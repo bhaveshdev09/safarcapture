@@ -3169,7 +3169,7 @@ section.about-detail{
 .about-us1{
 	&:before {
 	    content: '';
-	    background: url(../images/bottom-bg.png) repeat-x;
+	    // background: url(../images/bottom-bg.png) repeat-x;
 	    position: absolute;
 	    top: -20px;
 	    left: 0;
@@ -3180,7 +3180,7 @@ section.about-detail{
 	}
 	&:after {
 	    content: '';
-	    background: url(../images/top-bg.png) repeat-x;
+	   // background: url(../images/top-bg.png) repeat-x;
 	    position: absolute;
 	    bottom: -34px;
 	    left: 0;
