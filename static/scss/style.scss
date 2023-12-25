@@ -2338,7 +2338,7 @@ span.location-box {
 }
 
 .navbar-sticky {
-    z-index: 99999;
+    z-index: 9;
     position: fixed!important;
     left: 0;
     top: 0;
@@ -2348,7 +2348,7 @@ span.location-box {
 }
 
 .tabs-navbar1.navbar-sticky {
-    top: 122px;
+    top: 89px;
     transition: $transition;
 }
 

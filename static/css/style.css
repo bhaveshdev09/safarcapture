@@ -578,7 +578,7 @@ iframe {
         color: #fff;
         text-transform: uppercase;
         line-height: 0.7;
-        font-size: 48px; }
+        font-size: 40px; }
       .breadcrumb-main .breadcrumb-outer .breadcrumb-content nav, .breadcrumb-main .breadcrumb-outer .bread-content nav {
         display: inline-block;
         position: absolute;
@@ -615,7 +615,7 @@ iframe {
     text-align: center; }
     .breadcrumb-main .breadcrumb-outer .breadcrumb-content h2 {
       display: block;
-      font-size: 40px; } }
+      font-size: 28px; } }
 /*Buttons*/
 button {
   border: none; }
@@ -2995,7 +2995,7 @@ span.location-box {
       transition: all ease-in-out 0.5s; }
 
 .navbar-sticky {
-  z-index: 99999;
+  z-index: 9;
   position: fixed !important;
   left: 0;
   top: 0;
@@ -3004,7 +3004,7 @@ span.location-box {
   transition: all ease-in-out 0.5s; }
 
 .tabs-navbar1.navbar-sticky {
-  top: 122px;
+  top: 89px;
   transition: all ease-in-out 0.5s; }
 
 .sticky1.tab-sticky {
