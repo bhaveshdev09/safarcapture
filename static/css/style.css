@@ -3145,7 +3145,6 @@ span.location-box {
   position: relative; }
   .call-to-action:before, .call-to-action1:before {
     content: '';
-    background-image: url(../images/bg/bg4.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -198,7 +198,7 @@
                     <li><a data-toggle="tab" href="#single-review">Reviews</a></li>
                     <li><a data-toggle="tab" href="#single-comments">Comments</a></li>
                     <li><a data-toggle="tab" href="#single-add-review" class="bordernone">Add Reviews</a></li>
-                    <li><a data-toggle="tab" href="#" class="bordernone">Book Now</a></li>
+                    <li><a  href="#" class="bordernone" data-toggle="modal" data-target="#bookNow">Book Now</a></li>
                 </ul>
             </div>
         </div>
@@ -762,6 +762,58 @@
             <button type="submit" class="btn btn-primary">Search</button>
         </form>
     </div>
+
+
+     <!-- Book Now Modal -->
+     <div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bordernone p-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="login-content p-4 text-center">
+                        <div class="login-title section-border">
+                            <h3 class="pink mb-1">Book Now</h3>  
+                            <p>Fill form and start your tour!!</p>                  
+                        </div>
+                        <div class="login-form text-center">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter phone number">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Enter email address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="No Of Adult">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="No Of Children">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter message here">
+                                </div>
+                            </form>
+                            <div class="form-btn">
+                                <a href="#" class="nir-btn">Book</a>
+                            </div>
+                            <div class="form-group mb-0 form-checkbox mt-3">
+                                <input type="checkbox"> By clicking this, you are agree to to<a href="#" class=""> our terms of use</a> and <a href="#" class="">privacy policy</a> including the use of cookies
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Register Modal -->
     <div class="modal fade" id="register" tabindex="-1" role="dialog" aria-hidden="true">
