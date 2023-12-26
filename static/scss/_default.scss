@@ -256,6 +256,10 @@ img{max-width:$size100;}
 
 .pt-10, .my-10{padding-top:5rem!important;}
 
+.pt-12, .my-10{padding-top:6rem!important;}
+
+.pt-18, .my-10{padding-top:9rem!important;}
+
 .sec-pt{
 	padding-top:76px!important;
 }
@@ -589,7 +593,7 @@ iframe{width: 100%; border:none;}
 				color: $white;
 			    text-transform: uppercase;
 			    line-height: 0.7;
-			    font-size: 48px;
+			    font-size: 40px;
 			}
 			nav{
 			    display: inline-block;
@@ -647,7 +651,7 @@ iframe{width: 100%; border:none;}
 		.breadcrumb-outer {
 			.breadcrumb-content {
 				text-align: center;
-				h2{display:block; font-size: 40px;}
+				h2{display:block; font-size: 28px;}
 			}
 		}
 	}
@@ -692,7 +696,7 @@ button{border:none;}
 	&:hover{
 		&:before {
 		  width: 100%;
-		  background: #fb7f6a;
+		  background: #6AAA5C;
 		}
 		i {
 		  transform: translateX(0);
