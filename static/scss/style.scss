@@ -2338,7 +2338,7 @@ span.location-box {
 }
 
 .navbar-sticky {
-    z-index: 99999;
+    z-index: 9;
     position: fixed!important;
     left: 0;
     top: 0;
@@ -2348,7 +2348,7 @@ span.location-box {
 }
 
 .tabs-navbar1.navbar-sticky {
-    top: 86px;
+    top: 89px;
     transition: $transition;
 }
 
@@ -2557,7 +2557,7 @@ span.location-box {
 	position:relative;
 	&:before{
 		content:'';
-		background-image: url(../images/bg/bg4.jpg);
+		
 		background-position: center;
 	    background-size: cover;
 	    background-repeat:no-repeat;
@@ -3169,7 +3169,7 @@ section.about-detail{
 .about-us1{
 	&:before {
 	    content: '';
-	    background: url(../images/bottom-bg.png) repeat-x;
+	    // background: url(../images/bottom-bg.png) repeat-x;
 	    position: absolute;
 	    top: -20px;
 	    left: 0;
@@ -3180,7 +3180,7 @@ section.about-detail{
 	}
 	&:after {
 	    content: '';
-	    background: url(../images/top-bg.png) repeat-x;
+	   // background: url(../images/top-bg.png) repeat-x;
 	    position: absolute;
 	    bottom: -34px;
 	    left: 0;

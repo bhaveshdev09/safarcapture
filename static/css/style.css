@@ -285,6 +285,12 @@ img {
 .pt-10, .my-10 {
   padding-top: 5rem !important; }
 
+.pt-12, .my-10 {
+  padding-top: 6rem !important; }
+
+.pt-18, .my-10 {
+  padding-top: 9rem !important; }
+
 .sec-pt {
   padding-top: 76px !important; }
 
@@ -572,7 +578,7 @@ iframe {
         color: #fff;
         text-transform: uppercase;
         line-height: 0.7;
-        font-size: 48px; }
+        font-size: 40px; }
       .breadcrumb-main .breadcrumb-outer .breadcrumb-content nav, .breadcrumb-main .breadcrumb-outer .bread-content nav {
         display: inline-block;
         position: absolute;
@@ -609,7 +615,7 @@ iframe {
     text-align: center; }
     .breadcrumb-main .breadcrumb-outer .breadcrumb-content h2 {
       display: block;
-      font-size: 40px; } }
+      font-size: 28px; } }
 /*Buttons*/
 button {
   border: none; }
@@ -2190,7 +2196,7 @@ nav.navbar.navbar-default.navbar-sticky-in .logo-black {
     .banner .slider .swiper-button-next {
       right: 30px; }
     .banner .slider .swiper-button-next:after, .banner .slider .swiper-button-prev:after {
-      background: #6AAA5C;
+      background: #6aaa5c61;
       font-size: 21px;
       padding: 10px 20px;
       color: #fff;
@@ -2989,7 +2995,7 @@ span.location-box {
       transition: all ease-in-out 0.5s; }
 
 .navbar-sticky {
-  z-index: 99999;
+  z-index: 9;
   position: fixed !important;
   left: 0;
   top: 0;
@@ -2998,7 +3004,7 @@ span.location-box {
   transition: all ease-in-out 0.5s; }
 
 .tabs-navbar1.navbar-sticky {
-  top: 86px;
+  top: 89px;
   transition: all ease-in-out 0.5s; }
 
 .sticky1.tab-sticky {
@@ -3139,7 +3145,6 @@ span.location-box {
   position: relative; }
   .call-to-action:before, .call-to-action1:before {
     content: '';
-    background-image: url(../images/bg/bg4.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3604,7 +3609,6 @@ section.about-detail {
 
 .about-us1:before {
   content: '';
-  background: url(../images/bottom-bg.png) repeat-x;
   position: absolute;
   top: -20px;
   left: 0;
@@ -3614,7 +3618,6 @@ section.about-detail {
   background-size: contain; }
 .about-us1:after {
   content: '';
-  background: url(../images/top-bg.png) repeat-x;
   position: absolute;
   bottom: -34px;
   left: 0;
