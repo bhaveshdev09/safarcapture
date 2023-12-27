@@ -71,6 +71,14 @@
          }
      });
 
+     $(window).on('scroll', () => {
+        if ($(window).scrollTop() > 500) {
+            $('#whatsapp').fadeIn(200);
+        } else {
+            $('#whatsapp').fadeOut(200);
+        }
+    });
+
      // Slick SLider
      $('.slider-store').slick({
          slidesToShow: 1,
