@@ -1,11 +1,21 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 router = Blueprint("main", __name__)
 
 
-@router.route("/")
+@router.route("/", methods=["GET", "POST"])
 def index():
+    if request.method == "POST":
+        print(request.form)
+        return "Form submitted "
     return render_template("index.html")
+
+
+@router.route("/", methods=["POST"])
+def footer_contact_form():
+    if request.method == "POST":
+        print(request.form)
+        return "Thanks for contacting"
 
 
 @router.route("/about")
@@ -23,8 +33,11 @@ def frequently_asked_question():
     return render_template("faq.html")
 
 
-@router.route("/contact")
+@router.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        print(request.form)
+        return "Contact Form submitted "
     return render_template("contact.html")
 
 
@@ -41,3 +54,8 @@ def blog_details():
 @router.route("/package")
 def package():
     return render_template("package.html")
+
+
+@router.route("/base")
+def base_render():
+    return render_template("base.html")

@@ -1,0 +1,144 @@
+<section class="about-us p-0">
+  <div class="container">
+    <div class="about-image-box">
+      <div class="row">
+        <div class="col-lg-7 col-sm-12">
+          <div class="about-content pt-9">
+            <h4 class="mb-1 blue font-weight-normal">About SufferCapture</h4>
+            <h2>We're Truely Dedicated To Make Your Travel Experience As Much As Simple And Fun As Possible</h2>
+            <p class="mb-0">Top Tour Operators and Travel Agency. We offering in total 793 tours and holidays
+              throughout the world. Combined we have received 1532 customer reviews and an average rating of 5 out of
+              5 stars.<br>Travel has helped us to understand the meaning of life and it has helped us become better
+              people. Each time we travel, we see the world with new eyes.</p>
+            <div class="about-featured mb-0 mt-3">
+              <ul>
+                <li>Safety Travel System</li>
+                <li>Budget-Friendly Tour</li>
+                <li>Expert Trip Planning</li>
+                <li>Fast Communication</li>
+                <li>Right Solution & Guide</li>
+                <li>24/7 Customer Support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-sm-12">
+          <!-- form main starts -->
+          <div class="form-main">
+            <div class="form-content w-100 p-0">
+              <h3 class="form-title text-center m-0 p-3 white">Query Form</h3>
+              <div class="form-content-inner p-4">
+                <form method="post" action="{{ url_for('main.index') }}">
+                  <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                      <div class="form-group">
+                        <div class="input-box">
+                          <i class="fa fa-user"></i>
+                          <input type="text" class="form-control" placeholder="Full Name" name="name" required />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-12">
+                      <div class="form-group">
+                        <div class="input-box">
+                          <i class="fa fa-phone"></i>
+                          <input type="tel" class="form-control" placeholder="Phone Number" pattern="[0-9]{10}"
+                            name="mobile" title="Please enter a valid 10-digit mobile number" required />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-12">
+                      <div class="form-group">
+                        <div class="input-box">
+                          <i class="fa fa-envelope"></i>
+                          <input type="email" class="form-control" placeholder="Email" name="email" required />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12 col-sm-12">
+                      <div class="form-group">
+                        <div class="input-box">
+                          <i class="fa fa-map-marker"></i>
+                          <input type="text" list="destinations" name="destination" id="destination"
+                            class="form-control" placeholder="Your Destination" required>
+                          <datalist id="destinations">
+                            <option value="Argentina">
+                            <option value="Belgium">
+                            <option value="Canada">
+                            <option value="Denmark">
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="col-lg-6 col-sm-12">
+                      <div class="form-group">
+                        <div class="input-box">
+                          <i class="fa fa-user"></i>
+                          <input type="text" list="adult" name="person" id="person" class="form-control"
+                            placeholder="Adult" required>
+                          <datalist id="adult">
+                            <option value="1">
+                            <option value="2">
+                            <option value="3">
+                            <option value="4">
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-12">
+                      <div class="form-group">
+                        <div class="input-box">
+                          <i class="fa fa-user"></i>
+                          <input type="text" list="children" name="person" id="person" class="form-control"
+                            placeholder="Children" required>
+                          <datalist id="children">
+                            <option value="1">
+                            <option value="2">
+                            <option value="3">
+                            <option value="4">
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12 col-sm-12">
+                      <div class="form-group">
+                        <div class="input-box">
+                          <!-- Corrected the 'name' attribute -->
+                          <textarea name="message" id="message" placeholder="Enter your query" required></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <div class="col-lg-12 col-sm-12">
+                      <div class="form-group">
+                        <button type="submit" class="nir-btn w-100">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+
+                  </div>
+                </form>
+
+
+              </div>
+            </div>
+          </div>
+          <!-- form main ends -->
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+<!-- index page query form  ends -->
