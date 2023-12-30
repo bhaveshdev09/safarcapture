@@ -1,11 +1,13 @@
 <!-- footer starts -->
-<footer style="background-image: url(static/images/bg/footerbg.jpg)" class="pt-10 ">
+{% load static %}
+
+<footer style="background-image: url({% static "images/bg/footerbg.jpg" %}" class="pt-10 ">
     <div class="footer-upper pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 mb-4">
                     <div class="footer-links">
-                        <img src="static/images/safarLogo.png" height="140px" width="300px" alt="" />
+                        <img src="{% static "images/safarLogo.png" %}" height="140px" width="300px" alt="" />
                         <p class="mt-3">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                             labore et
@@ -45,52 +47,7 @@
                             <li><strong>Location:</strong> Hariyana,India </li>
                             <li><strong>Email:</strong> info@safarcapture.com</li>
                         </ul>
-
-                        {% comment %}
-
-**NOTE - Django template rendering does not care about the HTML, it cares about the {% %}
-
-                        <!-- <div class="newsletter-form form-main">
-                            <form method="post" action="{{ url_for('main.footer_contact_form') }}"
-                                enctype="multipart/form-data">
-                                <div class="form-group">
-                                    <div class="input-box input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fa fa-user"></i></span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder=" Enter Full Name"
-                                            required />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-box input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fa fa-phone"></i></span>
-                                        </div>
-                                        <input type="Number" class="form-control" placeholder="Enter Phone no."
-                                            required />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-box input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                                        </div>
-                                        <input type="email" class="form-control" placeholder="Enter Email " required />
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="input-box input-group">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Write your message.."
-                                            required />
-                                    </div>
-                                </div>
-                                <input type="submit" class="nir-btn mt-2 w-100" value="Submit" />
-                            </form>
-                        </div> -->
+                        </div> 
                     </div>
                 </div>
             </div>
@@ -125,4 +82,3 @@
 </footer>
 <!-- footer ends -->
 
-{% endcomment %}
