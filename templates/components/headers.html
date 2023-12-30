@@ -1,0 +1,118 @@
+{% load static %}
+  <!-- header starts -->
+  <header class="main_header_area headerstye-1">
+    <div class="header-content">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="links">
+          <ul>
+            <li><a href="#" class="white"><i class="fa fa-phone"></i> (+91)9998989888</a></li>
+            <li><a href="#" class="white"><i class="fa fa-support"></i> info@safarcapture.com</a></li>
+            <li><a href="#" class="white"><i class="fa fa-map-marker"></i> Mon-Sun: 10 AM – 5 PM</a></li>
+          </ul>
+        </div>
+        <div class="links float-right">
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook white" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter white" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram white" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin white" aria-hidden="true"></i></a></li>
+            <li><a href="#search1" class="mt_search"><i class="icon-magnifier white"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="header_menu" id="header_menu">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-2 pt-2">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">
+                <img src="static/images/safarLogoWhite.png" height="60px" width="180px" alt="image" />
+                <img src="static/images/safarLogo2.png" height="60px" width="180px" alt="image" />
+              </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse1 d-flex align-items-center" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav" id="responsive-menu">
+                <li class="active pr-2">
+                  <a href= "{% url 'index' %}" >Home</a>
+                </li>
+                <li class="pr-2"><a href= "{% url 'about' %}" >About Us</a></li>
+                <li class="submenu dropdown pr-2">
+                  <a href= "{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Packages <i class="icon-arrow-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="package.html">Kasol Kheerganga Trek</a></li>
+                    <li><a href="#">Enchanting Kerala</a></li>
+                    <li><a href="#">Historical Hampi </a></li>
+                    <li><a href="#">Serene Himalayan </a></li>
+                    <li><a href="#">Mystical Varanasi </a></li>
+                    <li><a href="#">Wildlife Wonders</a></li>
+                  </ul>
+                </li>
+
+                <li class="submenu dropdown pr-2">
+                  <a href= "{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">Destination
+                    <i class="icon-arrow-down" aria-hidden="true"></i></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="destination.html">Shimla</a>
+                    </li>
+                    <li>
+                      <a href="destination.html">Taj Mahal</a>
+                    </li>
+                    <li>
+                      <a href="destination.html">Goa Beaches </a>
+                    </li>
+                    <li>
+                      <a href="destination.html">Jaipur</a>
+                    </li>
+                    <li>
+                      <a href="destination.html">Leh-Ladakh</a>
+                    </li>
+                    <li>
+                      <a href="destination.html">Darjeeling</a>
+                    </li>
+
+
+                  </ul>
+
+                </li>
+
+                <li class="submenu dropdown pr-2">
+                  <a href = "{% url 'blogs' %}" > Updates </a>
+
+                </li>
+
+                <li><a href= "{% url 'contact' %}" >Contact Us</a></li>
+              </ul>
+              <!-- <a href="#" class="cart-icon d-flex align-items-center ml-1"><i class="icon-basket-loaded"></i><span class="cart-label">3</span></a> -->
+            </div>
+            <!-- /.navbar-collapse -->
+
+            <div class="register-login">
+              <!-- <a
+                  href="#"
+                  class="mr-2"
+                  data-toggle="modal"
+                  data-target="#register"
+                  ><i class="icon-user mr-1"></i> Register</a
+                >
+                <a href="#" data-toggle="modal" data-target="#login"
+                  ><i class="icon-login mr-1"></i> Login</a
+                > -->
+            </div>
+
+            <div id="slicknav-mobile"></div>
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+    </div>
+    <!-- Navigation Bar Ends -->
+  </header>
+  <!-- header ends -->
