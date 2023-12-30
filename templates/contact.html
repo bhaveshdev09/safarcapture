@@ -1,9 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Contact SufferCapture{% endblock title %}
 
 {% block content %}
 
   <!-- BreadCrumb Starts -->
+  {% comment %} <section class="breadcrumb-main pb-0" style="background-image: url(static/images/bg/bg7.jpg) ;"> {% endcomment %}
   <section class="breadcrumb-main pb-0" style="background-image: url(static/images/bg/bg7.jpg);">
     <div class="breadcrumb-outer pt-18">
       <div class="container">
@@ -78,8 +80,8 @@
                 type and scrambled it to make a type specimen book.</p>
 
               <div id="contactform-error-msg"></div>
-
-              <form method="post" action="{{ url_for('main.contact') }}" name="contactformdetails" id="contactformdetails">
+              <!-- form starts here -->
+              <form method="post" action="#" name="contactformdetails" id="contactformdetails">
                 <div class="form-group">
                   <input type="text" name="first_name" class="form-control" id="fname" placeholder="First Name"
                     required>
@@ -100,6 +102,7 @@
                   <input type="submit" class="nir-btn" id="submit" value="Send Message">
                 </div>
               </form>
+              <!-- form starts here -->
             </div>
           </div>
         </div>

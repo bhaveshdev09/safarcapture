@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}FAQ SufferCapture{% endblock title %}
 
 {% block content %}
 
 <!-- BreadCrumb Starts -->
-<section class="breadcrumb-main pb-0" style="background-image: url(static/images/bg/bg7.jpg);">
+<section class="breadcrumb-main pb-0" style="background-image: url(static/images/bg/bg7.jpg url);">
   <div class="breadcrumb-outer pt-18">
     <div class="container">
       <div class="breadcrumb-content d-md-flex align-items-center pt-10">
@@ -220,7 +221,7 @@
           </p>
         </div>
         <div class="col-lg-3 col-md-3">
-          <a href="{{ url_for('main.contact') }}#contact-form1" class="nir-btn">Contact Now</a>
+          <a href= "{% url 'contact' %}"  "contact-form1" class="nir-btn">Contact Now</a>
         </div>
       </div>
     </div>
@@ -229,7 +230,9 @@
 <!-- content-line ends -->
 
 {% endblock content %}
+
 <!-- *Scripts* -->
+
 {% block js %}
-<script src="{{ url_for('static', filename='js/custom-accordian.js') }}"></script>
+<script src= "{% static 'js/custom-accordian.js' %}"  ></script>
 {% endblock js %}

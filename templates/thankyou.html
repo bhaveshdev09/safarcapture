@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Thank you !{% endblock title %}
+
+{% block content %}
+
+    <!-- BreadCrumb Starts -->
+    <section class="breadcrumb-main pb-0" style="background-image: url({% static "images/bg/bg7.jpg" %});">
+        <div class="breadcrumb-outer pt-18">
+            <div class="container">
+                <div class="breadcrumb-content d-md-flex align-items-center pt-10">
+                    <h2 class="pb-2 ">Thank you ! </h2>
+                    <nav aria-label="breadcrumb">
+                        <ul class="breadcrumb">
+                            {% comment %} <li class="breadcrumb-item"><a href="#">Home</a></li> {% endcomment %}
+                            <li class="breadcrumb-item active" aria-current="page">Thank you! </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="dot-overlay"></div>
+    </section>
+    <!-- BreadCrumb Ends -->
+
+{% endblock content %}

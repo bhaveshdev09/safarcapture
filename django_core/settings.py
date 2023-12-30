@@ -106,11 +106,33 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+
 # Base url to serve media files
-MEDIA_URL = 'media/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media' # New version of django support this kind of definition also
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+"""# sending emails
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.zoho.in'
+EMAIL_HOST_USER='sagavekarom@zohomail.in'
+EMAIL_HOST_PASSWORD='Omkar@111111'
+# DEFAULT_FROM_EMAIL = "sagavekarom@zohomail.in"
+EMAIL_PORT= 465
+EMAIL_USE_TLS= False
+EMAIL_USE_SSL = True # for ssl, port= 465  and for TLS port = 587"""
+
+# sending emails
+EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER='sagavekar.om@gmail.com'
+EMAIL_HOST_PASSWORD='xfyfzukdbquediis'
+# DEFAULT_FROM_EMAIL = "sagavekarom@zohomail.in"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

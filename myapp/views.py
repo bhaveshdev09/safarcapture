@@ -1,5 +1,8 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, redirect,HttpResponse
 from django.contrib import messages
+from django.core.mail import EmailMultiAlternatives
+from django_core.settings import EMAIL_HOST_USER
+from myapp.models import *
 
 
 # Create your views here.
@@ -18,3 +21,56 @@ def contact(request):
 
 def faq(request):
     return render(request, "faq.html")
+
+def destination(request):
+    return render(request, "destination.html")
+
+def thankyou(request):
+    return render(request, "thankyou.html")
+
+def query_form(request):
+    if request.method == "POST":
+        print(request.POST)
+        instance = Query() # create instance of model user_query
+        instance.full_name = request.POST.get("full_name")
+        instance.phone_number = request.POST.get("phone_number")
+        instance.email = request.POST.get("email")
+        instance.adult_count = int(request.POST.get("adult_count"))
+        instance.child_count = int(request.POST.get("child_count"))
+        instance.message =request.POST.get("message")
+        instance.destination = request.POST.get("destination")
+        instance.save()
+        messages.success(request, 'Thanks for contacting SufferCapture !')
+        
+        #email process starts from here
+        try:
+            subject = "Thanks for contacting SufferCapture !"
+            # text_content = "This is an important message."
+            html_content = """<p> Dear Customer, <strong>Thanks for contacting SufferCapture</strong> <br> Will connect back to you soon.</p>"""
+            msg = EmailMultiAlternatives(subject, "" , from_email=EMAIL_HOST_USER ,to= [request.POST.get("email")], bcc=["sagavekarom@zohomail.in"])
+            msg.attach_alternative(html_content, "text/html")
+            msg.send()
+        except:
+            return redirect('index' )   
+
+        return redirect('thankyou')
+    else:
+        return redirect('index')
+        
+
+#temp forms-->
+def destination_admin(request):
+    if request.method == "POST":
+        print(request.POST, request.user)
+        instance = Destination()
+        instance.name = request.POST.get("destination_name")
+        instance.state = request.POST.get("destination_state")
+        instance.description = request.POST.get("destination_description") 
+        instance.map_link = request.POST.get("destination_map_link")
+        instance.save()
+        return HttpResponse("form posted")
+    else:  
+        return render(request, "0_destination_form.html")
+
+
+    

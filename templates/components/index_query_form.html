@@ -24,17 +24,19 @@
         </div>
         <div class="col-lg-5 col-sm-12">
           <!-- form main starts -->
+          
           <div class="form-main">
             <div class="form-content w-100 p-0">
               <h3 class="form-title text-center m-0 p-3 white">Query Form</h3>
               <div class="form-content-inner p-4">
-                <form method="post" action= "{% url 'index' %}" >
+                <form method="post" action= "{% url 'query_form' %}" >
+                  {% csrf_token %} 
                   <div class="row">
                     <div class="col-lg-12 col-sm-12">
                       <div class="form-group">
                         <div class="input-box">
                           <i class="fa fa-user"></i>
-                          <input type="text" class="form-control" placeholder="Full Name" name="name" required />
+                          <input type="text" class="form-control" placeholder="Full Name" name="full_name" required />
                         </div>
                       </div>
                     </div>
@@ -44,7 +46,7 @@
                         <div class="input-box">
                           <i class="fa fa-phone"></i>
                           <input type="tel" class="form-control" placeholder="Phone Number" pattern="[0-9]{10}"
-                            name="mobile" title="Please enter a valid 10-digit mobile number" required />
+                            name="phone_number" title="Please enter a valid 10-digit mobile number" required />
                         </div>
                       </div>
                     </div>
@@ -80,7 +82,7 @@
                       <div class="form-group">
                         <div class="input-box">
                           <i class="fa fa-user"></i>
-                          <input type="text" list="adult" name="person" id="person" class="form-control"
+                          <input type="number" list="adult" name="adult_count" id="person" class="form-control"
                             placeholder="Adult" required>
                           <datalist id="adult">
                             <option value="1">
@@ -90,13 +92,13 @@
                           </datalist>
                         </div>
                       </div>
-                    </div>
+                    </div>  
 
                     <div class="col-lg-6 col-sm-12">
                       <div class="form-group">
                         <div class="input-box">
                           <i class="fa fa-user"></i>
-                          <input type="text" list="children" name="person" id="person" class="form-control"
+                          <input type="number" list="children" name="child_count" id="person" class="form-control"
                             placeholder="Children" required>
                           <datalist id="children">
                             <option value="1">
