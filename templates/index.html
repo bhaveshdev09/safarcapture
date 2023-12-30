@@ -1,0 +1,886 @@
+
+{% extends "base.html" %}
+{% block title %}SufferCapture{% endblock title %}
+{% block content %}
+
+{% load static %}
+<!-- banner starts -->
+<section class="banner overflow-hidden">
+  <div class="slider slider1">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-inner">
+            <div class="slide-image" style="background-image: url(static/images/slider/1.jpg)"></div>
+            <div class="swiper-content1 container">
+              <h4 class="white">Choose The Best Destination</h4>
+              <h1 class="white mb-4">
+                Make Your Trip Fun And Memorable Where You Want
+              </h1>
+              <a href="#" class="per-btn">
+                <span class="white">Discover</span>
+                <i class="fa fa-arrow-right white"></i>
+              </a>
+            </div>
+            <div class="dot-overlay"></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-inner">
+            <div class="slide-image" style="background-image: url(static/images/slider/2.jpg)"></div>
+            <div class="swiper-content1 container">
+              <h4 class="white">Feel Free To Travel</h4>
+              <h1 class="white mb-4">
+                Discover Your Beautiful <span>Travel</span> With Us
+              </h1>
+              <a href="#" class="per-btn">
+                <span class="white">Discover</span>
+                <i class="fa fa-arrow-right white"></i>
+              </a>
+            </div>
+            <div class="dot-overlay"></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-inner">
+            <div class="slide-image" style="background-image: url(static/images/slider/3.jpg)"></div>
+            <div class="swiper-content1 container">
+              <h4 class="white">Trip For Your Kids</h4>
+              <h1 class="white mb-4">
+                <span>Sensation Ice Trip</span> Is Coming For Kids
+              </h1>
+              <a href="#" class="per-btn">
+
+                <span class="white" id="contactForm">Discover</span>
+                <i class="fa fa-arrow-right white"></i>
+              </a>
+            </div>
+            <div class="dot-overlay"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add Arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+<!-- banner ends -->
+
+
+<!-- index page query form starts -->
+{% include "components/index_query_form.html" %}
+<!-- End index page query form starts -->
+
+<!-- Index Fav destination Starts -->
+{% include "components/index_destination.html" %}
+
+<!-- Trending Starts -->
+<section class="trending pb-6 pt-5">
+  <div class="container">
+    <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+      <h2 class="m-0">Perfect <span>Tour Packages</span></h2>
+      <p class="mb-0">Travel has helped us to understand the meaning of life and it has helped us become better
+        people. Each time we travel, we see the world with new eyes.</p>
+    </div>
+    <div class="trend-box">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+          <div class="trend-item">
+            <div class="trend-image">
+              <img src="static/images/trending/Shimla and Manali, Himachal Pradesh.jpg" alt="image">
+              <!-- <div class="trend-tags">
+                                  <a href="#"><i class="flaticon-like"></i></a>
+                              </div> -->
+            </div>
+            <div class="trend-content-main">
+              <div class="trend-content">
+                <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i>Himachal Pradesh</h6>
+                <h4><a href="#">Shimla and Manali</a></h4>
+                <div class="rating-main d-flex align-items-center">
+                  <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
+                  <span class="ml-2">38 Reviews</span>
+                </div>
+              </div>
+              <div class="trend-last-main">
+                <p class="mb-0 trend-para">A wonderful little cottage right on the seashore - perfect for exploring.
+                </p>
+                <div class="trend-last d-flex align-items-center justify-content-between">
+                  <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days & 2 night</p>
+                  <div class="trend-price">
+                    <p class="price white mb-0">From <span>₹29999</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+          <div class="trend-item">
+            <div class="trend-image">
+              <img src="static/images/trending/Andaman and Nicobar Islands.jpg" alt="image">
+              <!-- <div class="trend-tags">
+                                  <a href="#"><i class="flaticon-like"></i></a>
+                              </div> -->
+            </div>
+            <div class="trend-content-main">
+              <div class="trend-content">
+                <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Andaman</h6>
+                <h4><a href="#">Andaman and Nicobar Islands</a></h4>
+                <div class="rating-main d-flex align-items-center">
+                  <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
+                  <span class="ml-2">38 Reviews</span>
+                </div>
+              </div>
+              <div class="trend-last-main">
+                <p class="mb-0 trend-para">A wonderful little cottage right on the seashore - perfect for exploring.
+                </p>
+                <div class="trend-last d-flex align-items-center justify-content-between">
+                  <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days & 2 night</p>
+                  <div class="trend-price">
+                    <p class="price white mb-0">From <span>₹29999</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+          <div class="trend-item">
+            <div class="trend-image">
+              <img src="static/images/trending/Jaipur City Palace, Rajasthan.jpg" alt="image">
+              <!-- <div class="trend-tags">
+                                  <a href="#"><i class="flaticon-like"></i></a>
+                              </div> -->
+            </div>
+            <div class="trend-content-main">
+              <div class="trend-content">
+                <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Rajasthan</h6>
+                <h4><a href="#">Jaipur City Palace, Rajasthan</a></h4>
+                <div class="rating-main d-flex align-items-center">
+                  <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
+                  <span class="ml-2">38 Reviews</span>
+                </div>
+              </div>
+              <div class="trend-last-main">
+                <p class="mb-0 trend-para">A wonderful little cottage right on the seashore - perfect for exploring.
+                </p>
+                <div class="trend-last d-flex align-items-center justify-content-between">
+                  <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days & 2 night</p>
+                  <div class="trend-price">
+                    <p class="price white mb-0">From <span>₹29999</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+          <div class="trend-item">
+            <div class="trend-image">
+              <img src="static/images/trending/Jammu and Kashmir.jpeg" alt="image">
+              <!-- <div class="trend-tags">
+                                  <a href="#"><i class="flaticon-like"></i></a>
+                              </div> -->
+            </div>
+            <div class="trend-content-main">
+              <div class="trend-content">
+                <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Jammu and Kashmir</h6>
+                <h4><a href="#">Jammu and Kashmir</a></h4>
+                <div class="rating-main d-flex align-items-center">
+                  <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
+                  <span class="ml-2">38 Reviews</span>
+                </div>
+              </div>
+              <div class="trend-last-main">
+                <p class="mb-0 trend-para">A wonderful little cottage right on the seashore - perfect for exploring.
+                </p>
+                <div class="trend-last d-flex align-items-center justify-content-between">
+                  <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days & 2 night</p>
+                  <div class="trend-price">
+                    <p class="price white mb-0">From <span>₹29999</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+          <div class="trend-item">
+            <div class="trend-image">
+              <img src="static/images/trending/Taj Mahal, Agra.jpg" alt="image">
+              <!-- <div class="trend-tags">
+                                  <a href="#"><i class="flaticon-like"></i></a>
+                              </div> -->
+            </div>
+            <div class="trend-content-main">
+              <div class="trend-content">
+                <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Agra</h6>
+                <h4><a href="#">Taj Mahal, Agra</a></h4>
+                <div class="rating-main d-flex align-items-center">
+                  <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
+                  <span class="ml-2">38 Reviews</span>
+                </div>
+              </div>
+              <div class="trend-last-main">
+                <p class="mb-0 trend-para">A wonderful little cottage right on the seashore - perfect for exploring.
+                </p>
+                <div class="trend-last d-flex align-items-center justify-content-between">
+                  <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days & 2 night</p>
+                  <div class="trend-price">
+                    <p class="price white mb-0">From <span>₹29999</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+          <div class="trend-item">
+            <div class="trend-image">
+              <img src="static/images/trending/goa.jpg" alt="image">
+              <!-- <div class="trend-tags">
+                                  <a href="#"><i class="flaticon-like"></i></a>
+                              </div> -->
+            </div>
+            <div class="trend-content-main">
+              <div class="trend-content">
+                <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> goa</h6>
+                <h4><a href="#">Goa Beaches</a></h4>
+                <div class="rating-main d-flex align-items-center">
+                  <div class="rating">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                  </div>
+                  <span class="ml-2">38 Reviews</span>
+                </div>
+              </div>
+              <div class="trend-last-main">
+                <p class="mb-0 trend-para">A wonderful little cottage right on the seashore - perfect for exploring.
+                </p>
+                <div class="trend-last d-flex align-items-center justify-content-between">
+                  <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days & 2 night</p>
+                  <div class="trend-price">
+                    <p class="price white mb-0">From <span>₹29999</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Trending Ends -->
+
+
+<!-- top destination starts -->
+<section class="top-destination overflow-hidden pb-9">
+  <div class="container">
+    <div class="desti-inner">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-4 col-md-6 p-1">
+          <div class="desti-title text-center">
+            <h2 class="white">Travel <br>Best Holidays Trips <br>In The India</h2>
+            <p class="white mb-0">Lorem Ipsum is simply dummy text the printing and typesetting industry.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 p-1">
+          <div class="desti-image">
+            <img src="static/images/destination/ShimalaTour.jpeg" alt="desti">
+            <div class="desti-content">
+              <div class="rating mb-1">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <h4 class="white mb-0">Shimla Tour</h4>
+            </div>
+            <div class="desti-overlay">
+              <a href="#" class="nir-btn">
+                <span class="white">Book Now</span>
+                <i class="fa fa-arrow-right white pl-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 p-1">
+          <div class="desti-image">
+            <img src="static/images/destination/destination4.jpg" alt="desti">
+            <div class="desti-content">
+              <div class="rating mb-1">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <h4 class="white mb-0">Sahyadri Tour</h4>
+            </div>
+            <div class="desti-overlay">
+              <a href="#" class="nir-btn">
+                <span class="white">Book Now</span>
+                <i class="fa fa-arrow-right white pl-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-1">
+          <div class="desti-image">
+            <img src="static/images/destination/RajasthanTour.jpg" alt="desti">
+            <div class="desti-content">
+              <div class="rating mb-1">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <h4 class="white mb-0">Rajasthan Cultural Tour</h4>
+            </div>
+            <div class="desti-overlay">
+              <a href="#" class="nir-btn">
+                <span class="white">Book Now</span>
+                <i class="fa fa-arrow-right white pl-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-1">
+          <div class="desti-image">
+            <img src="static/images/destination/KashmirTour.jpg" alt="desti">
+            <div class="desti-content">
+              <div class="rating mb-1">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <h4 class="white mb-0">Kashmir Tour</h4>
+            </div>
+            <div class="desti-overlay">
+              <a href="#" class="nir-btn">
+                <span class="white">Book Now</span>
+                <i class="fa fa-arrow-right white pl-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 p-1">
+          <div class="desti-image">
+            <img src="static/images/destination/varanasi.jpeg" alt="destin">
+            <div class="desti-content">
+              <div class="rating mb-1">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <h4 class="white mb-0">Varanasi Tour</h4>
+            </div>
+            <div class="desti-overlay">
+              <a href="#" class="nir-btn">
+                <span class="white">Book Now</span>
+                <i class="fa fa-arrow-right white pl-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-12 p-1">
+          <div class="desti-image">
+            <img src="static/images/destination/Golden Temple.jpeg" alt="desti">
+            <div class="desti-content">
+              <div class="rating mb-1">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+              <h4 class="white mb-0">Golden Temple Tour</h4>
+            </div>
+            <div class="desti-overlay">
+              <a href="#" class="nir-btn">
+                <span class="white">Book Now</span>
+                <i class="fa fa-arrow-right white pl-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="particles-js"></div>
+</section>
+<!-- top destination ends -->
+
+
+<!-- Trending Starts -->
+<section class="latest-tour pb-6 bg-white pt-9">
+  <div class="container">
+    <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+      <h2 class="m-0">
+        Special <span>Offers</span> & <span>Discount</span>
+      </h2>
+      <p class="mb-0">
+        Travel has helped us to understand the meaning of life and it has
+        helped us become better people. Each time we travel, we see the
+        world with new eyes.
+      </p>
+    </div>
+    <div class="tour-box">
+      <div class="row team-slider">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="tour-item">
+            <div class="tour-image">
+              <img src="static/images/destination/KashmirTour.jpg" alt="Image" />
+            </div>
+            <div class="tour-content">
+              <div class="rating-main d-flex align-items-center mb-1">
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <span class="ml-2 white">38 Reviews</span>
+              </div>
+              <h3 class="mb-1">
+                <a href="#" class="white">Hills and Beach Tour</a>
+              </h3>
+              <div class="user-main d-flex align-items-center justify-content-between mb-2 pb-2 border-b">
+                <p class="white mb-0 mr-">
+                  <i class="fa fa-clock white mr-1"></i> 5 days
+                </p>
+                <p class="white mb-0">
+                  <i class="fa fa-user-plus white mr-1"></i> 51
+                </p>
+              </div>
+              <p class="white mb-3">
+                A wonderful little cottage right on the seashore - perfect
+                for exploring with the little boat.
+              </p>
+              <a href="tour-d#" class="nir-btn" tabindex="0">View More</a>
+            </div>
+            <div class="tour-tag">
+              <span class="old-price white">₹29999</span>
+              <span class="new-price white"> ₹19999</span>
+            </div>
+            <div class="color-overlay"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="tour-item">
+            <div class="tour-image">
+              <img src="static/images/destination/destination5.jpg" alt="Image" />
+            </div>
+            <div class="tour-content">
+              <div class="rating-main d-flex align-items-center mb-1">
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <span class="ml-2 white">18 Reviews</span>
+              </div>
+              <h3 class="mb-1">
+                <a href="#" class="white">Special India Tour</a>
+              </h3>
+              <div class="user-main d-flex align-items-center justify-content-between mb-2 pb-2 border-b">
+                <p class="white mb-0 mr-">
+                  <i class="fa fa-clock white mr-1"></i> 5 days
+                </p>
+                <p class="white mb-0">
+                  <i class="fa fa-user-plus white mr-1"></i> 51
+                </p>
+              </div>
+              <p class="white mb-3">
+                A wonderful little cottage right on the seashore - perfect
+                for exploring with the little boat.
+              </p>
+              <a href="tour-d#" class="nir-btn" tabindex="0">View More</a>
+            </div>
+            <div class="tour-tag">
+              <span class="old-price white">₹29999</span>
+              <span class="new-price white"> ₹19999</span>
+            </div>
+            <div class="color-overlay"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="tour-item">
+            <div class="tour-image">
+              <img src="static/images/destination/CoupleTour.jpeg" alt="Image" />
+            </div>
+            <div class="tour-content">
+              <div class="rating-main d-flex align-items-center mb-1">
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <span class="ml-2 white">21 Reviews</span>
+              </div>
+              <h3 class="mb-1">
+                <a href="#" class="white">Couple & Holidays Tour</a>
+              </h3>
+              <div class="user-main d-flex align-items-center justify-content-between mb-2 pb-2 border-b">
+                <p class="white mb-0 mr-">
+                  <i class="fa fa-clock white mr-1"></i> 5 days
+                </p>
+                <p class="white mb-0">
+                  <i class="fa fa-user-plus white mr-1"></i> 51
+                </p>
+              </div>
+              <p class="white mb-3">
+                A wonderful little cottage right on the seashore - perfect
+                for exploring with the little boat.
+              </p>
+              <a href="tour-d#" class="nir-btn" tabindex="0">View More</a>
+            </div>
+            <div class="tour-tag">
+              <span class="old-price white">₹29999</span>
+              <span class="new-price white"> ₹19999</span>
+            </div>
+            <div class="color-overlay"></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="tour-item">
+            <div class="tour-image">
+              <img src="static/images/destination/Jammu and Kashmir.jpeg" alt="Image" />
+            </div>
+            <div class="tour-content">
+              <div class="rating-main d-flex align-items-center mb-1">
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <span class="ml-2 white">26 Reviews</span>
+              </div>
+              <h3 class="mb-1">
+                <a href="#" class="white">Hills and Beach Tour</a>
+              </h3>
+              <div class="user-main d-flex align-items-center justify-content-between mb-2 pb-2 border-b">
+                <p class="white mb-0 mr-">
+                  <i class="fa fa-clock white mr-1"></i> 5 days
+                </p>
+                <p class="white mb-0">
+                  <i class="fa fa-user-plus white mr-1"></i> 51
+                </p>
+              </div>
+              <p class="white mb-3">
+                A wonderful little cottage right on the seashore - perfect
+                for exploring with the little boat.
+              </p>
+              <a href="tour-d#" class="nir-btn" tabindex="0">View More</a>
+            </div>
+            <div class="tour-tag">
+              <span class="old-price white">₹29999</span>
+              <span class="new-price white"> ₹19999</span>
+            </div>
+            <div class="color-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Trending Ends -->
+
+
+<!-- testomonial start -->
+<section class="testimonial pb-10" style="background-image: url(static/images/bg/testimonialbg.jpg);">
+  <div class="container">
+    <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+      <h2 class="m-0 white">What <span>People Say About Us</span></h2>
+      <p class="mb-0 white">Travel has helped us to understand the meaning of life and it has helped us become better
+        people. Each time we travel, we see the world with new eyes.</p>
+    </div>
+    <div class="row review-slider1">
+      <div class="col-sm-4">
+        <div class="testimonial-item">
+          <div class="testimonial-content mb-5">
+            <div class="testimonial-icon">
+              <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="description mb-0">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="author-title d-flex align-items-center">
+            <a href="#"><img src="static/images/testimonial/user.png" alt=""></a>
+            <div class="author-in ml-3">
+              <h5 class="m-0 white"> Sahil Jain</h5>
+              <div class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="testimonial-item">
+          <div class="testimonial-content mb-5">
+            <div class="testimonial-icon">
+              <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="description mb-0">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="author-title d-flex align-items-center">
+            <a href="#"><img src="static/images/testimonial/user.png" alt=""></a>
+            <div class="author-in ml-3">
+              <h5 class="m-0 white">Adarsh Soni</h5>
+              <div class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="testimonial-item">
+          <div class="testimonial-content mb-5">
+            <div class="testimonial-icon">
+              <i class="fa fa-quote-left"></i>
+            </div>
+            <p class="description mb-0">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+              scrambled it to make a type specimen book.
+            </p>
+          </div>
+          <div class="author-title d-flex align-items-center">
+            <a href="#"><img src="static/images/testimonial/user.png" alt=""></a>
+            <div class="author-in ml-3">
+              <h5 class="m-0 white">Dhruv reddy</h5>
+              <div class="rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</section>
+<!-- testimonial ends -->
+
+
+<!-- News Starts -->
+<section class="news pb-2 bg-lgrey pt-9">
+  <div class="container">
+    <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+      <h2 class="m-0">Latest Some <span>Tips & Articles</span></h2>
+      <p class="mb-0 ">Travel has helped us to understand the meaning of life and it has helped us become better
+        people. Each time we travel, we see the world with new eyes.</p>
+    </div>
+    <div class="news-outer">
+      <div class="row">
+        <div class="col-lg-5 col-md-12 col-xs-12 mb-4">
+          <div class="news-item overflow-hidden">
+            <div class="news-image">
+              <img src="static/images/blog/blog1.jpeg" alt="image">
+            </div>
+            <div class="news-list mt-2 border-b pb-2 mb-2">
+              <ul>
+                <li><a href="single-#" class="pr-3"><i class="fa fa-calendar pink pr-1"></i> 4th AUg 2020 </a></li>
+                <li><a href="single-#" class="pr-3"><i class="fa fa-comment pink pr-1"></i> 3</a></li>
+                <li><a href="single-#" class=""><i class="fa fa-tag pink pr-1"></i> Tour, Tourism, Travel</a></li>
+              </ul>
+            </div>
+            <div class="news-content mt-2">
+              <h4 class="pb-2 mb-2 border-b"><a href="single-#">The real voyage does not consist in seeking new
+                  landscapes</a></h4>
+              <p class="mb-3">Excited him now natural saw passage offices you minuter. At by asked being court hopes.
+                Farther so friends am to detract. Forbade concern do private be. Offending residence but men engrossed
+                shy. <br><br>One of the programs is Save Our I have personally in many of the programs mentioned on
+                this site.</p>
+
+              <div class="author-img">
+                <img src="static/images/testimonial/user.png" alt="Demo Image">
+                <span>By - Adarsh Soni</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-12 col-xs-12 mb-4">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+              <div class="news-item overflow-hidden">
+                <div class="news-image">
+                  <img src="static/images/blog/blog2.jpg" alt="image">
+                </div>
+                <div class="news-list mt-2 border-b pb-2 mb-2">
+                  <ul>
+                    <li><a href="single-#" class="pr-3"><i class="fa fa-calendar pink pr-1"></i> 4th AUg 2020 </a>
+                    </li>
+                    <li><a href="single-#" class="pr-3"><i class="fa fa-comment pink pr-1"></i> 3</a></li>
+                    <li><a href="single-#" class=""><i class="fa fa-tag pink pr-1"></i> Travel</a></li>
+                  </ul>
+                </div>
+                <div class="news-content mt-2">
+                  <h4 class="bordernone mb-0"><a href="single-#">Mountains is always right destination.</a></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+              <div class="news-item overflow-hidden">
+                <div class="news-image">
+                  <img src="static/images/blog/CoupleTour.jpeg" alt="image">
+                </div>
+                <div class="news-list mt-2 border-b pb-2 mb-2">
+                  <ul>
+                    <li><a href="single-#" class="pr-3"><i class="fa fa-calendar pink pr-1"></i> 4th AUg 2020 </a>
+                    </li>
+                    <li><a href="single-#" class="pr-3"><i class="fa fa-comment pink pr-1"></i> 3</a></li>
+                    <li><a href="single-#" class=""><i class="fa fa-tag pink pr-1"></i> Tourism</a></li>
+                  </ul>
+                </div>
+                <div class="news-content mt-2">
+                  <h4 class="bordernone mb-0"><a href="single-#">We have not all those who wander are lost.</a></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+              <div class="news-item overflow-hidden">
+                <div class="news-image">
+                  <img src="static/images/blog/blog2.jpeg" alt="image">
+                </div>
+                <div class="news-list mt-2 border-b pb-2 mb-2">
+                  <ul>
+                    <li><a href="single-#" class="pr-3"><i class="fa fa-calendar pink pr-1"></i> 4th AUg 2020 </a>
+                    </li>
+                    <li><a href="single-#" class="pr-3"><i class="fa fa-comment pink pr-1"></i> 3</a></li>
+                    <li><a href="single-#" class=""><i class="fa fa-tag pink pr-1"></i> Tour</a></li>
+                  </ul>
+                </div>
+                <div class="news-content mt-2">
+                  <h4 class="bordernone mb-0"><a href="single-#">Here Our's Life is either a daring adventure.</a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+              <div class="news-item overflow-hidden">
+                <div class="news-image">
+                  <img src="static/images/blog/blog5.jpg" alt="image">
+                </div>
+                <div class="news-list mt-2 border-b pb-2 mb-2">
+                  <ul>
+                    <li><a href="single-#" class="pr-3"><i class="fa fa-calendar pink pr-1"></i> 4th AUg 2020 </a>
+                    </li>
+                    <li><a href="single-#" class="pr-3"><i class="fa fa-comment pink pr-1"></i> 3</a></li>
+                    <li><a href="single-#" class=""><i class="fa fa-tag pink pr-1"></i> Travel</a></li>
+                  </ul>
+                </div>
+                <div class="news-content mt-2">
+                  <h4 class="bordernone mb-0"><a href="single-#">Take only memories, leave only footprints.</a></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- News Ends -->
+
+<!-- Counter -->
+{% include "components/counter.html" %}
+<!-- End Counter-->
+
+
+<!-- content-line start -->
+<div class="content-line bg-white pb-6 pt-6">
+  <div class="container">
+    <div class="content-line-inner">
+      <div class="row d-md-flex align-items-center justify-content-between">
+        <div class="col-lg-9 col-md-9">
+          <p class="mb-0 navy h4">
+            It's Time For a New Adventure! Don't Wait Any Longer. Contact us!
+          </p>
+        </div>
+        <!-- <div class="col-lg-3 col-md-3">
+          <a href="" class="nir-btn">Contact Now</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- content-line ends -->
+
+{% endblock content %}
+{% block js %}
+{% endblock js %}
