@@ -1,6 +1,6 @@
 {% extends "base.html" %}
+{% load static %}
 {% block title %}About SufferCapture{% endblock title %}
-
 {% block content %}
 
     <!-- BreadCrumb Starts -->
@@ -39,19 +39,19 @@
                             <div class="about-imagelist">
                                 <ul class="d-flex justify-content-between">
                                     <li class="mr-2">
-                                        <img src="static/images/destination/CoupleTour.jpeg" alt="">
+                                        <img src= "{% static 'images/destination/CoupleTour.jpeg' %}"  alt="">
                                     </li>
                                     <li class="mr-2">
-                                        <img src="static/images/destination/RajasthanTour.jpg" alt="">
+                                        <img src= "{% static 'images/destination/RajasthanTour.jpg' %}"  alt="">
                                     </li>
                                     <li class="mr-2">
-                                        <img src="static/images/destination/Jammu and Kashmir.jpeg" alt="">
+                                        <img src= "{% static 'images/destination/Jammu and Kashmir.jpeg' %}"  alt="">
                                     </li>
                                     <li class="mr-2">
-                                        <img src="static/images/destination/varanasi.jpeg" alt="">
+                                        <img src= "{% static 'images/destination/varanasi.jpeg' %}"  alt="">
                                     </li>
                                     <li>
-                                        <img src="static/images/destination/destination5.jpg" alt="">
+                                        <img src= "{% static 'images/destination/destination5.jpg' %}"  alt="">
                                     </li>
                                 </ul>
                             </div>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <div class="about-image">
-                            <img src="static/images/destination/KashmirTour.jpg" alt="">
+                            <img src= "{% static 'images/destination/KashmirTour.jpg' %}" alt="">
                         </div>
                     </div>
                 </div>
@@ -98,10 +98,10 @@
                         <div class="about-image-main">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 mt-4 mb-4">
-                                    <img src="static/images/about/about1.jpg" alt="">
+                                    <img src= "{% static 'images/about/about1.jpg' %}"  alt="">
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-                                    <img src="static/images/about/about2.jpg" alt="">
+                                    <img src= "{% static 'images/about/about2.jpg' %}"  alt="">
                                 </div>
                             </div>
                         </div>
@@ -226,7 +226,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list">
                             <div class="team-image">
-                                <img src="static/images/team/img1.jpg" alt="team">
+                                <img src= "{% static 'images/team/img1.jpg' %}"  alt="team">
                             </div>
                             <div class="team-content1 text-center">
                                 <h4 class="mb-0 pink">Member Name</h4>
@@ -240,22 +240,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list">
                             <div class="team-image">
-                                <img src="static/images/team/img2.jpg" alt="team">
-                            </div>
-                            <div class="team-content1 text-center">
-                                <h4 class="mb-0 pink">Member Name</h4>
-                                <p class="mb-0">Member Post</p>
-
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                        <div class="team-list">
-                            <div class="team-image">
-                                <img src="static/images/team/img4.jpg" alt="team">
+                                <img src= "{% static 'images/team/img2.jpg' %}"  alt="team">
                             </div>
                             <div class="team-content1 text-center">
                                 <h4 class="mb-0 pink">Member Name</h4>
@@ -270,7 +255,22 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list">
                             <div class="team-image">
-                                <img src="static/images/team/img3.jpg" alt="team">
+                                <img src= "{% static 'images/team/img4.jpg' %}"  alt="team">
+                            </div>
+                            <div class="team-content1 text-center">
+                                <h4 class="mb-0 pink">Member Name</h4>
+                                <p class="mb-0">Member Post</p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                        <div class="team-list">
+                            <div class="team-image">
+                                <img src= "{% static 'images/team/img3.jpg' %}"  alt="team">
                             </div>
                             <div class="team-content1 text-center">
                                 <h4 class="mb-0 pink">Member Name</h4>
@@ -284,7 +284,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="team-list">
                             <div class="team-image">
-                                <img src="static/images/team/img5.jpg" alt="team">
+                                <img src= "{% static 'images/team/img5.jpg' %}"  alt="team">
                             </div>
                             <div class="team-content1 text-center">
                                 <h4 class="mb-0 pink">Member Name</h4>
@@ -322,7 +322,7 @@
                             </p>
                         </div>
                         <div class="author-title d-flex align-items-center">
-                            <a href="#"><img src="static/images/testimonial/user.png" alt=""></a>
+                            <a href="#"><img src=  "{% static 'images/testimonial/user.png' %}" alt=""></a>
                             <div class="author-in ml-3">
                                 <h5 class="m-0 white"> Sahil Jain</h5>
                                 <div class="rating">
@@ -349,7 +349,7 @@
                             </p>
                         </div>
                         <div class="author-title d-flex align-items-center">
-                            <a href="#"><img src="static/images/testimonial/user.png" alt=""></a>
+                            <a href="#"><img src=  "{% static 'images/testimonial/user.png' %}" alt=""></a>
                             <div class="author-in ml-3">
                                 <h5 class="m-0 white">Adarsh Soni</h5>
                                 <div class="rating">
@@ -376,7 +376,7 @@
                             </p>
                         </div>
                         <div class="author-title d-flex align-items-center">
-                            <a href="#"><img src="static/images/testimonial/user.png" alt=""></a>
+                            <a href="#"><img src= "{% static 'images/testimonial/user.png' %}" alt=""></a>
                             <div class="author-in ml-3">
                                 <h5 class="m-0 white">Dhruv reddy</h5>
                                 <div class="rating">
