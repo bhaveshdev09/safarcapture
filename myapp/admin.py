@@ -3,8 +3,9 @@ from django.utils.html import format_html
 from .models import *
 
 
+
 class PackageAdmin(admin.ModelAdmin):
-    list_display = ["id", "title"]
+    list_display = ["id", "title","location","days","night","pickup_location","dropof_location","iternary","costing"]
 admin.site.register(Package, PackageAdmin)
 
 
@@ -15,14 +16,17 @@ class PackageImageAdmin(admin.ModelAdmin):
     list_display = ['image_tag',]
 admin.site.register(PackageImage, PackageImageAdmin)
 
-class QueryFormAdmin(admin.ModelAdmin):
+class QueryAdmin(admin.ModelAdmin):
     list_display = ["id", "email","full_name", "destination"]
-admin.site.register(Query, QueryFormAdmin)
+admin.site.register(Query, QueryAdmin)
+
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ["id", "fname","lname", "phone_number","message","updated_at","is_contacted","admin_remark"]
+admin.site.register(Contact, ContactAdmin)
 
 class DestinationAdmin(admin.ModelAdmin):
     list_display = ["id", "name", "state", "description"]
 admin.site.register(Destination, DestinationAdmin)
-
 
 class DestinationImageAdmin(admin.ModelAdmin):
     def image_tag(self, obj):

@@ -31,7 +31,7 @@ def thankyou(request):
 def query_form(request):
     if request.method == "POST":
         print(request.POST)
-        instance = Query() # create instance of model user_query
+        instance = Query() # instance of model
         instance.full_name = request.POST.get("full_name")
         instance.phone_number = request.POST.get("phone_number")
         instance.email = request.POST.get("email")
@@ -57,7 +57,34 @@ def query_form(request):
     else:
         return redirect('index')
         
+def contactus(request):
+    if request.method == "POST":
+        print(request.POST)
+        instance = Contact() 
+        instance.fname = request.POST.get("first_name")
+        instance.lname = request.POST.get("last_name")
+        instance.email = request.POST.get("email")
+        instance.phone_number = request.POST.get("phone")
+        instance.message =request.POST.get("comments")
+        instance.save()
+        
+        #email process starts from here
+        try:
+            subject = "Thanks for contacting SufferCapture !"
+            # text_content = "This is an important message."
+            html_content = """<p> Dear Customer, <strong>Thanks for contacting SufferCapture</strong> <br> Will connect back to you soon.</p>"""
+            msg = EmailMultiAlternatives(subject, "" , from_email=EMAIL_HOST_USER ,to= [request.POST.get("email")], bcc=["sagavekarom@zohomail.in"])
+            msg.attach_alternative(html_content, "text/html")
+            msg.send()
+        except:
+            return redirect('index' )   
 
+        return redirect('thankyou')
+    else:
+        return redirect('index')
+
+
+        
 #temp forms-->
 def destination_admin(request):
     if request.method == "POST":

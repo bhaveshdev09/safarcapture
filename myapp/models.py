@@ -30,6 +30,7 @@ class Package(models.Model):
     exclude = models.JSONField()
     images = models.ManyToManyField(PackageImage)
 
+#customer package query table
 class Query(models.Model):
     full_name = models.CharField(max_length=40)
     phone_number = models.IntegerField()
@@ -42,3 +43,16 @@ class Query(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     is_contacted = models.BooleanField(default=False)
     admin_remark = models.TextField(max_length=200)
+
+# customer contact query table
+class Contact(models.Model):
+    fname = models.CharField(max_length=25)
+    lname = models.CharField(max_length=25)
+    email = models.EmailField()
+    phone_number = models.IntegerField()
+    message = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    is_contacted = models.BooleanField(default=False)
+    admin_remark = models.TextField(max_length=200)
+    
