@@ -5,7 +5,7 @@ from .models import *
 
 
 class PackageAdmin(admin.ModelAdmin):
-    list_display = ["id", "title","location","days","night","pickup_location","dropof_location","iternary","costing"]
+    list_display = ["id", "name","location","days","night","pickup_location","dropof_location","iternary","costing"]
 admin.site.register(Package, PackageAdmin)
 
 

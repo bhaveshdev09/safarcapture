@@ -10,24 +10,28 @@ class DestinationImage(models.Model):
 
 class Destination(models.Model):
     name = models.CharField(max_length=50)
-    state = models.CharField(max_length=30)
+    destination_location = models.CharField(max_length=50)
     description = models.CharField(max_length=100)
+    state = models.CharField(max_length=30, null=True)
     images = models.ManyToManyField(DestinationImage)
     map_link = models.URLField() # -- URL
     
 
 class Package(models.Model):
-    title = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
     description = models.TextField()
     days = models.IntegerField()
     night = models.IntegerField()
     pickup_location = models.CharField(max_length=50)
     dropof_location = models.CharField(max_length=50)
-    iternary = models.JSONField()
-    costing = models.JSONField()
-    inclusion = models.JSONField()
-    exclude = models.JSONField()
+    price_includes = models.JSONField()
+    price_excludes = models.JSONField()
+    price_quad_sharing = models.IntegerField()
+    price_triple_sharing = models.IntegerField()
+    price_double_sharing = models.IntegerField()
+    iternary = models.JSONField(null=True)
+    costing = models.JSONField(null=True)
     images = models.ManyToManyField(PackageImage)
     # slug = models.SlugField() -- TODO: this is to check
     

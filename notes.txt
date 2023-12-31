@@ -1,4 +1,7 @@
 
+
+
+
 Packages adding form:{
 package_name,
 package_location,
@@ -15,6 +18,7 @@ package_price_triple_sharing,
 package_price_double_sharing,
 package image[ ]
 }
+
 Destiantion adding form:{
 destination_name,
 destination_location,
