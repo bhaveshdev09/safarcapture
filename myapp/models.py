@@ -17,8 +17,13 @@ class Destination(models.Model):
     
 
 class Package(models.Model):
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=50)
+    location = models.CharField(max_length=50)
     description = models.TextField()
+    days = models.IntegerField()
+    night = models.IntegerField()
+    pickup_location = models.CharField(max_length=50)
+    dropof_location = models.CharField(max_length=50)
     iternary = models.JSONField()
     costing = models.JSONField()
     inclusion = models.JSONField()
