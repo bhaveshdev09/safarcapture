@@ -29,6 +29,8 @@ class Package(models.Model):
     inclusion = models.JSONField()
     exclude = models.JSONField()
     images = models.ManyToManyField(PackageImage)
+    # slug = models.SlugField() -- TODO: this is to check
+    
 
 #customer package query table
 class Query(models.Model):
@@ -54,5 +56,25 @@ class Contact(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_contacted = models.BooleanField(default=False)
-    admin_remark = models.TextField(max_length=200)
+    admin_remark = models.TextField(max_length=200,blank=True, null=True)
+    
+class Booking(models.Model):
+    booking_id = models.AutoField(primary_key=True)
+    full_name = models.CharField(max_length=40)
+    phone_number = models.IntegerField()
+    email = models.EmailField()
+    adult_count = models.IntegerField()
+    child_count = models.IntegerField()
+    message = models.CharField(max_length=200)
+    is_confirmed = models.BooleanField(default=False)
+    is_paid = models.BooleanField(default=False)
+
+class Review(models.Model):
+    name = models.CharField(max_length=50,null=True)
+    email = models.EmailField(null=True)
+    message = models.CharField(max_length=200)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    seen = models.BooleanField(default=False)
+    admin_remark = models.TextField(max_length=200,blank=True, null=True)
     

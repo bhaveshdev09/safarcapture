@@ -4,6 +4,7 @@ from django.core.mail import EmailMultiAlternatives
 from django_core.settings import EMAIL_HOST_USER
 from myapp.models import *
 
+app_name = "myapp"
 
 # Create your views here.
 
@@ -24,6 +25,9 @@ def faq(request):
 
 def destination(request):
     return render(request, "destination.html")
+
+def package(request):
+    return render(request, "package.html")
 
 def thankyou(request):
     return render(request, "thankyou.html")
@@ -82,6 +86,30 @@ def contactus(request):
         return redirect('thankyou')
     else:
         return redirect('index')
+
+def review(request):
+    if request.method == "POST":
+        print(request.POST)
+        instance = Review() 
+        instance.name = request.POST.get("name")
+        instance.email = request.POST.get("email")
+        instance.message =request.POST.get("message")
+        instance.save()
+        
+        #email process starts from here
+        try:
+            subject = "Thanks for contacting SufferCapture !"
+            # text_content = "This is an important message."
+            html_content = """<p> Dear Customer, <strong>Thanks for contacting SufferCapture</strong> <br> Will connect back to you soon.</p>"""
+            msg = EmailMultiAlternatives(subject, "" , from_email=EMAIL_HOST_USER ,to= [request.POST.get("email")], bcc=["sagavekarom@zohomail.in"])
+            msg.attach_alternative(html_content, "text/html")
+            msg.send()
+        except:
+            return redirect('index')   
+
+        return redirect('thankyou')
+    else:
+        return redirect('index')        
 
 
         

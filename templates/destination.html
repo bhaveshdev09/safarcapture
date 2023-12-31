@@ -4,7 +4,7 @@
 {% block content %}
 
     <!-- BreadCrumb Starts -->
-    <section class="breadcrumb-main pb-0" style="background-image: url(static/images/bg/bg7.jpg);">
+    <section class="breadcrumb-main pb-0" style="background-image: url({% static 'images/bg/bg7.jpg' %});">
         <div class="breadcrumb-outer pt-18">
             <div class="container">
                 <div class="breadcrumb-content d-md-flex align-items-center pt-10">
@@ -336,7 +336,7 @@
                             <h5 class="border-b pb-2 mb-2">Showing 16 verified guest comments</h5>
                             <div class="comment-box">
                                 <div class="comment-image">
-                                    <img src="static/images/reviewer/1.jpg" alt="image">
+                                    <img src="{% static 'images/reviewer/1.jpg' %}" alt="image">
                                 </div>
                                 <div class="comment-content">
                                     <h5 class="mb-1">Adarsh</h5>
@@ -369,7 +369,7 @@
                             </div>
                             <div class="comment-box">
                                 <div class="comment-image">
-                                    <img src="static/images/reviewer/2.jpg" alt="image">
+                                    <img src="{% static 'images/reviewer/2.jpg' %}" alt="image">
                                 </div>
                                 <div class="comment-content">
                                     <h5 class="mb-1">Dhruv</h5>
@@ -405,30 +405,32 @@
                         <!-- blog review -->
                         <div class="single-add-review" id="single-add-review">
                             <h4>Write a Review</h4>
-                            <form>
+                            <form method="post" action="{% url 'review' %}">
+                                {% csrf_token %}
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" placeholder="Name">
+                                            <input type="text" placeholder="Name" name="name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="email" placeholder="Email">
+                                            <input type="email" placeholder="Email" name="email">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <textarea>Comment</textarea>
+                                            <input type="text" placeholder="Enter message here" name="message">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-btn">
-                                            <a href="#" class="nir-btn">Submit Review</a>
+                                            <button class="nir-btn" type="submit">Submit Review</button>
                                         </div>
                                     </div>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
@@ -638,4 +640,8 @@
     {% endblock content %}
 
     {% block js %}
+    
+    <script src= "{% static 'js/custom-navscroll.js' %}" ></script>
+    <script src= "{% static 'js/custom-accordian.js' %}"></script>
+
     {% endblock js %}    

@@ -1,0 +1,29 @@
+
+Packages adding form:{
+package_name,
+package_location,
+package_description,
+package_days,
+package_night,
+package_pickup_location,
+package_dropof_location,
+package_price_includes,
+package_price_excludes,
+package day[ ],
+package_price_quad_sharing,
+package_price_triple_sharing,
+package_price_double_sharing,
+package image[ ]
+}
+Destiantion adding form:{
+destination_name,
+destination_location,
+destination_description,
+destination_image_[ ],
+destination_map_link
+}
+
+1/1/24
+index page - static files fixed
+instagram link added on header and footer
+review form - completed

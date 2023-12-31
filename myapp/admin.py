@@ -34,3 +34,14 @@ class DestinationImageAdmin(admin.ModelAdmin):
     image_tag.short_description = 'Image'
     list_display = ['image_tag',]
 admin.site.register(DestinationImage,DestinationImageAdmin)
+
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ["booking_id", "is_confirmed","is_paid","full_name","phone_number","adult_count","child_count","message"]
+admin.site.register(Booking,BookingAdmin)
+
+
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ["id","seen" ,"name", "updated_at", "message","admin_remark"]
+admin.site.register(Review, ReviewAdmin)
+
+

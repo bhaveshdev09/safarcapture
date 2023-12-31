@@ -7,11 +7,11 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("faq/", views.faq, name="faq"),
     path("destination/", views.destination, name="destination"),
+    path("package/", views.package, name="package"),
     path("thankyou/", views.thankyou, name="thankyou"),
     path("query_form/", views.query_form, name="query_form"),
     path("destination_admin/", views.destination_admin, name="destination_admin"),
-
     path("contactus/", views.contactus, name="contactus"),
-    
+    path("review/", views.review, name="review"), 
 ]
 
