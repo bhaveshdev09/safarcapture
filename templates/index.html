@@ -16,7 +16,7 @@
               <h1 class="white mb-4">
                 Make Your Trip Fun And Memorable Where You Want
               </h1>
-              <a href="#" class="per-btn">
+              <a href="{% url "destination" %}" class="per-btn">
                 <span class="white">Discover</span>
                 <i class="fa fa-arrow-right white"></i>
               </a>
@@ -453,7 +453,10 @@
 <!-- top destination ends -->
 
 
+
 <!-- Trending Starts -->
+
+{% comment "trending section we removed for instance" %}  
 <section class="latest-tour pb-6 bg-white pt-9">
   <div class="container">
     <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
@@ -635,6 +638,8 @@
     </div>
   </div>
 </section>
+{% endcomment %}
+
 <!-- Trending Ends -->
 
 

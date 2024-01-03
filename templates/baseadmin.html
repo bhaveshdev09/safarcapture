@@ -1,0 +1,148 @@
+{% load static %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %} {% endblock title %}</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <!--Custom CSS-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <!--Plugin CSS-->
+    <link href="{% static 'css/plugin.css' %}" rel="stylesheet" type="text/css">
+    <!--ashboard CSS-->
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet" type="text/css">
+    <!--Flaticons CSS-->
+    <link href="{% static 'fonts/flaticon.css' %}" rel="stylesheet" type="text/css">
+    <!--Icons CSS-->
+    <link href="{% static 'css/icons.css' %}" rel="stylesheet" type="text/css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <link rel="stylesheet" href="{% static 'fonts/line-icons.css' %}" type="text/css">
+    {% block css %} {% endblock css %}
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+    <!-- Preloader Ends -->
+
+    <!-- header starts -->
+    <header class="main_header_area headerstye-1">
+
+        <!-- Navigation Bar -->
+        <div class="header_menu" id="header_menu">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-2 pt-2">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="index.html">
+                                <img src="{% static 'images/safarLogoWhite.png' %}" height="60px" width="180px" alt="image" />
+                                <img src="{% static 'images/safarLogo2.png' %}" height="60px" width="180px" alt="image" />
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="navbar-collapse1 d-flex align-items-center" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav" id="responsive-menu">
+                                <li class="active pr-2">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="pr-2"><a href="about.html">About Us</a></li>
+                                <li class="submenu dropdown pr-2">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">Packages <i class="icon-arrow-down"
+                                            aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="package.html">Kasol Kheerganga Trek</a></li>
+                                        <li><a href="package1.html">Lahaul Atal Tunnel with River Rafting</a></li>
+                                        <li><a href="package2.html">Manali Solang Kasol Tosh </a></li>
+                                        <li><a href="package3.html">Manali Solang Kasol </a></li>
+                                        <li><a href="package4.html">Manali Jispa Kasol </a></li>
+                                        <li><a href="package5.html">Kedarnath Luxury</a></li>
+                                        <li><a href="package6.html">Tirthan Valley</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="submenu dropdown pr-2">
+                                    <a href="destin#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                        aria-haspopup="true" aria-expanded="false">Destination
+                                        <i class="icon-arrow-down" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="{% url 'destination' %}">Shimla</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'destination' %}">Taj Mahal</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'destination' %}">Goa Beaches </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'destination' %}">Jaipur</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'destination' %}">Leh-Ladakh</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'destination' %}">Darjeeling</a>
+                                        </li>
+
+
+                                    </ul>
+
+                                </li>
+
+                                <li class="submenu dropdown pr-2">
+                                    <a href="updates.html">Updates </a>
+
+                                </li>
+
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                            <!-- <a href="#" class="cart-icon d-flex align-items-center ml-1"><i class="icon-basket-loaded"></i><span class="cart-label">3</span></a> -->
+                        </div>
+                        <!-- /.navbar-collapse -->
+
+                        <!-- Register and login option we are not providing now -->
+                        <!--                         
+                        <div class="register-login">
+                            <a href="#" class="mr-2" data-toggle="modal" data-target="#register"><i
+                                    class="icon-user mr-1"></i>
+                                Register</a>
+                            <a href="#" data-toggle="modal" data-target="#login"><i class="icon-login mr-1"></i>
+                                Login</a>
+                        </div> -->
+
+                        <div id="slicknav-mobile"></div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </div>
+        <!-- Navigation Bar Ends -->
+    </header>
+    <!-- header ends -->
+
+
+    <!-- Content Starts Here -->
+    {% block content %} {% endblock content %}
+    <!-- Content End -->
+    
+
+    {% block js %} {% endblock js %}
+
+</body>
+
+</html>   

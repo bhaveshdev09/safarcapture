@@ -1,0 +1,287 @@
+{% extends "baseadmin.html" %}
+{% load static %}
+{% block title %}dashboard-add-destination{% endblock title %}
+{% block content %}
+
+    <!-- BreadCrumb Starts -->
+    <section class="breadcrumb-main pb-2" style="background-image: url(static/images/bg/bg8.jpg);">
+        <div class="dot-overlay"></div>
+    </section>
+    <!-- BreadCrumb Ends -->
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="pt-10 pb-10">
+        <div class="container">
+            <div class="dashboard-main">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                        <div class="dashboard-sidebar">
+                            <div class="profile-sec">
+                                <div class="author-news mb-3">
+                                    <div class="author-news-content text-center p-3">
+                                        <div class="author-thumb mt-0">
+                                            <img src="static/images/team/img1.jpg" alt="author">
+                                        </div>
+                                        <div class="author-content pt-2 p-0">
+                                            <h3 class="mb-1 white"><a href="#" class="white">Admin Name</a></h3>
+                                            <p class="detail"><i class="fa fa-map-marker"></i> Admin address</p>
+                                            <p class="detail"><i class="fa fa-phone"></i> +91 90247 9851</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="dot-overlay"></div>
+                                </div>
+                            </div>
+                            <!-- Responsive Navigation Trigger -->
+                            <a href="#" class="dashboard-responsive-nav-trigger"><i class="fa fa-reorder"></i> Dashboard
+                                Navigation</a>
+                            <div class="dashboard-nav">
+                                <div class="dashboard-nav-inner">
+                                    <ul>
+                                        <li><a href="dashboard-main.html"><i class="sl sl-icon-settings"></i>
+                                                Dashboard</a></li>
+                                        <li><a href="dashboard-booking-history.html"><i
+                                                    class="fa fa-list-ul"></i>Booking History</a></li>
+                                        <li><a href="dashboard-package-enquiry.html"><i
+                                                    class="fa fa-list-ul"></i>Package Queries</a></li>
+                                        <li><a href="dashboard-customer-enquiry.html"><i
+                                                    class="fa fa-list-ul"></i>Customer Queries</a></li>
+                                        <li><a href="dashboard-user-details.html"><i class="fa fa-list-ul"></i>User
+                                                Details</a></li>
+                                        <!-- <li><a href="dashboard-my-profile.html"><i class="sl sl-icon-user"></i> Profile</a></li>                     
+                                      <li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messages</a></li> -->
+                                        <!-- <li><a href="dashboard-reviews.html"><i class="sl sl-icon-star"></i> Reviews</a></li> -->
+                                        <li><a href="dashboard-add-package.html"><i class="sl sl-icon-plus"></i> Add
+                                                package</a></li>
+                                        <li class="active"><a href="dashboard-add-destination.html"><i
+                                                    class="sl sl-icon-plus"></i> Add Destination</a></li>
+
+                                        <li><a href="dashboard-login.html"><i class="sl sl-icon-power"></i> Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="dashboard-content">
+                            <div class="add-listing">
+                                <div class="listing-main">
+                                    <div class="addlist-inner mb-3">
+                                        <div class="addlist-title">
+                                            <h4 class="m-0"><i class="fa fa-user pr-2"></i>Destiantion Information</h4>
+                                        </div>
+                                        <div class="addlist-content bg-white">
+                                            <form action="/">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-xs-12">
+                                                        <div class="form-group">
+                                                            <div class="input-box">
+                                                                <label class="form-label">Destination Name</label>
+                                                                <input type="text" class="" name="destination_name"
+                                                                    placeholder="Enter your destination name here">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-xs-12">
+                                                        <div class="form-group">
+                                                            <div class="input-box">
+                                                                <label>Destination Location</label>
+                                                                <input type="text" class="" name="destination_location"
+                                                                    placeholder="Enter destination location here">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group">
+                                                            <div class="input-box">
+                                                                <label> Destination Description</label>
+                                                                <textarea id="desc" name="destination_description"
+                                                                    rows="8" class=""
+                                                                    placeholder="Enter destination Description"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+
+
+                                                    <div class="col-lg-12 col-md-12 col-xs-12 mb-2">
+                                                        <button type="button" class="nir-btn"
+                                                            onclick="addImageField()">Add More Destinaton Image</button>
+                                                    </div>
+
+                                                    <div class="row" id="image-container">
+                                                        <div class="col-lg-6 col-md-6 col-xs-12">
+                                                            <div class="form-group mb-0">
+                                                                <label>Destiantion Image 1</label>
+                                                                <div class="input-box">
+                                                                    <label class="upload-file mb-0">
+                                                                        <input type="file" name="destination_image_1">
+                                                                        <i class="far fa-image"></i>
+                                                                        <span>Click here or drop file to upload</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-xs-12">
+                                                            <div class="form-group mb-0">
+                                                                <label>Destiantion Image 2</label>
+                                                                <div class="input-box">
+                                                                    <label class="upload-file mb-0">
+                                                                        <input type="file" name="destination_image_2">
+                                                                        <i class="far fa-image"></i>
+                                                                        <span>Click here or drop file to upload</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-xs-12">
+                                                            <div class="form-group mb-0">
+                                                                <label>Destiantion Image 3</label>
+                                                                <div class="input-box">
+                                                                    <label class="upload-file mb-0">
+                                                                        <input type="file" name="destination_image_3">
+                                                                        <i class="far fa-image"></i>
+                                                                        <span>Click here or drop file to upload</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6 col-xs-12">
+                                                            <div class="form-group mb-0">
+                                                                <label>Destiantion Image 4</label>
+                                                                <div class="input-box">
+                                                                    <label class="upload-file mb-0">
+                                                                        <input type="file" name="destination_image_4">
+                                                                        <i class="far fa-image"></i>
+                                                                        <span>Click here or drop file to upload</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-sm-12 mt-2">
+                                                        <div class="form-group">
+                                                            <input type="text" name="map_link"
+                                                                placeholder="Enter embed destination map link">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-sm-12 mt-2">
+                                                        <div class="form-group">
+                                                            <button type="submit" class="nir-btn w-100">
+                                                                Add Destiantion
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div>
+
+
+
+                                                    </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- <div class="addlist-inner mb-3">
+                                        <div class="addlist-title">
+                                            <h4 class="m-0"><i class="fa fa-calendar-check pr-2"></i>Listing FAQs</h4>
+                                        </div>
+                                        <div class="addlist-content bg-white">
+                                            <form action="/">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="form-group m-0">
+                                                            <div class="row d-flex align-items-center">
+                                                                <div class="col-lg-4 col-md-5 col-xs-12">
+                                                                    <div class="input-box">
+                                                                        <input type="text" class="" placeholder="Questions">
+                                                                    </div> 
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-5 col-xs-12">
+                                                                    <div class="input-box">
+                                                                        <input type="text" class="" placeholder="Answers">
+                                                                    </div> 
+                                                                </div>
+                                                                <div class="col-lg-4 col-md-2 col-xs-12">
+                                                                    <div class="listing-btn d-flex justify-content-between align-items-center text-right">
+                                                                        <a href="#" class="nir-btn mr-2"><i class="fa fa-times"></i></a>
+                                                                        <a href="#" class="nir-btn-black"><i class="fa fa-expand-arrows-alt"></i></a>
+                                                                        <a href="#" class="nir-btn"><i class="fa fa-plus"></i> Add New</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div> -->
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- Content / End -->
+            </div>
+        </div>
+        <!-- Dashboard / End -->
+
+
+        <!-- *Scripts* -->
+        <script>
+            var imageCounter = 4;
+            function addImageField() {
+                var imageContainer = document.getElementById('image-container');
+
+                // Create a new image upload field
+                var newImageField = document.createElement('div');
+                newImageField.className = 'col-lg-6 col-md-6 col-xs-12';
+                newImageField.innerHTML = `
+                <div class="form-group mb-0">
+                    <label>Destiantion Image ${imageCounter + 1}</label>
+                    <div class="input-box">
+                        <label class="upload-file mb-0">
+                            <input type="file" name="destination_image_${imageCounter + 1}">
+                            <i class="far fa-image"></i>
+                            <span>Click here or drop file to upload</span>
+                        </label>
+                    </div>
+                </div>
+            `;
+
+                // Increment the counter
+                imageCounter++;
+
+                // Append the new image field to the container
+                imageContainer.appendChild(newImageField);
+            }
+        </script>
+        
+        <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/plugin.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+        <script src="{% static 'js/custom-nav.js' %}"></script>
+        <script src="{% static 'js/jpanelmenu.min.js' %}"></script>
+        <script src="{% static 'js/dashboard-custom.js' %}"></script>
+    
+
+{% endblock content %}
+
+{% block js %}
+{% endblock js %}

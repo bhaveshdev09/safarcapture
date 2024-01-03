@@ -15,6 +15,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "admin_panel",
     "myapp",
     "django.contrib.admin",
     "django.contrib.auth",

@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 class PackageImage(models.Model):
     image = models.ImageField(upload_to='packages/')    
@@ -33,6 +34,9 @@ class Package(models.Model):
     iternary = models.JSONField(null=True)
     costing = models.JSONField(null=True)
     images = models.ManyToManyField(PackageImage)
+    rating = models.IntegerField(
+        validators=[MinValueValidator(0), MaxValueValidator(5)], blank=True, null=True
+    )
     # slug = models.SlugField() -- TODO: this is to check
     
 
