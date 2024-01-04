@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse,redirect
 from django.contrib.auth import authenticate,login,logout
+from myapp.models import Query
 
 def dashboardlogin(request):
     if request.method=="GET":
@@ -20,7 +21,11 @@ def dashboardlogin(request):
 
         
 def dashboardmain(request):
-    return render(request,"dashboard-main.html") 
+    QueryObject = Query.objects.all()
+    context = {
+        "Query": QueryObject,
+    }
+    return render(request,"dashboard-main.html",context) 
 
 def handlelogout(request):
     logout(request)
