@@ -1,4 +1,6 @@
+
 {% extends "base.html" %}
+{% load static %}
 {% block title %}FAQ SufferCapture{% endblock title %}
 
 {% block content %}
@@ -220,7 +222,7 @@
           </p>
         </div>
         <div class="col-lg-3 col-md-3">
-          <a href="{{ url_for('main.contact') }}#contact-form1" class="nir-btn">Contact Now</a>
+          <a href="{% url "contact" %}" #contact-form1" class="nir-btn">Contact Now</a>
         </div>
       </div>
     </div>
@@ -231,5 +233,5 @@
 {% endblock content %}
 <!-- *Scripts* -->
 {% block js %}
-<script src="{{ url_for('static', filename='js/custom-accordian.js') }}"></script>
+<script src="{% static "js/custom-accordian.js" %}"></script>
 {% endblock js %}
