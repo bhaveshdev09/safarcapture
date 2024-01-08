@@ -213,7 +213,18 @@
                             <div class="dashboard-list-box">
                                 
                                 <div class="table-box">
-                                    
+  
+                                  <div class="search-container col-lg-4 text-right d-flex fle ml-auto p-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="searchInput" placeholder="Search..." name="search">
+                                        <div class="input-group-append">
+                                            <button type="button" class="btn btn-outline-secondary search-button" onclick="focusSearchInput()">
+                                                <i class="fas fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            
                                     <table class="basic-table history-table">
                                         <thead>
                                             <tr>
@@ -299,7 +310,16 @@
                                     </table>
                                 </div>
                             </div>
-
+                            <div class="pagination-main text-right pt-4">
+                              <ul class="pagination">
+                                  <li><a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                                  <li class="active"><a href="#">1</a></li>
+                                  <li><a href="#">2</a></li>
+                                  <li><a href="#">3</a></li>
+                                  <li><a href="#">4</a></li>
+                                  <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                              </ul>
+                          </div>
                         </div>
                     </div>
                 </div>    
@@ -322,6 +342,11 @@
     <script src="static/js/custom-nav.js"></script>
     <script src="static/js/jpanelmenu.min.js"></script>
     <script src="static/js/dashboard-custom.js"></script>
+    <script>
+      function focusSearchInput() {
+          document.getElementById('searchInput').focus();
+      }
+  </script>
 
 </body>
 </html>

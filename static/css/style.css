@@ -438,6 +438,9 @@ table {
   table thead tr th {
     border-bottom: none !important; }
 
+
+
+
 .overlay, .dot-overlay, .color-overlay, .black-overlay {
   position: absolute;
   top: 0;
@@ -772,11 +775,18 @@ input#submit:hover {
     z-index: 9999999999; }
 
 /* End Preloader */
+#whatsapp {
+  position: fixed;
+  z-index: 1000;
+  bottom: 70px;
+  right: 20px;
+  display: none; }
+
 #back-to-top {
   position: fixed;
   z-index: 1000;
   bottom: 20px;
-  right: 20px;
+  right: 30px;
   display: none; }
   #back-to-top a {
     display: block;
@@ -802,7 +812,7 @@ input#submit:hover {
   margin-bottom: 10px;
   border-radius: 0px;
   color: #e83737;
-  padding: 0; }
+  }
   .alert .alert-success {
     background: transparent;
     border: transparent;
