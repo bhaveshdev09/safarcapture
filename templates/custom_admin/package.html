@@ -1,40 +1,7 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zxx">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>SafarCapture</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
-    <!-- Bootstrap core CSS -->
-    <link href="static/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <!--Custom CSS-->
-    <link href="static/css/style.css" rel="stylesheet" type="text/css">
-    <!--Plugin CSS-->
-    <link href="static/css/plugin.css" rel="stylesheet" type="text/css">
-    <!--ashboard CSS-->
-    <link href="static/css/dashboard.css" rel="stylesheet" type="text/css">
-    <!--Flaticons CSS-->
-    <link href="static/fonts/flaticon.css" rel="stylesheet" type="text/css">
-    <!--Icons CSS-->
-    <link href="static/css/icons.css" rel="stylesheet" type="text/css">
-    <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-
-    <link rel="stylesheet" href="static/fonts/line-icons.css" type="text/css">
-</head>
-<body>
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div id="status"></div>
-    </div>
-    <!-- Preloader Ends -->
-
+{% extends "base_admin.html" %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+{% block content %}
     <!-- header starts -->
     <header class="main_header_area headerstye-1">
         
@@ -173,7 +140,7 @@
                                 <div class="author-news mb-3">
                                     <div class="author-news-content text-center p-3">
                                         <div class="author-thumb mt-0">
-                                            <img src="static/images/team/img1.jpg" alt="author">
+                                            <img src="{% static "images/team/img1.jpg" %}" alt="author">
                                         </div>
                                         <div class="author-content pt-2 p-0">
                                             <h3 class="mb-1 white"><a href="#" class="white">Admin Name</a></h3>
@@ -456,67 +423,67 @@
     </div>
     <!-- Dashboard / End -->
 
+    <!--end login section -->
 
-    <!-- *Scripts* -->
-    <script>
-        var imageCounter = 4;
-        function addImageField() {
-            var imageContainer = document.getElementById('image-container');
-            
-            // Create a new image upload field
-            var newImageField = document.createElement('div');
-            newImageField.className = 'col-lg-6 col-md-6 col-xs-12';
-            newImageField.innerHTML = `
-                <div class="form-group mb-0">
-                    <label>Package Image ${imageCounter + 1}</label>
-                    <div class="input-box">
-                        <label class="upload-file mb-0">
-                            <input type="file" name="package_image${imageCounter + 1}">
-                            <i class="far fa-image"></i>
-                            <span>Click here or drop file to upload</span>
-                        </label>
-                    </div>
+{% endblock content %}
+
+{% block js %}
+
+<!-- *Scripts* -->
+<script>
+    var imageCounter = 4;
+    function addImageField() {
+        var imageContainer = document.getElementById('image-container');
+        
+        // Create a new image upload field
+        var newImageField = document.createElement('div');
+        newImageField.className = 'col-lg-6 col-md-6 col-xs-12';
+        newImageField.innerHTML = `
+            <div class="form-group mb-0">
+                <label>Package Image ${imageCounter + 1}</label>
+                <div class="input-box">
+                    <label class="upload-file mb-0">
+                        <input type="file" name="package_image${imageCounter + 1}">
+                        <i class="far fa-image"></i>
+                        <span>Click here or drop file to upload</span>
+                    </label>
                 </div>
-            `;
+            </div>
+        `;
 
-            // Increment the counter
-        imageCounter++;
-            
-            // Append the new image field to the container
-            imageContainer.appendChild(newImageField);
-        }
+        // Increment the counter
+    imageCounter++;
+        
+        // Append the new image field to the container
+        imageContainer.appendChild(newImageField);
+    }
 
-        var dayCounter = 1;
+    var dayCounter = 1;
 
-        function addDay() {
-            var daysContainer = document.getElementById('days-container');
-    
-            // Create a new day input field
-            var newDayField = document.createElement('div');
-            newDayField.className = 'col-lg-12 col-md-12 col-xs-12';
-            newDayField.innerHTML = `
-                <div class="form-group">
-                    <div class="input-box">
-                        <label>Day ${dayCounter + 1}</label>
-                        <input type="text" name="package_day_${dayCounter + 1}" class="" placeholder="Enter Activities of day ${dayCounter + 1}">
-                    </div>
+    function addDay() {
+        var daysContainer = document.getElementById('days-container');
+
+        // Create a new day input field
+        var newDayField = document.createElement('div');
+        newDayField.className = 'col-lg-12 col-md-12 col-xs-12';
+        newDayField.innerHTML = `
+            <div class="form-group">
+                <div class="input-box">
+                    <label>Day ${dayCounter + 1}</label>
+                    <input type="text" name="package_day_${dayCounter + 1}" class="" placeholder="Enter Activities of day ${dayCounter + 1}">
                 </div>
-            `;
-    
-            // Increment the counter
-            dayCounter++;
-    
-            // Append the new day field to the container
-            daysContainer.appendChild(newDayField);
-        }
-    </script>
-    <script src="static/js/jquery-3.5.1.min.js"></script>
-    <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/plugin.js"></script>
-    <script src="static/js/main.js"></script>
-    <script src="static/js/custom-nav.js"></script>
-    <script src="static/js/jpanelmenu.min.js"></script>
-    <script src="static/js/dashboard-custom.js"></script>
+            </div>
+        `;
 
-</body>
-</html>
+        // Increment the counter
+        dayCounter++;
+
+        // Append the new day field to the container
+        daysContainer.appendChild(newDayField);
+    }
+</script>
+
+
+{% endblock js %}
+
+    
