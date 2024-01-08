@@ -1,112 +1,106 @@
 {% extends "base.html" %}
-{% block title %}Contact SufferCapture{% endblock title %}
-
+{% load static %}
+{% block title %}Contact Us{% endblock title %}
 {% block content %}
 
-  <!-- BreadCrumb Starts -->
-  <section class="breadcrumb-main pb-0" style="background-image: url(static/images/bg/bg7.jpg);">
-    <div class="breadcrumb-outer pt-18">
-      <div class="container">
-        <div class="breadcrumb-content d-md-flex align-items-center pt-10">
-          <h2 class="pb-2">Contact Us</h2>
-          <nav aria-label="breadcrumb">
-            <ul class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <div class="dot-overlay"></div>
-  </section>
-  <!-- BreadCrumb Ends -->
-
-  <!-- contact starts -->
-  <section class="contact-main pt-0  contact1 bg-grey">
-    <div class="map mb-10">
-      <div style="width: 100%">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13926.580208487805!2d78.51306019832822!3d29.233993280250168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390bb6e2dfa592a3%3A0x106a5ff64b502931!2sHariyana%2C%20Uttar%20Pradesh%20246761!5e0!3m2!1sen!2sin!4v1703413616930!5m2!1sen!2sin"
-          width="700" height="550" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
+<!-- BreadCrumb Starts -->
+<section class="breadcrumb-main pb-0" style="background-image: url({% static "images/bg/bg7.jpg" %});">
+  <div class="breadcrumb-outer pt-18">
     <div class="container">
-      <div class="contact-info">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div class="contact-info">
-              <h3 class="">INFORMATION ABOUT US</h3>
-              <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book.</p>
-              <div class="info-item d-flex align-items-center bg-white mb-3">
-                <div class="info-icon">
-                  <i class="fa fa-map-marker"></i>
-                </div>
-                <div class="info-content pl-4">
-                  <p class="m-0">Hariyana</p>
-                  <p class="m-0">Uttarpradesh</p>
-                </div>
+      <div class="breadcrumb-content d-md-flex align-items-center pt-10">
+        <h2 class="pb-2">Contact Us</h2>
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "index" %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="dot-overlay"></div>
+</section>
+<!-- BreadCrumb Ends -->
+
+<!-- contact starts -->
+<section class="contact-main pt-0  contact1 bg-grey">
+  <div class="map mb-10">
+    <div style="width: 100%">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13926.580208487805!2d78.51306019832822!3d29.233993280250168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390bb6e2dfa592a3%3A0x106a5ff64b502931!2sHariyana%2C%20Uttar%20Pradesh%20246761!5e0!3m2!1sen!2sin!4v1703413616930!5m2!1sen!2sin"
+        width="700" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="container">
+    <div class="contact-info">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="contact-info">
+            <h3 class="">INFORMATION ABOUT US</h3>
+            <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+              been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.</p>
+            <div class="info-item d-flex align-items-center bg-white mb-3">
+              <div class="info-icon">
+                <i class="fa fa-map-marker"></i>
               </div>
-              <div class="info-item d-flex align-items-center bg-white mb-3">
-                <div class="info-icon">
-                  <i class="fa fa-phone"></i>
-                </div>
-                <div class="info-content pl-4">
-                  <p class="m-0">977-4444-666</p>
-                  <p class="m-0">977-4444-222</p>
-                </div>
+              <div class="info-content pl-4">
+                <p class="m-0">Hariyana</p>
+                <p class="m-0">Uttarpradesh</p>
               </div>
-              <div class="info-item d-flex align-items-center bg-white mb-3">
-                <div class="info-icon">
-                  <i class="fa fa-envelope"></i>
-                </div>
-                <div class="info-content pl-4">
-                  <p class="m-0">info@safarcapture.com</p>
-                  <p class="m-0">help@safarcapture.com</p>
-                </div>
+            </div>
+            <div class="info-item d-flex align-items-center bg-white mb-3">
+              <div class="info-icon">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="info-content pl-4">
+                <p class="m-0">+91 977-4444-666</p>
+                <p class="m-0">+91 977-4444-222</p>
+              </div>
+            </div>
+            <div class="info-item d-flex align-items-center bg-white mb-3">
+              <div class="info-icon">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div class="info-content pl-4">
+                <p class="m-0">info@safarcapture.com</p>
+                <p class="m-0">help@safarcapture.com</p>
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <div id="contact-form1" class="contact-form">
-              <h3 class="">Keep in Touch</h3>
-              <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-                type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div id="contact-form1" class="contact-form">
+            <h3 class="">Keep in Touch</h3>
+            <p class="mb-4">To keep in touch with us, please fill out the contact form above and we will get back to you as soon as possible. 
+              For more information about us, we are a team of professionals dedicated to providing excellent customer service and support.</p>
 
-              <div id="contactform-error-msg"></div>
-
-              <form method="post" action="{{ url_for('main.contact') }}" name="contactformdetails" id="contactformdetails">
-                <div class="form-group">
-                  <input type="text" name="first_name" class="form-control" id="fname" placeholder="First Name"
-                    required>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="last_name" class="form-control" id="lname" placeholder="Last Name" required>
-                </div>
-                <div class="form-group">
-                  <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                  <input type="text" name="phone" class="form-control" id="phnumber" placeholder="Phone" required>
-                </div>
-                <div class="textarea">
-                  <textarea name="comments" placeholder="Enter a message" required></textarea>
-                </div>
-                <div class="comment-btn text-right mt-1">
-                  <input type="submit" class="nir-btn" id="submit" value="Send Message">
-                </div>
-              </form>
-            </div>
+            <form method="post" action="{% url "contact" %}" name="contactformdetails" id="contactformdetails">
+              {% csrf_token %}
+              <div class="form-group">
+                {{ form.name }}
+              </div>
+              <div class="form-group">
+                {{ form.email }}
+              </div>
+              <div class="form-group">
+                {{ form.phone }}
+              </div>
+              <div class="textarea">
+                {{ form.message }}
+              </div>
+              <div class="comment-btn text-right mt-1">
+                <input type="submit" class="nir-btn" id="submit" value="Send Message">
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- contact Ends -->
+  </div>
+</section>
+<!-- contact Ends -->
 
 {% endblock content %}
 
