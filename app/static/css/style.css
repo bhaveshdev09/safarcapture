@@ -5529,7 +5529,7 @@ footer.footermain {
   .list-results .nice-select {
     border: 1px solid #f1f1f1;
     background: #fff;
-    width: 150px;
+    width: 225px;
     padding-left: 20px;
     line-height: 1.5;
     height: 44px; }
@@ -5637,7 +5637,7 @@ footer.footermain {
   background: #fff;
   box-shadow: 0 0 15px #cccccc57; }
   .add-listing .addlist-inner .addlist-content .niceSelect {
-    padding: 10px 20px;
+    padding: 10px 30px;
     line-height: 2; }
 .add-listing .addlist-inner .upload-file {
   width: 100%;
