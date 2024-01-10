@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from django.views.generic.edit import FormView
+from django.views.generic import ListView, FormView, DetailView
 from app.forms import ContactForm
 from django.urls import reverse_lazy
 from django.contrib import messages
-from app.models import Contact
+from app.models import Contact, Blog
 
 
 def index(request):
@@ -14,8 +14,24 @@ def about(request):
     return render(request, "about.html")
 
 
-def blogs(request):
-    return render(request, "blogs.html")
+class BlogListView(ListView):
+    model = Blog
+    template_name = "blogs.html"
+    context_object_name = "blogs"
+    paginate_by = 4
+
+    def get_queryset(self):
+        order_by = self.request.GET.get("order_by", "asc")
+        if order_by == "desc":
+            return Blog.objects.all().order_by("-published_date")
+        else:
+            return Blog.objects.all().order_by("published_date")
+
+
+class BlogDetailView(DetailView):
+    model = Blog
+    template_name = "blog_detail.html"
+    context_object_name = "blog"
 
 
 class ContactView(FormView):
@@ -31,20 +47,16 @@ class ContactView(FormView):
             message=form.cleaned_data["message"],
         )
         contact.save()
-
         # Optionally, you can add a success message
         # messages.success(self.request, "Your message has been sent successfully!")
 
         return super().form_valid(form)
 
     def form_invalid(self, form):
-        print(form.errors.as_json())
-
         messages.error(
             self.request,
             "There was an error with your submission. Please check the form.",
         )
-
         return super().form_invalid(form)
 
 
