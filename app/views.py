@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, FormView
+from django.views.generic import ListView, FormView, DetailView
 from app.forms import ContactForm
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -26,6 +26,12 @@ class BlogListView(ListView):
             return Blog.objects.all().order_by("-published_date")
         else:
             return Blog.objects.all().order_by("published_date")
+
+
+class BlogDetailView(DetailView):
+    model = Blog
+    template_name = "blog_detail.html"
+    context_object_name = "blog"
 
 
 class ContactView(FormView):

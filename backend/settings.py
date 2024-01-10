@@ -89,7 +89,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Kolkata"
 
 USE_I18N = True
 
@@ -107,7 +107,9 @@ else:
 
 # Base url to serve media files
 MEDIA_URL = "media/"
-MEDIA_ROOT = BASE_DIR / "media"  # New version of django support this kind of definition also
+MEDIA_ROOT = (
+    BASE_DIR / "media"
+)  # New version of django support this kind of definition also
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
