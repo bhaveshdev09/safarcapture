@@ -11,7 +11,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="slide-inner">
-            <div class="slide-image" style="background-image: url(static/images/slider/1.jpg)"></div>
+            <div class="slide-image" style="background-image: url({% static "images/slider/1.jpg" %})"></div>
             <div class="swiper-content1 container">
               <h4 class="white">Choose The Best Destination</h4>
               <h1 class="white mb-4">
@@ -27,7 +27,7 @@
         </div>
         <div class="swiper-slide">
           <div class="slide-inner">
-            <div class="slide-image" style="background-image: url(static/images/slider/2.jpg)"></div>
+            <div class="slide-image" style="background-image: url({% static "images/slider/2.jpg" %})"></div>
             <div class="swiper-content1 container">
               <h4 class="white">Feel Free To Travel</h4>
               <h1 class="white mb-4">
@@ -43,7 +43,41 @@
         </div>
         <div class="swiper-slide">
           <div class="slide-inner">
-            <div class="slide-image" style="background-image: url(static/images/slider/3.jpg)"></div>
+            <div class="slide-image" style="background-image: url({% static "images/slider/3.jpg" %})"></div>
+            <div class="swiper-content1 container">
+              <h4 class="white">Trip For Your Kids</h4>
+              <h1 class="white mb-4">
+                <span>Sensation Ice Trip</span> Is Coming For Kids
+              </h1>
+              <a href="#" class="per-btn">
+
+                <span class="white" id="contactForm">Discover</span>
+                <i class="fa fa-arrow-right white"></i>
+              </a>
+            </div>
+            <div class="dot-overlay"></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-inner">
+            <div class="slide-image" style="background-image: url({% static "images/slider/12.jpeg" %})"></div>
+            <div class="swiper-content1 container">
+              <h4 class="white">Trip For Your Kids</h4>
+              <h1 class="white mb-4">
+                <span>Sensation Ice Trip</span> Is Coming For Kids
+              </h1>
+              <a href="#" class="per-btn">
+
+                <span class="white" id="contactForm">Discover</span>
+                <i class="fa fa-arrow-right white"></i>
+              </a>
+            </div>
+            <div class="dot-overlay"></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slide-inner">
+            <div class="slide-image" style="background-image: url({% static "images/slider/11.jpeg" %})"></div>
             <div class="swiper-content1 container">
               <h4 class="white">Trip For Your Kids</h4>
               <h1 class="white mb-4">
@@ -230,7 +264,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+        {% comment %} <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
           <div class="trend-item">
             <div class="trend-image">
               <img src="static/images/trending/Taj Mahal, Agra.jpg" alt="image">
@@ -265,7 +299,42 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
+        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+          <a href="#"><div class="trend-item">
+               <div class="trend-image">
+                   <img src="static/images/trending/Taj Mahal, Agra.jpg" alt="image">
+                   <!-- <div class="trend-tags">
+                       <a href="#"><i class="flaticon-like"></i></a>
+                   </div> -->
+               </div>
+               <div class="trend-content-main">
+                   <div class="trend-content">
+                       <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> Agra</h6>
+                       <h4>Taj Mahal, Agra</h4>
+                       <div class="rating-main d-flex align-items-center">
+                           <div class="rating">
+                               <span class="fa fa-star checked"></span>
+                               <span class="fa fa-star checked"></span>
+                               <span class="fa fa-star checked"></span>
+                               <span class="fa fa-star checked"></span>
+                               <span class="fa fa-star checked"></span>
+                           </div>
+                           <span class="ml-2">38 Reviews</span>
+                       </div>
+                   </div>
+                   <div class="trend-last-main">
+                       <p class="mb-0 trend-para">A wonderful little cottage right on the seashore - perfect for exploring.</p>
+                       <div class="trend-last d-flex align-items-center justify-content-between">
+                           <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days & 2 night</p>
+                           <div class="trend-price">
+                               <p class="price white mb-0">From <span>₹29999</span></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div></a> 
+       </div>
         <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
           <div class="trend-item">
             <div class="trend-image">
@@ -309,7 +378,7 @@
 <!-- Trending Ends -->
 
 
-<!-- top destination starts -->
+{% comment %} <!-- top destination starts -->
 <section class="top-destination overflow-hidden pb-9">
   <div class="container">
     <div class="desti-inner">
@@ -636,16 +705,15 @@
     </div>
   </div>
 </section>
-<!-- Trending Ends -->
+<!-- Trending Ends --> {% endcomment %}
 
 
 <!-- testomonial start -->
-<section class="testimonial pb-10" style="background-image: url(static/images/bg/testimonialbg.jpg);">
+<section class="testimonial pb-10" style="background-image: url({% static "images/bg/testimonialbg.jpg" %});">
   <div class="container">
     <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
       <h2 class="m-0 white">What <span>People Say About Us</span></h2>
-      <p class="mb-0 white">Travel has helped us to understand the meaning of life and it has helped us become better
-        people. Each time we travel, we see the world with new eyes.</p>
+      <p class="mb-0 white">Travel unveils life's essence, fostering personal growth. Each journey offers fresh perspectives, shaping us into better individuals..</p>
     </div>
     <div class="row review-slider1">
       <div class="col-sm-4">
@@ -655,13 +723,12 @@
               <i class="fa fa-quote-left"></i>
             </div>
             <p class="description mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              Exceptional service! This tours and travels company exceeded my expectations. From seamless bookings to personalized itineraries,
+              every detail was flawlessly executed. Professionalism, reliability, and a touch of luxury, my go-to choice for unforgettable journeys!
             </p>
           </div>
           <div class="author-title d-flex align-items-center">
-            <a href="#"><img src="static/images/testimonial/user.png" alt=""></a>
+            <a href="#"><img src="{% static "images/testimonial/user.png" %}" alt=""></a>
             <div class="author-in ml-3">
               <h5 class="m-0 white"> Sahil Jain</h5>
               <div class="rating">
@@ -682,13 +749,13 @@
               <i class="fa fa-quote-left"></i>
             </div>
             <p class="description mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              Outstanding experience with this travel company! Their attention to detail is remarkable. Courteous staff, 
+              well-planned tours, and a commitment to customer satisfaction make them stand out. Trustworthy and efficient, 
+              they ensure every trip is a memorable adventure.
             </p>
           </div>
           <div class="author-title d-flex align-items-center">
-            <a href="#"><img src="static/images/testimonial/user.png" alt=""></a>
+            <a href="#"><img src="{% static "images/testimonial/user.png" %}" alt=""></a>
             <div class="author-in ml-3">
               <h5 class="m-0 white">Adarsh Soni</h5>
               <div class="rating">
@@ -709,13 +776,13 @@
               <i class="fa fa-quote-left"></i>
             </div>
             <p class="description mb-0">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book.
+              A travel gem! This company turned my vacation dreams into reality. Impeccable planning, knowledgeable guides, and a
+              range of diverse destinations to choose from. Their passion for creating unforgettable experiences is evident. 
+              Highly recommended for a seamless and enjoyable travel experience!.
             </p>
           </div>
           <div class="author-title d-flex align-items-center">
-            <a href="#"><img src="static/images/testimonial/user.png" alt=""></a>
+            <a href="#"><img src="{% static "images/testimonial/user.png" %}" alt=""></a>
             <div class="author-in ml-3">
               <h5 class="m-0 white">Dhruv reddy</h5>
               <div class="rating">
@@ -723,7 +790,7 @@
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
               </div>
             </div>
           </div>
@@ -740,7 +807,7 @@
 <section class="news pb-2 bg-lgrey pt-9">
   <div class="container">
     <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
-      <h2 class="m-0">Latest Some <span>Tips & Articles</span></h2>
+      <h2 class="m-0">Latest Some <span>Tips &amp; Articles</span></h2>
       <p class="mb-0 ">Travel has helped us to understand the meaning of life and it has helped us become better
         people. Each time we travel, we see the world with new eyes.</p>
     </div>
@@ -872,9 +939,9 @@
             It's Time For a New Adventure! Don't Wait Any Longer. Contact us!
           </p>
         </div>
-        <!-- <div class="col-lg-3 col-md-3">
-          <a href="" class="nir-btn">Contact Now</a>
-        </div> -->
+        <div class="col-lg-3 col-md-3">
+          <a href="{% url "contact" %}##contact-form1" class="nir-btn">Contact Now</a>
+        </div>
       </div>
     </div>
   </div>
