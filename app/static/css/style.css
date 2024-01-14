@@ -151,6 +151,10 @@ img {
 .pink {
   color: #6AAA5C !important; }
 
+.red {
+  color: #f62b2b !important;
+}
+  
 .grey {
   color: #777 !important; }
 
@@ -182,12 +186,15 @@ img {
   border-bottom: 1px dashed #f1f1f1 !important; }
 
 .border-all {
-  border: 1px solid #f1f1f1 !important; }
+  border: 1px solid #f1f1f1 !important;
+}
 
 .rating span {
-  color: #ffbc00;
   display: inline;
   font-size: 14px; }
+.rating span.checked {
+  color: #ffbc00;
+}
 
 .small, small {
   font-size: 60%; }

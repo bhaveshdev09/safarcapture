@@ -1,9 +1,12 @@
+from typing import Any
+from django.db.models.base import Model as Model
+from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views.generic import ListView, FormView, DetailView
 from app.forms import ContactForm
 from django.urls import reverse_lazy
 from django.contrib import messages
-from app.models import Contact, Blog
+from app.models import Contact, Blog, Package
 
 
 def index(request):
@@ -58,6 +61,24 @@ class ContactView(FormView):
             "There was an error with your submission. Please check the form.",
         )
         return super().form_invalid(form)
+
+
+class PackageDetailView(DetailView):
+    model = Package
+    template_name = "package_detail.html"
+    context_object_name = "package"
+
+    def get_queryset(self):
+        return Package.objects.prefetch_related("image_list").all()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        package_object = context.get("object")
+        package_object.rating_details = [True] * package_object.rating + (
+            [False] * (5 - package_object.rating)
+        )
+        print(package_object.rating_details)
+        return context
 
 
 def faq(request):

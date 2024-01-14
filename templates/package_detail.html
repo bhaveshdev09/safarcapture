@@ -1,0 +1,503 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Packages{% endblock title %}
+{% block content %}
+
+
+    <!-- BreadCrumb Starts -->
+    <section class="breadcrumb-main pb-0" style="background-image: url({% static "images/bg/bg7.jpg" %});">
+        <div class="breadcrumb-outer pt-18">
+            <div class="container">
+                <div class="breadcrumb-content d-md-flex align-items-center pt-10">
+                    <h2 class="mb-1">{{package.name}}</h2>
+                    <nav aria-label="breadcrumb">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Packages</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="dot-overlay"></div>
+    </section>
+    <!-- BreadCrumb Ends -->
+
+    <div class="tabs-navbar1 bg-white sticky1 p-4">
+        <div class="row">
+            <div class="col-md-12">
+                <ul id="tabs" class="nav nav-tabs bordernone">
+                    <li class="active"><a data-toggle="tab" href="#description">Highlight</a></li>
+                    <li><a data-toggle="tab" href="#iternary">Iternary</a></li>
+                    <li><a data-toggle="tab" href="#single-map">Map</a></li>
+                    <li><a data-toggle="tab" href="#single-review">Reviews</a></li>
+                    {% comment %} <li><a data-toggle="tab" href="#single-comments">Comments</a></li> {% endcomment %}
+                    {% comment %} <li><a data-toggle="tab" href="#single-add-review" class="bordernone">Add Reviews</a></li> {% endcomment %}
+                    <li><a href="#" class="bordernone" data-toggle="modal" data-target="#bookNow">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- blog starts -->
+    <section class="blog trending destination-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single-content">
+                        <div class="description-images mb-4">
+                            <div class="thumbnail-images">
+                                <div class="slider-store">
+                                    {% comment %} {% for img in package.image_list.all %}
+                                    <div>
+                                        <img src="{{img.image.url}}" alt="1">
+                                    </div>
+                                    {% endfor %} {% endcomment %}
+                                    
+                                    <div>
+                                        <img src="{% static "images/destination/shimla2.jpg" %}" alt="1">
+                                    </div>
+                                    <div>
+                                        <img src="{% static "images/destination/shimla3.jpg" %}" alt="1">
+                                    </div>
+                                    <div>
+                                        <img src="{% static "images/destination/shimla1.jpg" %}" alt="1">
+                                    </div>
+                                    <div>
+                                        <img src="{% static "images/destination/shimla2.jpg" %}" alt="1">
+                                    </div>
+                                    <div>
+                                        <img src="{% static "images/destination/shimla3.jpg" %}" alt="1">
+                                    </div>
+                                </div>
+                                <div class="slider-thumbs">
+                                    {% comment %} {% for img in package.image_list.all %}
+                                    <div>
+                                        <img src="{{img.image.url}}" alt="1">
+                                    </div>
+                                    {% endfor %} {% endcomment %}
+                                    <div>
+                                        <img src="{% static "images/destination/shimla1.jpg" %}" alt="1">
+                                    </div>
+                                    <div>
+                                        <img src="{% static "images/destination/shimla2.jpg" %}" alt="1">
+                                    </div>
+                                    <div>
+                                        <img src="{% static "images/destination/shimla3.jpg" %}" alt="1">
+                                    </div>
+                                    <div>
+                                        <img src="{% static "images/destination/shimla1.jpg" %}" alt="1">
+                                    </div>
+                                    <div>
+                                        <img src="{% static "images/destination/shimla2.jpg" %}" alt="1">
+                                    </div>
+                                    <div>
+                                        <img src="{% static "images/destination/shimla3.jpg" %}" alt="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="description" id="description">
+                            <div class="single-full-title border-b mb-2 pb-2">
+                                <div class="single-title">
+                                    <h3 class="mb-1">{{package.name}}</h3>
+                                    <div class="rating-main d-sm-flex align-items-center">
+                                        <p class="mb-0 mr-2"><i class="flaticon-location-pin"></i> {{package.location}}, India</p>
+
+                                        <div class="rating mr-2">
+                                            {% for check in package.rating_details %}
+                                                <span class="fa fa-star{% if check %} checked{% endif %}"></span>
+                                            {% endfor %}
+                                            {% comment %} <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span> {% endcomment %}
+                                        </div>
+                                        {% comment %} <span>(1,186 Reviews)</span> {% endcomment %}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="description-inner mb-2">
+                                <h4>Highlight</h4>
+                                <p>{{package.description}}.</p>
+                            </div>
+                            <br/>
+                            <div class="tour-includes mb-2">
+                                <h4>Packages Details</h4>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            
+                                            <td><i class="fa fa-group pink mr-1" aria-hidden="true"></i>&nbsp;Max People</td>
+                                            <td>{{package.people_max_limit}}</td>
+                                            <td><i class="fa fa-clock-o pink mr-1" aria-hidden="true"></i>&nbsp;Duration</td>
+                                            <td>{{package.days}} Days / {{package.night}} Nights</td>
+                                            {% comment %} <td><i class="fa fa-clock-o pink mr-1" aria-hidden="true"></i> {{package.days}} Days {{package.night}} Nights</td>
+                                            <td><i class="fa fa-group pink mr-1" aria-hidden="true"></i> Max People : {{package.days}}
+                                            </td>
+                                            <td><i class="fa fa-calendar pink mr-1" aria-hidden="true"></i> Jan 18 - Dec
+                                                21</td> {% endcomment %}
+                                        </tr>
+                                        <tr>
+                                            
+                                            <td><i class="fa fa-map-signs pink mr-1" aria-hidden="true"></i>&nbsp;Pickup / Drop</td>
+                                            {% if package.pickup_location == package.drop_of_location %}
+                                                <td>{{package.pickup_location}}</td>
+                                            {% else %}
+                                                <td>{{package.pickup_location}} / {{package.drop_of_location}}</td>
+                                            {% endif %}
+                                            <td><i class="fa fa-user pink mr-1" aria-hidden="true"></i>&nbsp;Min Age</td>
+                                            <td>10+</td>
+                                    </tbody>
+                                </table>
+                                <br/>
+                                <h4>Costing</h4>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td><i class="fa fa-users pink mr-1" aria-hidden="true"></i><span class="h6">Room Sharing</span></td>
+                                            <td><span class="h6">Quad Sharing</span></td>
+                                            <td><span class="h6">Triple Sharing</span></td>
+                                            <td><span class="h6">Double Sharing</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-money pink mr-1" aria-hidden="true"></i>Price Per Person (in &#8377;)</td>
+                                            <td>{% if  package.price_quad_sharing < 0 %} [ Not Available ] {% else %}&#8377; {{package.price_quad_sharing}}/-{% endif %}</td>
+                                            <td>{% if  package.price_triple_sharing < 0 %} [ Not Available ] {% else %}&#8377; {{package.price_triple_sharing}}/-{% endif %}</td>
+                                            <td>{% if  package.price_double_sharing < 0 %} [ Not Available ] {% else %}&#8377; {{package.price_double_sharing}}/-{% endif %}</td>
+                                        
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+
+                            <div class="description-inner mb-2">
+                                <div class="row">
+                                    {% comment %} <div class="col-lg-4 col-md-4 mb-2 pr-2">
+                                        <div class="desc-box">
+                                            <h5 class="mb-1">Quad Sharing</h5>
+                                            <p class="mb-0">INR 6999/-</p>
+                                        </div>
+                                    </div> 
+                                     <div class="col-lg-4 col-md-4 mb-2 pr-2">
+                                        <div class="desc-box">
+                                            <h5 class="mb-1">Triple Sharing</h5>
+                                            <p class="mb-0">4 Bedrooms</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 mb-2 pr-2">
+                                        <div class="desc-box">
+                                            <h5 class="mb-1">Double Sharing</h5>
+                                            <p class="mb-0"></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 mb-2 pl-2">
+                                        <div class="desc-box">
+                                            <h5 class="mb-1">Costing</h5>
+                                            <ul>
+                                                <li><i class="fa fa-check pink mr-1"></i> Room Sharing
+                                                    / Price Per Person
+                                                    / Quad Sharing
+                                                    : INR 6999/-</li>
+                                                <li><i class="fa fa-check pink mr-1"></i>Triple Sharing
+                                                    : INR 7299/-</li>
+                                                <li><i class="fa fa-check pink mr-1"></i> Double Sharing
+                                                    : INR 7799/-</li>
+                                                <li><i class="fa fa-check pink mr-1"></i>NOTE: Extra Mattress will be
+                                                    Provided for Triple Sharing & Quad Sharing </li>
+                                            </ul>
+                                        </div>
+                                    </div> {% endcomment %}
+                                    <div class="col-lg-12 col-md-12 mb-2 pr-2">
+                                        <div class="desc-box">
+                                            <h5 class="mb-1">Price Includes</h5>
+                                            <ul>
+                                                {% for inc in package.inclusives.all %}
+                                                    <li><i class="fa fa-check pink mr-1"></i>&nbsp;{{inc.note}}</li>
+                                                {% endfor %}
+                                                
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 mb-2 pl-2">
+                                        <div class="desc-box">
+                                            <h5 class="mb-1">Price Excludes</h5>
+                                            <ul>
+                                                {% for exc in package.exclusive_set.all %}
+                                                    <li><i class="fa fa-close red mr-1"></i>&nbsp;{{exc.note}}</li>
+                                                {% endfor %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% comment %} <div class="description-inner mb-4">
+                                <h4>What to Expect</h4>
+                                <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out
+                                    print, graphic or web designs. The passage is attributed to an unknown typesetter in
+                                    the 15th century who is thought to have scrambled parts of Cicero's De Finibus
+                                    Bonorum et Malorum for use in a type specimen book.Lorem ipsum, or lipsum as it is
+                                    sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                                <p class="mb-0">The passage is attributed to an unknown typesetter in the 15th century
+                                    who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for
+                                    use in a type specimen book.</p>
+                            </div> {% endcomment %}
+                        </div>
+
+                        <div class="accrodion-grp faq-accrodion mb-4" id="iternary" data-grp-name="faq-accrodion">
+                            <h4>Iternary</h4>
+                            {% for iternary in package.iternaries.all %}
+                                <div class="accrodion {% if forloop.counter == 1 %}active{% endif %}">
+                                    <div class="accrodion-title">
+                                        <h5 class="mb-0"><span>Day 1:</span>&nbsp;&nbsp;{{iternary.title|upper}}</h5>
+                                    </div>
+                                    <div class="accrodion-content" style="display: block;">
+                                        <div class="inner">
+                                            {{iternary.details|safe}}
+                                        </div><!-- /.inner -->
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="single-map mb-4" id="single-map">
+                            <h4>Map</h4>
+                            <div class="map">
+                                <div style="width: 100%">
+                                    
+                                    <iframe src="{{package.map_embed_link}}"
+                                        width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                        {% comment %} <div class="single-review mb-4" id="single-review">
+                            <h4>Average Reviews</h4>
+                            <div class="row d-flex align-items-center">
+                                <div class="col-lg-4 col-md-4">
+                                    <div class="review-box bg-pink text-center pb-4 pt-4">
+                                        <h2 class="mb-1 white"><span>2.2</span>/5</h2>
+                                        <h4 class="white mb-1">"Feel so much worst than thinking"</h4>
+                                        <p class="mb-0 white font-italic">From 40 Reviews</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-md-8">
+                                    <div class="review-progress">
+                                        <div class="progress-item">
+                                            <p>Cleanliness</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="40"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                                                    <span class="sr-only">40% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-item">
+                                            <p>Facilities</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="30"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:30%">
+                                                    <span class="sr-only">30% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-item">
+                                            <p>Value for money</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="60"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                                    <span class="sr-only">60% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-item">
+                                            <p>Service</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="20"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:20%">
+                                                    <span class="sr-only">20% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="progress-item">
+                                            <p>Location</p>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="45"
+                                                    aria-valuemin="0" aria-valuemax="100" style="width:45%">
+                                                    <span class="sr-only">45% Complete</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
+
+                        {% comment %} <!-- blog comment list -->
+                        <div class="single-comments single-box mb-4" id="single-comments">
+                            <h5 class="border-b pb-2 mb-2">Showing 16 verified guest comments</h5>
+                            <div class="comment-box">
+                                <div class="comment-image">
+                                    <img src="{% static "images/testimonial/user.png" %}" alt="image" width="75">
+                                </div>
+                                <div class="comment-content">
+                                    <h5 class="mb-1">Adarsh</h5>
+                                    <p class="comment-date">April 25, 2019 at 10:46 am</p>
+                                    <div class="comment-rate">
+                                        <div class="rating mar-right-15">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </div>
+                                        <span class="comment-title">Best destination ever"</span>
+                                    </div>
+                                    <p class="comment">hjsdfsdjfbsnfbsnfsbfnsfmns</p>
+                                    {% comment %} <p class="comment">Take in the iconic skyline and visit the neighbourhood hangouts
+                                        that you've only ever seen on TV. Take in the iconic skyline and visit the
+                                        neighbourhood.</p> 
+                                    <!-- <div class="comment-like">
+                                        <div class="like-title">
+                                            <a href="#" class="nir-btn">Reply</a>
+                                        </div>
+                                        <div class="like-btn pull-right">
+                                            <a href="#" class="like"><i class="fa fa-thumbs-up"></i> Like</a>
+                                            <a href="#" class="disike"><i class="fa fa-thumbs-down"></i> Dislike</a>
+                                            <a href="#" class="love"><i class="flaticon-like"></i> Love</a>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <div class="comment-box">
+                                <div class="comment-image">
+                                    <img src="{% static "images/testimonial/user.png" %}" width="75" alt="image">
+                                </div>
+                                <div class="comment-content">
+                                    <h5 class="mb-1">Dhruv</h5>
+                                    <p class="comment-date">April 25, 2019 at 10:46 am</p>
+                                    <div class="comment-rate">
+                                        <div class="rating mar-right-15">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </div>
+                                        <span class="comment-title">Amazing tour....."</span>
+                                    </div>
+
+                                    <p class="comment">Take in the iconic skyline and visit the neighbourhood hangouts
+                                        that you've only ever seen on TV. Take in the iconic skyline and visit the
+                                        neighbourhood.</p>
+                                    <!-- <div class="comment-like">
+                                        <div class="like-title">
+                                            <a href="#" class="nir-btn">Reply</a>
+                                        </div>
+                                        <div class="like-btn pull-right">
+                                            <a href="#" class="like"><i class="fa fa-thumbs-up"></i> Like</a>
+                                            <a href="#" class="disike"><i class="fa fa-thumbs-down"></i> Dislike</a>
+                                            <a href="#" class="love"><i class="flaticon-like"></i> Love</a>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- blog review -->
+                        <div class="single-add-review" id="single-add-review">
+                            <h4>Write a Review</h4>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea>Comment</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-btn">
+                                            <a href="#" class="nir-btn">Submit Review</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blog Ends -->
+
+    <!-- Book Now Modal -->
+    <div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bordernone p-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="login-content p-4 text-center">
+                        <div class="login-title section-border">
+                            <h3 class="pink mb-1">Book Now</h3>
+                            <p>Fill form and start your tour!!</p>
+                        </div>
+                        <div class="login-form text-center">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter phone number">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Enter email address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="No Of Adult">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="No Of Children">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter message here">
+                                </div>
+                            </form>
+                            <div class="form-btn">
+                                <a href="#" class="nir-btn">Book</a>
+                            </div>
+                            <div class="form-group mb-0 form-checkbox mt-3">
+                                <input type="checkbox"> By clicking this, you are agree to to<a href="#" class=""> our
+                                    terms of use</a> and <a href="#" class="">privacy policy</a> including the use of
+                                cookies
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+{% endblock content %}
+
+{% block js %}
+<script src="{% static "js/custom-accordian.js" %}"></script>
+<script src="{% static "js/custom-navscroll.js" %}"></script>
+{% endblock js %}
