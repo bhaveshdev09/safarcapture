@@ -1,4 +1,7 @@
 from django import forms
+from app.models import Package, Blog
+from ckeditor.fields import RichTextFormField
+from ckeditor.widgets import CKEditorWidget
 
 
 class ContactForm(forms.Form):
@@ -23,7 +26,7 @@ class ContactForm(forms.Form):
         label="Your Phone Number",
         max_length=15,  # Adjust the max length as needed
         widget=forms.TextInput(
-            attrs={"class": "form-control", "placeholder": "Eter Mobile Number"}
+            attrs={"class": "form-control", "placeholder": "Enter Mobile Number"}
         ),
         required=True,
     )
@@ -40,16 +43,10 @@ class ContactForm(forms.Form):
         required=True,
     )
 
-    # def clean_name(self):
-    #     name = self.cleaned_data.get("name")
-    #     if len(name.split()) < 2:
-    #         raise forms.ValidationError("Please enter your full name.")
-    #     return name
 
-    # def clean_message(self):
-    #     message = self.cleaned_data.get("message")
-    #     if len(message) < 10:
-    #         raise forms.ValidationError(
-    #             "Your message should be at least 10 characters long."
-    #         )
-    #     return message
+class BlogForm(forms.ModelForm):
+    description = forms.CharField(widget=CKEditorWidget())
+
+    class Meta:
+        model = Blog
+        fields = "__all__"
