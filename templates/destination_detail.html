@@ -1,0 +1,782 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Destination{% endblock title %}
+{% block content %}
+
+
+<!-- BreadCrumb Starts -->
+<section class="breadcrumb-main pb-0" style="background-image: url({% static "images/bg/bg8.jpg" %});">
+    <div class="breadcrumb-outer pt-18">
+        <div class="container">
+            <div class="breadcrumb-content d-md-flex align-items-center pt-10">
+                <h2 class="mb-1">{{destination.name}}</h2>
+                <nav aria-label="breadcrumb">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Destination</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="dot-overlay"></div>
+</section>
+<!-- BreadCrumb Ends -->
+
+
+
+<!-- destination starts -->
+<section class="blog trending destination-b">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="single-content">
+                    <div class="description-images mb-4">
+                        <div class="thumbnail-images">
+                            <div class="slider-store">
+                                {% for img in destination.image_list.all %}
+                                <div>
+                                    <img src="{{img.image.url}}" alt="{{forloop.counter}}_destination_image">
+                                </div>
+                                {% endfor %}
+                                {% comment %} <div>
+                                    <img src="static/images/destination/shimla1.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla2.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla3.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla1.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla2.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla3.jpg" alt="1">
+                                </div> {% endcomment %}
+                            </div>
+                            <div class="slider-thumbs">
+                                {% for img in destination.image_list.all %}
+                                <div>
+                                    <img src="{{img.image.url}}" alt="1">
+                                </div>
+                                {% endfor %}
+                                {% comment %} <div>
+                                    <img src="static/images/destination/shimla1.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla2.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla3.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla1.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla2.jpg" alt="1">
+                                </div>
+                                <div>
+                                    <img src="static/images/destination/shimla3.jpg" alt="1">
+                                </div> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="description" id="description">
+                        <div class="single-full-title border-b mb-2 pb-2">
+                            <div class="single-title">
+                                <h3 class="mb-1">{{destination.name}}</h3>
+                                <div class="rating-main d-sm-flex align-items-center">
+                                    <p class="mb-0 mr-2"><i
+                                            class="flaticon-location-pin"></i>&nbsp;{{destination.location}}</p>
+                                    <div class="rating mr-2">
+                                        {% for check in destination.rating_details %}
+                                        <span class="fa fa-star{% if check %} checked{% endif %}"></span>
+                                        {% endfor %}
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-inner mb-2">
+                            <h4>Highlight</h4>
+                            <p>{{destination.description|safe}}</p>
+                        </div>
+
+                        <!-- Trending Starts -->
+                        <section class="trending pb-6 pt-5">
+                            <div class="container">
+                                <div class="section-title text-center mb-5 pb-2 w-50 mx-auto">
+                                    <h2 class="m-0">Perfect <span>Tour Packages</span></h2>
+                                    <p class="mb-0">Travel has helped us to understand the meaning of life and it has
+                                        helped us become better people. Each time we travel, we see the world with new
+                                        eyes.</p>
+                                </div>
+                                <div class="trend-box">
+                                    <div class="row">
+                                        {% for package in destination.packages.all %}
+                                        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                                            <a href="#">
+                                                <div class="trend-item">
+                                                    <div class="trend-image">
+                                                        <img src="{{package.card_cover_image.url}}" alt="image">
+                                                        <div class="trend-tags"><a href="#" class="bordernone" data-toggle="modal" data-target="#bookNow"><i class="flaticon-price"></i></a></div>
+                                                    </div>
+                                                    <div class="trend-content-main">
+                                                        <div class="trend-content">
+                                                            <h6 class="font-weight-normal pink"><i
+                                                                    class="fa fa-map-marker-alt"></i>
+                                                                    &nbsp;{{package.location}}
+                                                            </h6>
+                                                            <h4><a href="{% url "package-detail" package.pk %}">{{package.name}}</a></h4>
+                                                            <div class="rating-main d-flex align-items-center">
+                                                                <div class="rating">
+                                                                    {% for check in package.rating_details %}
+                                                                        <span class="fa fa-star{% if check %} checked{% endif %}"></span>
+                                                                    {% endfor %}
+                                                                    {% comment %} <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span> {% endcomment %}
+                                                                </div>
+                                                                {% comment %} <span class="ml-2">38 Reviews</span> {% endcomment %}
+                                                            </div>
+                                                        </div>
+                                                        <div class="trend-last-main">
+                                                            <p class="mb-0 trend-para">{{package.description|safe|truncatechars_html:60}}.</p>
+                                                            <div
+                                                                class="trend-last d-flex align-items-center justify-content-between">
+                                                                <p class="mb-0 white"><i class="fa fa-clock-o"
+                                                                        aria-hidden="true"></i> {{package.days}} days & {{package.night}} night</p>
+                                                                <div class="trend-price">
+                                                                    <p class="price white mb-0">From <span>₹&nbsp;{{package.price}}</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        {% endfor %}
+                                        {% comment %} <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                                            <a href="#">
+                                                <div class="trend-item">
+                                                    <div class="trend-image">
+                                                        <img src="{% static "images/trending/Andaman and" %} Nicobar Islands.jpg"
+                                                            alt="image">
+                                                        <!-- <div class="trend-tags"><a href="#"><i class="flaticon-like"></i></a></div> -->
+                                                    </div>
+                                                    <div class="trend-content-main">
+                                                        <div class="trend-content">
+                                                            <h6 class="font-weight-normal pink"><i
+                                                                    class="fa fa-map-marker-alt"></i> Andaman</h6>
+                                                            <h4>Andaman and Nicobar Islands</h4>
+                                                            <div class="rating-main d-flex align-items-center">
+                                                                <div class="rating">
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                </div>
+                                                                <span class="ml-2">38 Reviews</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="trend-last-main">
+                                                            <p class="mb-0 trend-para">A wonderful little cottage right
+                                                                on the seashore - perfect for exploring.</p>
+                                                            <div
+                                                                class="trend-last d-flex align-items-center justify-content-between">
+                                                                <p class="mb-0 white"><i class="fa fa-clock-o"
+                                                                        aria-hidden="true"></i> 3 days & 2 night</p>
+                                                                <div class="trend-price">
+                                                                    <p class="price white mb-0">From <span>₹29999</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                                            <a href="#">
+                                                <div class="trend-item">
+                                                    <div class="trend-image">
+                                                        <img src="{% static "images/trending/Jaipur City" %} Palace, Rajasthan.jpg"
+                                                            alt="image">
+                                                        <!-- <div class="trend-tags"><a href="#"><i class="flaticon-like"></i></a></div> -->
+                                                    </div>
+                                                    <div class="trend-content-main">
+                                                        <div class="trend-content">
+                                                            <h6 class="font-weight-normal pink"><i
+                                                                    class="fa fa-map-marker-alt"></i> Rajasthan</h6>
+                                                            <h4>Jaipur City Palace, Rajasthan</h4>
+                                                            <div class="rating-main d-flex align-items-center">
+                                                                <div class="rating">
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                </div>
+                                                                <span class="ml-2">38 Reviews</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="trend-last-main">
+                                                            <p class="mb-0 trend-para">A wonderful little cottage right
+                                                                on the seashore - perfect for exploring.</p>
+                                                            <div
+                                                                class="trend-last d-flex align-items-center justify-content-between">
+                                                                <p class="mb-0 white"><i class="fa fa-clock-o"
+                                                                        aria-hidden="true"></i> 3 days & 2 night</p>
+                                                                <div class="trend-price">
+                                                                    <p class="price white mb-0">From <span>₹29999</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                                            <a href="#">
+                                                <div class="trend-item">
+                                                    <div class="trend-image">
+                                                        <img src="{% static "images/trending/Jammu and" %} Kashmir.jpeg"
+                                                            alt="image">
+                                                        <!-- <div class="trend-tags"><a href="#"><i class="flaticon-like"></i></a></div> -->
+                                                    </div>
+                                                    <div class="trend-content-main">
+                                                        <div class="trend-content">
+                                                            <h6 class="font-weight-normal pink"><i
+                                                                    class="fa fa-map-marker-alt"></i> Jammu and Kashmir
+                                                            </h6>
+                                                            <h4>Jammu and Kashmir</h4>
+                                                            <div class="rating-main d-flex align-items-center">
+                                                                <div class="rating">
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                </div>
+                                                                <span class="ml-2">38 Reviews</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="trend-last-main">
+                                                            <p class="mb-0 trend-para">A wonderful little cottage right
+                                                                on the seashore - perfect for exploring.</p>
+                                                            <div
+                                                                class="trend-last d-flex align-items-center justify-content-between">
+                                                                <p class="mb-0 white"><i class="fa fa-clock-o"
+                                                                        aria-hidden="true"></i> 3 days & 2 night</p>
+                                                                <div class="trend-price">
+                                                                    <p class="price white mb-0">From <span>₹29999</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                                            <a href="#">
+                                                <div class="trend-item">
+                                                    <div class="trend-image">
+                                                        <img src="{% static "images/trending/Taj Mahal" %}, Agra.jpg"
+                                                            alt="image">
+                                                        <!-- <div class="trend-tags"><a href="#"><i class="flaticon-like"></i></a></div> -->
+                                                    </div>
+                                                    <div class="trend-content-main">
+                                                        <div class="trend-content">
+                                                            <h6 class="font-weight-normal pink"><i
+                                                                    class="fa fa-map-marker-alt"></i> Agra</h6>
+                                                            <h4>Taj Mahal, Agra</h4>
+                                                            <div class="rating-main d-flex align-items-center">
+                                                                <div class="rating">
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                </div>
+                                                                <span class="ml-2">38 Reviews</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="trend-last-main">
+                                                            <p class="mb-0 trend-para">A wonderful little cottage right
+                                                                on the seashore - perfect for exploring.</p>
+                                                            <div
+                                                                class="trend-last d-flex align-items-center justify-content-between">
+                                                                <p class="mb-0 white"><i class="fa fa-clock-o"
+                                                                        aria-hidden="true"></i> 3 days & 2 night</p>
+                                                                <div class="trend-price">
+                                                                    <p class="price white mb-0">From <span>₹29999</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+                                            <a href="#">
+                                                <div class="trend-item">
+                                                    <div class="trend-image">
+                                                        <img src="{% static "images/trending/goa.jpg" %}" alt="image">
+                                                        <!-- <div class="trend-tags"><a href="#"><i class="flaticon-like"></i></a></div> -->
+                                                    </div>
+                                                    <div class="trend-content-main">
+                                                        <div class="trend-content">
+                                                            <h6 class="font-weight-normal pink"><i
+                                                                    class="fa fa-map-marker-alt"></i> goa</h6>
+                                                            <h4>Goa Beaches</h4>
+                                                            <div class="rating-main d-flex align-items-center">
+                                                                <div class="rating">
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                    <span class="fa fa-star checked"></span>
+                                                                </div>
+                                                                <span class="ml-2">38 Reviews</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="trend-last-main">
+                                                            <p class="mb-0 trend-para">A wonderful little cottage right
+                                                                on the seashore - perfect for exploring.</p>
+                                                            <div
+                                                                class="trend-last d-flex align-items-center justify-content-between">
+                                                                <p class="mb-0 white"><i class="fa fa-clock-o"
+                                                                        aria-hidden="true"></i> 3 days & 2 night</p>
+                                                                <div class="trend-price">
+                                                                    <p class="price white mb-0">From <span>₹29999</span>
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div> {% endcomment %}
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Trending Ends -->
+
+                        <div class="single-map mb-4" id="single-map">
+                            <h4>Map</h4>
+                            <div class="map">
+                                <div style="width: 100%">
+                                    <iframe src="{{destination.map_embed_link}}" width="600" height="450"
+                                        style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- destination Ends -->
+
+{% comment %} <!-- footer starts -->
+<footer style="background-image: url({% static "images/bg/footerbg.jpg" %})" class="pt-10 ">
+    <div class="footer-upper pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 mb-4">
+                    <div class="footer-links">
+                        <img src="static/images/safarLogo.png" height="140px" width="300px" alt="" />
+                        <p class="mt-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua
+                        </p>
+                        <ul>
+                            <li><strong>Phone No:</strong> +91-252-254-2542</li>
+                            <li>
+                                <strong>Location:</strong> Hariyana,India
+                            </li>
+                            <li><strong>Email:</strong> info@safarcapture.com</li>
+                            <li><strong>Website:</strong> www.safarcapture.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 mb-4">
+                    <div class="footer-links">
+                        <h4 class="white">Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="#">Delivery Information</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms &amp; Conditions</a></li>
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 mb-4">
+                    <div class="footer-links">
+                        <h4 class="white">Services</h4>
+                        <ul>
+                            <li><a href="#">Payment</a></li>
+                            <li><a href="#">Feedback</a></li>
+                            <li><a href="contact.html">Contact us</a></li>
+                            <li><a href="#">Our Service</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Site map</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+                    <div class="footer-links">
+                        <h4 class="white">Contact</h4>
+
+                        <div class="newsletter-form form-main">
+                            <form>
+                                <div class="form-group">
+                                    <div class="input-box input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-user"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder=" Enter Full Name"
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-box input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-phone"></i></span>
+                                        </div>
+                                        <input type="Number" class="form-control" placeholder="Enter Phone no."
+                                            required />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-box input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" class="form-control" placeholder="Enter Email " required />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-box input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Write your message.."
+                                            required />
+                                    </div>
+                                </div>
+                                <input type="submit" class="nir-btn mt-2 w-100" value="Submit" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright pt-2 pb-2">
+        <div class="container">
+            <div class="copyright-inner d-md-flex align-items-center justify-content-between">
+                <div class="copyright-text">
+                    <p class="m-0 white">Copyright © 2023-2024 ByteX Technologies. <br>All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+</footer>
+<!-- footer ends --> {% endcomment %}
+
+{% comment %} <!-- Back to top start -->
+<div id="back-to-top">
+    <a href="#"></a>
+</div>
+<!-- Back to top ends -->
+
+<!-- search popup -->
+<div id="search1">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" value="" placeholder="type keyword(s) here" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div> {% endcomment %}
+
+{% comment %} <!-- Register Modal -->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bordernone p-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="login-content p-4 text-center">
+                    <div class="login-title section-border">
+                        <h3 class="pink mb-1">Register</h3>
+                        <p>Access thousands of online classes in design, business, and more!</p>
+                    </div>
+                    <div class="login-form text-center">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter Full Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter email address">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Enter password">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Confirm password">
+                            </div>
+                        </form>
+                        <div class="form-btn">
+                            <a href="#" class="nir-btn">Register</a>
+                        </div>
+                        <div class="form-group mb-0 form-checkbox mt-3">
+                            <input type="checkbox"> By clicking this, you are agree to to<a href="#" class=""> our
+                                terms of use</a> and <a href="#" class="">privacy policy</a> including the use of
+                            cookies
+                        </div>
+                    </div>
+                    <div class="login-social border-t mt-3 pt-2 mb-3">
+                        <p class="mb-2">OR continue with</p>
+                        <a href="#" class="btn-facebook"><i class="fab fa-facebook" aria-hidden="true"></i>
+                            Facebook</a>
+                        <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
+                            Twitter</a>
+                        <a href="#" class="btn-google"><i class="fab fa-google" aria-hidden="true"></i> Google</a>
+                    </div>
+                    <div class="sign-up">
+                        <p class="m-0">Already have an account? <a href="login.html" class="pink">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+
+{% comment %} <!-- login Modal -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bordernone p-0">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="login-content p-4 text-center">
+                    <div class="login-title section-border">
+                        <h3 class="pink">Login</h3>
+                    </div>
+                    <div class="login-form">
+                        <form>
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter email address">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Enter password">
+                            </div>
+                        </form>
+                        <div class="form-btn">
+                            <a href="#" class="nir-btn">LOGIN</a>
+                        </div>
+                        <div class="form-group mb-0 form-checkbox mt-3">
+                            <input type="checkbox"> Remember Me | <a href="#" class="">Forgot password?</a>
+                        </div>
+                    </div>
+                    <div class="login-social border-t mt-3 pt-2 mb-3">
+                        <p class="mb-2">OR continue with</p>
+                        <a href="#" class="btn-facebook"><i class="fab fa-facebook" aria-hidden="true"></i>
+                            Facebook</a>
+                        <a href="#" class="btn-twitter"><i class="fab fa-twitter" aria-hidden="true"></i>
+                            Twitter</a>
+                    </div>
+                    <div class="sign-up">
+                        <p class="m-0">Do not have an account? <a href="login.html" class="pink">Sign Up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+
+<!-- <div class="header_sidemenu">
+        <div class="header_sidemenu_in">
+            <div class="menu">
+                <div class="close-menu">
+                    <i class="fa fa-times white"></i>
+                </div>
+                 <div class="m-contentmain">
+                    <div class="cart-main">
+                        <div class="cart-box">
+                            <div class="popup-container">
+                                <h5 class="p-3 mb-0 bg-pink white text-caps">My Carts(3 Items)</h5>
+                                <div class="cart-entry d-flex align-items-center p-3">
+                                    <a href="#" class="image">
+                                        <img src="static/images/shop/shop1.jpg" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <a href="#" class="title font-weight-bold">Pullover Batwing</a>
+                                        <p class="quantity m-0">Quantity: 3</p>
+                                        <span class="price">$45.00</span>
+                                    </div>
+                                    <div class="button-x">
+                                        <i class="icon-close"></i>
+                                    </div>
+                                </div>
+                                <div class="cart-entry d-flex align-items-center p-3">
+                                    <a href="#" class="image">
+                                        <img src="static/images/shop/shop2.jpg" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <a href="#" class="title font-weight-bold">Pullover Batwing</a>
+                                        <p class="quantity m-0">Quantity: 3</p>
+                                        <span class="price">$90.00</span>
+                                    </div>
+                                    <div class="button-x">
+                                        <i class="icon-close"></i>
+                                    </div>
+                                </div>
+                                <div class="cart-entry d-flex align-items-center p-3">
+                                    <a href="#" class="image">
+                                        <img src="static/images/shop/shop6.jpg" alt="">
+                                    </a>
+                                    <div class="content">
+                                        <a href="#" class="title font-weight-bold">Pullover Batwing</a>
+                                        <p class="quantity m-0">Quantity: 3</p>
+                                        <span class="price">$90.00</span>
+                                    </div>
+                                    <div class="button-x">
+                                        <i class="icon-close"></i>
+                                    </div>
+                                </div>
+                                <div class="summary-total">
+                                    <div class="summary d-flex align-items-center justify-content-between">
+                                        <div class="subtotal font-weight-bold">Delivery Charge</div>
+                                        <div class="price-s">$10</div>
+                                    </div>
+                                    <div class="summary d-flex align-items-center justify-content-between">
+                                        <div class="subtotal font-weight-bold">Sub Total</div>
+                                        <div class="price-s">$200</div>
+                                    </div>
+                                    <div class="summary d-flex align-items-center justify-content-between">
+                                        <div class="subtotal font-weight-bold">Discount</div>
+                                        <div class="price-s">$2</div>
+                                    </div>
+                                    <div class="summary d-flex align-items-center justify-content-between">
+                                        <div class="subtotal font-weight-bold">Total</div>
+                                        <div class="price-s">$208</div>
+                                    </div>
+                                </div>
+                                <div class="cart-buttons d-flex align-items-center justify-content-between">
+                                    <a href="#" class="nir-btn">View Cart</a>
+                                    <a href="#" class="nir-btn-black">Checkout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="overlay hide"></div>
+        </div>
+    </div> -->
+
+    <!-- Book Now Modal -->
+    <div class="modal fade" id="bookNow" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bordernone p-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="login-content p-4 text-center">
+                        <div class="login-title section-border">
+                            <h3 class="pink mb-1">Book Now</h3>
+                            <p>Fill form and start your tour!!</p>
+                        </div>
+                        <div class="login-form text-center">
+                            <form action="{% url "package-booking" %}" method="post">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter Full Name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter phone number">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Enter email address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="No Of Adult">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="No Of Children">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Enter message here">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" value="{{package.id}}" name="package" hidden>
+                                </div>
+                            </form>
+                            <div class="form-btn">
+                                <button type="submit" class="nir-btn w-100">
+                                    Submit
+                                  </button>
+                            </div>
+                            {% comment %} <div class="form-group mb-0 form-checkbox mt-3">
+                                <input type="checkbox"> By clicking this, you are agree to to<a href="#" class=""> our
+                                    terms of use</a> and <a href="#" class="">privacy policy</a> including the use of
+                                cookies
+                            </div> {% endcomment %}
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+{% block js %}
+<script src="{% static " js/custom-accordian.js" %}"></script>
+<script src="{% static " js/custom-navscroll.js" %}"></script>
+{% endblock js %}

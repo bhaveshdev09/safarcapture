@@ -1,12 +1,12 @@
 from typing import Any
 from django.db.models.base import Model as Model
 from django.db.models.query import QuerySet
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView, FormView, DetailView
 from app.forms import ContactForm
 from django.urls import reverse_lazy
 from django.contrib import messages
-from app.models import Contact, Blog, Package
+from app.models import Contact, Blog, Package, Destination, Booking
 
 
 def index(request):
@@ -69,16 +69,49 @@ class PackageDetailView(DetailView):
     context_object_name = "package"
 
     def get_queryset(self):
-        return Package.objects.prefetch_related("image_list").all()
+        return Package.objects.prefetch_related("image_list").all() 
+
+
+class DestinationDetailView(DetailView):
+    model = Destination
+    template_name = "destination_detail.html"
+    context_object_name = "destination"
+
+    def get_queryset(self):
+        return Destination.objects.prefetch_related("image_list").all()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        package_object = context.get("object")
-        package_object.rating_details = [True] * package_object.rating + (
-            [False] * (5 - package_object.rating)
+        destination_object = context.get("object")
+        destination_object.rating_details = [True] * destination_object.rating + (
+            [False] * (5 - destination_object.rating)
         )
-        print(package_object.rating_details)
+        print(destination_object.rating_details)
         return context
+
+
+# class PackageBookingView(DetailView):
+#     model = Booking
+#     template_name = "destination_detail.html"
+#     context_object_name = "destination"
+
+#     def get_queryset(self):
+#         return Destination.objects.prefetch_related("image_list").all()
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         destination_object = context.get("object")
+#         destination_object.rating_details = [True] * destination_object.rating + (
+#             [False] * (5 - destination_object.rating)
+#         )
+#         print(destination_object.rating_details)
+#         return context
+
+
+def post_booking(request):
+    if request.method == "POST":
+        print(request.POST)
+        return redirect("index")
 
 
 def faq(request):

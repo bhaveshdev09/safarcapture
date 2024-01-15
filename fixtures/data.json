@@ -1,0 +1,296 @@
+[
+    {
+        "model": "app.packageimage",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-14T14:57:07.464Z",
+            "updated_at": "2024-01-14T14:57:07.464Z",
+            "image": "package/images/akash-choudhary-CTdDooABASA-unsplash.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-14T14:57:15.527Z",
+            "updated_at": "2024-01-14T14:57:15.527Z",
+            "image": "package/images/istockphoto-539105384-612x612.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.category",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-14T14:07:51.148Z",
+            "updated_at": "2024-01-14T14:07:51.148Z",
+            "title": "Spiritual Yatra"
+        }
+    },
+    {
+        "model": "app.category",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-14T16:27:13.892Z",
+            "updated_at": "2024-01-14T16:27:13.892Z",
+            "title": "Historical"
+        }
+    },
+    {
+        "model": "app.category",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-01-14T16:27:27.942Z",
+            "updated_at": "2024-01-14T16:27:27.942Z",
+            "title": "Weekends"
+        }
+    },
+    {
+        "model": "app.category",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-01-14T16:27:42.540Z",
+            "updated_at": "2024-01-14T16:27:42.540Z",
+            "title": "Special Tour"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-14T14:10:00.719Z",
+            "updated_at": "2024-01-14T14:10:00.719Z",
+            "image": "destination/images/akshay-syal-5vDTocCCutE-unsplash_1110x720.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-14T14:27:38.958Z",
+            "updated_at": "2024-01-14T14:30:51.709Z",
+            "image": "destination/images/pexels-sandeep-singh-7104962_3.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-01-14T17:28:52.250Z",
+            "updated_at": "2024-01-14T17:28:52.250Z",
+            "image": "destination/images/Shimla_and_Manali_Himachal_Pradesh.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-14T14:58:28.701Z",
+            "updated_at": "2024-01-14T18:12:13.258Z",
+            "name": "Manali Solang Kasol",
+            "location": "Himachal Pradesh",
+            "description": "Everyone�s most visited vacation spot, Manali is a high-altitude Himalayan town that is a treat for every nomad.\r\nBounded by the Pir Panjal and Dhauladhar ranges, the aura of Manali is unsurpassed and invincible. Be it a\r\nrelaxation trip with the family, a backpacking trip with your buddies, or a solo trip. Manali has got you covered!\r\nA trip to Manali will be inadequate if you miss visiting the enthralling Solang valley, which is one of the most\r\nwidespread travel destinations of Himachal Pradesh. Solang valley is situated 14 kilometers to the northwest of\r\nManali and welcomes thousands of tourists every year. Consider as a heaven for adventure devotees, Solang\r\nvalley offers a plethora of activities like parachuting, paragliding, horse riding, Skiing, Quad biking, etc. there is a\r\nlot to explore and enjoy here in Solang valley on your Manali Trip.\r\nJispa, a beautiful little town in the Lahaul district of Himachal Pradesh, is a stunning must-visit. Perched on the\r\nbanks of river Bhaga, Jispa lies 2 hours from Baralacha-la and provides the most stunning views of surrounding\r\nmountains!\r\nWhile it is often regarded as a pit stop en route Leh on the Manali-Leh Highway, I beg to differ. This place is truly\r\nworthy of its own individually planned visit! Situated at a stunning height of 10,500 ft., this little village, home to\r\nabout 78 households, serves as a halt for travelers on the long road trip to Leh-Ladakh. The calm, quiet and\r\ntranquil village with a very small population, offers the most beautiful Zen-like trip you will not soon forget",
+            "days": 3,
+            "night": 2,
+            "min_age": 10,
+            "people_max_limit": 20,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.193969071424!2d77.3117297761793!3d32.00985907399369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39045c4474aa31e9%3A0xf112d2e32b47949d!2sKasol%2C%20Himachal%20Pradesh%20175105!5e0!3m2!1sen!2sin!4v1705249949350!5m2!1sen!2sin",
+            "price_quad_sharing": 4555,
+            "price_triple_sharing": 5555,
+            "price_double_sharing": 6666,
+            "price": 7777,
+            "rating": 4,
+            "card_cover_image": "package/covers/akshay-syal-5vDTocCCutE-unsplash_4.jpg",
+            "category": [
+                4
+            ],
+            "image_list": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "app.destination",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-14T14:11:31.436Z",
+            "updated_at": "2024-01-14T14:27:52.543Z",
+            "name": "Rishikesh",
+            "location": "Uttarakhand",
+            "state": "Uttarakhand",
+            "country": "India",
+            "rating": 3,
+            "description": "<p>Rishikesh is a city in the Indian state of Uttarakhand, known for its association with spirituality and yoga. It is situated in the foothills of the Himalayas, along the banks of the Ganges River. Rishikesh has a long history dating back to ancient times and is considered a sacred place by Hindus.</p>\r\n\r\n<p>The city is home to numerous temples, ashrams, and yoga centers, making it a popular destination for pilgrims, spiritual seekers, and yoga enthusiasts from around the world. The most famous landmark in Rishikesh is the Triveni Ghat, where the Ganges River meets two other rivers, the Yamuna and the Saraswati. This confluence is considered particularly sacred, and thousands of devotees take a dip in the holy waters every day.</p>\r\n\r\n<p>Rishikesh is also known for its natural beauty, with lush green forests, cascading waterfalls, and serene landscapes. The city offers a variety of outdoor activities such as hiking, rafting, camping, and mountain climbing. Visitors can also enjoy the local cuisine, which includes traditional Indian dishes as well as international fare.</p>",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55235.63523269081!2d78.27060875!3d30.08767875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39093e67cf93f111%3A0xcc78804a6f941bfe!2sRishikesh%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1705241057097!5m2!1sen!2sin",
+            "category": 1,
+            "image_list": [
+                1,
+                2
+            ],
+            "packages": []
+        }
+    },
+    {
+        "model": "app.destination",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-14T17:30:15.407Z",
+            "updated_at": "2024-01-14T17:31:20.068Z",
+            "name": "Manali",
+            "location": "Himachal Pradesh, India",
+            "state": "himachal pradesh",
+            "country": "India",
+            "rating": 5,
+            "description": "<p>In Hinduism, Manu was said to have survived a great flood that destroyed the rest of the world. He then recreated mankind in this Kullu Valley town. What a rush, huh? No wonder the towering peaks and verdant terrain of Manali attracts adventure travellers, with heli-skiing, hiking, mountaineering and river rafting the favored active pursuits. Come down from your endorphin high by breathing deeply at the four-story, wooden Hidimba Devi Temple, which sits in the middle of a nearby deciduous forest, or take a medicinal soak in the hot springs burbling from the ground a 30-minute walk from town.</p>",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26997.5325195682!2d77.16652023256441!3d32.23947037911844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39048708163fd03f%3A0x8129a80ebe5076cd!2sManali%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1705253389401!5m2!1sen!2sin",
+            "category": 4,
+            "image_list": [
+                3
+            ],
+            "packages": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-14T14:58:28.713Z",
+            "updated_at": "2024-01-14T18:09:35.606Z",
+            "note": "Accommodation for 2 nights in a hotel at Manali & 1 night in Kasol on Double/Triple Sharing.",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-14T14:58:28.713Z",
+            "updated_at": "2024-01-14T18:10:07.017Z",
+            "note": "AC Transportation.",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-01-14T18:09:35.608Z",
+            "updated_at": "2024-01-14T18:10:07.018Z",
+            "note": "Team Captain throughout the trip.",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-01-14T18:09:35.608Z",
+            "updated_at": "2024-01-14T18:10:07.018Z",
+            "note": "Driver Night Charges, Toll Tax, Parking Charges Extra.",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 5,
+        "fields": {
+            "created_at": "2024-01-14T18:09:35.609Z",
+            "updated_at": "2024-01-14T18:12:13.268Z",
+            "note": "6 meals will be provided throughout the trip. ( 1 meal on Day 1 (Breakfast) + 2 meals on Day 2 (Breakfast + Dinner) + 2 meals on Day 3 (Breakfast + Dinner) + 2 meals on Day 4 (Breakfast) )",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-14T14:58:28.714Z",
+            "updated_at": "2024-01-14T14:58:28.714Z",
+            "note": "Exclusive 1",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-14T14:58:28.715Z",
+            "updated_at": "2024-01-14T14:58:28.715Z",
+            "note": "Exclusive 2",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-14T14:58:28.718Z",
+            "updated_at": "2024-01-14T14:58:28.718Z",
+            "note": "wedwehdeshj",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-14T14:58:28.719Z",
+            "updated_at": "2024-01-14T14:58:28.719Z",
+            "note": "welkdjewfewjfewfwe",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-14T14:58:28.716Z",
+            "updated_at": "2024-01-14T16:39:56.286Z",
+            "title": "DEPART FROM DELHI BY 07:00 PM",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>We depart from Delhi around 7:00 PM in an AC Vehicle. (Know the true value of time; snatch, seize, and enjoy every moment of it.)</li>\r\n\t<li>Pit stop for dinner at any decent roadside restaurant</li>\r\n</ol>\r\n\r\n<p style=\"margin-left:40px\"><strong>Note: The pickup point will be Majnu Ka Tila (Near Vidhan Sabha Metro Station)</strong></p>",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-14T16:41:44.473Z",
+            "updated_at": "2024-01-14T16:41:44.473Z",
+            "title": "REACH MANALI | JOGINI FALLS | OVERNIGHT STAY AT MANALI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Check in to the hotel, freshen up &amp; have breakfast or lunch (Depending on the Arrival).</li>\r\n\t<li>After relaxing, head to Vashishth village, and begin the trek to the stunning Jogini Falls.</li>\r\n\t<li>Come back to the hotel, relax for a while.</li>\r\n\t<li>In the Evening, You are free to explore some local part of Manali &ndash; Mall Road. (At your own).</li>\r\n\t<li>Enjoy bonfire and DJ in the hotel.&nbsp;</li>\r\n\t<li>Overnight stay in hotel.</li>\r\n</ol>",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-01-14T16:44:07.072Z",
+            "updated_at": "2024-01-14T16:45:21.203Z",
+            "title": "SOLANG VALLEY | SNOW ACTIVITIES | OVERNIGHT STAY AT MANALI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up with the beautiful sight in front of your eyes.</li>\r\n\t<li>Have delicious breakfast at hotel and then proceed for full day tour to Solang valley.</li>\r\n\t<li>You can indulge in various snow adventure activities offered here like skiing, zorbing, atv rides etc. (At Your Own)</li>\r\n\t<li>Later come back to the hotel.</li>\r\n\t<li>Have fun around bonfire.</li>\r\n\t<li>Get your dinner served, overnight stay.</li>\r\n</ol>\r\n\r\n<p style=\"margin-left:40px\"><strong>Note: In the event of snowfall or if regular Sumo or Tempo vehicles are unable to ascend due to snowy conditions, customers will be responsible for arranging a separate 4x4 vehicle at their own expense. Capture A Trip bears no responsibility for any such acts of God or the associated expenses.</strong></p>",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-01-14T18:02:22.271Z",
+            "updated_at": "2024-01-14T18:02:22.271Z",
+            "title": "MANALI SIGHTSEEING | PROCEED FOR KASOL | OVERNIGHT STAY AT KASOL",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up in the Hotel.</li>\r\n\t<li>After Breakfast checkout the hotel, then proceed for the sightseeing of Hadimba devi temple, Tibetan Monastery and The Mall road.</li>\r\n\t<li>Later board your vehicle and depart for Kasol. Rest for a while after short journey.</li>\r\n\t<li>Have dinner &amp; overnight stay at Kasol Hotel.</li>\r\n</ol>",
+            "package": 1
+        }
+    }
+]
