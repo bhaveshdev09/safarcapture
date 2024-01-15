@@ -2,6 +2,10 @@
 from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from django.db.models.signals import post_save
+from django.core.mail import send_mail
+from django.dispatch import receiver
+from backend import settings
 
 
 class BaseModel(models.Model):
@@ -221,3 +225,42 @@ class Iternary(BaseModel):
     # rating = models.IntegerField(
     #     validators=[MinValueValidator(0), MaxValueValidator(5)], blank=True, null=True
     # )
+
+
+# Signals
+
+
+@receiver(post_save, sender=Booking)
+def send_email_booking_to_admin(sender, instance, created, **kwargs):
+    from django.contrib.auth import get_user_model
+
+    User = get_user_model()
+
+    get_admin_users = list(User.objects.all().values_list("email", flat=True))
+
+    if created:
+        subject = "New Booking from {instance.name}"
+        message = f"A new {sender.__name__} has been submitted.\n\nDetails:\n{instance}"
+
+        from_email = settings.EMAIL_HOST_USER  # Replace with your actual email address
+        admin_emails = get_admin_users  # Replace with your admin's email address
+
+        send_mail(subject, message, from_email, admin_emails)
+
+
+@receiver(post_save, sender=Contact)
+def send_email_to_admin(sender, instance, created, **kwargs):
+    from django.contrib.auth import get_user_model
+
+    User = get_user_model()
+
+    get_admin_users = list(User.objects.all().values_list("email", flat=True))
+
+    if created:
+        subject = "Contact Query From {instance.name}"
+        message = f"A new contact query has been submitted.\n\nDetails:\n{instance}\nPhone: {instance.phone}\nMessage: {instance.message}"
+
+        from_email = settings.EMAIL_HOST_USER  # Replace with your actual email address
+        admin_emails = get_admin_users  # Replace with your admin's email address
+
+        send_mail(subject, message, from_email, admin_emails)
