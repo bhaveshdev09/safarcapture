@@ -11,6 +11,15 @@ urlpatterns = [
         views.PackageDetailView.as_view(),
         name="package-detail",
     ),
+    path(
+        "destinations/details/<pk>/",
+        views.DestinationDetailView.as_view(),
+        name="destination-detail",
+    ),
+    path(
+        "packages/booking/", views.post_booking,
+        name="package-booking",
+    ),
     path("contact/", views.ContactView.as_view(), name="contact"),
     path("faq/", views.faq, name="faq"),
     path("success/", views.success, name="success"),
