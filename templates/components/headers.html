@@ -45,12 +45,11 @@
                   <a href= "{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                     aria-expanded="false">Packages <i class="icon-arrow-down" aria-hidden="true"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="package.html">Kasol Kheerganga Trek</a></li>
-                    <li><a href="#">Enchanting Kerala</a></li>
-                    <li><a href="#">Historical Hampi </a></li>
-                    <li><a href="#">Serene Himalayan </a></li>
-                    <li><a href="#">Mystical Varanasi </a></li>
-                    <li><a href="#">Wildlife Wonders</a></li>
+                    {% for package in package_list %}
+                      <li>
+                        <a href="{% url "package-detail" package.id %}">{{package.name}}</a>
+                      </li>
+                    {% endfor %}
                   </ul>
                 </li>
 
@@ -59,28 +58,13 @@
                     aria-expanded="false">Destination
                     <i class="icon-arrow-down" aria-hidden="true"></i></a>
                   <ul class="dropdown-menu">
-                    <li>
-                      <a href="destination.html">Shimla</a>
-                    </li>
-                    <li>
-                      <a href="destination.html">Taj Mahal</a>
-                    </li>
-                    <li>
-                      <a href="destination.html">Goa Beaches </a>
-                    </li>
-                    <li>
-                      <a href="destination.html">Jaipur</a>
-                    </li>
-                    <li>
-                      <a href="destination.html">Leh-Ladakh</a>
-                    </li>
-                    <li>
-                      <a href="destination.html">Darjeeling</a>
-                    </li>
 
-
+                    {% for destination in destination_list %}
+                      <li>
+                        <a href="{% url "destination-detail" destination.id %}">{{destination.name}}</a>
+                      </li>
+                    {% endfor %}
                   </ul>
-
                 </li>
 
                 <li class="submenu dropdown pr-2">
