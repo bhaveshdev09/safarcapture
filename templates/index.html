@@ -120,41 +120,42 @@
     </div>
     <div class="trend-box">
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
-          <div class="trend-item">
-            <div class="trend-image">
-              <img src="static/images/trending/Shimla and Manali, Himachal Pradesh.jpg" alt="image">
-              <div class="trend-tags"><a href="#"><i class="flaticon-like"></i></a></div> 
-            </div>
-            <div class="trend-content-main">
-              <div class="trend-content">
-                <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i>Himachal Pradesh</h6>
-                <h4><a href="#">Shimla and Manali</a></h4>
-                <div class="rating-main d-flex align-items-center">
-                  <div class="rating">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                  </div>
-                  <span class="ml-2">38 Reviews</span>
-                </div>
+        {% for package in packages %}
+          <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+            <div class="trend-item">
+              <div class="trend-image">
+                <img src="{{package.card_cover_image.url}}" alt="image">
+                <div class="trend-tags"><a href="#"><i class="flaticon-location"></i></a></div> 
               </div>
-              <div class="trend-last-main">
-                <p class="mb-0 trend-para">A wonderful little cottage right on the seashore - perfect for exploring.
-                </p>
-                <div class="trend-last d-flex align-items-center justify-content-between">
-                  <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days & 2 night</p>
-                  <div class="trend-price">
-                    <p class="price white mb-0">From <span>₹29999</span></p>
+              <div class="trend-content-main">
+                <div class="trend-content">
+                  <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> {{package.location}}</h6>
+                  <h4><a href="{% url "package-detail" package.pk %}">{{package.name}}</a></h4>
+                  <div class="rating-main d-flex align-items-center">
+                    <div class="rating">
+                      {% for check in package.rating_details %}
+                        <span class="fa fa-star{% if check %} checked{% endif %}"></span>
+                      {% endfor %}
+                    </div>
+                    {% comment %} <span class="ml-2">388 Reviews</span> {% endcomment %}
+                  </div>
+                </div>
+                <div class="trend-last-main">
+                  <p class="mb-0 trend-para">{{package.description|safe|truncatewords:8}}.
+                  </p>
+                  <div class="trend-last d-flex align-items-center justify-content-between">
+                    <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> {{package.days}} days &amp; {{package.night}} night</p>
+                    <div class="trend-price">
+                      <p class="price white mb-0">From <span>₹{{package.price}}</span></p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+        {% endfor %}
+        
+        {% comment %} <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
           <div class="trend-item">
             <div class="trend-image">
               <img src="static/images/trending/Andaman and Nicobar Islands.jpg" alt="image">
@@ -261,7 +262,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
         {% comment %} <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
           <div class="trend-item">
             <div class="trend-image">
@@ -297,7 +298,7 @@
               </div>
             </div>
           </div>
-        </div> {% endcomment %}
+        </div>
         <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
           <a href="#"><div class="trend-item">
                <div class="trend-image">
@@ -368,7 +369,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> {% endcomment %}
       </div>
     </div>
   </div>

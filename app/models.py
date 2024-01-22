@@ -136,6 +136,11 @@ class Destination(BaseModel):
     def __str__(self) -> str:
         return self.name
 
+    @property
+    def rating_details(self):
+        rating_list = [True] * self.rating + ([False] * (5 - self.rating))
+        return rating_list
+
 
 class Booking(BaseModel):
     STATUS_PENDING = "pending"

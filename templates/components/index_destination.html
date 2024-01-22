@@ -10,49 +10,63 @@
         <div class="trend-box">
             <div class="price-navtab text-center mb-4">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a data-toggle="tab" href="#historical">Historical</a></li>
-                    <li><a data-toggle="tab" href="#weekend">Weekend</a></li>
+                    {% for category in categories %}
+                    <li class="{% if categories.0 == category %}active{% endif %}" ><a data-toggle="tab" href="#{{category|lower|slugify}}">{{category}}</a></li> 
+                    {% comment %} <li><a data-toggle="tab" href="#weekend">Weekend</a></li>
                     <li><a data-toggle="tab" href="#holidays">Holidays</a></li>
-                    <li><a data-toggle="tab" href="#special">Special Tour</a></li>
+                    <li><a data-toggle="tab" href="#special">Special Tour</a></li> {% endcomment %}
+                    {% endfor %}
+                    {% comment %} <li class="active"><a data-toggle="tab" href="#historical">Historical</a></li> {% endcomment %}
+                    {% comment %} <li><a data-toggle="tab" href="#weekend">Weekend</a></li>
+                    <li><a data-toggle="tab" href="#holidays">Holidays</a></li>
+                    <li><a data-toggle="tab" href="#special">Special Tour</a></li> {% endcomment %}
                 </ul>
             </div>
             <div class="tab-content">
-                <div id="historical" class="tab-pane fade in active">
+                {% for category in categories %}
+                <div id="{{category|lower|slugify}}" class="tab-pane fade in {% if categories.0 == category %}active{% endif %}">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="trend-item">
-                                <div class="trend-image">
-                                    <img src="static/images/trending/Taj Mahal, Agra.jpg" alt="image">
-                                </div>
-                                <div class="trend-content-main">
-                                    <div class="trend-content">
-                                        <div class="rating-main d-flex align-items-center pb-1">
-                                            <div class="rating">
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                            </div>
-                                            <span class="ml-2">38 Reviews</span>
-                                        </div>
-                                        <h4><a href="#">Taj Mahal, Agra</a></h4>
-                                        <p class="mb-0"><i class="fa fa-eye mr-1"></i> 852 Visiting Places <i
-                                                class="fa fa-map-marker mr-1 ml-3"></i> Agra.</p>
+                        {% comment %} {% for destination in destinations %} {% endcomment %}
+                        {% for destination in destinations %}
+                            {% if destination.category.pk == category.pk %}
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="trend-item">
+                                    <div class="trend-image">
+                                    
+                                        <img src="{{destination.image_list.first.image.url}}" alt="image">
                                     </div>
-                                    <div class="trend-last-main">
-                                        <p class="mb-0 trend-para">A wonderful little cottage right on the seashore -
-                                            perfect for
-                                            exploring.</p>
-                                        <div class="trend-last d-flex align-items-center justify-content-center">
-                                            <p class="mb-0 white d-flex align-items-center">View Details</p>
+                                    <div class="trend-content-main">
+                                        <div class="trend-content">
+                                            <div class="rating-main d-flex align-items-center pb-1">
+                                                <div class="rating">
+                                                    {% for check in destination.rating_details %}
+                                                        <span class="fa fa-star{% if check %} checked{% endif %}"></span>
+                                                    {% endfor %}
+                                                    {% comment %} <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span> {% endcomment %}
+                                                </div>
+                                                {% comment %} <span class="ml-2">38 Reviews</span> {% endcomment %}
+                                            </div>
+                                            <h4><a href="{% url "destination-detail" destination.pk %}">{{destination.name}}</a></h4>
+                                            <p class="mb-0"><i class="fa fa-map-marker"></i> {{destination.location}}</p>
+                                        </div>
+                                        <div class="trend-last-main">
+                                            <div class="ml-3 mr-3 mb-2">{{destination.description|safe|truncatewords_html:20}}</div>
+                                            <div class="trend-last d-flex align-items-center justify-content-center">
+                                                <a class="mb-0 white d-flex align-items-center" href="{% url "destination-detail" destination.pk %}">View Details</a>
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class=" col-lg-4 col-md-6 mb-4">
+                            {% endif %}
+                        {% endfor %} 
+                        
+                        {% comment %} <div class=" col-lg-4 col-md-6 mb-4">
                             <div class="trend-item">
                                 <div class="trend-image">
                                     <img src="static/images/trending/Jaipur City Palace, Rajasthan.jpg" alt="image">
@@ -117,11 +131,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> {% endcomment %}
                     </div>
                 </div>
-
-                <div id="weekend" class="tab-pane fade">
+                {% endfor %}
+                {% comment %} <div id="weekend" class="tab-pane fade">
                     <div class="row">
                         <div class=" col-lg-4 col-md-6 mb-4">
                             <div class="trend-item">
@@ -433,7 +447,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
         </div>
     </div>

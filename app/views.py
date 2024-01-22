@@ -6,11 +6,18 @@ from django.views.generic import ListView, FormView, DetailView
 from app.forms import ContactForm
 from django.urls import reverse_lazy
 from django.contrib import messages
-from app.models import Contact, Blog, Package, Destination, Booking
+from app.models import Contact, Blog, Package, Destination, Booking, Category
 
 
 def index(request):
-    return render(request, "index.html")
+    destinations = Destination.objects.all()[:3]
+    categories = Category.objects.all()
+    packages = Package.objects.all()[:6]
+    return render(
+        request,
+        "index.html",
+        {"destinations": destinations, "categories": categories, "packages": packages},
+    )
 
 
 def about(request):
@@ -69,7 +76,7 @@ class PackageDetailView(DetailView):
     context_object_name = "package"
 
     def get_queryset(self):
-        return Package.objects.prefetch_related("image_list").all() 
+        return Package.objects.prefetch_related("image_list").all()
 
 
 class DestinationDetailView(DetailView):
@@ -79,15 +86,6 @@ class DestinationDetailView(DetailView):
 
     def get_queryset(self):
         return Destination.objects.prefetch_related("image_list").all()
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        destination_object = context.get("object")
-        destination_object.rating_details = [True] * destination_object.rating + (
-            [False] * (5 - destination_object.rating)
-        )
-        print(destination_object.rating_details)
-        return context
 
 
 # class PackageBookingView(DetailView):
