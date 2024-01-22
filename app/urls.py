@@ -17,10 +17,13 @@ urlpatterns = [
         name="destination-detail",
     ),
     path(
-        "packages/booking/", views.post_booking,
+        "packages/booking/",
+        views.post_booking,
         name="package-booking",
     ),
     path("contact/", views.ContactView.as_view(), name="contact"),
     path("faq/", views.faq, name="faq"),
     path("success/", views.success, name="success"),
+    path("terms-condtions/", views.terms_conditions, name="terms-conditions"),
+    path("privacy-policy/", views.privacy_policy, name="privacy-policy"),
 ]
