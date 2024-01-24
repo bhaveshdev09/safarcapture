@@ -372,7 +372,7 @@ input[type=password], input[type=tel], input[type=date], input[type=time], texta
 select {
   padding: 8px 20px;
   width: 100%;
-  height: inherit; }
+}
   select option {
     color: #3f3f3f; }
 
@@ -1838,7 +1838,7 @@ header #navbar {
     position: absolute;
     top: 40px;
     left: 0px;
-    min-width: 220px;
+    min-width: 280px;
     background: #fff;
     box-shadow: 0 0 15px #cccccc57;
     text-align: left;

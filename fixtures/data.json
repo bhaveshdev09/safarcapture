@@ -1,11 +1,165 @@
 [
     {
+        "model": "app.contact",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-15T10:46:32.904Z",
+            "updated_at": "2024-01-15T10:46:32.904Z",
+            "name": "Bhavesh Namdev Patil",
+            "email": "patilbhavesh991209@gmail.com",
+            "phone": "7045809623",
+            "message": "hello world"
+        }
+    },
+    {
+        "model": "app.contact",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-15T10:50:05.045Z",
+            "updated_at": "2024-01-15T10:50:05.045Z",
+            "name": "Bhavesh Namdev Patil",
+            "email": "patilbhavesh991209@gmail.com",
+            "phone": "7045809623",
+            "message": "hello world"
+        }
+    },
+    {
+        "model": "app.blogimage",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-24T21:06:58.963Z",
+            "updated_at": "2024-01-24T21:06:58.963Z",
+            "image": "blogs/images/snow2.jpg",
+            "name": "blog_image"
+        }
+    },
+    {
+        "model": "app.blogimage",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-24T21:07:19.309Z",
+            "updated_at": "2024-01-24T21:07:19.309Z",
+            "image": "blogs/images/nature6.jpg",
+            "name": "blog_image"
+        }
+    },
+    {
+        "model": "app.blogimage",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-01-24T21:13:04.206Z",
+            "updated_at": "2024-01-24T21:13:04.206Z",
+            "image": "blogs/images/badrinath.jpg",
+            "name": "blog_image"
+        }
+    },
+    {
+        "model": "app.blogimage",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-01-24T21:13:34.982Z",
+            "updated_at": "2024-01-24T21:13:34.982Z",
+            "image": "blogs/images/Gangotri_Temple.jpg",
+            "name": "blog_image"
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-01-24T21:08:14.374Z",
+            "updated_at": "2024-01-24T21:37:53.262Z",
+            "title": "Discovering Heaven on Earth: Manali and Kullu - A Blissful Journey Amidst the Himalayas",
+            "description": "<p>Nestled in the lap of the majestic Himalayas, Manali and Kullu collectively form a picture-perfect destination that captivates the hearts of travelers seeking a blend of natural beauty, adventure, and tranquility. These twin gems of Himachal Pradesh, India, have earned a reputation as a haven for nature enthusiasts, adventure seekers, and those in search of a serene retreat. Let&#39;s embark on a virtual journey to explore the enchanting beauty and myriad offerings of Manali and Kullu.</p>\r\n\r\n<p><strong>Manali: The Gateway to Bliss</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>Breathtaking Scenery:</strong> Manali is renowned for its breathtaking landscapes that seamlessly blend snow-capped peaks, lush greenery, and the gushing Beas River. The picturesque views of the surrounding mountains, especially during sunrise and sunset, paint a canvas of unparalleled beauty.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Rohtang Pass:</strong> One of the highlights of Manali is the famous Rohtang Pass, situated at an altitude of 3,978 meters. This mountain pass connects Kullu Valley to Lahaul and Spiti Valleys, offering mesmerizing panoramic views of the Himalayan ranges. Adventure enthusiasts can indulge in activities like skiing and snowboarding during the winter months.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Adventure Sports Hub:</strong> Manali is a paradise for adventure seekers, offering a plethora of activities such as paragliding, river rafting, trekking, and mountaineering. Solang Valley is particularly popular for its adventure sports facilities, attracting adrenaline junkies from around the world.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Old Manali and Hadimba Temple:</strong> Old Manali exudes a charm of its own with narrow lanes, quaint cafes, and a vibrant atmosphere. The Hadimba Temple, dedicated to the goddess Hadimba, is a unique wooden structure surrounded by cedar forests, adding a touch of spirituality to the destination.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p><strong>Experiencing the Magic of Manali</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>Cultural Delights:</strong> The rich cultural tapestry of Manali&nbsp;is reflected in their traditional festivals, including Kullu Dussehra. Visitors can witness vibrant processions, cultural performances, and the unique congregation of local deities.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Shopping and Cuisine:</strong> Explore the bustling markets of Manali to shop for local handicrafts, woolens, and exquisite jewelry. Indulge in the delectable Himachali cuisine, featuring local specialties like Sidu, Thenthuk, and various apple-based dishes.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Cozy Accommodations:</strong> Both Manali offer a range of accommodations, from luxury resorts to cozy guesthouses. Wake up to the crisp mountain air and panoramic views, ensuring a memorable stay.</p>\r\n\t</li>\r\n</ol>",
+            "cover_image": "blogs/covers/horse_riding.jpg",
+            "published_date": "2024-01-24",
+            "quote": "Manali's nature whispers tales of timeless beauty, where the mountains stand as guardians of serenity, the rivers dance with untamed grace, and the air is a melody of tranquility. In the heart of Manali, one finds not just a destination but a sanctuary where the soul connects with the essence of the earth.",
+            "author": "Bipin Tatkare",
+            "image_list": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-24T21:14:11.219Z",
+            "updated_at": "2024-01-24T21:14:11.219Z",
+            "title": "Chardham Yatra: A Spiritual Odyssey through the Sacred Himalayas",
+            "description": "<p>Nestled in the divine embrace of the Himalayas, the Chardham Yatra stands as a spiritual pilgrimage that transcends the boundaries of time and space. This sacred journey, encompassing the four hallowed sites of Yamunotri, Gangotri, Kedarnath, and Badrinath, beckons devotees and travelers alike to embark on a soul-stirring odyssey through the majestic mountains.</p>\r\n\r\n<ul>\r\n\t<li><strong>Yamunotri: The Source of the Yamuna River</strong></li>\r\n</ul>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li>\r\n\t<p><strong>Pilgrimage to Yamunotri:</strong> The journey begins at Yamunotri, where the Yamuna River originates. Devotees undertake a trek to the Yamunotri Temple, seeking the blessings of Goddess Yamuna. The natural beauty of the surroundings adds a mystical charm to this sacred site.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Surya Kund and Divya Shila:</strong> Surya Kund, a natural thermal spring, and Divya Shila, a rock pillar, are integral to the religious rituals performed at Yamunotri. Pilgrims take a holy dip in the Surya Kund before offering prayers at the temple and seeking the divine energy from Divya Shila.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<ul>\r\n\t<li><strong>Gangotri: The Abode of the Ganges</strong></li>\r\n</ul>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li>\r\n\t<p><strong>Sacred Dip at Gangotri:</strong> The Chardham Yatra then leads to Gangotri, the birthplace of the holy Ganges River. Pilgrims take a dip in the sacred waters of the Bhagirathi River, believing it cleanses them of sins and paves the way for spiritual elevation.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Gangotri Temple:</strong> The Gangotri Temple, dedicated to Goddess Ganga, is a spiritual haven adorned with breathtaking views of the surrounding mountains. The chanting of hymns and the ringing of temple bells create an ambiance of divine serenity.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<ul>\r\n\t<li><strong>Kedarnath: Where Lord Shiva Resides</strong></li>\r\n</ul>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li>\r\n\t<p><strong>Pilgrimage to Kedarnath:</strong> The Chardham Yatra then ascends to Kedarnath, the abode of Lord Shiva. Pilgrims trek through scenic landscapes to reach the Kedarnath Temple, situated against the backdrop of snow-capped peaks.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Breathtaking Views and Bhairavnath Temple:</strong> Apart from the spiritual aura, Kedarnath offers awe-inspiring views of the Himalayas. The Bhairavnath Temple nearby adds a touch of mystical reverence to the pilgrimage.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p style=\"margin-left:40px\"><strong>Badrinath: The Gateway to Spiritual Enlightenment</strong></p>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li>\r\n\t<p><strong>Holiness of Badrinath:</strong> The final destination of the Chardham Yatra is Badrinath, where the divine journey reaches its pinnacle. Devotees seek blessings at the Badrinath Temple, dedicated to Lord Vishnu, and immerse themselves in the sacred atmosphere of this ancient pilgrimage site.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Mana Village and Charan Paduka:</strong> Nearby attractions include the Mana Village, known as the last inhabited village before the Indo-China border, and Charan Paduka, a rock believed to bear the footprints of Lord Vishnu.</p>\r\n\t</li>\r\n</ol>",
+            "cover_image": "blogs/covers/chardham_p_cover_img.jpg",
+            "published_date": "2024-01-24",
+            "quote": "Embark on the Chardham Yatra, where each step is a prayer, and every peak whispers the secrets of eternity. In the sacred embrace of the Himalayas, find not just the four revered shrines but a profound connection with divinity. As you tread the path of the Chardham, may your soul be uplifted, and your spirit find solace in the mountains' silent hymn",
+            "author": "Bhavesh",
+            "image_list": [
+                3,
+                4
+            ]
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-01-24T21:20:59.678Z",
+            "updated_at": "2024-01-24T21:27:55.020Z",
+            "title": "Take only memories, leave only footprints.",
+            "description": "<p>Introduction: In the pursuit of wanderlust, the phrase &quot;Take only memories, leave only footprints&quot; has become the mantra for a new breed of travelers &ndash; those committed to the principles of sustainable and responsible tourism. This philosophy encourages explorers to cherish the memories of their journeys while minimizing their impact on the environment and local communities. Let&#39;s delve into the essence of this mindful approach to travel and discover how each footstep can be a testament to responsible tourism.</p>\r\n\r\n<ul>\r\n\t<li><strong>Embracing Sustainable Practices:</strong></li>\r\n</ul>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li>\r\n\t<p><strong>Eco-friendly Accommodations:</strong> Start your journey responsibly by choosing eco-friendly accommodations. From eco-lodges to green hotels, options abound for travelers seeking to reduce their carbon footprint and support establishments committed to environmental conservation.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Respect for Local Culture:</strong> Immerse yourself in the local culture and traditions of the places you visit. Respect for customs, attire, and etiquettes fosters a positive exchange between tourists and the communities they encounter, ensuring that the cultural tapestry remains vibrant and intact.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<ul>\r\n\t<li><strong>Minimizing Environmental Impact:</strong></li>\r\n</ul>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li>\r\n\t<p><strong>Waste Reduction:</strong> Carry a reusable water bottle, refuse single-use plastics, and practice waste segregation. Minimizing your waste not only contributes to cleaner environments but also sets an example for fellow travelers to follow suit.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Carbon Conscious Travel:</strong> Opt for sustainable transportation options, such as public transit, cycling, or walking. If your journey requires air travel, consider carbon offset programs to neutralize your carbon footprint, mitigating the environmental impact of your trip.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<ul>\r\n\t<li><strong>Supporting Local Economies:</strong></li>\r\n</ul>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li>\r\n\t<p><strong>Shop Local, Eat Local:</strong> Encourage sustainable tourism by supporting local businesses and markets. Choose souvenirs crafted by local artisans, dine at eateries that source ingredients locally, and contribute to the economic well-being of the communities you visit.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Community Engagement:</strong> Seek opportunities to engage with local communities through responsible tourism initiatives. Whether participating in cultural exchanges, volunteering for conservation projects, or contributing to local charities, your involvement can leave a positive, lasting impact.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<ul>\r\n\t<li><strong>Preserving Natural Wonders:</strong></li>\r\n</ul>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li>\r\n\t<p><strong>Leave No Trace:</strong> Adhere to the principles of &quot;Leave No Trace&quot; by refraining from littering, defacing natural sites, or disturbing wildlife. Your commitment to preserving the pristine beauty of destinations ensures they remain treasures for future generations to explore.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Educate and Inspire:</strong> Share your experiences and knowledge about responsible tourism with fellow travelers. Through social media, blogs, or community engagement, inspire others to adopt sustainable practices, creating a ripple effect that contributes to a more conscious and responsible global travel community.</p>\r\n\t</li>\r\n</ol>",
+            "cover_image": "blogs/covers/valley.jpg",
+            "published_date": "2024-01-24",
+            "quote": "Travel with purpose: Take only memories, leave only footprints, and let your journey be a celebration of sustainable exploration",
+            "author": "Bhavesh",
+            "image_list": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-01-24T21:29:00.150Z",
+            "updated_at": "2024-01-24T21:29:00.150Z",
+            "title": "Here Our's Life is either a daring adventure.",
+            "description": "<p>In the pursuit of unforgettable experiences, the saying, &quot;Here our life is either a daring adventure or nothing at all,&quot; perfectly captures the spirit of those who seek excitement, challenge, and the thrill of the unknown. This sentiment serves as an anthem for adventure tourism enthusiasts, drawing them to destinations that offer heart-pounding activities amidst awe-inspiring landscapes. Join us on a journey to explore the adrenaline-fueled world of adventure tourism, where every moment is a daring adventure waiting to be embraced.</p>\r\n\r\n<p><strong>Soaring High: Skydiving and Paragliding Adventures</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>Skydiving Over Majestic Landscapes:</strong> Experience the ultimate adrenaline rush as you leap from an airplane, free-falling over stunning landscapes. Skydiving destinations around the world, from Interlaken to Queenstown, provide an unparalleled perspective of nature&#39;s grandeur.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Paragliding for Aerial Serenity:</strong> Glide through the skies like a bird with paragliding adventures. Destinations like Bir Billing in India or Oludeniz in Turkey offer breathtaking views and a sense of freedom that only comes from soaring high above the world.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p><strong>Conquering the Elements: Rock Climbing and White-Water Rafting</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>Scaling New Heights: Rock Climbing Escapades:</strong> For those who seek vertical challenges, rock climbing destinations such as Yosemite National Park or Meteora in Greece beckon with their towering cliffs and adrenaline-pumping ascents.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Navigating Rapids: White-Water Rafting Thrills:</strong> Strap on your helmet and embark on a white-water rafting expedition. Whether it&#39;s the wild rivers of Costa Rica or the untamed rapids of the Zambezi, the thrill of conquering rushing waters is an adventure like no other.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p><strong>Exploring the Depths: Scuba Diving and Snorkeling Expeditions</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>Beneath the Waves: Scuba Diving Adventures:</strong> Dive into the mesmerizing world beneath the waves with scuba diving escapades. Explore vibrant coral reefs, encounter marine life, and discover underwater treasures in destinations like the Great Barrier Reef or the Maldives.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Surface Wonders: Snorkeling in Crystal Clear Waters:</strong> For a more leisurely underwater experience, snorkeling offers a glimpse into the aquatic wonders. The crystal-clear waters of places like the Red Sea or Bora Bora provide an opportunity to connect with marine life in their natural habitat.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p><strong>On the Trails: Hiking, Trekking, and Mountain Biking</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>Epic Trails: Hiking and Trekking Adventures:</strong> Lace up your hiking boots and hit the trails of iconic destinations like the Inca Trail, the Himalayas, or the Appalachian Trail. Hiking and trekking adventures promise not only physical challenges but also breathtaking views and cultural immersion.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Downhill Rush: Mountain Biking Trails:</strong> Seek thrills on two wheels as you navigate mountain biking trails around the world. From the challenging trails of Moab, Utah, to the scenic routes of the Swiss Alps, each descent is a pulse-quickening adventure.</p>\r\n\t</li>\r\n</ol>",
+            "cover_image": "blogs/covers/pexels-anjali-vishwakarma-14477905.jpg",
+            "published_date": "2024-01-24",
+            "quote": "Embrace the daring adventure of life's escapades, where each moment becomes a thrilling chapter in the epic tale of exploration.",
+            "author": "Bipin",
+            "image_list": [
+                1,
+                2
+            ]
+        }
+    },
+    {
+        "model": "app.blog",
+        "pk": 5,
+        "fields": {
+            "created_at": "2024-01-24T21:44:31.390Z",
+            "updated_at": "2024-01-24T21:44:31.390Z",
+            "title": "The real voyage does not consist in seeking new landscapes",
+            "description": "<p>This quote encapsulates the essence of meaningful travel, highlighting the transformative power of perspective over the pursuit of new destinations. Join us on a contemplative journey that transcends the mere exploration of physical landscapes, delving into the heart of travel where introspection, cultural immersion, and personal growth become the true markers of a genuine voyage.</p>\r\n\r\n<p><strong>Seeing with New Eyes: The Power of Perception</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>Cultural Immersion as a Gateway:</strong> Rather than merely ticking off popular tourist destinations, delve into the heart of local cultures. Immerse yourself in the traditions, cuisine, and everyday life of the places you visit, allowing a deeper understanding to shape your journey.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Mindful Exploration:</strong> Slow down, observe, and absorb the intricacies of your surroundings. From bustling markets to serene landscapes, practicing mindfulness in your travels unveils hidden beauty and cultural richness that may go unnoticed in a hurried pursuit of new landscapes.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p><strong>Connecting Through Stories:</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>People as Living Narratives:</strong> Every person you encounter has a story to tell. Engage with locals, listen to their narratives, and allow these personal connections to add layers of meaning to your journey. The real voyage unfolds through the lives and stories of the people you meet.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Sharing Experiences:</strong> Travel becomes more than a physical journey when you share your experiences. Whether through storytelling, photography, or social media, the narrative of your voyage becomes a bridge, connecting diverse perspectives and fostering a global community of explorers.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p><strong>Personal Growth as the Ultimate Destination:</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>Challenges and Reflections:</strong> Embrace challenges as opportunities for personal growth. Whether navigating language barriers, trying unfamiliar cuisines, or stepping out of your comfort zone, each obstacle becomes a milestone in your internal voyage.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Cultivating Empathy:</strong> Travel has the power to cultivate empathy by exposing you to different ways of life. As you witness the struggles and joys of others, your heart opens to a broader understanding of humanity, fostering compassion and empathy for the world.</p>\r\n\t</li>\r\n</ol>\r\n\r\n<p><strong>A Journey That Lasts:</strong></p>\r\n\r\n<ol>\r\n\t<li>\r\n\t<p><strong>Mindful Travel Practices:</strong> Choose sustainable and responsible travel practices that leave a positive impact on both the environment and local communities. The real voyage involves being conscious of your footprint and contributing to the preservation of the destinations you explore.</p>\r\n\t</li>\r\n\t<li>\r\n\t<p><strong>Reflection and Gratitude:</strong> Take moments for self-reflection during your travels. Express gratitude for the experiences, people, and perspectives encountered along the way. These moments of reflection become lasting souvenirs of a voyage that goes beyond the surface.</p>\r\n\t</li>\r\n</ol>",
+            "cover_image": "blogs/covers/blog1.jpeg",
+            "published_date": "2024-01-24",
+            "quote": "True travel is not about seeking new landscapes; it's a journey within, where fresh perspectives shape the profound landscapes of the heart",
+            "author": "Marcel Proust",
+            "image_list": [
+                1,
+                2
+            ]
+        }
+    },
+    {
         "model": "app.packageimage",
         "pk": 1,
         "fields": {
             "created_at": "2024-01-14T14:57:07.464Z",
-            "updated_at": "2024-01-14T14:57:07.464Z",
-            "image": "package/images/akash-choudhary-CTdDooABASA-unsplash.jpg",
+            "updated_at": "2024-01-24T18:21:47.553Z",
+            "image": "package/images/bg.jpg",
             "name": "package_image"
         }
     },
@@ -14,8 +168,618 @@
         "pk": 2,
         "fields": {
             "created_at": "2024-01-14T14:57:15.527Z",
-            "updated_at": "2024-01-14T14:57:15.527Z",
-            "image": "package/images/istockphoto-539105384-612x612.jpg",
+            "updated_at": "2024-01-24T18:22:14.236Z",
+            "image": "package/images/shimla1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-01-24T11:43:55.248Z",
+            "updated_at": "2024-01-24T18:22:25.090Z",
+            "image": "package/images/shimla2.jpg",
+            "name": "kedarnath_template_img"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-01-24T13:12:45.961Z",
+            "updated_at": "2024-01-24T18:22:38.091Z",
+            "image": "package/images/shimla3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 5,
+        "fields": {
+            "created_at": "2024-01-24T13:13:13.399Z",
+            "updated_at": "2024-01-24T18:22:53.096Z",
+            "image": "package/images/sunset1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 6,
+        "fields": {
+            "created_at": "2024-01-24T13:13:22.576Z",
+            "updated_at": "2024-01-24T18:23:14.229Z",
+            "image": "package/images/temple1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 7,
+        "fields": {
+            "created_at": "2024-01-24T13:13:29.672Z",
+            "updated_at": "2024-01-24T18:23:51.579Z",
+            "image": "package/images/temple2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 8,
+        "fields": {
+            "created_at": "2024-01-24T13:13:36.963Z",
+            "updated_at": "2024-01-24T18:24:04.394Z",
+            "image": "package/images/Tiger_Falls.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 9,
+        "fields": {
+            "created_at": "2024-01-24T13:13:44.457Z",
+            "updated_at": "2024-01-24T18:24:13.465Z",
+            "image": "package/images/trek1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 10,
+        "fields": {
+            "created_at": "2024-01-24T13:14:01.495Z",
+            "updated_at": "2024-01-24T18:24:23.189Z",
+            "image": "package/images/nature4.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 11,
+        "fields": {
+            "created_at": "2024-01-24T13:14:18.751Z",
+            "updated_at": "2024-01-24T18:24:33.345Z",
+            "image": "package/images/nature5.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 12,
+        "fields": {
+            "created_at": "2024-01-24T13:14:31.378Z",
+            "updated_at": "2024-01-24T18:24:42.934Z",
+            "image": "package/images/river_rafting1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 13,
+        "fields": {
+            "created_at": "2024-01-24T13:14:40.497Z",
+            "updated_at": "2024-01-24T18:24:52.617Z",
+            "image": "package/images/river_rafting2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 14,
+        "fields": {
+            "created_at": "2024-01-24T13:14:47.608Z",
+            "updated_at": "2024-01-24T18:25:03.421Z",
+            "image": "package/images/river_rafting3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 15,
+        "fields": {
+            "created_at": "2024-01-24T13:15:25.727Z",
+            "updated_at": "2024-01-24T18:25:21.134Z",
+            "image": "package/images/river_rafting5.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 16,
+        "fields": {
+            "created_at": "2024-01-24T13:15:34.522Z",
+            "updated_at": "2024-01-24T18:25:32.251Z",
+            "image": "package/images/river1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 17,
+        "fields": {
+            "created_at": "2024-01-24T13:15:42.487Z",
+            "updated_at": "2024-01-24T18:25:40.771Z",
+            "image": "package/images/kedarnath.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 18,
+        "fields": {
+            "created_at": "2024-01-24T13:15:53.615Z",
+            "updated_at": "2024-01-24T19:03:17.835Z",
+            "image": "package/images/bike_riding.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 19,
+        "fields": {
+            "created_at": "2024-01-24T13:16:00.245Z",
+            "updated_at": "2024-01-24T18:25:55.979Z",
+            "image": "package/images/manali1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 20,
+        "fields": {
+            "created_at": "2024-01-24T13:16:07.874Z",
+            "updated_at": "2024-01-24T18:26:04.799Z",
+            "image": "package/images/mountain1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 21,
+        "fields": {
+            "created_at": "2024-01-24T13:16:19.654Z",
+            "updated_at": "2024-01-24T18:26:13.624Z",
+            "image": "package/images/mountain2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 22,
+        "fields": {
+            "created_at": "2024-01-24T13:16:58.116Z",
+            "updated_at": "2024-01-24T18:26:22.071Z",
+            "image": "package/images/mountain3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 23,
+        "fields": {
+            "created_at": "2024-01-24T13:17:05.988Z",
+            "updated_at": "2024-01-24T18:26:35.262Z",
+            "image": "package/images/nature1.jfif",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 24,
+        "fields": {
+            "created_at": "2024-01-24T13:17:17.009Z",
+            "updated_at": "2024-01-24T18:26:46.255Z",
+            "image": "package/images/nature2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 25,
+        "fields": {
+            "created_at": "2024-01-24T13:38:46.772Z",
+            "updated_at": "2024-01-24T18:35:56.707Z",
+            "image": "package/images/nature3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 26,
+        "fields": {
+            "created_at": "2024-01-24T13:44:39.925Z",
+            "updated_at": "2024-01-24T18:36:13.523Z",
+            "image": "package/images/fort1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 27,
+        "fields": {
+            "created_at": "2024-01-24T14:46:21.070Z",
+            "updated_at": "2024-01-24T18:36:22.445Z",
+            "image": "package/images/fort2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 28,
+        "fields": {
+            "created_at": "2024-01-24T14:46:38.480Z",
+            "updated_at": "2024-01-24T18:36:29.533Z",
+            "image": "package/images/fort3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 29,
+        "fields": {
+            "created_at": "2024-01-24T14:46:48.246Z",
+            "updated_at": "2024-01-24T18:36:38.544Z",
+            "image": "package/images/fort4.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 30,
+        "fields": {
+            "created_at": "2024-01-24T14:47:06.283Z",
+            "updated_at": "2024-01-24T18:36:48.178Z",
+            "image": "package/images/architecture2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 31,
+        "fields": {
+            "created_at": "2024-01-24T14:47:18.313Z",
+            "updated_at": "2024-01-24T18:36:55.449Z",
+            "image": "package/images/architecture1.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 32,
+        "fields": {
+            "created_at": "2024-01-24T14:47:31.516Z",
+            "updated_at": "2024-01-24T18:37:22.288Z",
+            "image": "package/images/DSC_0007.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 33,
+        "fields": {
+            "created_at": "2024-01-24T15:00:42.399Z",
+            "updated_at": "2024-01-24T18:38:22.710Z",
+            "image": "package/images/kedarnath2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 34,
+        "fields": {
+            "created_at": "2024-01-24T15:09:45.275Z",
+            "updated_at": "2024-01-24T19:16:30.386Z",
+            "image": "package/images/chardham_p_cover_img.png",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 35,
+        "fields": {
+            "created_at": "2024-01-24T18:39:11.613Z",
+            "updated_at": "2024-01-24T18:39:11.613Z",
+            "image": "package/images/Jaipur_City_Palace_Rajasthan.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 36,
+        "fields": {
+            "created_at": "2024-01-24T18:39:46.549Z",
+            "updated_at": "2024-01-24T18:39:46.549Z",
+            "image": "package/images/Gangotri_Temple.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 37,
+        "fields": {
+            "created_at": "2024-01-24T18:40:30.948Z",
+            "updated_at": "2024-01-24T18:40:30.948Z",
+            "image": "package/images/badrinath.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 38,
+        "fields": {
+            "created_at": "2024-01-24T18:41:09.576Z",
+            "updated_at": "2024-01-24T18:41:09.576Z",
+            "image": "package/images/sunset2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 39,
+        "fields": {
+            "created_at": "2024-01-24T18:41:39.176Z",
+            "updated_at": "2024-01-24T18:41:39.176Z",
+            "image": "package/images/sunset3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 40,
+        "fields": {
+            "created_at": "2024-01-24T18:42:28.588Z",
+            "updated_at": "2024-01-24T18:42:28.588Z",
+            "image": "package/images/ganga.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 41,
+        "fields": {
+            "created_at": "2024-01-24T18:43:00.178Z",
+            "updated_at": "2024-01-24T18:43:00.178Z",
+            "image": "package/images/trek2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 42,
+        "fields": {
+            "created_at": "2024-01-24T18:43:30.544Z",
+            "updated_at": "2024-01-24T18:43:30.544Z",
+            "image": "package/images/trek3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 43,
+        "fields": {
+            "created_at": "2024-01-24T18:44:04.499Z",
+            "updated_at": "2024-01-24T18:45:44.011Z",
+            "image": "package/images/kedarnath3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 44,
+        "fields": {
+            "created_at": "2024-01-24T18:46:24.560Z",
+            "updated_at": "2024-01-24T18:46:24.560Z",
+            "image": "package/images/temple3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 45,
+        "fields": {
+            "created_at": "2024-01-24T18:46:58.080Z",
+            "updated_at": "2024-01-24T18:48:29.248Z",
+            "image": "package/images/dodham_p_cover_img.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 46,
+        "fields": {
+            "created_at": "2024-01-24T18:49:44.593Z",
+            "updated_at": "2024-01-24T18:49:44.593Z",
+            "image": "package/images/snow2.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 47,
+        "fields": {
+            "created_at": "2024-01-24T18:50:23.609Z",
+            "updated_at": "2024-01-24T18:50:23.609Z",
+            "image": "package/images/trek4.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 48,
+        "fields": {
+            "created_at": "2024-01-24T18:50:48.605Z",
+            "updated_at": "2024-01-24T18:50:48.605Z",
+            "image": "package/images/manali4.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 49,
+        "fields": {
+            "created_at": "2024-01-24T18:51:36.725Z",
+            "updated_at": "2024-01-24T18:51:36.725Z",
+            "image": "package/images/nature6.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 50,
+        "fields": {
+            "created_at": "2024-01-24T18:59:34.976Z",
+            "updated_at": "2024-01-24T18:59:34.976Z",
+            "image": "package/images/paragliding.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 51,
+        "fields": {
+            "created_at": "2024-01-24T18:59:53.644Z",
+            "updated_at": "2024-01-24T18:59:53.644Z",
+            "image": "package/images/horse_riding.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 52,
+        "fields": {
+            "created_at": "2024-01-24T19:28:01.417Z",
+            "updated_at": "2024-01-24T19:28:01.418Z",
+            "image": "package/images/camel_riding.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 53,
+        "fields": {
+            "created_at": "2024-01-24T19:28:28.881Z",
+            "updated_at": "2024-01-24T19:28:28.881Z",
+            "image": "package/images/desert.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 54,
+        "fields": {
+            "created_at": "2024-01-24T19:43:52.811Z",
+            "updated_at": "2024-01-24T19:43:52.811Z",
+            "image": "package/images/badrinath3.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 55,
+        "fields": {
+            "created_at": "2024-01-24T19:44:21.737Z",
+            "updated_at": "2024-01-24T19:44:21.737Z",
+            "image": "package/images/devprayag.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 56,
+        "fields": {
+            "created_at": "2024-01-24T20:10:16.952Z",
+            "updated_at": "2024-01-24T20:10:16.952Z",
+            "image": "package/images/sadhu.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 57,
+        "fields": {
+            "created_at": "2024-01-24T20:16:06.099Z",
+            "updated_at": "2024-01-24T20:16:06.099Z",
+            "image": "package/images/lord_shiva.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 58,
+        "fields": {
+            "created_at": "2024-01-24T20:20:29.417Z",
+            "updated_at": "2024-01-24T20:20:29.417Z",
+            "image": "package/images/badrinath4.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 59,
+        "fields": {
+            "created_at": "2024-01-24T20:27:15.566Z",
+            "updated_at": "2024-01-24T20:27:15.566Z",
+            "image": "package/images/ladakh.jpg",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 60,
+        "fields": {
+            "created_at": "2024-01-24T20:46:46.678Z",
+            "updated_at": "2024-01-24T20:46:46.678Z",
+            "image": "package/images/atal_tunnel.jfif",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 61,
+        "fields": {
+            "created_at": "2024-01-24T20:55:33.882Z",
+            "updated_at": "2024-01-24T20:55:33.882Z",
+            "image": "package/images/kasol.jfif",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 62,
+        "fields": {
+            "created_at": "2024-01-24T20:55:52.092Z",
+            "updated_at": "2024-01-24T20:55:52.092Z",
+            "image": "package/images/kheerganga2.jfif",
+            "name": "package_image"
+        }
+    },
+    {
+        "model": "app.packageimage",
+        "pk": 63,
+        "fields": {
+            "created_at": "2024-01-24T20:56:04.458Z",
+            "updated_at": "2024-01-24T20:56:04.458Z",
+            "image": "package/images/kheerganga.jpg",
             "name": "package_image"
         }
     },
@@ -56,12 +820,30 @@
         }
     },
     {
+        "model": "app.category",
+        "pk": 5,
+        "fields": {
+            "created_at": "2024-01-22T20:11:58.180Z",
+            "updated_at": "2024-01-22T20:12:11.468Z",
+            "title": "Trekking"
+        }
+    },
+    {
+        "model": "app.category",
+        "pk": 6,
+        "fields": {
+            "created_at": "2024-01-22T20:12:24.315Z",
+            "updated_at": "2024-01-22T20:12:24.315Z",
+            "title": "Road Trip"
+        }
+    },
+    {
         "model": "app.destinationimage",
         "pk": 1,
         "fields": {
             "created_at": "2024-01-14T14:10:00.719Z",
-            "updated_at": "2024-01-14T14:10:00.719Z",
-            "image": "destination/images/akshay-syal-5vDTocCCutE-unsplash_1110x720.jpg",
+            "updated_at": "2024-01-24T21:55:30.172Z",
+            "image": "destination/images/pexels-julia-volk-5205010.jpg",
             "name": "destination_image"
         }
     },
@@ -70,8 +852,8 @@
         "pk": 2,
         "fields": {
             "created_at": "2024-01-14T14:27:38.958Z",
-            "updated_at": "2024-01-14T14:30:51.709Z",
-            "image": "destination/images/pexels-sandeep-singh-7104962_3.jpg",
+            "updated_at": "2024-01-24T21:56:05.590Z",
+            "image": "destination/images/pexels-gokul-gurang-15896015.jpg",
             "name": "destination_image"
         }
     },
@@ -80,8 +862,8 @@
         "pk": 3,
         "fields": {
             "created_at": "2024-01-14T17:28:52.250Z",
-            "updated_at": "2024-01-14T17:28:52.250Z",
-            "image": "destination/images/Shimla_and_Manali_Himachal_Pradesh.jpg",
+            "updated_at": "2024-01-24T21:56:30.846Z",
+            "image": "destination/images/chakrata_p_cover_img.jpg",
             "name": "destination_image"
         }
     },
@@ -90,10 +872,10 @@
         "pk": 1,
         "fields": {
             "created_at": "2024-01-14T14:58:28.701Z",
-            "updated_at": "2024-01-14T18:12:13.258Z",
+            "updated_at": "2024-01-24T19:10:13.284Z",
             "name": "Manali Solang Kasol",
             "location": "Himachal Pradesh",
-            "description": "Everyone�s most visited vacation spot, Manali is a high-altitude Himalayan town that is a treat for every nomad.\r\nBounded by the Pir Panjal and Dhauladhar ranges, the aura of Manali is unsurpassed and invincible. Be it a\r\nrelaxation trip with the family, a backpacking trip with your buddies, or a solo trip. Manali has got you covered!\r\nA trip to Manali will be inadequate if you miss visiting the enthralling Solang valley, which is one of the most\r\nwidespread travel destinations of Himachal Pradesh. Solang valley is situated 14 kilometers to the northwest of\r\nManali and welcomes thousands of tourists every year. Consider as a heaven for adventure devotees, Solang\r\nvalley offers a plethora of activities like parachuting, paragliding, horse riding, Skiing, Quad biking, etc. there is a\r\nlot to explore and enjoy here in Solang valley on your Manali Trip.\r\nJispa, a beautiful little town in the Lahaul district of Himachal Pradesh, is a stunning must-visit. Perched on the\r\nbanks of river Bhaga, Jispa lies 2 hours from Baralacha-la and provides the most stunning views of surrounding\r\nmountains!\r\nWhile it is often regarded as a pit stop en route Leh on the Manali-Leh Highway, I beg to differ. This place is truly\r\nworthy of its own individually planned visit! Situated at a stunning height of 10,500 ft., this little village, home to\r\nabout 78 households, serves as a halt for travelers on the long road trip to Leh-Ladakh. The calm, quiet and\r\ntranquil village with a very small population, offers the most beautiful Zen-like trip you will not soon forget",
+            "description": "<p>Everyone&rsquo;s most visited vacation spot, <strong>Manali</strong> is a high-altitude Himalayan town that is a treat for every nomad. Bounded by the Pir Panjal and Dhauladhar ranges, the aura of Manali is unsurpassed and invincible. Be it a relaxation trip with the family, a backpacking trip with your buddies, or a solo trip. Manali has got you covered! A trip to Manali will be inadequate if you miss visiting the enthralling Solang valley, which is one of the most widespread travel destinations of Himachal Pradesh. Solang valley is situated 14 kilometers to the northwest of Manali and welcomes thousands of tourists every year. Consider as a heaven for adventure devotees, Solang valley offers a plethora of activities like parachuting, paragliding, horse riding, Skiing, Quad biking, etc.</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;There is a lot to explore and enjoy here in Solang valley on your Manali Trip. Jispa, a beautiful little town in the Lahaul district of Himachal Pradesh, is a stunning must-visit. Perched on the banks of river Bhaga, Jispa lies 2 hours from Baralacha-la and provides the most stunning views of surrounding mountains! While it is often regarded as a pit stop en route Leh on the Manali-Leh Highway, I beg to differ. This place is truly worthy of its own individually planned visit! Situated at a stunning height of 10,500 ft., this little village, home to about 78 households, serves as a halt for travelers on the long road trip to Leh-Ladakh. The calm, quiet and tranquil village with a very small population, offers the most beautiful Zen-like trip you will not soon forget</p>",
             "days": 3,
             "night": 2,
             "min_age": 10,
@@ -106,8 +888,444 @@
             "price_double_sharing": 6666,
             "price": 7777,
             "rating": 4,
-            "card_cover_image": "package/covers/akshay-syal-5vDTocCCutE-unsplash_4.jpg",
+            "card_cover_image": "package/covers/manali_kasol.jpeg",
             "category": [
+                4
+            ],
+            "image_list": [
+                2,
+                24,
+                25,
+                48,
+                50,
+                51
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.488Z",
+            "updated_at": "2024-01-24T19:20:11.238Z",
+            "name": "Chakrata",
+            "location": "Uttarakhand",
+            "description": "<p>Chakrata is a beautiful cantonment town nestled in the district of Dehradun and enveloped amidst snow-clad himalayan ranges. It sits gracefully at an elevation of 2,118 meters above sea level and offers the scenic beauty of some of the most beautiful waterfalls that make it an ideal place to visit.</p>",
+            "days": 2,
+            "night": 1,
+            "min_age": 5,
+            "people_max_limit": 25,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27444.296159838097!2d77.84613822870519!3d30.703299974274852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f4a6c1ae9b81f%3A0x9bbdb9d6b27b0eb4!2sChakrata%2C%20Uttarakhand%20248123!5e0!3m2!1sen!2sin!4v1705954515940!5m2!1sen!2sin",
+            "price_quad_sharing": -1,
+            "price_triple_sharing": 5299,
+            "price_double_sharing": 5499,
+            "price": 5799,
+            "rating": 4,
+            "card_cover_image": "package/covers/trending5.jpg",
+            "category": [
+                5,
+                6
+            ],
+            "image_list": [
+                9,
+                20,
+                22,
+                32,
+                38,
+                41
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.366Z",
+            "updated_at": "2024-01-24T19:28:50.495Z",
+            "name": "Jaisalmer",
+            "location": "Rajastan",
+            "description": "<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The magic and chivalry of Jaisalmer need no explanation. We thought of a lot of adjectives to define the glories of this jewel&ndash; war-scarred forts, chivalric delight, riot conjuring colors, breathtaking sand dunes, barely arrogant pride and romantic glory. But most are just near-perfectly suited to depict this piece of beauty. Beyond the breezy majestic royal towns of Rajasthan lies Jaisalmer&ndash; the gateway to the land of Thar Desert. The desolate tract townlet, also known as the Golden Town, is a way to the sedation it acquires from the yellow sandstone used to build the infrastructures.</p>\r\n\r\n<p>The city of Jaisalmer is one of the remaining monumental cities in Rajasthan closest to the India-Pakistan border and stands within the Thar Desert&#39;s coronary soul. It is a notable traveller vacation spot to discover in any season. Jaisalmer excursion bundle from Delhi is your pick. The tour bundle from Delhi to Jaisalmer is an outstanding opportunity to witness the historic beauty. Witness the tragedies that passed off a hundred and eighty million years in the past within side the Thar Desert. The town&#39;s maximum distinguished element is the Jaisalmer Fort, also called Sonar Qila (Golden Fort)</p>",
+            "days": 3,
+            "night": 2,
+            "min_age": 3,
+            "people_max_limit": 24,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227712.02329843707!2d70.73026492558783!3d26.903483551586486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3947bc28aa1b396b%3A0xf5ef9bd660d66ee3!2sJaisalmer%2C%20Rajasthan%20345001!5e0!3m2!1sen!2sin!4v1705955882076!5m2!1sen!2sin",
+            "price_quad_sharing": -1,
+            "price_triple_sharing": 11899,
+            "price_double_sharing": 12499,
+            "price": 8999,
+            "rating": 5,
+            "card_cover_image": "package/covers/Jaipur_City_Palace_Rajasthan.jpg",
+            "category": [
+                2
+            ],
+            "image_list": [
+                27,
+                28,
+                29,
+                30,
+                31,
+                52,
+                53
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.884Z",
+            "updated_at": "2024-01-24T20:21:02.441Z",
+            "name": "Panch Kedar",
+            "location": "Uttarkhand",
+            "description": "<p>Panch Kedar consists of 5 famous temlpes of Lord Shiva: Kedarnath, Rudranath, Madhmaheswar, Kalpeshwar and Tungnath. It is a very long pilgrimage trekking destination in India. According to Hindu legend Panch Kedar relates to the Pandavas of Mahabharata, the heroes of the famous hindu epic who built Panch Kedar Temples (means five temples of Lord Shiva) located in Uttrakhand at Garwal Himalayan Region and known as Kedarnath, Kalpnath, Tungnath, Madmaheshwar and Rudranath.</p>",
+            "days": 14,
+            "night": 13,
+            "min_age": 12,
+            "people_max_limit": 12,
+            "pickup_location": "Haridwar",
+            "drop_of_location": "Haridwar",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.766486207591!2d79.16380027612816!3d30.49935837469773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390833004428cb7b%3A0x5c4f1895f13ffaa9!2sPanch%20Kedar!5e0!3m2!1sen!2sin!4v1706011733832!5m2!1sen!2sin",
+            "price_quad_sharing": -1,
+            "price_triple_sharing": -1,
+            "price_double_sharing": -1,
+            "price": 64999,
+            "rating": 5,
+            "card_cover_image": "package/covers/haridwar2.jpg",
+            "category": [
+                1,
+                5,
+                6
+            ],
+            "image_list": [
+                3,
+                6,
+                17,
+                40,
+                47,
+                54,
+                55,
+                58
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 5,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.424Z",
+            "updated_at": "2024-01-24T19:55:35.539Z",
+            "name": "Chardham",
+            "location": "Utterakhand",
+            "description": "<p>A journey that will take you on a quest for Moksha; a journey filled with fascination and spirituality. These Char Dhams - Kedarnath, Badrinath, Yamunotri, and Gangotri of Uttarakhand are some of the most sacred and significant pilgrimages in India which take you on a path of divinity. Every one of these Dhams holds a legend and is devoted to a specific deity. Yamunotri being the seat of the Goddess Yamuna is dedicated to the Goddess Yamuna who goes along the pilgrims to the high altitudes of the picturesque Rawai Valley. Gangotri is dedicated to the Goddess Ganga. The shrine overlooks the River Bhagirathi, another name of River Ganga. According to the legend, Goddess Ganga took the form of the river to cleanse the ashes and liberate the souls of King Bhagiratha&rsquo;s predecessors. Kedarnath is dedicated to Lord Shiva and is also a part of the Panch Kedar. It is the northernmost Jyotirlinga and is close to the source of the holy river Mandakini. Badrinath is dedicated to Lord Vishnu. It is situated on the bank of the River Alaknanda. According to legend, Lord Vishnu meditated here while his consort Lakshmi took the form of a berry (Badri) tree to offer him shade.</p>",
+            "days": 11,
+            "night": 10,
+            "min_age": 12,
+            "people_max_limit": 25,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/d/embed?mid=1muPOhwVIraxXIQyfhD8zd6nRLIo&hl=en&ehbc=2E312F",
+            "price_quad_sharing": 0,
+            "price_triple_sharing": -1,
+            "price_double_sharing": -1,
+            "price": 28499,
+            "rating": 5,
+            "card_cover_image": "package/covers/chardham_p_cover_img.jpg",
+            "category": [
+                1
+            ],
+            "image_list": [
+                10,
+                34,
+                36,
+                37,
+                41,
+                43
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 6,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.308Z",
+            "updated_at": "2024-01-24T20:20:34.154Z",
+            "name": "Dodham",
+            "location": "Utterakhand",
+            "description": "<p>Straight from the snow-capped majestic mountains to dense wild forests, river confluence to captivating cascades, you can experience the best of nature&rsquo;s blessings on our Badrinath Kedarnath yatra trip. With this pilgrimage, one can marvel at treasures in Uttarakhand&rsquo;s holy towns, experience complete serenity and explore the beauty of the immaculate surrounding mountains. Moreover, Badrinath and Kedarnath are some of the most worshipped temples in India. Their magnificent location offers you a number of picture-perfect locations. The Kedarnath Temple is a holy place for the Hindus and is located amidst the Rudra Himalayan Range at an approximate height of 12,000 ft. The location is near the start of the Mandakini river in Uttarakhand. Because of the harsh weather conditions, the temple is only open between April and November. The Badrikashram, or the city of Badrinath, is located at the height of 3133 m from the main sea level. The city attracts thousands of enthusiasts from different parts of the world. The Do Dham Yatra trip particularly includes a tour to the two most significant shrines in Hinduism &ndash; Kedarnath and Badrinath. With the team, you will get a 6 day and 5 nights expedition, to explore the sacred divine abodes and pay your homage to the gods.</p>",
+            "days": 6,
+            "night": 5,
+            "min_age": 10,
+            "people_max_limit": 24,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/d/embed?mid=1TXOZgjhFcPz6p14XRTMpqcAhPc59QAN0&hl=en_US&ehbc=2E312F",
+            "price_quad_sharing": -1,
+            "price_triple_sharing": 23499,
+            "price_double_sharing": 24499,
+            "price": 25499,
+            "rating": 5,
+            "card_cover_image": "package/covers/dodham_p_cover_img.jpg",
+            "category": [
+                1
+            ],
+            "image_list": [
+                16,
+                20,
+                25,
+                43,
+                45,
+                54,
+                58
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 7,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.517Z",
+            "updated_at": "2024-01-24T20:17:07.356Z",
+            "name": "Kedarnath",
+            "location": "Uttarakhand",
+            "description": "<p>The beauty of Kedarnath is alien to none. It is a sacred pilgrimage place of Lord Shiva and is situated in the Rudraprayag district of the Garhwal region in Uttarakhand. Kedarnath is one of the Char Dhams of Uttarakhand and is situated at an altitude of 3586 meters. The place is located in the lap of the majestic Himalayas near the source of the River Mandakini. Kedarnath also has one of the 12 Jyotirlingas of Lord Shiva. You will be mesmerized by the beautiful ambience of the place and, it looks like heaven on earth. Every year thousands of pilgrimages and tourists visit this holy place to offer prayers to Lord Shiva</p>",
+            "days": 4,
+            "night": 3,
+            "min_age": 12,
+            "people_max_limit": 25,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12533.071157498427!2d79.06452266607234!3d30.733841633456137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39083ee051e628b1%3A0x167ce4efaf440f1e!2sKedarnath%2C%20Uttarakhand%20246445!5e0!3m2!1sen!2sin!4v1706020587120!5m2!1sen!2sin",
+            "price_quad_sharing": -1,
+            "price_triple_sharing": 15599,
+            "price_double_sharing": 16699,
+            "price": 17799,
+            "rating": 5,
+            "card_cover_image": "package/covers/Kedarnath_temple.jpg",
+            "category": [
+                1
+            ],
+            "image_list": [
+                3,
+                9,
+                17,
+                33,
+                43,
+                56,
+                57
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 8,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.242Z",
+            "updated_at": "2024-01-24T20:23:06.413Z",
+            "name": "Manali Jispa Tour",
+            "location": "Himachal Pradesh",
+            "description": "<p>Everyone&rsquo;s most visited vacation spot, Manali is a high-altitude Himalayan town that is a treat for every nomad. Bounded by the Pir Panjal and Dhauladhar ranges, the aura of Manali is unsurpassed and invincible. Be it a relaxation trip with the family, a backpacking trip with your buddies, or a solo trip. Manali has got you covered! A trip to Manali will be inadequate if you miss visiting the enthralling Solang valley, which is one of the most widespread travel destinations of Himachal Pradesh. Solang valley is situated 14 kilometers to the northwest of Manali and welcomes thousands of tourists every year. Consider as a heaven for adventure devotees, Solang valley offers a plethora of activities like parachuting, paragliding, horse riding, Skiing, Quad biking, etc. there is a lot to explore and enjoy here in Solang valley on your Manali Trip. Jispa, a beautiful little town in the Lahaul district of Himachal Pradesh, is a stunning must-visit. Perched on the banks of river Bhaga, Jispa lies 2 hours from Baralacha-la and provides the most stunning views of surrounding mountains! While it is often regarded as a pit stop en route Leh on the Manali-Leh Highway, I beg to differ. This place is truly worthy of its own individually planned visit! Situated at a stunning height of 10,500 ft., this little village, home to about 78 households, serves as a halt for travelers on the long road trip to Leh-Ladakh. The calm, quiet and ranquil village with a very small population, offers the most beautiful Zen-like trip you will not soon forget.</p>",
+            "days": 4,
+            "night": 3,
+            "min_age": 10,
+            "people_max_limit": 25,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6747.344287414381!2d77.18135476563306!3d32.64003641148515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390377ef65fc6817%3A0xc876940966571ddc!2sJispa%20Valley%2C%20Leh%20Manali%20Highway!5e0!3m2!1sen!2sin!4v1706022180796!5m2!1sen!2sin",
+            "price_quad_sharing": 7999,
+            "price_triple_sharing": 8299,
+            "price_double_sharing": 8799,
+            "price": 8999,
+            "rating": 5,
+            "card_cover_image": "package/covers/manali4.jpg",
+            "category": [
+                4,
+                5
+            ],
+            "image_list": [
+                2,
+                10,
+                13,
+                19,
+                20,
+                24
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 9,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.124Z",
+            "updated_at": "2024-01-24T20:28:31.754Z",
+            "name": "Manali Jipsa Kasol",
+            "location": "Himachal Pradesh",
+            "description": "<p>Everyone&rsquo;s most visited vacation spot, Manali is a high-altitude Himalayan town that is a treat for every nomad. Bounded by the Pir Panjal and Dhauladhar ranges, the aura of Manali is unsurpassed and invincible. Be it a relaxation trip with the family, a backpacking trip with your buddies, or a solo trip. Manali has got you covered! A trip to Manali will be inadequate if you miss visiting the enthralling Solang valley, which is one of the most widespread travel destinations of Himachal Pradesh. Solang valley is situated 14 kilometers to the northwest of Manali and welcomes thousands of tourists every year. Consider as a heaven for adventure devotees, Solang valley offers a plethora of activities like parachuting, paragliding, horse riding, Skiing, Quad biking, etc. there is a lot to explore and enjoy here in Solang valley on your Manali Trip. Jispa, a beautiful little town in the Lahaul district of Himachal Pradesh, is a stunning must-visit. Perched on the banks of river Bhaga, Jispa lies 2 hours from Baralacha-la and provides the most stunning views of surrounding mountains! While it is often regarded as a pit stop en route Leh on the Manali-Leh Highway, I beg to differ. This place is truly worthy of its own individually planned visit! Situated at a stunning height of 10,500 ft., this little village, home to about 78 households, serves as a halt for travelers on the long road trip to Leh-Ladakh. The calm, quiet and tranquil village with a very small population, offers the most beautiful Zen-like trip you will not soon forget.</p>",
+            "days": 4,
+            "night": 3,
+            "min_age": 10,
+            "people_max_limit": 10,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/d/embed?mid=1EAzd63pnw9P-D8BWosZTemeU28BObEA&ehbc=2E312F",
+            "price_quad_sharing": -1,
+            "price_triple_sharing": 12499,
+            "price_double_sharing": 13999,
+            "price": 14999,
+            "rating": 5,
+            "card_cover_image": "package/covers/nature6.jpg",
+            "category": [
+                4
+            ],
+            "image_list": [
+                21,
+                24,
+                25,
+                39,
+                48,
+                59
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 10,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.610Z",
+            "updated_at": "2024-01-24T20:42:43.687Z",
+            "name": "Manali Solang Kasol Tosh",
+            "location": "Himalchal Pradesh",
+            "description": "<p>Kasol is a hamlet in the district Kullu of the Indian state of Himachal Pradesh. It is situated in Parvati Valley, on the banks of the Parvati River, on the way between Bhuntar and Manikaran . Kasol is the Himalayan hotspot for backpackers. and acts as a base for nearby treks to Malana and Kheerganga. We have specially curated this trip for Kasol in Christmas and New Year. Manali is known for its shiny gompas or Buddhist monasteries. With the highest concentration of Tibetan refugees in the entire Kullu valley, it is famous for its Gadhan Thekchhokling Gompa, built in 1969.</p>",
+            "days": 5,
+            "night": 4,
+            "min_age": 10,
+            "people_max_limit": 10,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/d/embed?mid=1EAzd63pnw9P-D8BWosZTemeU28BObEA&ehbc=2E312F",
+            "price_quad_sharing": -1,
+            "price_triple_sharing": 14999,
+            "price_double_sharing": 15999,
+            "price": 16999,
+            "rating": 5,
+            "card_cover_image": "package/covers/pexels-saikat-ghosh-914128.jpg",
+            "category": [
+                3,
+                6
+            ],
+            "image_list": [
+                5,
+                12,
+                18,
+                20,
+                24,
+                41,
+                47,
+                48,
+                50
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 11,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.676Z",
+            "updated_at": "2024-01-24T20:47:43.412Z",
+            "name": "Lahaul Atal Tunnel",
+            "location": "Himachal Pradesh",
+            "description": "<p>Manali and Sissu make for an incredible travel duo, each offering its own unique charm. Manali, nestled in the high-altitude Himalayas, is a favorite among nomads for family vacations, backpacking adventures, and solo journeys. Its breathtaking location, surrounded by the Pir Panjal and Dhauladhar ranges, is truly unmatched. Don&#39;t miss a visit to the captivating Solang Valley, a widespread destination in Himachal Pradesh, just 14 kilometers northwest of Manali. It&#39;s a haven for adventure enthusiasts, with activities like parachuting, paragliding, horse riding, skiing, quad biking, and more to enjoy. On the other hand, Sissu, a picturesque town in Himachal Pradesh&#39;s Lahaul district, is a must-visit. Nestled along the banks of the Bhaga River and located just two hours from Baralacha-la, it offers stunning mountain views. While some may view Jispa as a mere pit stop on the way to Leh along the Manali-Leh Highway, I beg to differ. This charming village, perched at a breathtaking altitude of 10,500 ft. and home to only about 78 households, is a destination worth visiting in its own right. Its serene and tranquil atmosphere provides a zen-like experience you won&#39;t soon forget, making it a perfect complement to your Manali-Sissu trip.</p>",
+            "days": 4,
+            "night": 3,
+            "min_age": 12,
+            "people_max_limit": 25,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.7249429482863!2d77.14367368708666!3d32.39973420632964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3904812723d6db55%3A0x6d9ec74f9b8c6205!2sAtal%20Tunnel!5e0!3m2!1sen!2sin!4v1706030917394!5m2!1sen!2sin",
+            "price_quad_sharing": 6999,
+            "price_triple_sharing": 7499,
+            "price_double_sharing": 7999,
+            "price": 8999,
+            "rating": 5,
+            "card_cover_image": "package/covers/atal_tunnel.jfif",
+            "category": [
+                3,
+                6
+            ],
+            "image_list": [
+                10,
+                11,
+                13,
+                41,
+                48,
+                60
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 12,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.690Z",
+            "updated_at": "2024-01-24T20:51:57.295Z",
+            "name": "Tirthan Valley",
+            "location": "Himachal Pradesh",
+            "description": "<p>Tirthan Valley Tour Package: Explore the Enchanting Beauty. Tirthan Valley derives its name from the Tirthan River, which winds its way through it. The pristine river originates from the icy cold glacial springs of Hanskund, a snow-capped peak in the verdant Great Himalayan National Park (GHNP). Tirthan Valley Best Time to Visit: A Year-Round Paradise. The best time to visit Tirthan is march- June &amp; mid Sep and Nov. It is an offbeat destination that has something for everyone. This quiet valley is ideal for trekking, fishing, wildlife watching, and discovering under-explored hill villages. There&rsquo;s also the option of doing absolutely nothing as you relax among the pine trees in the valley. Are you ready to embark on a Tirthan Valley adventure? Check out our exclusive Tirthan Valley tour packages to experience the magic of this hidden gem in the Himalayas</p>",
+            "days": 4,
+            "night": 3,
+            "min_age": 12,
+            "people_max_limit": 25,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3397.274635161006!2d77.41955177616607!3d31.626330074165566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3905b229df43691d%3A0x4b2f6450196e5ba8!2sTirthan%20Valley!5e0!3m2!1sen!2sin!4v1706031879326!5m2!1sen!2sin",
+            "price_quad_sharing": 6999,
+            "price_triple_sharing": 7499,
+            "price_double_sharing": 7999,
+            "price": 9000,
+            "rating": 5,
+            "card_cover_image": "package/covers/valley.jpg",
+            "category": [
+                3,
+                4
+            ],
+            "image_list": [
+                10,
+                13,
+                21,
+                42,
+                46,
+                49
+            ]
+        }
+    },
+    {
+        "model": "app.package",
+        "pk": 13,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.581Z",
+            "updated_at": "2024-01-24T20:56:36.703Z",
+            "name": "Kasol Kheerganga",
+            "location": "Himachal Pradesh",
+            "description": "<p>Kasol, a picturesque hamlet nestled in the Kullu district of Himachal Pradesh, is a traveler&#39;s paradise. This serene destination is situated in the enchanting Parvati Valley, cradled by the meandering Parvati River. If you&#39;re seeking an adventure that immerses you in the breathtaking landscapes of Himachal Pradesh, the Kasol Kheerganga Trek is your ticket to an unforgettable experience.</p>",
+            "days": 5,
+            "night": 5,
+            "min_age": 10,
+            "people_max_limit": 10,
+            "pickup_location": "Delhi",
+            "drop_of_location": "Delhi",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3383.193969071424!2d77.3117297761793!3d32.00985907399369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39045c4474aa31e9%3A0xf112d2e32b47949d!2sKasol%2C%20Himachal%20Pradesh%20175105!5e0!3m2!1sen!2sin!4v1706032770155!5m2!1sen!2sin",
+            "price_quad_sharing": 6999,
+            "price_triple_sharing": 7299,
+            "price_double_sharing": 7799,
+            "price": 0,
+            "rating": 5,
+            "card_cover_image": "package/covers/kheerganga.jpg",
+            "category": [
+                3,
                 4
             ],
             "image_list": [
@@ -142,7 +1360,7 @@
         "pk": 2,
         "fields": {
             "created_at": "2024-01-14T17:30:15.407Z",
-            "updated_at": "2024-01-14T17:31:20.068Z",
+            "updated_at": "2024-01-23T17:36:32.243Z",
             "name": "Manali",
             "location": "Himachal Pradesh, India",
             "state": "himachal pradesh",
@@ -155,7 +1373,11 @@
                 3
             ],
             "packages": [
-                1
+                1,
+                8,
+                9,
+                10,
+                11
             ]
         }
     },
@@ -210,12 +1432,702 @@
         }
     },
     {
+        "model": "app.inclusive",
+        "pk": 6,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.502Z",
+            "updated_at": "2024-01-22T20:26:45.502Z",
+            "note": "Accommodation: A Grade Accommodation in Hotel/Camps/Cottages per the location",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 7,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.503Z",
+            "updated_at": "2024-01-22T20:26:45.503Z",
+            "note": "Meals: Buffet Breakfast and Dinner (Nos.02)",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 8,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.503Z",
+            "updated_at": "2024-01-22T20:26:45.503Z",
+            "note": "Dedicated support staff : You will get a professional guide for supervision and assistance",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 9,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.504Z",
+            "updated_at": "2024-01-22T20:26:45.504Z",
+            "note": "Transportation: Comfortable and sanitized vehicle for sightseeing and transfer on all days as per the itinerary (Travellers/Cabs/Bus)",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 10,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.504Z",
+            "updated_at": "2024-01-22T20:26:45.504Z",
+            "note": "All the toll tax, fuel charges, driver allowance and parking fees",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 11,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.505Z",
+            "updated_at": "2024-01-22T20:26:45.505Z",
+            "note": "Local Sightseeing as per the itinerary",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 12,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.374Z",
+            "updated_at": "2024-01-22T20:48:58.374Z",
+            "note": "Accommodation: A Grade Accommodation in hotel/camps/homestay as per the location",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 13,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.375Z",
+            "updated_at": "2024-01-22T20:48:58.375Z",
+            "note": "Meals: Buffet Breakfast and Dinner (Nos.04)",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 14,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.375Z",
+            "updated_at": "2024-01-22T20:48:58.376Z",
+            "note": "Dedicated support staff : You will get a professional guide for supervision and assistance throughout the trip",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 15,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.376Z",
+            "updated_at": "2024-01-22T20:48:58.376Z",
+            "note": "Activity: Folk Dance, Folk Music, DJ, Bonfire, Camel Ride & Jeep Safari",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 16,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.376Z",
+            "updated_at": "2024-01-22T20:48:58.376Z",
+            "note": "All the toll tax, fuel charges, driver allowance, and parking fees",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 17,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.377Z",
+            "updated_at": "2024-01-22T20:48:58.377Z",
+            "note": "Local Sightseeing as per the itinerary",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 18,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.897Z",
+            "updated_at": "2024-01-23T12:23:59.897Z",
+            "note": "Accommodation in all places (Hotel/HomeStay/Camps/Tents)",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 19,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.897Z",
+            "updated_at": "2024-01-23T12:23:59.897Z",
+            "note": "Breakfast, Dinner in all properties",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 20,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.898Z",
+            "updated_at": "2024-01-23T12:23:59.898Z",
+            "note": "Packed lunch during trek",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 21,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.898Z",
+            "updated_at": "2024-01-23T12:23:59.898Z",
+            "note": "Morning tea and evening tea",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 22,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.898Z",
+            "updated_at": "2024-01-23T12:23:59.898Z",
+            "note": "Guided Trek",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 23,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.898Z",
+            "updated_at": "2024-01-23T12:23:59.899Z",
+            "note": "Transportation Haridwar to Haridwar",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 24,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.438Z",
+            "updated_at": "2024-01-23T14:11:05.438Z",
+            "note": "Transportation: Comfortable and sanitized vehicle for sightseeing and transfer on all days as per the itinerary (Travellers/Cabs/Bus)",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 25,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.438Z",
+            "updated_at": "2024-01-23T14:11:05.438Z",
+            "note": "Accommodation: Accommodation in Hotel/Camps/Cottages per the location",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 26,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.438Z",
+            "updated_at": "2024-01-23T14:11:05.438Z",
+            "note": "Meals: Buffet Breakfast and Dinner (Total 20 Meals)",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 27,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.439Z",
+            "updated_at": "2024-01-23T14:11:05.439Z",
+            "note": "Activity: Rishikesh River Rafting and Kedarnath Ji Trek",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 28,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.439Z",
+            "updated_at": "2024-01-23T14:11:05.439Z",
+            "note": "Educated support staff: You will get a professional guide for supervision and assistance throughout the trip",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 29,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.439Z",
+            "updated_at": "2024-01-23T14:11:05.439Z",
+            "note": "All the toll tax, fuel charges, driver allowance and parking fees",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 30,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.440Z",
+            "updated_at": "2024-01-23T14:11:05.440Z",
+            "note": "Local Sightseeing as per the itinerary",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 31,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.323Z",
+            "updated_at": "2024-01-23T14:29:33.323Z",
+            "note": "Transportation: Comfortable and sanitized vehicle for sightseeing and transfer on all days as per the itinerary (Travellers/Cabs/Bus)",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 32,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.323Z",
+            "updated_at": "2024-01-23T14:29:33.323Z",
+            "note": "Accommodation: A Grade Accommodation in hotel/camps/homestay as per the location",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 33,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.324Z",
+            "updated_at": "2024-01-23T14:29:33.324Z",
+            "note": "Meals: Buffet Breakfast and Dinner (Nos.10)",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 34,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.324Z",
+            "updated_at": "2024-01-23T14:29:33.324Z",
+            "note": "Dedicated support staff : You will get a professional guide for supervision and assistance throughout the trip",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 35,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.324Z",
+            "updated_at": "2024-01-23T14:29:33.324Z",
+            "note": "Activity: Kedarnath Trek, White Water Rafting and Bonfire With Light Music",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 36,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.325Z",
+            "updated_at": "2024-01-23T14:29:33.325Z",
+            "note": "All the toll tax, fuel charges, driver allowance and parking fees",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 37,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.325Z",
+            "updated_at": "2024-01-23T14:29:33.325Z",
+            "note": "Local Sightseeing as per the itinerary",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 38,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.524Z",
+            "updated_at": "2024-01-23T14:51:03.524Z",
+            "note": "Transportation: Comfortable and sanitized vehicle for sightseeing and transfer on all days as per the itinerary (Travellers/Cabs/Bus)",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 39,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.525Z",
+            "updated_at": "2024-01-23T14:51:03.526Z",
+            "note": "Accommodation: A Grade Accommodation in hotel/camps/homestay as per the location",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 40,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.526Z",
+            "updated_at": "2024-01-23T14:51:03.526Z",
+            "note": "Meals: Buffet Breakfast and Dinner (Nos.6)",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 41,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.527Z",
+            "updated_at": "2024-01-23T14:51:03.527Z",
+            "note": "Dedicated support staff : You will get a professional guide for supervision and assistance throughout the trip (Activity: Kedarnath Trek)",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 42,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.527Z",
+            "updated_at": "2024-01-23T14:51:03.527Z",
+            "note": "All the toll tax, fuel charges, driver allowance and parking fees",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 43,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.527Z",
+            "updated_at": "2024-01-23T14:51:03.527Z",
+            "note": "Local Sightseeing as per the itinerary",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 44,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.253Z",
+            "updated_at": "2024-01-23T15:15:08.253Z",
+            "note": "Accommodation for 1 night in a hotel at Manali and 1 night in Jispa Camps",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 45,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.253Z",
+            "updated_at": "2024-01-23T15:15:08.253Z",
+            "note": "4 meals will be provided throughout the trip. 1 meal on Day 1 (Breakfast) + 2 meals on Day 2 (Breakfast + Dinner) + 1 meal on Day 3 (Breakfast).",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 46,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.253Z",
+            "updated_at": "2024-01-23T15:15:08.253Z",
+            "note": "AC Transportation.",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 47,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.254Z",
+            "updated_at": "2024-01-23T15:15:08.254Z",
+            "note": "Local and Sissu Sightseeing via Atal Tunnel.",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 48,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.254Z",
+            "updated_at": "2024-01-23T15:15:08.254Z",
+            "note": "Guide while Trekking.",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 49,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.254Z",
+            "updated_at": "2024-01-23T15:15:08.254Z",
+            "note": "Team captain throughout the trip",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 50,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.133Z",
+            "updated_at": "2024-01-23T16:22:34.133Z",
+            "note": "Accommodation for 1 night in a hotel at Manali, 1 night in Jispa Camps & 1 Night in Camp in kasol.",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 51,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.133Z",
+            "updated_at": "2024-01-23T16:22:34.133Z",
+            "note": "AC Transportation",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 52,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.134Z",
+            "updated_at": "2024-01-23T16:22:34.134Z",
+            "note": "Sightseeing as per itinerary",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 53,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.135Z",
+            "updated_at": "2024-01-23T16:22:34.135Z",
+            "note": "Team Captain throughout the trip",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 54,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.622Z",
+            "updated_at": "2024-01-23T16:38:50.622Z",
+            "note": "Accommodation (Hotels / Homestay)",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 55,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.622Z",
+            "updated_at": "2024-01-23T16:38:50.622Z",
+            "note": "AC Transportation",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 56,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.623Z",
+            "updated_at": "2024-01-23T16:38:50.623Z",
+            "note": "Sightseeing as per itinerary",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 57,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.623Z",
+            "updated_at": "2024-01-23T16:38:50.623Z",
+            "note": "Team Captain throughout the trip",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 58,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.623Z",
+            "updated_at": "2024-01-23T16:38:50.623Z",
+            "note": "8 meals will be provided throughout the trip. 1 meal on Day 1 (Breakfast) + 2 meals on Day 2\r\n(Breakfast + Dinner) + 2 meals on Day 3 (Breakfast + Dinner) + 2 meals on Day 4 (Breakfast + Dinner) + 1 meal on Day 5 (Breakfast).",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 59,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.684Z",
+            "updated_at": "2024-01-23T17:35:18.684Z",
+            "note": "Team captain throughout the trip",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 60,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.685Z",
+            "updated_at": "2024-01-23T17:35:18.685Z",
+            "note": "Guide while Trekking.",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 61,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.685Z",
+            "updated_at": "2024-01-23T17:35:18.685Z",
+            "note": "Local and Sissu Sightseeing via Atal Tunnel.",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 62,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.685Z",
+            "updated_at": "2024-01-23T17:35:18.685Z",
+            "note": "River Rafting.",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 63,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.686Z",
+            "updated_at": "2024-01-23T17:35:18.686Z",
+            "note": "Accommodation for 2 nights in a hotel at Manali.",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 64,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.686Z",
+            "updated_at": "2024-01-23T17:35:18.686Z",
+            "note": "4 meals will be provided throughout the trip. 1 meal on Day 1 (Breakfast) + 2 meals on Day 2 (Breakfast + Dinner) + 1 meal on Day 3 (Breakfast).",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 65,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.698Z",
+            "updated_at": "2024-01-23T17:53:39.699Z",
+            "note": "Accommodation for 2 nights in a Homestay/Campsite.",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 66,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.699Z",
+            "updated_at": "2024-01-23T17:53:39.699Z",
+            "note": "A total of 5 meals � 2 meals on Day 1 + 2 meals on Day 2 + 1 meal on Day 3",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 67,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.700Z",
+            "updated_at": "2024-01-23T17:53:39.700Z",
+            "note": "AC Transportation",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 68,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.700Z",
+            "updated_at": "2024-01-23T17:53:39.700Z",
+            "note": "Local Sightseeing",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 69,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.701Z",
+            "updated_at": "2024-01-23T17:53:39.701Z",
+            "note": "Guide while Trekking",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 70,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.594Z",
+            "updated_at": "2024-01-23T18:05:03.594Z",
+            "note": "Accommodation in a hotel at Kasol for 1 night & in camps at Kheerganga for 1 night.",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 71,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.594Z",
+            "updated_at": "2024-01-23T18:05:03.594Z",
+            "note": "4 meals - Breakfast (Day 1) + Breakfast & Dinner (Day 2) + Breakfast (Day 3).",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 72,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.595Z",
+            "updated_at": "2024-01-23T18:05:03.595Z",
+            "note": "Volvo for Delhi to Delhi transportation, Local Surface transport from Kasol to Barshaini and back",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 73,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.595Z",
+            "updated_at": "2024-01-23T18:05:03.595Z",
+            "note": "Team Captain throughout the trip.",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.inclusive",
+        "pk": 74,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.596Z",
+            "updated_at": "2024-01-23T18:05:03.596Z",
+            "note": "Guide while Trekking",
+            "package": 13
+        }
+    },
+    {
         "model": "app.exclusive",
         "pk": 1,
         "fields": {
             "created_at": "2024-01-14T14:58:28.714Z",
-            "updated_at": "2024-01-14T14:58:28.714Z",
-            "note": "Exclusive 1",
+            "updated_at": "2024-01-23T16:31:55.215Z",
+            "note": "Any personal Expenses / Adventure activities",
             "package": 1
         }
     },
@@ -224,29 +2136,1229 @@
         "pk": 2,
         "fields": {
             "created_at": "2024-01-14T14:58:28.715Z",
-            "updated_at": "2024-01-14T14:58:28.715Z",
-            "note": "Exclusive 2",
+            "updated_at": "2024-01-23T16:31:55.216Z",
+            "note": "Anything not mentioned in the itinerary",
             "package": 1
         }
     },
     {
-        "model": "app.carrything",
-        "pk": 1,
+        "model": "app.exclusive",
+        "pk": 3,
         "fields": {
-            "created_at": "2024-01-14T14:58:28.718Z",
-            "updated_at": "2024-01-14T14:58:28.718Z",
-            "note": "wedwehdeshj",
+            "created_at": "2024-01-22T20:26:45.505Z",
+            "updated_at": "2024-01-22T20:26:45.505Z",
+            "note": "An extra 5% GST will be applicable",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.506Z",
+            "updated_at": "2024-01-22T20:26:45.506Z",
+            "note": "Fee for the optional adventure activities not mentioned in the inclusions",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 5,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.506Z",
+            "updated_at": "2024-01-22T20:26:45.506Z",
+            "note": "Travel insurance or medical costs or emerged cost due to any mishap",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 6,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.507Z",
+            "updated_at": "2024-01-22T20:26:45.507Z",
+            "note": "Monument or museum entry fee, guide fee,Camera fee",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 7,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.508Z",
+            "updated_at": "2024-01-22T20:26:45.508Z",
+            "note": "Extra for personal expenses that include laundry, extra food, lunch, drinks, cigarettes, water and room heaters",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 8,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.508Z",
+            "updated_at": "2024-01-22T20:26:45.508Z",
+            "note": "You will have to pay for everything that is not mentioned under the heading 'prices included'",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 9,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.509Z",
+            "updated_at": "2024-01-22T20:26:45.509Z",
+            "note": "Any Kind of Expense for Loss / Misplaced / Theft of personal belongings.",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 10,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.377Z",
+            "updated_at": "2024-01-22T20:48:58.377Z",
+            "note": "An extra 5% GST will be applicable",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 11,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.378Z",
+            "updated_at": "2024-01-22T20:48:58.378Z",
+            "note": "Fee for the optional adventure activities not mentioned in the inclusions",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 12,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.378Z",
+            "updated_at": "2024-01-22T20:48:58.378Z",
+            "note": "Travel insurance or medical costs or emerged cost due to any mishap",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 13,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.379Z",
+            "updated_at": "2024-01-22T20:48:58.379Z",
+            "note": "Monument or museum entry fee, guide fee, camera fee",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 14,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.379Z",
+            "updated_at": "2024-01-22T20:48:58.379Z",
+            "note": "Extra for personal expenses that include laundry, extra food, lunch, drinks, cigarettes, water and room heaters",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 15,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.380Z",
+            "updated_at": "2024-01-22T20:48:58.380Z",
+            "note": "You will have to pay for everything that is not mentioned under the heading 'prices included'",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 16,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.380Z",
+            "updated_at": "2024-01-22T20:48:58.380Z",
+            "note": "Any Kind of Expense for Loss / Misplaced / Theft of personal belongings",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 17,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.899Z",
+            "updated_at": "2024-01-23T12:23:59.899Z",
+            "note": "Lunch during road transport",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 18,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.899Z",
+            "updated_at": "2024-01-23T12:23:59.899Z",
+            "note": "Any meals during road transport",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 19,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.900Z",
+            "updated_at": "2024-01-23T12:23:59.900Z",
+            "note": "Kedarnath Helicopter Ticket",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 20,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.900Z",
+            "updated_at": "2024-01-23T12:23:59.900Z",
+            "note": "Forest entry fees, permits",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 21,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.900Z",
+            "updated_at": "2024-01-23T12:23:59.900Z",
+            "note": "Pony or Potter charges anywhere",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 22,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.900Z",
+            "updated_at": "2024-01-23T12:23:59.900Z",
+            "note": "Any personal expenses, Tips",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 23,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.901Z",
+            "updated_at": "2024-01-23T12:23:59.901Z",
+            "note": "Anything not mentioned in inclusions",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 24,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.440Z",
+            "updated_at": "2024-01-23T14:11:05.440Z",
+            "note": "An extra 5% GST will be applicable",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 25,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.441Z",
+            "updated_at": "2024-01-23T14:11:05.441Z",
+            "note": "Fee for the optional adventure activities not mentioned in the inclusions",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 26,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.441Z",
+            "updated_at": "2024-01-23T14:11:05.441Z",
+            "note": "Travel insurance or medical costs or emerged cost due to any mishap",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 27,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.442Z",
+            "updated_at": "2024-01-23T14:11:05.442Z",
+            "note": "Monument or museum entry fee, guide fee,Camera fee, Porters, Mules or Helicopter",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 28,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.442Z",
+            "updated_at": "2024-01-23T14:11:05.442Z",
+            "note": "Extra for personal expenses that include laundry, extra food, lunch, drinks, cigarettes, water and room heaters",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 29,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.442Z",
+            "updated_at": "2024-01-23T14:11:05.442Z",
+            "note": "You will have to pay for everything that is not mentioned under the heading 'prices included",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 30,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.443Z",
+            "updated_at": "2024-01-23T14:11:05.443Z",
+            "note": "Any Kind of Expense for Loss / Misplaced / Theft of personal belongings",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 31,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.325Z",
+            "updated_at": "2024-01-23T14:29:33.325Z",
+            "note": "An extra 5% GST will be applicable",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 32,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.326Z",
+            "updated_at": "2024-01-23T14:29:33.326Z",
+            "note": "Fee for the optional adventure activities not mentioned in the inclusions",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 33,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.326Z",
+            "updated_at": "2024-01-23T14:29:33.326Z",
+            "note": "Travel insurance or medical costs or emerged cost due to any mishap",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 34,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.326Z",
+            "updated_at": "2024-01-23T14:29:33.326Z",
+            "note": "Monument or museum entry fee, guide fee, Camera fee, Mule or porters",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 35,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.327Z",
+            "updated_at": "2024-01-23T14:29:33.327Z",
+            "note": "Extra for personal expenses that include laundry, extra food, lunch, drinks, cigarettes, water and room heaters",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 36,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.327Z",
+            "updated_at": "2024-01-23T14:29:33.327Z",
+            "note": "You will have to pay for everything that is not mentioned under the heading 'prices included'",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 37,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.327Z",
+            "updated_at": "2024-01-23T14:29:33.327Z",
+            "note": "Any Kind of Expense for Loss / Misplaced / Theft of personal belongings",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 38,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.528Z",
+            "updated_at": "2024-01-23T14:51:03.528Z",
+            "note": "An extra 5% GST will be applicable",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 39,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.528Z",
+            "updated_at": "2024-01-23T14:51:03.528Z",
+            "note": "Fee for the optional adventure activities not mentioned in the inclusions",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 40,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.529Z",
+            "updated_at": "2024-01-23T14:51:03.529Z",
+            "note": "Travel insurance or medical costs or emerged cost due to any mishap",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 41,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.529Z",
+            "updated_at": "2024-01-23T14:51:03.529Z",
+            "note": "Monument or museum entry fee, guide fee, Camera fee, Mule or porters",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 42,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.529Z",
+            "updated_at": "2024-01-23T14:51:03.529Z",
+            "note": "Extra for personal expenses that include laundry, extra food, lunch, drinks, cigarettes, water and room heaters",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 43,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.530Z",
+            "updated_at": "2024-01-23T14:51:03.530Z",
+            "note": "You will have to pay for everything that is not mentioned under the heading 'prices included'",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 44,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.530Z",
+            "updated_at": "2024-01-23T14:51:03.530Z",
+            "note": "Any Kind of Expense for Loss / Misplaced / Theft of personal belongings",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 45,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.255Z",
+            "updated_at": "2024-01-23T15:15:08.255Z",
+            "note": "5% GST",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 46,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.255Z",
+            "updated_at": "2024-01-23T15:15:08.255Z",
+            "note": "Any personal Expenses / Adventure activities",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 47,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.256Z",
+            "updated_at": "2024-01-23T15:15:08.256Z",
+            "note": "Anything not mentioned in the itinerary",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 48,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.256Z",
+            "updated_at": "2024-01-23T15:15:08.256Z",
+            "note": "Any kind of entry tickets / fees",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 49,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.257Z",
+            "updated_at": "2024-01-23T15:15:08.257Z",
+            "note": "Any Meals / Drinks other than Inclusion",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 50,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.136Z",
+            "updated_at": "2024-01-23T16:22:34.136Z",
+            "note": "5% GST",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 51,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.136Z",
+            "updated_at": "2024-01-23T16:22:34.136Z",
+            "note": "Any personal Expenses / Adventure activities",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 52,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.137Z",
+            "updated_at": "2024-01-23T16:22:34.137Z",
+            "note": "Anything not mentioned in the itinerary",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 53,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.137Z",
+            "updated_at": "2024-01-23T16:22:34.137Z",
+            "note": "Any kind of entry tickets / fees",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 54,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.138Z",
+            "updated_at": "2024-01-23T16:22:34.138Z",
+            "note": "Any Meals / Drinks other than Inclusion",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 55,
+        "fields": {
+            "created_at": "2024-01-23T16:31:55.217Z",
+            "updated_at": "2024-01-23T16:31:55.217Z",
+            "note": "Any kind of entry tickets/fees",
             "package": 1
         }
     },
     {
-        "model": "app.carrything",
-        "pk": 2,
+        "model": "app.exclusive",
+        "pk": 56,
         "fields": {
-            "created_at": "2024-01-14T14:58:28.719Z",
-            "updated_at": "2024-01-14T14:58:28.719Z",
-            "note": "welkdjewfewjfewfwe",
+            "created_at": "2024-01-23T16:31:55.218Z",
+            "updated_at": "2024-01-23T16:31:55.218Z",
+            "note": "Any Meals / Drinks other than Inclusion",
             "package": 1
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 57,
+        "fields": {
+            "created_at": "2024-01-23T16:31:55.218Z",
+            "updated_at": "2024-01-23T16:31:55.218Z",
+            "note": "5% GST",
+            "package": 1
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 58,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.624Z",
+            "updated_at": "2024-01-23T16:38:50.624Z",
+            "note": "Any personal Expenses / Adventure activities",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 59,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.624Z",
+            "updated_at": "2024-01-23T16:38:50.624Z",
+            "note": "Anything not mentioned in the itinerary",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 60,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.624Z",
+            "updated_at": "2024-01-23T16:38:50.624Z",
+            "note": "Any kind of entry tickets/fees",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 61,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.625Z",
+            "updated_at": "2024-01-23T16:38:50.625Z",
+            "note": "Any Meals / Drinks other than Inclusion",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 62,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.625Z",
+            "updated_at": "2024-01-23T16:38:50.625Z",
+            "note": "5%GST",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 63,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.686Z",
+            "updated_at": "2024-01-23T17:35:18.686Z",
+            "note": "Any personal Expenses / Adventure activities",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 64,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.687Z",
+            "updated_at": "2024-01-23T17:35:18.687Z",
+            "note": "Anything not mentioned in the itinerary",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 65,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.687Z",
+            "updated_at": "2024-01-23T17:35:18.687Z",
+            "note": "Any kind of entry tickets/fees",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 66,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.688Z",
+            "updated_at": "2024-01-23T17:35:18.688Z",
+            "note": "Any Meals / Drinks other than Inclusion",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 67,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.689Z",
+            "updated_at": "2024-01-23T17:35:18.689Z",
+            "note": "5%GST",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 68,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.702Z",
+            "updated_at": "2024-01-23T17:53:39.702Z",
+            "note": "Any personal Expenses / Adventure activities",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 69,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.703Z",
+            "updated_at": "2024-01-23T17:53:39.703Z",
+            "note": "Anything not mentioned in the itinerary",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 70,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.703Z",
+            "updated_at": "2024-01-23T17:53:39.703Z",
+            "note": "Any kind of entry tickets/fees",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 71,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.703Z",
+            "updated_at": "2024-01-23T17:53:39.703Z",
+            "note": "Any Meals / Drinks other than Inclusion",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 72,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.703Z",
+            "updated_at": "2024-01-23T17:53:39.703Z",
+            "note": "5% GST",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 73,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.596Z",
+            "updated_at": "2024-01-23T18:05:03.596Z",
+            "note": "Any personal Expenses / Adventure activities",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 74,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.597Z",
+            "updated_at": "2024-01-23T18:05:03.597Z",
+            "note": "Anything not mentioned in the itinerary",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 75,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.597Z",
+            "updated_at": "2024-01-23T18:05:03.597Z",
+            "note": "Any kind of entry tickets/fees Any Meals / Drinks other than Inclusion",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.exclusive",
+        "pk": 76,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.597Z",
+            "updated_at": "2024-01-23T18:05:03.597Z",
+            "note": "5% GST",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.512Z",
+            "updated_at": "2024-01-22T20:26:45.512Z",
+            "note": "Water Bottle",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.512Z",
+            "updated_at": "2024-01-22T20:26:45.512Z",
+            "note": "Snacks",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 5,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.513Z",
+            "updated_at": "2024-01-22T20:26:45.513Z",
+            "note": "Medicines (If any)",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 6,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.383Z",
+            "updated_at": "2024-01-22T20:48:58.383Z",
+            "note": "Warm clothes, fleece jackets, jackets, raincoats, & thermals",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 7,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.384Z",
+            "updated_at": "2024-01-22T20:48:58.384Z",
+            "note": "Hand gloves, nice quality footwear",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 8,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.385Z",
+            "updated_at": "2024-01-22T20:48:58.385Z",
+            "note": "Additional pair of socks & trekking Shoes of durable sole",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 9,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.385Z",
+            "updated_at": "2024-01-22T20:48:58.385Z",
+            "note": "Personal toiletries & medications (if any)",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 10,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.386Z",
+            "updated_at": "2024-01-22T20:48:58.386Z",
+            "note": "Water bottles, energy drinks & bars",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 11,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.386Z",
+            "updated_at": "2024-01-22T20:48:58.386Z",
+            "note": "Caps/ hats, sunglasses & towels",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 12,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.387Z",
+            "updated_at": "2024-01-22T20:48:58.387Z",
+            "note": "Power Bank & Torch",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 13,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.387Z",
+            "updated_at": "2024-01-22T20:48:58.387Z",
+            "note": "Backpack with water-resistant lining",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 14,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.388Z",
+            "updated_at": "2024-01-22T20:48:58.388Z",
+            "note": "Basic Medical Care",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 15,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.388Z",
+            "updated_at": "2024-01-22T20:48:58.388Z",
+            "note": "Sunscreen lotion and sunglasses",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 16,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.388Z",
+            "updated_at": "2024-01-22T20:48:58.388Z",
+            "note": "Hand sanitiser",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 17,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.907Z",
+            "updated_at": "2024-01-23T12:23:59.907Z",
+            "note": "Warm clothes, jackets, raincoats, fleece jackets and thermals",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 18,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.908Z",
+            "updated_at": "2024-01-23T12:23:59.908Z",
+            "note": "Hand gloves, good quality footwear and extra pair of socks",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 19,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.908Z",
+            "updated_at": "2024-01-23T12:23:59.908Z",
+            "note": "Water bottles, energy bars and energy drinks",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 20,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.908Z",
+            "updated_at": "2024-01-23T12:23:59.908Z",
+            "note": "Caps/hats, sunglasses and towels",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 21,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.909Z",
+            "updated_at": "2024-01-23T12:23:59.909Z",
+            "note": "Trekking Shoes with good sole",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 22,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.909Z",
+            "updated_at": "2024-01-23T12:23:59.909Z",
+            "note": "Personal toiletries and medications (if any)",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 23,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.909Z",
+            "updated_at": "2024-01-23T12:23:59.909Z",
+            "note": "Backpack with waterproof linings",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 24,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.909Z",
+            "updated_at": "2024-01-23T12:23:59.909Z",
+            "note": "Power Bank",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 25,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.910Z",
+            "updated_at": "2024-01-23T12:23:59.910Z",
+            "note": "Torch",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 26,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.910Z",
+            "updated_at": "2024-01-23T12:25:07.071Z",
+            "note": "Basic Medical Care",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 27,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.448Z",
+            "updated_at": "2024-01-23T14:11:05.448Z",
+            "note": "Warm clothes, jackets, raincoats, fleece jackets and thermals",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 28,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.448Z",
+            "updated_at": "2024-01-23T14:11:05.448Z",
+            "note": "Hand gloves, good quality footwear and extra pair of socks",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 29,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.448Z",
+            "updated_at": "2024-01-23T14:11:05.450Z",
+            "note": "Water bottles, energy bars and energy drinks",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 30,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.450Z",
+            "updated_at": "2024-01-23T14:11:05.450Z",
+            "note": "Caps/hats, sunglasses and towels",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 31,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.450Z",
+            "updated_at": "2024-01-23T14:11:05.450Z",
+            "note": "Trekking Shoes with good sole",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 32,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.450Z",
+            "updated_at": "2024-01-23T14:11:05.450Z",
+            "note": "Personal toiletries and medications (if any)",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 33,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.451Z",
+            "updated_at": "2024-01-23T14:11:05.451Z",
+            "note": "Backpack with waterproof linings",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 34,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.451Z",
+            "updated_at": "2024-01-23T14:11:05.451Z",
+            "note": "Power Bank",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 35,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.451Z",
+            "updated_at": "2024-01-23T14:11:05.451Z",
+            "note": "Torch",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 36,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.452Z",
+            "updated_at": "2024-01-23T14:11:05.452Z",
+            "note": "Basic Medical Care",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 37,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.333Z",
+            "updated_at": "2024-01-23T14:59:41.900Z",
+            "note": "Warm clothes, jackets, raincoats, and extra thermals",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 38,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.333Z",
+            "updated_at": "2024-01-23T14:29:33.333Z",
+            "note": "Hand gloves, good quality footwear, and extra pair of socks",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 39,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.333Z",
+            "updated_at": "2024-01-23T14:29:33.333Z",
+            "note": "Water bottles, energy bars, and energy drinks",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 40,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.334Z",
+            "updated_at": "2024-01-23T14:29:33.334Z",
+            "note": "Caps/hats, sunglasses, and towels",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 41,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.335Z",
+            "updated_at": "2024-01-23T14:29:33.335Z",
+            "note": "Trekking Shoes with a good and firm sole.",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 42,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.335Z",
+            "updated_at": "2024-01-23T14:29:33.335Z",
+            "note": "Personal toiletries and medications (if any)",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 43,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.335Z",
+            "updated_at": "2024-01-23T14:29:33.335Z",
+            "note": "Waterproof backpack",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 44,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.336Z",
+            "updated_at": "2024-01-23T20:00:28.432Z",
+            "note": "Power Bank and torch",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 45,
+        "fields": {
+            "created_at": "2024-01-23T14:32:36.515Z",
+            "updated_at": "2024-01-23T20:00:28.435Z",
+            "note": "Sunscreen lotion and sunglasses",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 46,
+        "fields": {
+            "created_at": "2024-01-23T14:32:36.516Z",
+            "updated_at": "2024-01-23T14:32:36.516Z",
+            "note": "Basic Medical Care",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 47,
+        "fields": {
+            "created_at": "2024-01-23T14:32:36.517Z",
+            "updated_at": "2024-01-23T14:32:36.517Z",
+            "note": "Hand Sanitiser",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 48,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.532Z",
+            "updated_at": "2024-01-23T14:51:03.532Z",
+            "note": "Warm clothes, jackets, raincoats, and extra thermals",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 49,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.259Z",
+            "updated_at": "2024-01-23T15:15:08.259Z",
+            "note": "Personal toiletries or medications",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.carrything",
+        "pk": 50,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.260Z",
+            "updated_at": "2024-01-23T15:15:08.260Z",
+            "note": "Basic Medical Care",
+            "package": 8
         }
     },
     {
@@ -291,6 +3403,831 @@
             "title": "MANALI SIGHTSEEING | PROCEED FOR KASOL | OVERNIGHT STAY AT KASOL",
             "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up in the Hotel.</li>\r\n\t<li>After Breakfast checkout the hotel, then proceed for the sightseeing of Hadimba devi temple, Tibetan Monastery and The Mall road.</li>\r\n\t<li>Later board your vehicle and depart for Kasol. Rest for a while after short journey.</li>\r\n\t<li>Have dinner &amp; overnight stay at Kasol Hotel.</li>\r\n</ol>",
             "package": 1
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 5,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.509Z",
+            "updated_at": "2024-01-22T20:30:19.478Z",
+            "title": ":Start from Delhi | Reach Chakrata in the Morning",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Start your trip by boarding an evening vehicle, which will take you to Chakrata after an overnight journey from Delhi</li>\r\n\t<li>Reach Chakrata the next day</li>\r\n</ol>",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 6,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.510Z",
+            "updated_at": "2024-01-22T20:30:19.479Z",
+            "title": "Arrive in Chakrata | Local sightseeing",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Early morning, reach Chakrata and check in to your hotel, followed by some relaxation</li>\r\n\t<li>After that head to one of the highest waterfalls in Uttarakhand, located at an elevatioin of 312 feet, the Tiger falls.</li>\r\n\t<li>In the evening, drive down to Chirmiri, a quaint plateau famous for bird-watching and offering some of the most beautiful views of sunset</li>\r\n\t<li>Reach hotel in the evening and relax around the bonfire and grove to the beat of Djambey, played by your travel expert</li>\r\n\t<li>Conclude your day with a delicious and warm dinner.</li>\r\n\t<li>Stay overnight in eco-huts on twin sharing basis</li>\r\n</ol>",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 7,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.511Z",
+            "updated_at": "2024-01-22T20:30:19.480Z",
+            "title": "Trek to Budher | Explore Deoban forest",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After the trek, pay a visit to Chinta Haran Mahadev Temple. This Popular Temple is dedicatedto Lord Shiva surrounded by dense trees of Pines.</li>\r\n\t<li>In the evening, reach your hotel and prepare for your back journey to Delhi</li>\r\n</ol>",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 8,
+        "fields": {
+            "created_at": "2024-01-22T20:26:45.511Z",
+            "updated_at": "2024-01-22T20:26:45.511Z",
+            "title": "Reach Dehli | Trip ends here",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Reach Dehli early in the morning, after an overnight journey from Chakrata.</li>\r\n\t<li>End of tour with memories to cherish forever.</li>\r\n</ol>",
+            "package": 2
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 9,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.380Z",
+            "updated_at": "2024-01-22T20:48:58.380Z",
+            "title": "OVERNIGHT JOURNEY FROM DELHI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Report at the assembly point at the given time, meet and greet your co-travellers &amp; excursion coordinator.</li>\r\n\t<li>Overnight adventure to Jaisalmer.</li>\r\n</ol>",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 10,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.381Z",
+            "updated_at": "2024-01-22T20:48:58.381Z",
+            "title": "JAISALMER LOCAL EXCURSIONS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Stop for Breakfast at Pokhran and arrive in Jaisalmer by 11 a.m.</li>\r\n\t<li>Rest &amp; Leisure time. Get Geared up to Visit Gadisar Lake by afternoon.</li>\r\n\t<li>Enjoy a thrilling evening and visit Sunset Point to witness one of the stunning golden sunsets.</li>\r\n\t<li>In the evening, visit local markets &amp; neighbourhood cafes and have dinner</li>\r\n\t<li>Overnight in the hotel.</li>\r\n</ol>",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 11,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.382Z",
+            "updated_at": "2024-01-24T14:47:55.963Z",
+            "title": "LONGEWALA & THAR DESERT",
+            "details": "<ol>\r\n\t<li>After having your delicious breakfast, checkout from the hotel and Visit the Longewala Battlefield, wherein the Indo-Pak struggle fair of 1971 took place.</li>\r\n\t<li>Visit the famous Tanot Mata Temple &amp; take a few fantastic snapshots at Bharatmala toll road in the Thar Desert</li>\r\n\t<li>Check into the camps at Sam Sand Dunes through the afternoon. Freshen-up &amp; get ready for Dunebashing at the Thar Desert.</li>\r\n\t<li>You can&#39;t afford to overlook the sundown at the Thar Desert simultaneously as on a camel ride. Many Bollywood films have been shot over here.</li>\r\n\t<li>Get a warm welcome at Camps with Traditional Tilak Ceremony &amp; Dance over the tunes of Traditional neighbourhood songs of Rajasthan.</li>\r\n\t<li>Enjoy the cultural performances on the campsite while having your evening snacks</li>\r\n\t<li>Have Rajasthani Dinner (Veg) &amp; get a great sleep after a tiring day.</li>\r\n</ol>",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 12,
+        "fields": {
+            "created_at": "2024-01-22T20:48:58.382Z",
+            "updated_at": "2024-01-22T20:48:58.382Z",
+            "title": "KULDHARA I GOLDEN FORT I LAST DAY",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Post tasty breakfast, check out from camps and wave goodbye to the lovely<strong> Thar Desert.</strong></li>\r\n\t<li>Visit The Abandoned Kuldhara Village, take a few cool snapshots, and pay attention to the tale of how a village gets vacant over nighttime with the help of locals.</li>\r\n\t<li>You can also take a Parasailing &amp; Quad motorcycles trip on private expenses.</li>\r\n\t<li>Return to Jaisalmer town and go to the most beautiful dwelling Fort of India, also called Golden Fort in which more than 2000 Families still stay.</li>\r\n\t<li>Visit Patwa Haveli, Salim Singh haveli &amp; try the well-known Jaisalmer &quot;Gothwa&quot; candy at Dhanraj Ranmal Bhatia Shop within the market.</li>\r\n\t<li>Post Lunch, say goodbye to the Golden Town of India &amp; leave for Delhi.</li>\r\n\t<li>Reach Delhi on the next day by 8 a.m. The trip terminates right here with a lifetime of memories.</li>\r\n</ol>",
+            "package": 3
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 13,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.901Z",
+            "updated_at": "2024-01-23T12:23:59.901Z",
+            "title": "Drive from Haridwar / Rishikesh � Sonprayag / Sitapur",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Stay: Hotel</li>\r\n\t<li>Drive to from Haridwar/Rishikesh to Sonprayag or Sitapur (depends on the accommodation booked/ available).</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 14,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.901Z",
+            "updated_at": "2024-01-23T12:23:59.901Z",
+            "title": "Gaurikund to Kedarnath",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Trek: 18 km</li>\r\n\t<li>Drive to Gaurikund. Trek to Kedarnath Temple. 21 km. You can also take pony/helicopter to cover this distance.</li>\r\n\t<li>Else keep 01 reserve day as directly getting down the next day will tire you down at the very beginning of the Panch Kedar yatra.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 15,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.902Z",
+            "updated_at": "2024-01-23T12:23:59.902Z",
+            "title": "Buffer Day (Optional)",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>We can use Buffer Day here or any other day in between if weather is bad, or somebody is not feeling well or too tired.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 16,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.902Z",
+            "updated_at": "2024-01-23T12:23:59.902Z",
+            "title": "Kedarnath - Gaurikund - Ransi Village",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Trek: 18 km</li>\r\n\t<li>After breakfast, trek back to Gaurikund. After reached to Gaurikund take some rest and then start your journey again and drive to Ransi Village. After reached Ransi village we provide you dinner</li>\r\n\t<li>After dinner, you can rest in the hotel at Ransi village. Ransi village is the starting point for Mad Maheshwar trek. Overnight stay at Ransi village.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 17,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.902Z",
+            "updated_at": "2024-01-23T12:23:59.902Z",
+            "title": "Trek to Nanu via Gaundar",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Ransi village is the starting point of Mad Maheshwar Trek. So you have to wake up early in the morning and breakfast is ready to eat. after breakfast, you have to trek for Nanu via Gondar. The beauty of the area while your trekking made you speechless.</li>\r\n\t<li>After reaching to Gaundar you can have your dinner and take rest on your Tents / Homestay. Overnight stay at Tents / Homestay at Nanu.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 18,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.902Z",
+            "updated_at": "2024-01-23T12:23:59.902Z",
+            "title": "Trek to Madhmaheshwar",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>On this morning after breakfast, your trek to Madhmaheshwar starts. On this trek, you explore Budha Madhmaheshwar</li>\r\n\t<li>Dinner at Madmaheshwar and Overnight stay at Tents/Homestay in Mashmaheshwar.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 19,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.903Z",
+            "updated_at": "2024-01-23T12:23:59.903Z",
+            "title": "Trek down to Ransi Village - Chopta",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>On this morning after breakfast, you have to trek down to Ransi Village (18kms) and after reaching to Ransi village you have to Drive to Dugalbitta, Chopta.</li>\r\n\t<li>Dinner at Chopta and overnight stay at Meraki Mayadeep Hotel in Chopta.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 20,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.904Z",
+            "updated_at": "2024-01-23T12:23:59.904Z",
+            "title": "Tungnath - Chandrashila - Saggar Village",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After breakfast starts your Trek to Tugnath Temple &amp; beyond to Chandrashila.</li>\r\n\t<li>After reaching the Temple take some blessing from God and trek back to Chopta &amp; drive to Sagar Village.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 21,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.905Z",
+            "updated_at": "2024-01-23T12:23:59.905Z",
+            "title": "Trek to Panar Bugyal",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After breakfast starts your trek from Saggar to Panar Bugyal which is almost 12 km.</li>\r\n\t<li>Dinner at Panar Bugyal and overnight stay at Tents/Homestay in Panar Bugyal.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 22,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.905Z",
+            "updated_at": "2024-01-23T12:23:59.905Z",
+            "title": "Panar Bugyal - Rudranath",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After breakfast, you have to trek to Rudranath Temple.</li>\r\n\t<li>After reaching the temple take some blessings from God and enjoy the environment and surroundings of the temple or the beautiful nature view of the area &amp; Return to Panar Bugyal.</li>\r\n\t<li>Dinner and overnight stay at the Tents / Homestay in Panar Bugyal.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 23,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.906Z",
+            "updated_at": "2024-01-23T12:23:59.906Z",
+            "title": "Rudranath - Sagar Village - Urgam Village",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After breakfast, you have to trek down to Sagar Village &amp; start your drive to Urgam Valley.</li>\r\n\t<li>Dinner and overnight stay at the hotel in Urgam Village.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 24,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.906Z",
+            "updated_at": "2024-01-23T12:23:59.906Z",
+            "title": "Kalpeshwar - Urgam - Joshimath/Badrinath",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After breakfast starts your trek to Kalpeshwar Temple which is almost 1 km, Take some blessing from God at Kalpeshwar temple &amp; return to Urgam Village.</li>\r\n\t<li>Drive to Joshimath / Badrinath. Visit Vishnuprayag en route. Overnightt stay at the hotel in Badrinath.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 25,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.907Z",
+            "updated_at": "2024-01-23T12:23:59.907Z",
+            "title": "Badrinath - Rudraprayag",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Early morning darshan at Badrinath temple and take some blessing from God, back to the hotel for breakfast</li>\r\n\t<li>Drive from Badrinath / Joshimath to Nandaprayag then Karnaprayag &amp; further to Rudraprayag if possible.</li>\r\n\t<li>Dinner and overnight stay at Rudraprayag hotel.</li>\r\n</ol>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 26,
+        "fields": {
+            "created_at": "2024-01-23T12:23:59.907Z",
+            "updated_at": "2024-01-23T12:23:59.907Z",
+            "title": "Rudraprayag - Haridwar/Rishikesh",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Drive to Devprayag, the origin of Ganga. And thereon to Haridwar / Rishikesh</li>\r\n</ol>\r\n\r\n<p style=\"margin-left:40px\"><strong>Note: Keep 1 Buffer Day Extra just in case of bad weather or bad health</strong></p>",
+            "package": 4
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 27,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.443Z",
+            "updated_at": "2024-01-23T14:11:05.443Z",
+            "title": "DELHI - HARIDWAR | REACH HARIDWAR AND TAKE A BREATH OF FRESH AIR AS YOU ARRIVE IN UTTARAKHAND",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Start your Chaar Dhaam Yatra from Delhi</li>\r\n\t<li>Reach the pre-determined point at Delhi where our representative will meet you &amp; help you for the smooth transfers</li>\r\n\t<li>Overnight journey to Haridwar.</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 28,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.444Z",
+            "updated_at": "2024-01-23T14:11:05.444Z",
+            "title": "HARDIWAR - BARKOT | GET READY TO WITNESS SOME AMAZING VIEWS THROUGHOUT YOUR JOURNEY",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After reaching Haridwar, freshen up &amp; have breakfast.</li>\r\n\t<li>Depart for Barkot.</li>\r\n\t<li>On your way, there will be a halt at Rishikesh for your biometric test that will take around 4 hours.</li>\r\n\t<li>One can also witness the beauty of the yoga capital of Indi, Rishikesh while waiting for the test.</li>\r\n\t<li>You will be passing through Dehradun &amp; Mussoorie in between your journey to Barkot.</li>\r\n\t<li>Stop in Mussoorie where you can have lunch and gather some essentials for the upcoming journey.</li>\r\n\t<li>After reaching Barkot check-in at the hotel, freshen up and rest of the day is for rest.</li>\r\n\t<li>Dinner &amp; overnight stay at hotel.</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 29,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.444Z",
+            "updated_at": "2024-01-23T14:11:05.444Z",
+            "title": "BARKOT - YAMUNOTRI DARSHAN | TAKE THE BLESSINGS YAMUNOTRI TEMPLE",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Rise and get ready to be served with divinity as today is the first stop of the pilgrimage.</li>\r\n\t<li>Have breakfast at hotel and start the day.</li>\r\n\t<li>Drive to Yamunotri Dham, the second most holy river of India from where the River Yamuna takes birth.</li>\r\n\t<li>Reach Jan Ki Chatti, the point from where the 6km trek starts.</li>\r\n\t<li>Before starting the trek, take a bath in Jamnabai&#39;s Kund which is believed that the water cleanses all sins and protects from an untimely and painful death.</li>\r\n\t<li>On reaching the temple, bow the heads down to praise the mother Yamuna. The idol of Ganga Devi is housed in the revered temple.</li>\r\n\t<li>Visit Surya Kund, a hot spring near the temple. Boil some rice and potatoes in the kund and accept it as a Prasad of the Devi.</li>\r\n\t<li>Trek down to Jan Ki Chatti and later drive back to Barkot for an overnight stay.</li>\r\n\t<li>Have Dinner at hotel and end the day.</li>\r\n\t<li>Take a good sleep to gain energy for further tour</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 30,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.445Z",
+            "updated_at": "2024-01-23T14:11:05.445Z",
+            "title": "BARKOT TO UTTARAKHAND | ENJOY YOUR RIDE BETWEEN THE HIMALAYAN MOUNTAINS WITH THE MESMERIZING VIEWS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Have Breakfast at the hotel/ homestay and head towards Uttarkashi.</li>\r\n\t<li>On your journey you will see some of the most mesmerizing views.</li>\r\n\t<li>Reach Uttarkashi, Check-in to the hotel, and take some rest.</li>\r\n\t<li>Rest of the day will be at leisure, where you can do local sightseeing and visit famous &amp; ancient temple dedicated to lord shiva in Uttarkashi.</li>\r\n\t<li>Dinner &amp; overnight stay at hotel.</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 31,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.445Z",
+            "updated_at": "2024-01-23T14:11:05.445Z",
+            "title": "UTTARKASHI - GANGOTRI - UTTARKASHI | BE READY FOR THE HOLY DIP IN GANGA",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up in between the mesmerizing mountains.</li>\r\n\t<li>Early morning, post breakfast, drive to Gangotri en route at Gangnani.</li>\r\n\t<li>Take a holy dip in Garam Kund at Gangnani.</li>\r\n\t<li>Drive further to Gangotri via the beautiful Harshil valley, famous for its natural beauty and the majestic views of the Deodar trees and mountains.</li>\r\n\t<li>On arrival at Shree Gangotri, take a holy dip in the sacred river Ganges which is also called Bhagirathi at its origin.</li>\r\n\t<li>On arrival at Gangotri Dham worship Goddess Ganga, who is said to have descended on earth to absolve the sins of humankind.</li>\r\n\t<li>After the Aarti soak the beauty of the place &amp; relax while witnessing the greenery around.</li>\r\n\t<li>Later drive back to Uttarkashi.</li>\r\n\t<li>Dinner at Hotel &amp; Overnight stays at Uttarkashi.</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 32,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.446Z",
+            "updated_at": "2024-01-23T14:11:05.446Z",
+            "title": "UTTARKASHI TO GUPTKASHI | EXPERIENCE THE CONFLUENCE OF TWO RIVERS IN YOUR JOURNEY",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early and get transferred to Guptkashi after breakfast.</li>\r\n\t<li>Get a mesmerizing view of Ganga all across the journey.</li>\r\n\t<li>See the confluence of Alaknanda and Bhagirathi river at Devprayag.</li>\r\n\t<li>The lunch stop is at Srinagar (on your own)which is the best place in the Garhwal region. Afterward, there is no such facility to have food so make sure to keep all essentials from here only.</li>\r\n\t<li>Visit a view of Rudraprayag, Ukhimath in the journey.</li>\r\n\t<li>Once reached, Guptkashi gets transferred to the hotel.</li>\r\n\t<li>Visit ArdhNarishwar Temple (If time permits).</li>\r\n\t<li>Dinner at the hotel and retire for the day.</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 33,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.446Z",
+            "updated_at": "2024-01-23T14:11:05.446Z",
+            "title": "GUPTKASHI - GAURIKUND - KEDARNATH | 18 KMS TREK | 7 HOURS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early and have a delicious breakfast.</li>\r\n\t<li>Head towards Sonprayag where your trekking to Kedarnath will start.</li>\r\n\t<li>Have a delicious breakfast and get transferred from Guptkashi to Sonprayag.</li>\r\n\t<li>Once we reach Sonprayag, we have to walk to the Government Union taxi stand, to reach Gaurikund. (Walk for 1 Km as no private vehicles are allowed in Gaurikund)</li>\r\n\t<li>Reach Gaurikund, Start the trek to the Kedarnath from Gaurikund.</li>\r\n\t<li>You can take ponies or palanquins for the journey to make it slightly on a comfortable side. (Own Expense).</li>\r\n\t<li>Trek through the beautiful valley and river stream.</li>\r\n\t<li>You can take a lunch stop in between and continue the journey, you will get to see the Kedarnath Temple, situated right at the center of the valley with mountains.</li>\r\n\t<li>On reaching Kedarnath, you&#39;ll witness the whole valley is filled with the sound of ringing bells and prayers going on everywhere this will surely provide relief to your soul.</li>\r\n\t<li>Overnight stay in Kedarnath.</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 34,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.446Z",
+            "updated_at": "2024-01-23T14:11:05.446Z",
+            "title": "KEDARNATH - GUPTKASHI | TREKKING DOWNWARDS WITNESSING THE VALLEYS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early and have a delicious breakfast.</li>\r\n\t<li>Post early morning Darshan, Head towards Gaurikund from Kedarnath, you can take ponies or palanquins for the journey to make it slightly on a comfortable side. (Own Expense).</li>\r\n\t<li>Once you reach Gaurikund from there will proceed to Sonprayag by a government Taxi.</li>\r\n\t<li>Arrive at Sonprayag from where you&#39;ll go to Guptkashi/Rampur (Walk for 1 Km is required at Sonpragyag as no private vehicles are allowed after a certain point)</li>\r\n\t<li>You&#39;ll then start traveling back to Guptkashi.</li>\r\n\t<li>Dinner and Overnight stay in Hotel.</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 35,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.447Z",
+            "updated_at": "2024-01-23T14:11:05.447Z",
+            "title": "GUPTKASHI - BADRINATH",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early and have a delicious breakfast. Check out from hotel by 10:00 AM</li>\r\n\t<li>On your way, you will visit some of the famous places like Baniyakund from where you can witness the glorious peaks of Chandrashila and witness the enchanting views of Joshimath, Govindghat, and Hanuman Chatti.</li>\r\n\t<li>Have lunch at the local restaurants on your way and you will reach Badrinath By evening.</li>\r\n\t<li>After reaching, check-in at the hotel and have some rest. Later, head out for Badrinath Darshan and seek the blessings of the lord and join the evening aarti at the temple.</li>\r\n\t<li>After the darshan, return to the hotel for dinner and an overnight stay.</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 36,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.447Z",
+            "updated_at": "2024-01-23T14:11:05.447Z",
+            "title": "BADRINATH TO RISHIKESH VIA JOSHIMATH",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Morning after breakfast, drive for Rishikesh via Joshimath.</li>\r\n\t<li>Visit on the way Narsingh Temple in Joshimath ater drive back to Rishikesh.</li>\r\n\t<li>After reaching, check in to your hotel and rest of the day is at leisure(You can visit some various famous cafes in Rishikesh and do some local sightseeing).</li>\r\n\t<li>Return back to the hotel for overnight stay in Rishikesh.</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 37,
+        "fields": {
+            "created_at": "2024-01-23T14:11:05.447Z",
+            "updated_at": "2024-01-23T14:11:05.447Z",
+            "title": "RISHIKESH - DELHI | TRIP TERMINATES WITH BABA'S BLESSINGS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up in the morning &amp; post breakfast check out from Hotel/ Camps and get ready to experience the thrill of rafting through the cold waters of Ganga.</li>\r\n\t<li>Get transferred to the start point for Rafting.</li>\r\n\t<li>Experience a round of enthralling rapids hitting your face and body whilst you drift by curves in the flowing river is a memory to be cherished, take a rest stop at the maggie point &amp; go for cliff jumping.</li>\r\n\t<li>Get ready for the adrenaline rush &amp; the excitement experienced while riding &amp; tumbling down the white waters of a fast-flowing river while rafting &amp; reach Neem Beach.</li>\r\n\t<li>Post this head towards to visit Laxman Jhula, Ram Jhula, Janki Setu and Rishikesh local market, you can have your lunch over a Cafe here</li>\r\n\t<li>Conclude the trip with glorious memories after reaching Delhi</li>\r\n</ol>",
+            "package": 5
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 38,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.328Z",
+            "updated_at": "2024-01-23T14:29:33.328Z",
+            "title": "DELHI TO GUPTKASHI | DRIVE THROUGH MANDAKINI RIVER",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Meet up at the departure point of the vehicle in Delhi (will be communicated to you in advance)</li>\r\n\t<li>A short break at Devprayag, where you can witness the Holy Sangam of Bhagirathi and Alaknanda that together form Ganga.</li>\r\n\t<li>Get back on the way to Guptkashi, witnessing some of the most scenic views.</li>\r\n\t<li>On reaching Guptkashi, check in to the hotel</li>\r\n\t<li>Stay the night at Guptkashi.</li>\r\n</ol>",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 39,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.328Z",
+            "updated_at": "2024-01-23T14:29:33.328Z",
+            "title": "- GUPTAKASHI � GAURIKUND � KEDARNATH | TREK AMIDST THE BEAUTIFUL TRAIL TO KEDARNATH TEMPLE",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early in the morning and have a delicious breakfast.</li>\r\n\t<li>Head towards Sonprayag, where the trekking to Kedarnath will begin.</li>\r\n\t<li>Eat a delicious meal and get transferred from Guptkashi to Sonprayag.</li>\r\n\t<li>Reach Sonprayag, walk to the Government Union taxi stand, to reach Gaurikund. (Walk for 1 Km as no private vehicles are allowed in Gaurikund)</li>\r\n\t<li>Reach Gaurikund and start the soulful trek to Kedarnath from Gaurikund.</li>\r\n\t<li>You can hire ponies or palanquins for a comfortable journey.</li>\r\n\t<li>Trek through the beautiful meadows and rivers.</li>\r\n\t<li>You can take a lunch break in between and then continue the journey. Here, you will see the Kedarnath Temple, situated right at the centre of the valley with majestic mountains.</li>\r\n\t<li>Reach Kedarnath, you can finally witness the whole valley which is filled with the sound of ringing bells and prayers going on everywhere. This will surely mesmerize you.</li>\r\n\t<li>Stay the night in Kedarnath.</li>\r\n</ol>",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 40,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.329Z",
+            "updated_at": "2024-01-23T14:29:33.329Z",
+            "title": "KEDARNATH �GUPTKASHI| TREKKING DOWNWARDS WITNESSING THE VALLEYS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early in the morning and enjoy a delicious breakfast.</li>\r\n\t<li>After the early morning Darshan, head towards Gaurikund from Kedarnath. Here you can hire ponies or palanquins for a safe and comfortable journey. (Own Expense).</li>\r\n\t<li>After you reach Gaurikund you will have to proceed to Sonprayag by government Taxi.</li>\r\n\t<li>Arrive at Sonprayag, go to Guptkashi/Rampur (Walk for 1 Km is required at Sonprayag as no private vehicles are allowed after a certain point)</li>\r\n\t<li>Dinner and overnight stay in a hotel</li>\r\n</ol>",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 41,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.329Z",
+            "updated_at": "2024-01-23T14:29:33.329Z",
+            "title": "GUPTKASHI TO BADRINATH VIA JOSHIMATH",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early and have a delicious breakfast. Check out from the hotel by 10:00 AM.</li>\r\n\t<li>On your way, you will come across famous places like Baniyakund. Witness the beautiful snow-clad peaks of Chandrashila and see the enchanting views of Joshimath, Govindghat, and Hanuman Chatti.</li>\r\n\t<li>Have lunch at the local restaurants on your way, reach Badrinath by evening.</li>\r\n\t<li>After reaching, check-in at the hotel and take some rest.</li>\r\n\t<li>Head out for Badrinath Darshan and seek the blessings of Vishnu. You can also witness the evening aarti at the temple.</li>\r\n\t<li>After the darshan, return to the hotel for dinner and an overnight stay.</li>\r\n</ol>",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 42,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.329Z",
+            "updated_at": "2024-01-23T14:29:33.329Z",
+            "title": "GUPTKASHI � RISHIKESH | CAMP STAY WITH BONFIRE AND MUSIC",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After having breakfast in the morning, drive to Rishikesh via Joshimath.</li>\r\n\t<li>Visit Narsingh Temple in Joshimath later drive back to Rishikesh.</li>\r\n\t<li>Check-in into the Camp/Hotel arrival in Rishikesh.</li>\r\n\t<li>Dinner and overnight stay at Camps/Hotel</li>\r\n</ol>",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 43,
+        "fields": {
+            "created_at": "2024-01-23T14:29:33.330Z",
+            "updated_at": "2024-01-23T14:29:33.331Z",
+            "title": "RISHIKESH RAFTING THRILL | LOCAL EXCURSIONS | DEPARTURE FOR DELHI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early in the morning and check out from the hotel or camps after breakfast. Now get ready to experience rafting on the cold gushing water of river Ganga.</li>\r\n\t<li>Move to the start point for Rafting.</li>\r\n\t<li>Enjoy a thrilling and wonderful experience while you move past the waves and rocks in the flowing river. It would be a memory that you will cherish for your entire life. Have a hot soupy bowl of Maggie and go cliff jumping.</li>\r\n\t<li>Visit Laxman Jhula, Ram Jhula, Janki Setu, and Rishikesh local market. Have your lunch over the cafe&#39;s.</li>\r\n\t<li>Head for returning to Delhi. Conclude the trip with glorious memories to cherish for life.</li>\r\n</ol>",
+            "package": 6
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 44,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.530Z",
+            "updated_at": "2024-01-23T14:51:03.530Z",
+            "title": "DELHI TO GUPTKASHI | 450 KM | 12 HOURS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Meet up at the departure point of the vehicle in Delhi that will be communicated to you in advance.</li>\r\n\t<li>Overnight Journey towards Guptkashi.</li>\r\n\t<li>On the way take a short stopover at Devprayag where you can witness the Holy Sangam of Bhagirathi and Alaknanda that together form Ganga.</li>\r\n\t<li>Get back on the way to Guptkashi witnessing some of the most Beautiful Landscapes.</li>\r\n\t<li>On reaching Guptkashi, Check-In into the Hotel</li>\r\n\t<li>Overnight stay at Guptkashi.</li>\r\n</ol>",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 45,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.531Z",
+            "updated_at": "2024-01-23T14:51:03.531Z",
+            "title": "GUPTAKASHI - GAURIKUND - KEDARNATH | 18 KM TREK | 7 HOURS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early and have a delicious breakfast.</li>\r\n\t<li>Head towards Sonprayag and start trekking to Kedarnath.</li>\r\n\t<li>Have a delicious breakfast and get transferred from Guptkashi to Sonprayag.</li>\r\n\t<li>Once we reach Sonprayag, walk to the Government Union taxi stand, to reach Gaurikund. (Walk for 1 Km as no private vehicles are allowed in Gaurikund)</li>\r\n\t<li>Reach Gaurikund, start the trek to the Kedarnath from Gaurikund.</li>\r\n\t<li>You can take ponies or palanquins for the journey to make it slightly on a comfortable side. (Own Expense).</li>\r\n\t<li>Trek through the beautiful valley and river stream.</li>\r\n\t<li>Take a lunch stop in between and continue the journey, you will get to see the Kedarnath Temple, situated right at the centre of the valley with mountains.</li>\r\n\t<li>On reaching Kedarnath, you&#39;ll witness the whole valley, filled with the sound of ringing bells and prayers going on everywhere, providing relief to your soul.</li>\r\n\t<li>Overnight stay in Kedarnath.</li>\r\n</ol>",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 46,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.531Z",
+            "updated_at": "2024-01-23T14:51:03.531Z",
+            "title": "KEDARNATH - GUPTKASHI | TREKKING DOWNWARDS WITNESSING THE VALLEYS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early and have a delicious breakfast.</li>\r\n\t<li>Post early morning Darshan, Head towards Gaurikund from Kedarnath, you can take ponies or palanquins for the journey to make it slightly on a comfortable side. (Own Expense).</li>\r\n\t<li>Once you reach Gaurikund, proceed to Sonprayag by government Taxi.</li>\r\n\t<li>Arrive at Sonprayag, go to Guptkashi/Rampur (Walk for 1 Km is required at Sonpragyag as no private vehicles are allowed after a certain point) Start travelling back to Guptkashi.</li>\r\n\t<li>Dinner and Overnight stay in hotel.</li>\r\n</ol>",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 47,
+        "fields": {
+            "created_at": "2024-01-23T14:51:03.532Z",
+            "updated_at": "2024-01-23T14:51:03.532Z",
+            "title": "GUPTKASHI - RISHIKESH - DELHI | TRIP TERMINATES WITH HAPPY MEMORIES",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early and have a delicious breakfast.</li>\r\n\t<li>Head towards Rishikesh from Guptkashi, Visit Laxman Jhula, Janki Setu, Ram Jhula.</li>\r\n\t<li>Experience the peaceful Ganga Aarti at Triveni Ghat (Time-Dependent) and local cafes at Rishikesh Market.</li>\r\n\t<li>Reach Delhi by early morning the next day and the trip terminates here with lifetime memories and Baba&#39;s Blessings.</li>\r\n</ol>",
+            "package": 7
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 48,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.257Z",
+            "updated_at": "2024-01-23T15:15:08.257Z",
+            "title": "DEPART FROM DELHI BY 07:00PM",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>We depart from Delhi around 6 PM in an AC Vehicle. (Know the true value of time snatch, seize, and enjoy every moment of it.)</li>\r\n\t<li>Pit stop for dinner at any decent roadside restaurant.</li>\r\n</ol>",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 49,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.258Z",
+            "updated_at": "2024-01-23T15:15:08.258Z",
+            "title": "REACH MANALI | JOGINI FALLS | OVERNIGHT STAY AT MANALI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Check in to the hotel, freshen up &amp; have breakfast or lunch (Depending on the Arrival).</li>\r\n\t<li>After relaxing, head to Vashisth village and begin the trek to the stunning Jogini Falls.</li>\r\n\t<li>Come back to the hotel, relax for a while.</li>\r\n\t<li>In the Evening, you are free to explore some local part of Manali &ndash; Mall Road, Club House, Hadimba Devi Temple (At your own)</li>\r\n\t<li>Enjoy bonfire &amp; music, Overnight stay in hotel.</li>\r\n</ol>",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 50,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.258Z",
+            "updated_at": "2024-01-23T15:15:08.258Z",
+            "title": "CHECK OUT FROM MANALI | JISPA Via ATAL TUNNEL & SISSU | OVERNIGHT STAY AT JISPA CAMPS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early morning, have breakfast and check out the hotel.</li>\r\n\t<li>Later kick starts your day with the road trip to Jispa via Atal tunnel</li>\r\n\t<li>We will head towards Baralacha La pass, it is one of the highest passes on the Manali Leh highway at an altitude of approx. 16090 feet.</li>\r\n\t<li>Later we will head towards jispa.</li>\r\n\t<li>Arrival at Jispa, Check in to the camps.</li>\r\n\t<li>Dinner will be served and overnight stay in Jispa Camps</li>\r\n</ol>",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 51,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.259Z",
+            "updated_at": "2024-01-23T15:15:08.259Z",
+            "title": "CHECK OUT FROM JISPA | DEPARTURE FROM MANALI TO DELHI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up in the Campsite.</li>\r\n\t<li>After Breakfast checkout the camps, then head towards Manali.</li>\r\n\t<li>Reach Manali by afternoon and later you are free to explore the local market or the mall road for some last-minute shopping experience.</li>\r\n\t<li>Then board your vehicle.</li>\r\n\t<li>Later in the evening, we depart for Delhi with lots of everlasting memories together.</li>\r\n</ol>",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 52,
+        "fields": {
+            "created_at": "2024-01-23T15:15:08.259Z",
+            "updated_at": "2024-01-23T15:15:08.259Z",
+            "title": "REACH BACK TO DELHI BY MORNING",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Reach Delhi in the morning.</li>\r\n</ol>",
+            "package": 8
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 53,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.138Z",
+            "updated_at": "2024-01-23T16:22:34.138Z",
+            "title": "DEPART FROM DELHI BY 07:00 PM",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>We depart from Delhi around 7:00 PM in an AC Vehicle. (Know the true value of time; snatch, seize, and enjoy every moment of it.)</li>\r\n\t<li>Pit stop for dinner at any decent roadside restaurant. Note: The pickup point will be Majnu Ka Tila (Near Vidhan Sabha Metro Station)</li>\r\n</ol>",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 54,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.139Z",
+            "updated_at": "2024-01-23T16:22:34.139Z",
+            "title": "REACH MANALI | JOGINI FALLS | OVERNIGHT STAY AT MANALI",
+            "details": "<ol>\r\n\t<li>Check in to the hotel, freshen up &amp; have breakfast or lunch (Depending on the Arrival).</li>\r\n\t<li>After relaxing, head to Vashishth village, and begin the trek to the stunning Jogini Falls.</li>\r\n\t<li>Come back to the hotel, relax for a while.</li>\r\n\t<li>In the Evening, You are free to explore some local part of Manali &ndash; Mall Road. (At your own).</li>\r\n\t<li>Enjoy bonfire and DJ in the hotel.</li>\r\n\t<li>Overnight stay in hotel.</li>\r\n</ol>",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 55,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.139Z",
+            "updated_at": "2024-01-23T16:22:34.139Z",
+            "title": "CHECK OUT FROM MANALI | JISPA Via ATAL TUNNEL & SISSU | OVERNIGHT STAY AT JISPA CAMPS",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early morning, have breakfast and check out the hotel.</li>\r\n\t<li>Later kick starts your day with the road trip to Jispa via Atal tunnel</li>\r\n\t<li>We will head towards Baralacha La pass, it is one of the highest passes on the Manali Leh highway at an altitude of approx. 16090 feet.</li>\r\n\t<li>Later we will head towards jispa.</li>\r\n\t<li>Arrival at Jispa, Check in to the camps.</li>\r\n\t<li>Dinner will be served and overnight stay in Jispa Camps</li>\r\n</ol>",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 56,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.140Z",
+            "updated_at": "2024-01-23T16:22:34.140Z",
+            "title": "CHECK OUT FROM JISPA | PROCEED FOR KASOL | OVERNIGHT STAY AT KASOL",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up in the Campsite.</li>\r\n\t<li>After Breakfast checkout the camps, Later board your vehicle and depart for Kasol. Rest for a while after short journey.</li>\r\n\t<li>Have dinner &amp; overnight stay at Kasol Hotel.</li>\r\n</ol>",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 57,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.140Z",
+            "updated_at": "2024-01-23T16:22:34.140Z",
+            "title": "CHALAL VILLAGE | MANIKARAN GURUDWARA | DEPARTURE TO DELHI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up to see the first ray of sun falling on the mighty Himalayas.</li>\r\n\t<li>Post Breakfast, go for a hike to Chalal village and capture some beautiful views of Parvati Valley.</li>\r\n\t<li>Visit the holy Manikaran Gurudwara, famous for it&#39;s natural hotsprings and&nbsp;local cafes.</li>\r\n\t<li>In the night we will depart for Delhi.</li>\r\n</ol>",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 58,
+        "fields": {
+            "created_at": "2024-01-23T16:22:34.140Z",
+            "updated_at": "2024-01-23T16:22:34.140Z",
+            "title": "REACH BACK TO DELHI BY MORNING",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Reach Delhi in the morning.</li>\r\n</ol>",
+            "package": 9
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 59,
+        "fields": {
+            "created_at": "2024-01-23T16:38:50.625Z",
+            "updated_at": "2024-01-24T20:42:43.692Z",
+            "title": "DEPART FROM DELHI BY 07:00 PM",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>We depart from Delhi around 7:00 PM in an AC Vehicle. (Know the true value of time; snatch, seize, and enjoy every moment of it.)</li>\r\n\t<li>Pit stop for dinner at any decent roadside restaurant.</li>\r\n</ol>\r\n\r\n<p style=\"margin-left:40px\">Note: The pickup point will be Majnu Ka Tila (Near Vidhan Sabha Metro Station)</p>",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 60,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.689Z",
+            "updated_at": "2024-01-23T17:35:18.689Z",
+            "title": "DEPART FROM DELHI BY 06:00PM",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>We depart from Delhi around 6 PM in an AC Vehicle. (Know the true value of time snatch, seize, and enjoy every moment of it.)</li>\r\n\t<li>Pit stop for dinner at any decent roadside restaurant.</li>\r\n</ol>",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 61,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.690Z",
+            "updated_at": "2024-01-23T17:35:18.690Z",
+            "title": "REACH MANALI | JOGINI FALLS | OVERNIGHT STAY AT MANALI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Check in to the hotel, freshen up &amp; have breakfast or lunch (Depending on the Arrival).</li>\r\n\t<li>After relaxing, head to Vashishth village, and begin the trek to the stunning Jogini Falls.</li>\r\n\t<li>Come back to the hotel, relax for a while.</li>\r\n\t<li>In the Evening, You are free to explore some local part of Manali &ndash; Mall Road. (At your own)</li>\r\n\t<li>Enjoy bonfire, Overnight stay in hotel</li>\r\n</ol>",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 62,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.691Z",
+            "updated_at": "2024-01-23T17:35:18.691Z",
+            "title": "MANALI | SOLANG VALLEY | LAHAUL VALLEY Via ATAL TUNNEL SISSU | OVERNIGHT STAY AT MANALI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up with the beautiful sight in front of your eyes.</li>\r\n\t<li>Have delicious breakfast at hotel and then proceed for full day tour to Solang valley, Atal Tunnel &amp; Sissu.</li>\r\n\t<li>Cross the tunnel, ride towards sissu while admiring the Beauty of Lahaul Valley</li>\r\n\t<li>While returning , stop at Solang valley for lunch</li>\r\n\t<li>You can indulge in various snow adventure activities offered at Solang valley like skiing, zorbing, atv rides etc. (At Your Own)</li>\r\n\t<li>Later come back to the hotel.</li>\r\n\t<li>Get your dinner served, overnight stay.</li>\r\n</ol>",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 63,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.691Z",
+            "updated_at": "2024-01-23T17:35:18.691Z",
+            "title": "RIVER RAFTING & DEPARTURE FROM KULLU TO DELHI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up in the Hotel.</li>\r\n\t<li>After breakfast check out the hotel, then proceed for the enthralling river rafting in Kullu.</li>\r\n\t<li>Have an adventurous ride of approx. 10 to 14 Kms. In the bone-chilling water.</li>\r\n\t<li>Come back and change your clothes.</li>\r\n\t<li>Then board your vehicle.</li>\r\n\t<li>Later in the evening, we depart for Delhi with lots of everlasting memories together.</li>\r\n</ol>",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 64,
+        "fields": {
+            "created_at": "2024-01-23T17:35:18.692Z",
+            "updated_at": "2024-01-23T17:35:18.692Z",
+            "title": "REACH BACK TO DELHI BY MORNING",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Reach Delhi in the morning.</li>\r\n</ol>",
+            "package": 11
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 65,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.704Z",
+            "updated_at": "2024-01-23T17:53:39.704Z",
+            "title": "DEPART FROM DELHI BY 07:30 PM",
+            "details": "<ol>\r\n\t<li>We depart from Delhi around 7:30 PM in an AC Vehicle. (Know the true value of time; snatch, seize, and enjoy every moment of it.)</li>\r\n\t<li>Pit stop for dinner at any decent roadside restaurant.</li>\r\n</ol>\r\n\r\n<p style=\"margin-left:40px\"><strong>Note: The pickup point will be Majnu Ka Tila (Near Vidhan Sabha Metro Station)</strong></p>",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 66,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.704Z",
+            "updated_at": "2024-01-23T17:53:39.704Z",
+            "title": "TRANSFER TO HOMESTAY | JIBHI SIGHTSEEING | OVERNIGHT STAY AT JIBHI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Reach Aut by morning, Local transfer from Aut to our Homestay/Campsite.</li>\r\n\t<li>Arrive at the Homestay/Campsite in the morning &amp; Have Breakfast.</li>\r\n\t<li>Check-in and freshen up. Some time is offered for relaxing and acclimatization.</li>\r\n\t<li>Thereafter, you will be taken to the Jibhi Waterfall.</li>\r\n\t<li>Later, come back to the Homestay/Campsite.</li>\r\n\t<li>Dinner and night stays are offered at the Homestay/Campsite.</li>\r\n</ol>",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 67,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.706Z",
+            "updated_at": "2024-01-23T17:53:39.706Z",
+            "title": "VISIT JALORI PASS | TREK TO 360 VIEWPOINT AND SEROLSAR LAKE | OVERNIGHT STAY AT JIBHI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After a delicious breakfast in the Homestay/Campsite.</li>\r\n\t<li>You will be taken for a drive to the Jalori Pass. Here you can enjoy the stunning 360&deg; view of the Great Himalayas and the Kullu Valley. You can also opt for a trek to Serolsar Lake &ndash; in case you don&rsquo;t want to explore 360&deg; view.</li>\r\n\t<li>Later come back to Homestay/Campsite and enjoy bonfires with soothing music.</li>\r\n\t<li>Dinner and overnight stay.</li>\r\n</ol>",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 68,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.706Z",
+            "updated_at": "2024-01-23T17:53:39.706Z",
+            "title": "RIVER RAFTING | TIME TO HEAD BACK",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up, and feel the breathtaking view of morning. &bull; Have breakfast, enjoy near by places.</li>\r\n\t<li>Check out from Homestay/Campsite.</li>\r\n\t<li>Enjoy River Rafting&nbsp;</li>\r\n\t<li>Later depart for Delhi by 7 pm with lots of breathtaking views and everlasting memories of Tirthan Valley.</li>\r\n</ol>",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 69,
+        "fields": {
+            "created_at": "2024-01-23T17:53:39.706Z",
+            "updated_at": "2024-01-23T17:53:39.706Z",
+            "title": "REACH BACK TO DELHI BY MORNING",
+            "details": "<ol>\r\n\t<li>Reach Delhi in the morning.</li>\r\n</ol>",
+            "package": 12
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 70,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.598Z",
+            "updated_at": "2024-01-23T18:05:03.598Z",
+            "title": "DEPART FROM DELHI BY 06:00 PM",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>We depart from Delhi around 6 PM in an AC Vehicle. (Know the true value of time snatch, seize, and enjoy every moment of it.)</li>\r\n\t<li>Pit stop for dinner at any decent roadside restaurant.</li>\r\n</ol>\r\n\r\n<p style=\"margin-left:40px\"><strong>Note: The pickup point will be Majnu Ka Tila (Near Vidhan Sabha Metro Station)</strong></p>",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 71,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.598Z",
+            "updated_at": "2024-01-23T18:05:03.598Z",
+            "title": "REACH KASOL | KASOL EXPLORATION | OVERNIGHT STAY AT KASOL",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Check in to the hotel, freshen up &amp; have breakfast or lunch (Depending on the Arrival).</li>\r\n\t<li>After having breakfast, go for a hike to Chalal Village and capture some beautiful views of Parvati Valley.</li>\r\n\t<li>In the evening, we will visit the Local market, try different cuisines at the local Hippie Cafe&#39;s.</li>\r\n\t<li>Return to the Hotel &amp; Overnight stay in Kasol.</li>\r\n</ol>",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 72,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.599Z",
+            "updated_at": "2024-01-23T18:05:03.599Z",
+            "title": "TREK TO KHEERGANGA | OVERNIGHT CAMP STAY AT KHEERGANGA",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After early morning breakfast, a briefing session by the trek leader sharing all the necessary details about the Kheerganga trek would be provided.</li>\r\n\t<li>Trek will start from a village called Barsheni (22 km from Kasol) and you will be transferred to Barsheni in private vehicles.</li>\r\n\t<li>It takes around 5-7 hours to reach the spring.</li>\r\n\t<li>Check-in to the camps and head to the springs for an exquisite swim.</li>\r\n\t<li>Spend the night under a sky full of stars and surrounded by mountains.</li>\r\n\t<li>Overnight stay in Kheerganga.</li>\r\n</ol>",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 73,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.599Z",
+            "updated_at": "2024-01-23T18:05:03.599Z",
+            "title": "TREK DOWN TO BARSHENI | MANIKARAN GURUDWARA | TIME TO HEAD BACK",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up to see the first ray of sun falling on the mighty Himalayas.</li>\r\n\t<li>Post breakfast, trek back to Barshaini (the same trail).</li>\r\n\t<li>Drive to Kasol from Barshaini.</li>\r\n\t<li>On the way, visit the holy Manikaran Gurudwara, famous for it&#39;s natural hotsprings.</li>\r\n\t<li>In the Evening, We&#39;ll board an overnight bus for our return journey to Delhi.</li>\r\n</ol>",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 74,
+        "fields": {
+            "created_at": "2024-01-23T18:05:03.599Z",
+            "updated_at": "2024-01-24T20:56:36.824Z",
+            "title": "REACH BACK TO DELHI BY MORNING",
+            "details": "<ol>\r\n\t<li>Reach Delhi in the morning</li>\r\n</ol>",
+            "package": 13
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 75,
+        "fields": {
+            "created_at": "2024-01-24T20:42:43.693Z",
+            "updated_at": "2024-01-24T20:42:43.693Z",
+            "title": "REACH MANALI | JOGINI FALLS | OVERNIGHT STAY AT MANALI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Check in to the hotel, freshen up &amp; have breakfast or lunch (Depending on the Arrival).</li>\r\n\t<li>After relaxing, head to Vashishth village, and begin the trek to the stunning Jogini Falls.</li>\r\n\t<li>Come back to the hotel, relax for a while.</li>\r\n\t<li>In the Evening, You are free to explore some local part of Manali &ndash; Mall Road. (At your own).</li>\r\n\t<li>Enjoy bonfire and DJ in the hotel.</li>\r\n\t<li>Overnight stay in hotel.</li>\r\n</ol>",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 76,
+        "fields": {
+            "created_at": "2024-01-24T20:42:43.694Z",
+            "updated_at": "2024-01-24T20:42:43.694Z",
+            "title": "SOLANG VALLEY | SNOW ACTIVITIES | OVERNIGHT STAY AT MANALI",
+            "details": "<ol>\r\n\t<li>Wake up with the beautiful sight in front of your eyes.</li>\r\n\t<li>Have delicious breakfast at hotel and then proceed for full day tour to Solang valley.</li>\r\n\t<li>You can indulge in various snow adventure activities offered here like skiing, zorbing, atv rides etc. (At Your Own)</li>\r\n\t<li>Later come back to the hotel.</li>\r\n\t<li>Have fun around bonfire.</li>\r\n\t<li>Get your dinner served, overnight stay.</li>\r\n</ol>",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 77,
+        "fields": {
+            "created_at": "2024-01-24T20:42:43.695Z",
+            "updated_at": "2024-01-24T20:42:43.695Z",
+            "title": "MANALI SIGHTSEEING | PROCEED FOR KASOL | OVERNIGHT STAY AT KASOL",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up in the Hotel.</li>\r\n\t<li>After Breakfast checkout the hotel, then proceed for the sightseeing of Hadimba devi temple, Tibetan Monastery and The Mall road.</li>\r\n\t<li>Later board your vehicle and depart for Kasol. Rest for a while after short journey. Have dinner &amp; overnight stay at Kasol Hotel.</li>\r\n</ol>",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 78,
+        "fields": {
+            "created_at": "2024-01-24T20:42:43.696Z",
+            "updated_at": "2024-01-24T20:42:43.696Z",
+            "title": "TRANSFER AND HIKE TO TOSH | OVERNIGHT STAY AT TOSH",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early morning and after having breakfast, head for Tosh.</li>\r\n\t<li>Upon arrival at Barshaini, we&#39;ll go for a scenic hike to Tosh where we&#39;ll be witnessing majestic views of snow capped mountains and pine trees.</li>\r\n\t<li>Reach Tosh and check in to the Hotel / Homestay. Later you are free to explore some local exquisite of Tosh.</li>\r\n\t<li>Spend a peaceful evening with friends around a bonfire and a beautiful sun setting behind the mountains.</li>\r\n\t<li>Dinner will be served.</li>\r\n</ol>",
+            "package": 10
+        }
+    },
+    {
+        "model": "app.iternary",
+        "pk": 79,
+        "fields": {
+            "created_at": "2024-01-24T20:42:43.696Z",
+            "updated_at": "2024-01-24T20:42:43.696Z",
+            "title": "TREK DOWN TO BARSHENI | MANIKARAN GURUDWARA | DEPARTURE TO DELHI",
+            "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up to see the first ray of sun falling on the mighty Himalayas.</li>\r\n\t<li>Trek your way down to Barsheni and reach Kasol by afternoon.</li>\r\n\t<li>On the way, visit the holy Manikaran Gurudwara, famous for it&#39;s natural hotsprings.</li>\r\n\t<li>In the evening we will depart for Delhi.</li>\r\n</ol>",
+            "package": 10
         }
     }
 ]

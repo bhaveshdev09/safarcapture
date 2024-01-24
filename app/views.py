@@ -11,12 +11,21 @@ from app.models import Contact, Blog, Package, Destination, Booking, Category
 
 def index(request):
     destinations = Destination.objects.all()[:3]
-    categories = Category.objects.all()
-    packages = Package.objects.all()[:6]
+    categories = Category.aggrgate_categories()
+    # packages = Package.objects.all().order_by("-name")
+    packages = Package.objects.all().order_by("id")
+    blogs = Blog.objects.all()[:4]
+    master_blog = Blog.objects.all().order_by("-created_at").first()
     return render(
         request,
         "index.html",
-        {"destinations": destinations, "categories": categories, "packages": packages},
+        {
+            "destinations": destinations,
+            "categories": categories,
+            "packages": packages,
+            "blogs": blogs,
+            "master_blog": master_blog,
+        },
     )
 
 

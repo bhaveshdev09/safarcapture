@@ -80,7 +80,7 @@ class ExclusiveInline(admin.StackedInline):
 class CarryThingInline(admin.TabularInline):
     model = CarryThing
     extra = 0
-    min_num = 1
+    min_num = 0
 
     formfield_overrides = {
         models.TextField: {"widget": forms.Textarea(attrs={"rows": 2, "cols": 150})},
@@ -100,7 +100,10 @@ class PackageAdmin(admin.ModelAdmin):
         models.TextField: {"widget": forms.Textarea(attrs={"rows": 4, "cols": 150})},
     }
 
-    filter_horizontal = ("category",)
+    filter_horizontal = (
+        "category",
+        "image_list",
+    )
 
     fieldsets = [
         (
