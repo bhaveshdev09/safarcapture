@@ -51,51 +51,17 @@
                                 <div class="slider-store">
                                     <!-- 6 Images are required -->
                                     {% for img in package.image_list.all %}
-                                    <div>
-                                        <img src="{{img.image.url}}" alt="1">
-                                    </div>
+                                        <div>
+                                            <img src="{{img.image.url}}" alt="1">
+                                        </div>
                                     {% endfor %} 
-                                    
-                                    <div>
-                                        <img src="{% static "images/destination/shimla2.jpg" %}" alt="1">
-                                    </div>
-                                    <div>
-                                        <img src="{% static "images/destination/shimla3.jpg" %}" alt="1">
-                                    </div>
-                                    <div>
-                                        <img src="{% static "images/destination/shimla1.jpg" %}" alt="1">
-                                    </div>
-                                    <div>
-                                        <img src="{% static "images/destination/shimla2.jpg" %}" alt="1">
-                                    </div>
-                                    <div>
-                                        <img src="{% static "images/destination/shimla3.jpg" %}" alt="1">
-                                    </div>
                                 </div>
                                 <div class="slider-thumbs">
                                     {% for img in package.image_list.all %}
-                                    <div>
-                                        <img src="{{img.image.url}}" alt="1">
-                                    </div>
+                                        <div>
+                                            <img src="{{img.image.url}}" alt="1">
+                                        </div>
                                     {% endfor %} 
-                                    <div>
-                                        <img src="{% static "images/destination/shimla1.jpg" %}" alt="1">
-                                    </div>
-                                    <div>
-                                        <img src="{% static "images/destination/shimla2.jpg" %}" alt="1">
-                                    </div>
-                                    <div>
-                                        <img src="{% static "images/destination/shimla3.jpg" %}" alt="1">
-                                    </div>
-                                    <div>
-                                        <img src="{% static "images/destination/shimla1.jpg" %}" alt="1">
-                                    </div>
-                                    <div>
-                                        <img src="{% static "images/destination/shimla2.jpg" %}" alt="1">
-                                    </div>
-                                    <div>
-                                        <img src="{% static "images/destination/shimla3.jpg" %}" alt="1">
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -121,7 +87,7 @@
                             </div>
                             <div class="description-inner mb-2">
                                 <h4>Highlight</h4>
-                                <p>{{package.description}}.</p>
+                                <p>{{package.description|safe}}.</p>
                             </div>
                             <br/>
                             <div class="tour-includes mb-2" id="costing_details">
@@ -137,11 +103,9 @@
                                             {% comment %} <td><i class="fa fa-clock-o pink mr-1" aria-hidden="true"></i> {{package.days}} Days {{package.night}} Nights</td>
                                             <td><i class="fa fa-group pink mr-1" aria-hidden="true"></i> Max People : {{package.days}}
                                             </td>
-                                            <td><i class="fa fa-calendar pink mr-1" aria-hidden="true"></i> Jan 18 - Dec
-                                                21</td> {% endcomment %}
+                                            <td><i class="fa fa-calendar pink mr-1" aria-hidden="true"></i> Jan 18 - Dec 21</td> {% endcomment %}
                                         </tr>
                                         <tr>
-                                            
                                             <td><i class="fa fa-map-signs pink mr-1" aria-hidden="true"></i>&nbsp;Pickup / Drop</td>
                                             {% if package.pickup_location == package.drop_of_location %}
                                                 <td>{{package.pickup_location}}</td>
@@ -150,6 +114,13 @@
                                             {% endif %}
                                             <td><i class="fa fa-user pink mr-1" aria-hidden="true"></i>&nbsp;Min Age</td>
                                             <td>{{package.min_age}}+</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-money pink mr-1" aria-hidden="true"></i>&nbsp;Price (per person)</td>
+                                            <td>&#8377; {{package.price}}/-</td>
+                                            <td><i class="fa fa-user pink mr-1" aria-hidden="true"></i>&nbsp;Tour Type</td>
+                                            <td>{% for category in package.category.all %}{{category.title}}, {% endfor %}</td>
+                                        </tr>
                                     </tbody>
                                 </table>
                                 <br/>
@@ -157,20 +128,23 @@
                                 <table>
                                     <thead>
                                         <tr>
-                                            <td><i class="fa fa-users pink mr-1" aria-hidden="true"></i><span class="h6">Room Sharing</span></td>
+                                            <td><i class="fa fa-users pink mr-1" aria-hidden="true"></i><span class="h6"> Room Sharing</span></td>
                                             <td><span class="h6">Quad Sharing</span></td>
                                             <td><span class="h6">Triple Sharing</span></td>
                                             <td><span class="h6">Double Sharing</span></td>
                                         </tr>
                                         <tr>
-                                            <td><i class="fa fa-money pink mr-1" aria-hidden="true"></i>Price Per Person (in &#8377;)</td>
+                                            <td><i class="fa fa-money pink mr-1" aria-hidden="true"></i> Price Per Person (in &#8377;)</td>
                                             <td>{% if  package.price_quad_sharing < 0 %} [ Not Available ] {% else %}&#8377; {{package.price_quad_sharing}}/-{% endif %}</td>
                                             <td>{% if  package.price_triple_sharing < 0 %} [ Not Available ] {% else %}&#8377; {{package.price_triple_sharing}}/-{% endif %}</td>
                                             <td>{% if  package.price_double_sharing < 0 %} [ Not Available ] {% else %}&#8377; {{package.price_double_sharing}}/-{% endif %}</td>
-                                        
                                         </tr>
                                     </thead>
                                 </table>
+                                <br/>
+                                {% if package.price_quad_sharing > 0 or package.price_triple_sharing > 0 %}
+                                <strong><p>NOTE: Extra Mattress will be Provided for Triple Sharing &amp; Quad Sharing</p></strong>
+                                {% endif %}
                             </div>
 
                             <div class="description-inner mb-2">
@@ -261,7 +235,29 @@
                                     </div>
                                 </div>
                             {% endfor %}
+                        </div>  
+                        
+                        {% if package.carry_things.count > 0 %}
+                        <div class="single-map mb-4" id="things-carry-2">
+                                <h4>Things To Carry</h4>
+                                <table>
+                                    <thead>
+                                        <thead>
+                                            <tr>
+                                                <td colspan="2"><span class="h6">#</span></td>
+                                                <td><span class="h6">Things</span></td>
+                                            </tr>
+                                        </thead>
+                                        {% for things in package.carry_things.all %}
+                                            <tr>
+                                                <td colspan="2">{{forloop.counter}}</td>
+                                                <td>{{things.note}}</td>
+                                            </tr>
+                                        {% endfor %}
+                                    </thead>
+                                </table>
                         </div>
+                        {% endif %}
 
                         <div class="single-map mb-4" id="single-map">
                             <h4>Map</h4>
@@ -269,7 +265,7 @@
                                 <div style="width: 100%">
                                     
                                     <iframe src="{{package.map_embed_link}}"
-                                        width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                                        width="600" height="700" style="border:0;" allowfullscreen="" loading="lazy"
                                         referrerpolicy="no-referrer-when-downgrade">
                                     </iframe>
                                 </div>

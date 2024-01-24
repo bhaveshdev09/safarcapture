@@ -67,7 +67,6 @@
                 <span>Sensation Ice Trip</span> Is Coming For Kids
               </h1>
               <a href="#" class="per-btn">
-
                 <span class="white" id="contactForm">Discover</span>
                 <i class="fa fa-arrow-right white"></i>
               </a>
@@ -121,7 +120,7 @@
     <div class="trend-box">
       <div class="row">
         {% for package in packages %}
-          <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
+          <div class="col-lg-4 col-md-4 col-xs-12 mb-4">
             <div class="trend-item">
               <div class="trend-image">
                 <img src="{{package.card_cover_image.url}}" alt="image">
@@ -141,10 +140,9 @@
                   </div>
                 </div>
                 <div class="trend-last-main">
-                  <p class="mb-0 trend-para">{{package.description|safe|truncatewords:8}}.
-                  </p>
+                    <div class="ml-3 mr-3 mb-2">{{package.description|safe|truncatewords:10}}</div>
                   <div class="trend-last d-flex align-items-center justify-content-between">
-                    <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> {{package.days}} days &amp; {{package.night}} night</p>
+                    <p class="mb-0 white"><i class="fa fa-clock-o" aria-hidden="true"></i> {{package.days}} D / {{package.night}} N</p>
                     <div class="trend-price">
                       <p class="price white mb-0">From <span>₹{{package.price}}</span></p>
                     </div>
@@ -812,7 +810,31 @@
     </div>
     <div class="news-outer">
       <div class="row">
+        
         <div class="col-lg-5 col-md-12 col-xs-12 mb-4">
+          {% if master_blog %}
+          <div class="news-item overflow-hidden">
+            <div class="news-image">
+              <img src="static/images/blog/blog1.jpeg" alt="image">
+            </div>
+            <div class="news-list mt-2 border-b pb-2 mb-2">
+              <ul>
+                <li><a href="single-#" class="pr-3"><i class="fa fa-calendar pink pr-1"></i> {{master_blog.published_date}} </a></li>
+                <li><a href="single-#" class="pr-3"><i class="fa fa-comment pink pr-1"></i> 3</a></li>
+                <li><a href="single-#" class=""><i class="fa fa-tag pink pr-1"></i> Tour, Tourism, Travel</a></li>
+              </ul>
+            </div>
+            <div class="news-content mt-2">
+              <h4 class="pb-2 mb-2 border-b"><a href="{% url "blog-detail" master_blog.id %}">{{master_blog.title}}</a></h4>
+              <p class="mb-3">{{master_blog.description|safe|truncatewords_html:60}}</p>
+
+              <div class="author-img">
+                <img src="static/images/testimonial/user.png" alt="Demo Image">
+                <span>By - {{master_blog.author}}</span>
+              </div>
+            </div>
+          </div>
+          {% else %}
           <div class="news-item overflow-hidden">
             <div class="news-image">
               <img src="static/images/blog/blog1.jpeg" alt="image">
@@ -838,10 +860,32 @@
               </div>
             </div>
           </div>
+          {% endif %}
+          
         </div>
         <div class="col-lg-7 col-md-12 col-xs-12 mb-4">
           <div class="row">
-            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+            {% for blog in blogs %}
+              <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+                <div class="news-item overflow-hidden">
+                  <div class="news-image">
+                    <img src="{{blog.cover_image.url}}" alt="image">
+                  </div>
+                  <div class="news-list mt-2 border-b pb-2 mb-2">
+                    <ul>
+                      <li><a href="#" class="pr-3"><i class="fa fa-calendar pink pr-1"></i> {{blog.published_date}} </a>
+                      </li>
+                      {% comment %} <li><a href="single-#" class="pr-3"><i class="fa fa-comment pink pr-1"></i> 3</a></li> {% endcomment %}
+                      <li><a href="#" class=""><i class="fa fa-tag pink pr-1"></i> {% cycle "Travel" "Spiritual" "Adventure" "Trek" "Mountains"  %}</a></li>
+                    </ul>
+                  </div>
+                  <div class="news-content mt-2">
+                    <h4 class="bordernone mb-0"><a href="{% url "blog-detail" blog.id %}">{{blog.title}}</a></h4>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+            {% comment %} <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
               <div class="news-item overflow-hidden">
                 <div class="news-image">
                   <img src="static/images/blog/blog2.jpg" alt="image">
@@ -913,7 +957,7 @@
                   <h4 class="bordernone mb-0"><a href="single-#">Take only memories, leave only footprints.</a></h4>
                 </div>
               </div>
-            </div>
+            </div> {% endcomment %}
           </div>
         </div>
       </div>

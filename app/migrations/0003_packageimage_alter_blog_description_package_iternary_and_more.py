@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=50)),
                 ('location', models.CharField(max_length=50)),
-                ('description', models.TextField()),
+                ('description', ckeditor.fields.RichTextField()),
                 ('days', models.PositiveSmallIntegerField(default=5)),
                 ('night', models.PositiveSmallIntegerField(default=5)),
                 ('people_max_limit', models.PositiveSmallIntegerField(default=10)),

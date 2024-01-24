@@ -6,6 +6,7 @@ from django.db.models.signals import post_save
 from django.core.mail import send_mail
 from django.dispatch import receiver
 from backend import settings
+from PIL import Image
 
 
 class BaseModel(models.Model):
@@ -59,11 +60,24 @@ class Blog(BaseModel):
 
 
 class PackageImage(BaseImage):
-    image = models.ImageField(upload_to="package/images/")
+    image = models.ImageField(
+        upload_to="package/images/", default="package/images/bg.jpg"
+    )
     name = models.CharField(max_length=255, default="package_image")
 
     def __str__(self):
-        return f"Package Image - {str(self.id)}"
+        import os
+
+        image_filename = os.path.basename(self.image.name)
+        return f"Package Image - {str(self.id)} : {image_filename}"
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.image.path)
+        if img.width != 1600 or img.height != 800:
+            output_size = (1600, 800)
+            resized_image = img.resize(output_size)
+            resized_image.save(self.image.path)
 
 
 class Category(BaseModel):
@@ -77,6 +91,14 @@ class Category(BaseModel):
     def __str__(self) -> str:
         return self.title
 
+    @classmethod
+    def aggrgate_categories(cls, count=1):
+        return (
+            cls.objects.all()
+            .annotate(dest_count=models.Count("destination"))
+            .filter(dest_count__gte=count)
+        )
+
 
 class DestinationImage(BaseImage):
     image = models.ImageField(upload_to="destination/images/")
@@ -89,7 +111,7 @@ class DestinationImage(BaseImage):
 class Package(BaseModel):
     name = models.CharField(max_length=50)
     location = models.CharField(max_length=50)
-    description = models.TextField()
+    description = RichTextField()
     category = models.ManyToManyField(Category)
     days = models.PositiveSmallIntegerField(default=5)
     night = models.PositiveSmallIntegerField(default=5)
@@ -106,7 +128,7 @@ class Package(BaseModel):
     rating = models.PositiveSmallIntegerField(default=5)
     card_cover_image = models.ImageField(
         upload_to="package/covers/",
-        default="static/images/trending/trending15.jpg",
+        default="package/covers/bg.jpg",
         help_text="Image size should be 700 X 460. Click <a href='https://www.iloveimg.com/resize-image' style='color:lightblue'>here</a> to resize an image.",
     )
 
@@ -117,6 +139,14 @@ class Package(BaseModel):
     def rating_details(self):
         rating_list = [True] * self.rating + ([False] * (5 - self.rating))
         return rating_list
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.card_cover_image.path)
+        if img.width != 700 or img.height != 460:
+            output_size = (700, 460)
+            resized_image = img.resize(output_size)
+            resized_image.save(self.card_cover_image.path)
 
 
 class Destination(BaseModel):
@@ -218,6 +248,9 @@ class Iternary(BaseModel):
         blank=True,
         related_name="iternaries",
     )
+
+    def __str__(self) -> str:
+        return self.title
 
     # price_includes = models.JSONField()
     # price_excludes = models.JSONField()

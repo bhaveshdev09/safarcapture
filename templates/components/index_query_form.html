@@ -57,22 +57,35 @@
                         </div>
                       </div>
                     </div>
-
                     <div class="col-lg-12 col-sm-12">
                       <div class="form-group">
                         <div class="input-box">
                           <i class="fa fa-map-marker"></i>
-                          <input type="text" list="destinations" name="destination" id="destination"
-                            class="form-control" placeholder="Your Destination" required>
-                          <datalist id="destinations">
-                            <option value="Argentina">
-                            <option value="Belgium">
-                            <option value="Canada">
-                            <option value="Denmark">
-                          </datalist>
+                          <select name="cars" id="cars" class="form-select">
+                            {% for destination in destination_list %}
+                              <option value="{{destination.pk}}">{{destination.name}}</option>
+                            {% endfor %}
+                          </select>
+                          {% comment %} <input type="email" class="form-control" placeholder="Email" name="email" required /> {% endcomment %}
                         </div>
                       </div>
                     </div>
+
+                    {% comment %} <div class="col-lg-12 col-sm-12">
+                      <div class="form-group">
+                        <div class="input-box">
+                          <i class="fa fa-map-marker"></i>
+                          
+                          <input type="text" list="destinations" name="destination" id="destination"
+                            class="form-control" placeholder="Your Destination" required>
+                          <datalist id="destinations">
+                            {% for destination in destination_list %}
+                              <option value="{{destination.name}}">
+                            {% endfor %}
+                          </datalist>
+                        </div>
+                      </div>
+                    </div> {% endcomment %}
 
 
 
@@ -99,6 +112,7 @@
                           <input type="text" list="children" name="person" id="person" class="form-control"
                             placeholder="Children" required>
                           <datalist id="children">
+                            <option value="0">
                             <option value="1">
                             <option value="2">
                             <option value="3">
