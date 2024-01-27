@@ -125,11 +125,11 @@ class PackageAdmin(admin.ModelAdmin):
             "People Sharing Cost",
             {
                 "fields": [
+                    ("discount", "price"),
                     (
                         "price_quad_sharing",
                         "price_triple_sharing",
                         "price_double_sharing",
-                        "price",
                     ),
                 ]
             },

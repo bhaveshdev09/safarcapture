@@ -2,6 +2,7 @@
 from django.db import models
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from django.core.validators import MaxValueValidator
 from django.db.models.signals import post_save
 from django.core.mail import send_mail
 from django.dispatch import receiver
@@ -126,6 +127,9 @@ class Package(BaseModel):
     price_double_sharing = models.IntegerField(default=0)
     price = models.IntegerField(default=0)  # Solo or starting From
     rating = models.PositiveSmallIntegerField(default=5)
+    discount = models.PositiveSmallIntegerField(
+        default=0, validators=[MaxValueValidator(limit_value=100)]
+    )
     card_cover_image = models.ImageField(
         upload_to="package/covers/",
         default="package/covers/bg.jpg",
@@ -134,6 +138,12 @@ class Package(BaseModel):
 
     def __str__(self) -> str:
         return self.name
+
+    def is_discount_available(self):
+        return self.discount > 0
+
+    def get_discounted_price(self):
+        return int(round(self.price * (100 - self.discount) * 0.01, 0))
 
     @property
     def rating_details(self):
