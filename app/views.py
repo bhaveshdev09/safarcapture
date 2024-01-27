@@ -13,6 +13,7 @@ def index(request):
     destinations = Destination.objects.all()[:3]
     categories = Category.aggrgate_categories()
     # packages = Package.objects.all().order_by("-name")
+
     packages = Package.objects.all().order_by("price")
     blogs = Blog.objects.all()[:4]
     master_blog = Blog.objects.all().order_by("-created_at").first()
