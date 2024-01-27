@@ -13,18 +13,20 @@ def index(request):
     destinations = Destination.objects.all()[:3]
     categories = Category.aggrgate_categories()
     # packages = Package.objects.all().order_by("-name")
-    packages = Package.objects.all().order_by("id")
+    packages = Package.objects.all().order_by("price")
     blogs = Blog.objects.all()[:4]
     master_blog = Blog.objects.all().order_by("-created_at").first()
+    special_offers = packages.filter(discount__gte=1)
     return render(
         request,
         "index.html",
         {
             "destinations": destinations,
             "categories": categories,
-            "packages": packages,
+            "packages": packages[:6],
             "blogs": blogs,
             "master_blog": master_blog,
+            "special_offers": special_offers,
         },
     )
 
@@ -76,9 +78,7 @@ class ContactView(FormView):
             message=form.cleaned_data["message"],
         )
         contact.save()
-        # Optionally, you can add a success message
-        # messages.success(self.request, "Your message has been sent successfully!")
-
+       
         return super().form_valid(form)
 
     def form_invalid(self, form):
