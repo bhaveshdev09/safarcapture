@@ -1,8 +1,53 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
+from django.urls import reverse_lazy
+from django.views.generic.edit import FormView
+from django.contrib.auth import authenticate, login
+from django.contrib import messages
+from custom_admin.forms import CustomUserAuthForm
+from django.contrib.auth.views import LogoutView
 
 
-def admin_login(request):
-    return render(request, "custom_admin/login.html")
+class CustomUserLoginView(FormView):
+    form_class = CustomUserAuthForm
+    template_name = "custom_admin/login.html"
+    success_url = reverse_lazy("main")
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return HttpResponseRedirect(redirect_to=reverse_lazy("main"))
+        return super().get(request, *args, **kwargs)
+
+    def form_valid(self, form):
+        email = form.cleaned_data["email"]
+        password = form.cleaned_data["password"]
+        print(form.cleaned_data)
+        user = authenticate(self.request, email=email, password=password)
+        print(user)
+        if user is not None:
+            login(self.request, user)
+            return super().form_valid(form)
+        else:
+            messages.error(self.request, "Invalid credentials")
+            return self.form_invalid(form)
+
+    def form_invalid(self, form):
+        print(form.errors)
+        response = super().form_invalid(form)
+        for message in form.errors.values():
+            messages.error(
+                self.request,
+                message[0],
+            )
+
+        return response
+
+
+class CustomUserLogoutView(LogoutView):
+    next_page = reverse_lazy("admin-login")
+
+    def dispatch(self, request, *args, **kwargs):
+        messages.success(request, "You have been successfully logged out.")
+        return super().dispatch(request, *args, **kwargs)
 
 
 def booking_history(request):

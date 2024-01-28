@@ -872,7 +872,7 @@
         "pk": 1,
         "fields": {
             "created_at": "2024-01-14T14:58:28.701Z",
-            "updated_at": "2024-01-24T19:10:13.284Z",
+            "updated_at": "2024-01-25T08:52:59.635Z",
             "name": "Manali Solang Kasol",
             "location": "Himachal Pradesh",
             "description": "<p>Everyone&rsquo;s most visited vacation spot, <strong>Manali</strong> is a high-altitude Himalayan town that is a treat for every nomad. Bounded by the Pir Panjal and Dhauladhar ranges, the aura of Manali is unsurpassed and invincible. Be it a relaxation trip with the family, a backpacking trip with your buddies, or a solo trip. Manali has got you covered! A trip to Manali will be inadequate if you miss visiting the enthralling Solang valley, which is one of the most widespread travel destinations of Himachal Pradesh. Solang valley is situated 14 kilometers to the northwest of Manali and welcomes thousands of tourists every year. Consider as a heaven for adventure devotees, Solang valley offers a plethora of activities like parachuting, paragliding, horse riding, Skiing, Quad biking, etc.</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;There is a lot to explore and enjoy here in Solang valley on your Manali Trip. Jispa, a beautiful little town in the Lahaul district of Himachal Pradesh, is a stunning must-visit. Perched on the banks of river Bhaga, Jispa lies 2 hours from Baralacha-la and provides the most stunning views of surrounding mountains! While it is often regarded as a pit stop en route Leh on the Manali-Leh Highway, I beg to differ. This place is truly worthy of its own individually planned visit! Situated at a stunning height of 10,500 ft., this little village, home to about 78 households, serves as a halt for travelers on the long road trip to Leh-Ladakh. The calm, quiet and tranquil village with a very small population, offers the most beautiful Zen-like trip you will not soon forget</p>",
@@ -888,6 +888,7 @@
             "price_double_sharing": 6666,
             "price": 7777,
             "rating": 4,
+            "discount": 20,
             "card_cover_image": "package/covers/manali_kasol.jpeg",
             "category": [
                 4
@@ -907,7 +908,7 @@
         "pk": 2,
         "fields": {
             "created_at": "2024-01-22T20:26:45.488Z",
-            "updated_at": "2024-01-24T19:20:11.238Z",
+            "updated_at": "2024-01-25T08:44:28.361Z",
             "name": "Chakrata",
             "location": "Uttarakhand",
             "description": "<p>Chakrata is a beautiful cantonment town nestled in the district of Dehradun and enveloped amidst snow-clad himalayan ranges. It sits gracefully at an elevation of 2,118 meters above sea level and offers the scenic beauty of some of the most beautiful waterfalls that make it an ideal place to visit.</p>",
@@ -923,6 +924,7 @@
             "price_double_sharing": 5499,
             "price": 5799,
             "rating": 4,
+            "discount": 10,
             "card_cover_image": "package/covers/trending5.jpg",
             "category": [
                 5,
@@ -943,10 +945,10 @@
         "pk": 3,
         "fields": {
             "created_at": "2024-01-22T20:48:58.366Z",
-            "updated_at": "2024-01-24T19:28:50.495Z",
+            "updated_at": "2024-01-25T08:18:43.293Z",
             "name": "Jaisalmer",
             "location": "Rajastan",
-            "description": "<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;The magic and chivalry of Jaisalmer need no explanation. We thought of a lot of adjectives to define the glories of this jewel&ndash; war-scarred forts, chivalric delight, riot conjuring colors, breathtaking sand dunes, barely arrogant pride and romantic glory. But most are just near-perfectly suited to depict this piece of beauty. Beyond the breezy majestic royal towns of Rajasthan lies Jaisalmer&ndash; the gateway to the land of Thar Desert. The desolate tract townlet, also known as the Golden Town, is a way to the sedation it acquires from the yellow sandstone used to build the infrastructures.</p>\r\n\r\n<p>The city of Jaisalmer is one of the remaining monumental cities in Rajasthan closest to the India-Pakistan border and stands within the Thar Desert&#39;s coronary soul. It is a notable traveller vacation spot to discover in any season. Jaisalmer excursion bundle from Delhi is your pick. The tour bundle from Delhi to Jaisalmer is an outstanding opportunity to witness the historic beauty. Witness the tragedies that passed off a hundred and eighty million years in the past within side the Thar Desert. The town&#39;s maximum distinguished element is the Jaisalmer Fort, also called Sonar Qila (Golden Fort)</p>",
+            "description": "<p>The magic and chivalry of Jaisalmer need no explanation. We thought of a lot of adjectives to define the glories of this jewel&ndash; war-scarred forts, chivalric delight, riot conjuring colors, breathtaking sand dunes, barely arrogant pride and romantic glory. But most are just near-perfectly suited to depict this piece of beauty. Beyond the breezy majestic royal towns of Rajasthan lies Jaisalmer&ndash; the gateway to the land of Thar Desert. The desolate tract townlet, also known as the Golden Town, is a way to the sedation it acquires from the yellow sandstone used to build the infrastructures.</p>\r\n\r\n<p>The city of Jaisalmer is one of the remaining monumental cities in Rajasthan closest to the India-Pakistan border and stands within the Thar Desert&#39;s coronary soul. It is a notable traveller vacation spot to discover in any season. Jaisalmer excursion bundle from Delhi is your pick. The tour bundle from Delhi to Jaisalmer is an outstanding opportunity to witness the historic beauty. Witness the tragedies that passed off a hundred and eighty million years in the past within side the Thar Desert. The town&#39;s maximum distinguished element is the Jaisalmer Fort, also called Sonar Qila (Golden Fort)</p>",
             "days": 3,
             "night": 2,
             "min_age": 3,
@@ -959,6 +961,7 @@
             "price_double_sharing": 12499,
             "price": 8999,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/Jaipur_City_Palace_Rajasthan.jpg",
             "category": [
                 2
@@ -979,7 +982,7 @@
         "pk": 4,
         "fields": {
             "created_at": "2024-01-23T12:23:59.884Z",
-            "updated_at": "2024-01-24T20:21:02.441Z",
+            "updated_at": "2024-01-25T08:53:24.386Z",
             "name": "Panch Kedar",
             "location": "Uttarkhand",
             "description": "<p>Panch Kedar consists of 5 famous temlpes of Lord Shiva: Kedarnath, Rudranath, Madhmaheswar, Kalpeshwar and Tungnath. It is a very long pilgrimage trekking destination in India. According to Hindu legend Panch Kedar relates to the Pandavas of Mahabharata, the heroes of the famous hindu epic who built Panch Kedar Temples (means five temples of Lord Shiva) located in Uttrakhand at Garwal Himalayan Region and known as Kedarnath, Kalpnath, Tungnath, Madmaheshwar and Rudranath.</p>",
@@ -995,6 +998,7 @@
             "price_double_sharing": -1,
             "price": 64999,
             "rating": 5,
+            "discount": 15,
             "card_cover_image": "package/covers/haridwar2.jpg",
             "category": [
                 1,
@@ -1034,6 +1038,7 @@
             "price_double_sharing": -1,
             "price": 28499,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/chardham_p_cover_img.jpg",
             "category": [
                 1
@@ -1069,6 +1074,7 @@
             "price_double_sharing": 24499,
             "price": 25499,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/dodham_p_cover_img.jpg",
             "category": [
                 1
@@ -1105,6 +1111,7 @@
             "price_double_sharing": 16699,
             "price": 17799,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/Kedarnath_temple.jpg",
             "category": [
                 1
@@ -1141,6 +1148,7 @@
             "price_double_sharing": 8799,
             "price": 8999,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/manali4.jpg",
             "category": [
                 4,
@@ -1177,6 +1185,7 @@
             "price_double_sharing": 13999,
             "price": 14999,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/nature6.jpg",
             "category": [
                 4
@@ -1212,6 +1221,7 @@
             "price_double_sharing": 15999,
             "price": 16999,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/pexels-saikat-ghosh-914128.jpg",
             "category": [
                 3,
@@ -1251,6 +1261,7 @@
             "price_double_sharing": 7999,
             "price": 8999,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/atal_tunnel.jfif",
             "category": [
                 3,
@@ -1287,6 +1298,7 @@
             "price_double_sharing": 7999,
             "price": 9000,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/valley.jpg",
             "category": [
                 3,
@@ -1323,6 +1335,7 @@
             "price_double_sharing": 7799,
             "price": 0,
             "rating": 5,
+            "discount": 0,
             "card_cover_image": "package/covers/kheerganga.jpg",
             "category": [
                 3,
