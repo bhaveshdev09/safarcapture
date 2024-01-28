@@ -805,7 +805,7 @@ input#submit:hover {
       font-weight: 700;
       transform: translate(-50%, -50%); }
 
-.alert {
+/* .alert {
   margin-bottom: 10px;
   border-radius: 0px;
   color: #e83737;
@@ -818,7 +818,7 @@ input#submit:hover {
     .alert .alert-success h4 {
       margin-bottom: 8px; }
     .alert .alert-success p {
-      color: #fff; }
+      color: #fff; } */
 
 /* ========================================= */
 /*          Ribbon CSS        */
@@ -906,7 +906,7 @@ input#submit:hover {
     position: relative;
     text-transform: capitalize; }
     .accrodion-grp .accrodion .accrodion-title h5:before {
-      content: '\f107';
+      /* content: '\f107'; */
       font-family: 'FontAwesome';
       color: #222222;
       font-size: 20px;

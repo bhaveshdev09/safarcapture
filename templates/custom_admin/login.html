@@ -5,42 +5,57 @@
 
 <!-- login section -->
 <section class="bg-grey ">
-    <div class="container ">
-        
+  <div class="container ">
+
     <div class="row bg-white">
-        <div class="col-lg-6 col-sm-6 pr-0">
-            <div class="pt-2 pl-2">
-                <img src="{% static "images/safarLogo2.png" %}" height="60px" width="180px" alt="image" />
-              </div>
-      
-              <div class="d-flex justify-content-center align-items-center h-custom-2  ms-xl-4 mt-5  pt-xl-0 mt-xl-n5">
-                <form style="width: 23rem;">
-                  <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Admin Log in</h3>
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example18">Email address</label>
-                    <input type="email" id="form2Example18" class="form-control form-control-lg" />
-                  </div>
-                  <div class="form-outline mb-4">
-                    <label class="form-label" for="form2Example28">Password</label>
-                    <input type="password" id="form2Example28" class="form-control form-control-lg" />
-                  </div>
-                  <div class="pt-1 mb-4">
-                   <a href="dashboard-main.html"><button class="btn bg-pink btn-lg btn-block white" type="button">Login</button></a> 
-                  </div>
-                </form>
-              </div>
+      <div class="col-lg-6 col-sm-6 pr-0">
+        <div class="pt-2 pl-2">
+          <img src="{% static "images/safarLogo2.png" %}" height="60px" width="180px" alt="image" />
         </div>
-        <div class="col-lg-6 col-sm-6 pr-0">
-            <img src="{% static "images/destination/destination4.jpg" %}">
-            
+        <div class="d-flex justify-content-center align-items-center h-custom-2  ms-xl-4 mt-5  pt-xl-0 mt-xl-n5">
+          <form style="width: 25rem;" method="post">
+            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Admin Log in</h3>
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-{% if message.tags == "error" %}danger{% else %}{{message.tags}}{% endif %} alert-dismissible fade show" role="alert">
+                  <strong>{% if message.tags == "error" %}Error{% else %}Success{% endif %}</strong>
+                  <p>{{message}}<p>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% comment %} 
+            <div class="alert alert-success">
+              <strong>Success!</strong> Indicates a successful or positive action.
+            </div> {% endcomment %}
+            {% csrf_token %}
+            <div class="form-outline mb-2">
+              {{form.email}}
+              {% comment %} <label class="form-label" for="form2Example18">Email address</label>
+              <input type="email" id="form2Example18" class="form-control form-control-lg" /> {% endcomment %}
+            </div>
+            <div class="form-outline mb-2">
+              {{form.password}}
+              {% comment %} <label class="form-label" for="form2Example28">Password</label> {% endcomment %}
+              {% comment %} <input type="password" id="form2Example28" class="form-control form-control-lg" /> {% endcomment %}
+            </div>
+            <div class="pt-1 mb-4">
+              <button class="btn bg-pink btn-lg btn-block white" type="submit">Login</button>
+            </div>
+          </form>
         </div>
+      </div>
+      <div class="col-lg-6 col-sm-6 pr-0">
+        <img src="{% static "images/destination/destination4.jpg" %}">
+      </div>
 
     </div>
-    </div>
+  </div>
 </section>
 <!--end login section -->
 
 {% endblock content %}
-
 {% block js %}
 {% endblock js %}

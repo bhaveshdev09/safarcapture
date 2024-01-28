@@ -1,6 +1,5 @@
 from typing import Any
 from django.db.models.base import Model as Model
-from django.db.models.query import QuerySet
 from django.shortcuts import render, redirect
 from django.views.generic import ListView, FormView, DetailView
 from app.forms import ContactForm
