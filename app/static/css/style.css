@@ -2707,7 +2707,13 @@ nav.navbar.navbar-default.navbar-sticky-in .logo-black {
 /* ========================================= */
 /*          Trending  CSS        */
 /* ======================================== */
+.treding{
+  text-align: center;
+}
 .trending .trend-item {
+  height:550px;
+  width:400px;
+  padding: 30px;
   position: relative;
   transition: all ease-in-out 0.5s; }
   .trending .trend-item:hover {
@@ -2724,6 +2730,7 @@ nav.navbar.navbar-default.navbar-sticky-in .logo-black {
   .trending .trend-item .trend-image {
     position: relative;
     overflow: hidden;
+    height:45%;
     transition: all ease-in-out 0.5s; }
     .trending .trend-item .trend-image:before {
       content: '';
