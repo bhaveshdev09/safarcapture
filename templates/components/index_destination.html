@@ -25,11 +25,11 @@
             <div class="tab-content">
                 {% for category in categories %}
                 <div id="{{category|lower|slugify}}" class="tab-pane fade in {% if categories.0 == category %}active{% endif %}">
-                    <div class="row">
+                    <div class="row d d-flex justify-content-center">
                         {% comment %} {% for destination in destinations %} {% endcomment %}
                         {% for destination in destinations %}
                             {% if destination.category.pk == category.pk %}
-                            <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="m-2">
                                 <div class="trend-item">
                                     <div class="trend-image">
                                     
