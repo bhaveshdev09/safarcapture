@@ -1,10 +1,12 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic.edit import FormView
+from django.views.generic import ListView
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from custom_admin.forms import CustomUserAuthForm
 from django.contrib.auth.views import LogoutView
+from app.models import Package
 
 
 class CustomUserLoginView(FormView):
@@ -66,8 +68,15 @@ def main(request):
     return render(request, "custom_admin/main.html")
 
 
-def package(request):
-    return render(request, "custom_admin/package.html")
+class PackageListView(ListView):
+    model = Package
+    template_name = "custom_admin/package_list.html"
+    context_object_name = "packages"
+    ordering = ["price"]
+    paginate_by = 4
+
+    def get_queryset(self):
+        return Package.objects.all().order_by(*self.ordering)
 
 
 def user_details(request):

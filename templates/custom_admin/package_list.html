@@ -1,0 +1,153 @@
+{% extends "base_admin.html" %}
+{% load static %}
+{% block title %}Packages{% endblock title %}
+{% block content %}
+
+<!-- BreadCrumb Starts -->
+<section class="breadcrumb-main pb-2" style="background-image: url(static/images/bg/bg8.jpg);">
+    <div class="dot-overlay"></div>
+</section>
+<!-- BreadCrumb Ends -->
+
+<!-- Dashboard -->
+<div id="dashboard" class="pt-10 pb-10">
+    <div class="container">
+        <div class="dashboard-main">
+            <div class="row">
+                {% include "./side_section.html" %}
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                    <div class="dashboard-content">
+                        <div class="add-listing">
+                            <div class="listing-main">
+                                <div class="addlist-inner mb-3">
+                                    <div class="addlist-title">
+                                        <h4 class="m-0"><i class="icon-directions pr-2"></i>Package Information</h4>
+                                    </div>
+                                    <section class="trending pb-6 pt-5">
+                                        <div class="addlist-content pt-5">
+                                            <div class="container">
+                                                <div class="trend-box">
+                                                    <div class="row">
+                                                        {% for package in packages %}
+                                                            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+                                                                <div class="trend-item">
+                                                                    <div class="trend-image">
+                                                                        <a href="{% url "package-detail" package.pk %}"><img src="{{package.card_cover_image.url}}" alt="image"></a>
+                                                                        <div class="trend-tags"><a href="#"><i class="flaticon-location"></i></a></div>
+                                                                    </div>
+                                                                    <div class="trend-content-main">
+                                                                        <div class="trend-content">
+                                                                            <h6 class="font-weight-normal pink">
+                                                                                <i class="fa fa-map-marker-alt"></i>
+                                                                                {{package.location}} &nbsp;&nbsp;
+                                                                                {% if package.discount %}
+                                                                                    <span class="badge bg-warning">{{package.discount}}% off </span>
+                                                                                {% endif %}
+                                                                            </h6>
+                                                                            <h4>
+                                                                                <!--class="stretched-link" to add link to whole bootstrap card-->
+                                                                                <a href="{% url "package-detail" package.pk %}" class="stretched-link">{{package.name}}</a>
+                                                                            </h4>
+                                                                            <div
+                                                                                class="rating-main d-flex align-items-center">
+                                                                                <div class="rating">
+                                                                                    {% for check in package.rating_details %}
+                                                                                        <span class="fa fa-star{% if check %} checked{% endif %}"></span>
+                                                                                    {% endfor %}
+                                                                                </div>
+                                                                                {% comment %} <span class="ml-2">(388 Reviews)</span> {% endcomment %}
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="trend-last-main">
+                                                                            <div class="ml-3 mr-3 mb-2">
+                                                                                {{package.description|safe|truncatewords:10}}
+                                                                            </div>
+                                                                            <div
+                                                                                class="trend-last d-flex align-items-center justify-content-between">
+                                                                                <p class="mb-0 white"><i
+                                                                                        class="fa fa-clock-o"
+                                                                                        aria-hidden="true"></i>
+                                                                                    {{package.days}} D / {{package.night}} N
+                                                                                </p>
+                                                                                <div class="trend-price">
+                                                                                    <p class="price white mb-0">From
+                                                                                        <span>₹{{package.price}}</span>
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% comment %} <div class="pagination-main text-center mt-4">
+                                                <ul class="pagination">
+                                                  {% if page_obj.has_previous %}
+                                                  <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-double-left"
+                                                        aria-hidden="true"></i></a></li>
+                                                  {% endif %}
+                                    
+                                                  {% for i in paginator.page_range %}
+                                                    {% if page_obj.number == i %}
+                                                      <li class="active"><a href="?page={{i}}">{{i}}</a></li>
+                                                    {% else %}
+                                                      {% if request.GET.order_by == 'desc' %}
+                                                        <li><a href="?page={{i}}&amp;order_by=desc">{{i}}</a></li>
+                                                      {% else %}
+                                                        <li><a href="?page={{i}}">{{i}}</a></li>
+                                                      {% endif %}
+                                                    {% endif %}
+                                                  {% endfor %}
+                                                  {% if page_obj.has_next %}
+                                                    <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                                                  {% endif %}
+                                                </ul>
+                                            </div> {% endcomment %}
+                                        </div>
+                                    </section>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagination-main text-center">
+                            <ul class="pagination">
+                              {% if page_obj.has_previous %}
+                              <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-double-left"
+                                    aria-hidden="true"></i></a></li>
+                              {% endif %}
+                
+                              {% for i in paginator.page_range %}
+                                {% if page_obj.number == i %}
+                                  <li class="active"><a href="?page={{i}}">{{i}}</a></li>
+                                {% else %}
+                                  {% if request.GET.order_by == 'desc' %}
+                                    <li><a href="?page={{i}}&amp;order_by=desc">{{i}}</a></li>
+                                  {% else %}
+                                    <li><a href="?page={{i}}">{{i}}</a></li>
+                                  {% endif %}
+                                {% endif %}
+                              {% endfor %}
+                              {% if page_obj.has_next %}
+                                <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                              {% endif %}
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content / End -->
+</div>
+</div>
+<!-- Dashboard / End -->
+
+<!--end package section -->
+
+{% endblock content %}
+
+{% block js %}
+{% endblock js %}
