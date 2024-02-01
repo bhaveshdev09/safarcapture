@@ -395,6 +395,7 @@ small {
   .form-group select {
     padding: 10px 20px 10px 35px; }
 
+
 input[type=text],
 input[type=email],
 input[type=number],
@@ -403,12 +404,13 @@ input[type=password],
 input[type=tel],
 input[type=date],
 input[type=time],
+input[type=url], 
 textarea,
 select {
   font-size: 15px;
   font-weight: 300;
   background-color: #fff;
-  border: 1px solid #f1f1f1;
+  border: 2px solid #f1f1f1;
   border-radius: 0px;
   padding: 10px 20px;
   color: #777;
@@ -416,6 +418,7 @@ select {
   height: 50px;
   box-shadow: none;
   width: 100%; }
+
   input[type=text]:focus,
   input[type=email]:focus,
   input[type=number]:focus,
@@ -424,6 +427,7 @@ select {
   input[type=tel]:focus,
   input[type=date]:focus,
   input[type=time]:focus,
+  input[type=url]:focus,
   textarea:focus,
   select:focus {
     outline: none;

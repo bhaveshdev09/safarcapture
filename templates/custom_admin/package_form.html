@@ -1,0 +1,543 @@
+{% extends "base_admin.html" %}
+{% load static %}
+{% block title %}Packages{% endblock title %}
+{% block css %}
+<style>
+    /* Custom CSS to override conflicting styles */
+    .category-checkbox-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        /* Adjust the gap between checkboxes if needed */
+    }
+</style>
+{% endblock css %}
+
+
+{% block content %}
+
+<!-- BreadCrumb Starts -->
+<section class="breadcrumb-main pb-2" style="background-image: url(static/images/bg/bg8.jpg);">
+    <div class="dot-overlay"></div>
+</section>
+<!-- BreadCrumb Ends -->
+<div id="dashboard" class="pt-10 pb-10">
+    <div class="container">
+        <div class="dashboard-main">
+            <div class="row">
+                {% include "./side_section.html" %}
+                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                    <div class="dashboard-content">
+                        <div class="add-listing">
+                            <div class="listing-main">
+                                <div class="addlist-inner mb-3">
+                                    <div class="addlist-title">
+                                        <h4 class="m-0"><i class="fa fa-user pr-2"></i>Package Information</h4>
+                                    </div>
+                                    <div class="addlist-content bg-white">
+                                        <form method="post" enctype="multipart/form-data" action="{% url "admin-package-create" %}">
+                                            {% csrf_token %}
+                                            <h5>Package Basic Details</h5>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.name.label_tag }}
+                                                        {{ form.name }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.location.label_tag }}
+                                                        {{ form.location }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        {{ form.map_embed_link.label_tag }}
+                                                        {{ form.map_embed_link }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.category.label_tag }}
+                                                        <div class="row ml-1">
+                                                            {% for choice in form.category %}
+                                                            <div class="category-checkbox-row">
+                                                                {{choice.tag}}
+                                                                <label class="form-check-label mr-2"
+                                                                    for="flexCheckChecked">
+                                                                    {{choice.choice_label}}
+                                                                </label>
+                                                            </div>
+                                                            {% endfor %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- ... Other form fields ... -->
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        {{ form.description.label_tag }}
+                                                        <br />
+                                                        {% comment %} {{form.media}} {% endcomment %}
+                                                        {{ form.description }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <h5>Package Costing &amp; Essentials</h5>
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.price.label_tag }}
+                                                        {{ form.price }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.discount.label_tag }}
+                                                        {{ form.discount }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.pickup_location.label_tag }}
+                                                        {{ form.pickup_location }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.drop_of_location.label_tag }}
+                                                        {{ form.drop_of_location }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.days.label_tag }}
+                                                        {{ form.days }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.night.label_tag }}
+                                                        {{ form.night }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.min_age.label_tag }}
+                                                        {{ form.min_age }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.people_max_limit.label_tag }}
+                                                        {{ form.people_max_limit }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.rating.label_tag }}
+                                                        {{ form.rating }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-xs-12">
+                                                    <h6>Package Costing (Room sharing /price per person)</h6>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.price_quad_sharing.label_tag }}
+                                                        {{ form.price_quad_sharing }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.price_triple_sharing.label_tag }}
+                                                        {{ form.price_triple_sharing }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-xs-12">
+                                                    <div class="form-group">
+                                                        {{ form.price_double_sharing.label_tag }}
+                                                        {{ form.price_double_sharing }}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-xs-12">
+                                                    <h5>Package Inclusives</h5>
+                                                    <div class="d-flex justify-content-end">
+                                                        <button type="button" class="nir-btn mb-2" id="add-inclusive">Add Inclusive</button>
+                                                    </div>
+                                                        <div class="row" id="inclusive-formsets">
+                                                            {{inclusives.management_form}}
+                                                            <div class="row col-12 clone-formset-inclusive">
+                                                                {% for inclusive_form in inclusives %}
+                                                                        {{inclusive_form.id}}
+                                                                        <div class="col-11">
+                                                                            <div class="form-group">
+                                                                                {{ inclusive_form.note }}
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-1">
+                                                                            <div class="form-group">
+                                                                                {% comment %} {{inclusive_form.DELETE}} {% endcomment %}
+                                                                                <button class="btn btn-danger delete-row"><i class="fa fa-trash"></i></button>
+                                                                            </div>
+                                                                        </div>
+                                                                {% endfor %}
+                                                            <div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-xs-12">
+                                                    <h5>Package Exclusives</h5>
+                                                    <div class="d-flex justify-content-end">
+                                                        <button type="button" class="nir-btn mb-2" id="add-exclusive">Add Exclusive</button>
+                                                    </div>
+                                                    <div class="row" id="exclusive-formsets">
+                                                        {{exclusives.management_form}}
+                                                        <div class="row col-12 clone-formset-exclusive">
+                                                            {% for exclusive_form in exclusives %}
+                                                            {{exclusive_form.id}}
+                                                                <div class="col-11">
+                                                                    <div class="form-group">
+                                                                        {{ exclusive_form.note }}
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-1">
+                                                                    <div class="form-group">
+                                                                        {% comment %} {{inclusive_form.DELETE}} {% endcomment %}
+                                                                        <button class="btn btn-danger delete-row"><i
+                                                                                class="fa fa-trash"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            {% endfor %}
+                                                        <div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr />
+                                            <div class="col-lg-12 col-md-12 col-xs-12">
+                                                <h5>Iternaries</h5>
+                                                <div class="d-flex justify-content-end">
+                                                    <button type="button" class="nir-btn mb-2" id="add-iternaries">Add
+                                                        Iternary</button>
+                                                </div>
+                                                <div class="row" id="iternary-formsets">
+                                                    {{iternaries.management_form}}
+                                                    {{iternaries.management_form.media}}
+                                                    <div class="row col-12 clone-formset-iternaries">
+                                                    {% for iternary_form in iternaries %}
+                                                        {{iternary_form.id}}
+                                                        <div class="col-11">
+                                                            <div class="form-group">
+                                                                {{ iternary_form.title }}
+                                                                <br />
+                                                                {{iternary_form.details}}
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-1">
+                                                            <div class="form-group">
+                                                                {{inclusive_form.DELETE}}
+                                                                <button class="btn btn-danger delete-row"><i
+                                                                        class="fa fa-trash"></i></button>
+                                                            </div>
+                                                        </div>
+                                                        {% endfor %}
+                                                    </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>     
+                                            <hr />      
+                                            <div class="col-lg-12 col-md-12 col-xs-12">                                 
+                                                <h5>Package Images</h5>
+                                                <div class="row">
+
+                                                    <div class="col-12 mb-1">
+                                                        <h6>Card Image</h6>
+                                                        {{form.card_cover_image}}
+                                                        <small id="emailHelp" class="form-text text-muted">To change the current image, click on "Choose File" above.</small>
+                                                        <br />
+                                                        {% if object.card_cover_image.url %}
+                                                            <img id="cover_img" height="400" width="100%" src="{{object.card_cover_image.url}}"/>
+                                                        {% else %}
+                                                            <img id="cover_img" height="400" width="100%" style="display: none;" />
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                                <hr />
+                                                <div
+                                                    class="col-lg-12 col-md-12 col-xs-12 mb-2 d-flex justify-content-end">
+                                                    <button type="button" class="nir-btn" onclick="addImageField()">Add Package Image</button>
+                                                </div>
+                                                <div class="row mx-1" id="image-container">
+                                                    {% if object %}
+                                                        {% for pack_img in object.image_list.all %}
+                                                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                                                <div class="form-group mb-1">
+                                                                    <label>Package Image {{forloop.counter}}</label>
+                                                                    <div class="input-box">
+                                                                        <img src="{{pack_img.image.url}}">
+                                                                        {% comment %} <label class="upload-file mb-0"> {% endcomment %}
+                                                                            {% comment %} <input type="file" name="package_image_1">
+                                                                            <i class="far fa-image"></i>
+                                                                            <span>Click here or drop file to upload</span> {% endcomment %}
+                                                                        {% comment %} </label> {% endcomment %}
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        {% endfor %}
+                                                    {% else %}
+                                                    {% endif %}
+                                                    
+                                                    <div class="col-lg-6 col-md-6 col-xs-12">
+                                                        <div class="form-group mb-0">
+                                                            <label>Package Image 2</label>
+                                                            <div class="input-box">
+                                                                <label class="upload-file mb-0">
+                                                                    <input type="file" name="package_image_2">
+                                                                    <i class="far fa-image"></i>
+                                                                    <span>Click here or drop file to upload</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-xs-12">
+                                                        <div class="form-group mb-0">
+                                                            <label>Package Image 3</label>
+                                                            <div class="input-box">
+                                                                <label class="upload-file mb-0">
+                                                                    <input type="file" name="package_image_3">
+                                                                    <i class="far fa-image"></i>
+                                                                    <span>Click here or drop file to upload</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-xs-12">
+                                                        <div class="form-group mb-0">
+                                                            <label>Package Image 4</label>
+                                                            <div class="input-box">
+                                                                <label class="upload-file mb-0">
+                                                                    <input type="file" name="package_image_4">
+                                                                    <i class="far fa-image"></i>
+                                                                    <span>Click here or drop file to upload</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12 col-sm-12 mt-2">
+                                                    <div class="form-group">
+                                                        <button type="submit" class="nir-btn w-100">
+                                                            Add Package
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- Content / End -->
+    </div>
+</div>
+
+{% endblock content %}
+{% block js %}
+<script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+<script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+
+<script>
+    var loadFile = function (event) {
+        var output = document.getElementById('cover_img');
+        output.style = "";
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function () {
+            URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+</script>
+
+<script>
+    // JavaScript logic to handle dynamic form addition
+    $(document).ready(function () {
+        let formsetDiv = $('#inclusive-formsets');
+        $('#add-inclusive').on('click', function () {
+            let formCount = parseInt(formsetDiv.find("input[name$='TOTAL_FORMS']").val());
+            console.log(formCount);
+            var newFormHtml = `<div class="row col-12 clone-formset-inclusive">\
+                {{inclusives.empty_form.id}}
+                <div class="col-11">
+                    <div class="form-group">\
+                        {{ inclusives.empty_form.note|safe }}\
+                    </div>\
+                </div>\
+                <div class="col-1">\
+                    <div class="form-group">\
+                        <button class="btn btn-danger delete-row"><i class="fa fa-trash"></i></button>\
+                    </div>\
+                </div>\
+            <div>`.replace(/__prefix__/g, formCount)
+            formsetDiv.append(newFormHtml);
+            formsetDiv.find("input[name$='TOTAL_FORMS']").val(formCount + 1);
+        });
+
+        // Event listener for deleting a form
+        $(document).on('click', '.delete-row', function () {
+            $(this).closest('.clone-formset-inclusive').remove();
+            updateFormsetIndices();
+        });
+
+        // Update formset indices
+        function updateFormsetIndices() {
+            $(".clone-formset-inclusive").each(function (index) {
+                $(this).find(':input').each(function () {
+                    var newName = $(this).attr('name');
+                    console.log(newName);
+                    if (newName) {
+                        newName.replace(/-\d+/, '-' + index);
+                        $(this).attr('name', newName);
+                        $(this).attr('id', 'id_' + newName);
+                    }
+                });
+            });
+            formCount = $(".clone-formset-inclusive").length;
+            formsetDiv.find("input[name$='TOTAL_FORMS']").val(formCount);
+        }
+
+
+    });
+</script>
+
+<script>
+    // JavaScript logic to handle dynamic form addition
+    $(document).ready(function () {
+        let formsetDiv = $('#exclusive-formsets');
+
+        $('#add-exclusive').on('click', function () {
+            var formCount = parseInt(formsetDiv.find("input[name$='TOTAL_FORMS']").val());
+            console.log(formCount);
+            var newFormHtml = `<div class="row col-12 clone-formset-exclusive">\
+                {{exclusives.empty_form.id}}
+
+                <div class="col-11">
+                    <div class="form-group">\
+                        {{ exclusives.empty_form.note|safe }}\
+                    </div>\
+                </div>\
+                <div class="col-1">\
+                    <div class="form-group">\
+                        <button class="btn btn-danger delete-row"><i class="fa fa-trash"></i></button>\
+                    </div>\
+                </div>\
+            <div>`.replace(/__prefix__/g, formCount)
+            formsetDiv.append(newFormHtml);
+            formsetDiv.find("input[name$='TOTAL_FORMS']").val(formCount + 1);
+        });
+
+        // Event listener for deleting a form
+        $(document).on('click', '.delete-row', function () {
+            $(this).closest('.clone-formset-exclusive').remove();
+            updateFormsetIndices();
+        });
+
+        // Update formset indices
+        function updateFormsetIndices() {
+            $(".clone-formset-exclusive").each(function (index) {
+                $(this).find(':input').each(function () {
+                    var newName = $(this).attr('name');
+                    console.log(newName);
+                    if (newName) {
+                        newName.replace(/-\d+/, '-' + index);
+                        $(this).attr('name', newName);
+                        $(this).attr('id', 'id_' + newName);
+                    }
+                });
+            });
+            formCount = $(".clone-formset-exclusive").length;
+            formsetDiv.find("input[name$='TOTAL_FORMS']").val(formCount);
+        }
+    });
+</script>
+
+<script>
+
+    // Function to handle CKEditor initialization
+
+    function initializeCKEditor(elementId) {
+        CKEDITOR.replace(elementId, {
+            toolbar: [
+                { name: 'Basic', items: ['Bold', 'Italic', 'Underline'] },
+                { name: 'Paragraph', items: ['NumberedList', 'BulletedList', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'] },
+                { name: 'Links', items: ['Link', 'Unlink'] },
+                { name: 'Styles', items: ['RemoveFormat', 'Source'] }
+            ],
+            height: 250,
+            width: "auto"
+        });
+    }
+
+    // JavaScript logic to handle dynamic form addition
+    $(document).ready(function () {
+        let formsetDiv = $('#iternary-formsets');
+        $('#add-iternaries').on('click', function () {
+            var formCount = parseInt(formsetDiv.find("input[name$='TOTAL_FORMS']").val());
+            var newFormHtml2 = `<div class="row col-12 clone-formset-iternaries">\
+                    {{iternaries.empty_form.id}}
+                    <div class="col-11">
+                        <div class="form-group">\
+                            {{ iternaries.empty_form.title|safe }}\
+                            <br/>\
+                            {{iternaries.empty_form.details|safe}}\
+                        </div>\
+                    </div>\
+                    <div class="col-1">\
+                        <div class="form-group">\
+                            <button class="btn btn-danger delete-row"><i class="fa fa-trash"></i></button>\
+                        </div>\
+                    </div>\
+                <div>`.replace(/__prefix__/g, formCount);
+            formsetDiv.append(newFormHtml2);
+            // Initialize CKEditor for the new form
+            var newFormId = formsetDiv.find('.form-group textarea:last').attr('id');
+            console.log("Id: ", newFormId);
+            initializeCKEditor(newFormId);
+            formsetDiv.find("input[name$='TOTAL_FORMS']").val(formCount + 1);
+        });
+
+        // Event listener for deleting a form
+        $(document).on('click', '.delete-row', function () {
+            $(this).closest('.clone-formset-iternaries').remove();
+            updateFormsetIndices();
+        });
+
+        // Update formset indices
+        function updateFormsetIndices() {
+            $(".clone-formset-iternaries").each(function (index) {
+                $(this).find(':input').each(function () {
+                    var newName = $(this).attr('name');
+                    console.log(newName);
+                    if (newName) {
+                        newName.replace(/-\d+/, '-' + index);
+                        $(this).attr('name', newName);
+                        $(this).attr('id', 'id_' + newName);
+                    }
+                });
+            });
+            formCount = $(".clone-formset-iternaries").length;
+            formsetDiv.find("input[name$='TOTAL_FORMS']").val(formCount);
+        }
+    });
+</script>
+{% endblock js %}

@@ -128,6 +128,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CKEDITOR_CONFIGS = {
     "default": {
         "toolbar": "Custom",
+        "height": 250,
+        "width": "auto",
         "toolbar_Custom": [
             ["Bold", "Italic", "Underline"],
             [
@@ -145,7 +147,29 @@ CKEDITOR_CONFIGS = {
             ["Link", "Unlink"],
             ["RemoveFormat", "Source"],
         ],
-    }
+    },
+    "iternary_description": {
+        "toolbar": "Custom",
+        "height": 200,
+        "width": "auto",
+        "toolbar_Custom": [
+            ["Bold", "Italic", "Underline", "Strike"],
+            [
+                "NumberedList",
+                "BulletedList",
+                "-",
+                "Outdent",
+                "Indent",
+                "-",
+                "JustifyLeft",
+                "JustifyCenter",
+                "JustifyRight",
+                "JustifyBlock",
+            ],
+            ["Link", "Unlink"],
+            ["RemoveFormat", "Source"],
+        ],
+    },
 }
 
 # SMTP Configuration
