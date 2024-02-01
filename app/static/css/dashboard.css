@@ -1297,7 +1297,7 @@ mark {
     z-index: 11;
 }
 .tab-content {
-    padding: 28px 33px;
+    padding: 28px 5px;
     position: relative;
     z-index: 10;
     display: inline-block;
@@ -3350,7 +3350,7 @@ a.close-list-item {
         text-align: left;
     }
     .dashboard-list-box .button.gray {
-        margin-top: 6px:
+        margin-top: 6px;
     }
 }
 /* ------------------------------------------------------------------- */
