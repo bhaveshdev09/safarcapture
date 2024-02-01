@@ -87,7 +87,7 @@
                             </div>
                             <div class="description-inner mb-2">
                                 <h4>Highlight</h4>
-                                <p>{{package.description|safe}}.</p>
+                                <p>{{package.description|safe}}</p>
                             </div>
                             <br/>
                             <div class="tour-includes mb-2" id="costing_details">
@@ -135,9 +135,9 @@
                                         </tr>
                                         <tr>
                                             <td><i class="fa fa-money pink mr-1" aria-hidden="true"></i> Price Per Person (in &#8377;)</td>
-                                            <td>{% if  package.price_quad_sharing < 0 %} [ Not Available ] {% else %}&#8377; {{package.price_quad_sharing}}/-{% endif %}</td>
-                                            <td>{% if  package.price_triple_sharing < 0 %} [ Not Available ] {% else %}&#8377; {{package.price_triple_sharing}}/-{% endif %}</td>
-                                            <td>{% if  package.price_double_sharing < 0 %} [ Not Available ] {% else %}&#8377; {{package.price_double_sharing}}/-{% endif %}</td>
+                                            <td>{% if  package.price_quad_sharing <= 0 %} [ Not Available ] {% else %}&#8377; {{package.price_quad_sharing}}/-{% endif %}</td>
+                                            <td>{% if  package.price_triple_sharing <= 0 %} [ Not Available ] {% else %}&#8377; {{package.price_triple_sharing}}/-{% endif %}</td>
+                                            <td>{% if  package.price_double_sharing <= 0 %} [ Not Available ] {% else %}&#8377; {{package.price_double_sharing}}/-{% endif %}</td>
                                         </tr>
                                     </thead>
                                 </table>
@@ -457,23 +457,28 @@
                         </div>
                         <div class="login-form text-center">
                             <form action="{% url "package-booking" %}" method="post">
+                                {% csrf_token %}
+
                                 <div class="form-group">
-                                    <input type="text" placeholder="Enter Full Name">
+                                    {{booking_form.name}}
+                                    {% comment %} <input type="text" placeholder="Enter Full Name"> {% endcomment %}
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" placeholder="Enter phone number">
+                                    {{booking_form.phone}}
+                                    {% comment %} <input type="text" placeholder="Enter phone number"> {% endcomment %}
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" placeholder="Enter email address">
+                                    {{booking_form.email}}
+                                    {% comment %} <input type="email" placeholder="Enter email address"> {% endcomment %}
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" placeholder="No Of Adult">
+                                    {{booking_form.total_adults}}
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" placeholder="No Of Children">
+                                    {{booking_form.total_childrens}}
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" placeholder="Enter message here">
+                                    {{booking_form.message}}
                                 </div>
                                 <div class="form-group">
                                     <input type="text" value="{{package.id}}" name="package" hidden>

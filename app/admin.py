@@ -13,6 +13,7 @@ from app.models import (
     Category,
     Destination,
     DestinationImage,
+    Booking,
 )
 from django.db import models
 from django import forms
@@ -152,3 +153,4 @@ admin.site.register(Contact)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(DestinationImage, DestinationImageAdmin)
 admin.site.register(Destination)
+admin.site.register(Booking)
