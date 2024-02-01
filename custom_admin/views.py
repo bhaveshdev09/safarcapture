@@ -1,12 +1,19 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse_lazy
-from django.views.generic.edit import FormView
+from django.views.generic.edit import FormView, CreateView, UpdateView, DeleteView
 from django.views.generic import ListView
 from django.contrib.auth import authenticate, login
-from django.contrib import messages
-from custom_admin.forms import CustomUserAuthForm
 from django.contrib.auth.views import LogoutView
-from app.models import Package
+from django.contrib import messages
+from custom_admin.forms import (
+    CustomUserAuthForm,
+    PackageForm,
+    InclusiveFormSet,
+    ExclusiveFormSet,
+    IternaryFormSet,
+    BookingForm,
+)
+from app.models import Package, Booking
 
 
 class CustomUserLoginView(FormView):
@@ -64,8 +71,35 @@ def destination(request):
     return render(request, "custom_admin/destination.html")
 
 
-def main(request):
-    return render(request, "custom_admin/main.html")
+def dashboard(request):
+    bookings_confirm_count = Booking.objects.filter(
+        status=Booking.STATUS_COMPLETED
+    ).count()
+    packages = Package.objects.all().count()
+    context = {"bookings": bookings_confirm_count, "packages": packages}
+    return render(request, "custom_admin/main.html", context)
+
+
+class BookingUpdateView(UpdateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = "booking_update.html"
+    success_url = reverse_lazy("booking_list")
+
+
+class BookingDeleteView(DeleteView):
+    model = Booking
+    template_name = "booking_delete.html"
+    success_url = reverse_lazy("booking_list")
+
+
+class BookingListView(ListView):
+    model = Booking
+    template_name = "custom_admin/booking_list.html"
+    context_object_name = "bookings"
+    paginate_by = 2
+
+    queryset = Booking.objects.all().order_by("-created_at")
 
 
 class PackageListView(ListView):
@@ -77,6 +111,67 @@ class PackageListView(ListView):
 
     def get_queryset(self):
         return Package.objects.all().order_by(*self.ordering)
+
+
+class PackageCreateView(CreateView):
+    model = Package
+    form_class = PackageForm
+    template_name = "custom_admin/package_form.html"
+    success_url = reverse_lazy("package-list")
+
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        if self.request.POST:
+            data["inclusives"] = InclusiveFormSet(
+                instance=self.object, prefix="inclusive"
+            )
+            data["exclusives"] = ExclusiveFormSet(
+                instance=self.object, prefix="exclusive"
+            )
+            data["iternaries"] = IternaryFormSet(
+                instance=self.object, prefix="iternary"
+            )
+            # data['books'] = BookFormSet(self.request.POST, instance=self.object)
+            # data['genres'] = GenreFormSet(self.request.POST)
+        else:
+            data["inclusives"] = InclusiveFormSet(instance=self.object)
+            data["exclusives"] = ExclusiveFormSet(instance=self.object)
+            data["iternaries"] = IternaryFormSet(instance=self.object)
+            # data['genres'] = GenreFormSet()
+        return data
+
+    def form_invalid(self, form):
+        print(form.errors)
+        response = super().form_invalid(form)
+        return response
+
+
+class PackageUpdateView(UpdateView):
+    model = Package
+    form_class = PackageForm
+    template_name = "custom_admin/package_form.html"
+    success_url = reverse_lazy("package-list")
+
+    def get_context_data(self, **kwargs):
+        data = super().get_context_data(**kwargs)
+        if self.request.POST:
+            data["inclusives"] = InclusiveFormSet(
+                instance=self.object, prefix="inclusive"
+            )
+            data["exclusives"] = ExclusiveFormSet(
+                instance=self.object, prefix="exclusive"
+            )
+            data["iternaries"] = IternaryFormSet(
+                instance=self.object, prefix="iternary"
+            )
+            # data['books'] = BookFormSet(self.request.POST, instance=self.object)
+            # data['genres'] = GenreFormSet(self.request.POST)
+        else:
+            data["inclusives"] = InclusiveFormSet(instance=self.object)
+            data["exclusives"] = ExclusiveFormSet(instance=self.object)
+            data["iternaries"] = IternaryFormSet(instance=self.object)
+            # data['genres'] = GenreFormSet()
+        return data
 
 
 def user_details(request):

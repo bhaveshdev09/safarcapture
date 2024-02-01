@@ -23,7 +23,12 @@
                                     <div class="addlist-title">
                                         <h4 class="m-0"><i class="icon-directions pr-2"></i>Package Information</h4>
                                     </div>
-                                    <section class="trending pb-6 pt-5">
+                                    <section class="trending pb-6 pt-1">
+        
+                                        <div
+                                        class="col-lg-12 col-md-12 col-xs-12 mb-2 d-flex justify-content-end">
+                                        <a href="{% url "admin-package-create" %}" type="button" class="nir-btn" onclick="addImageField()">Add Package</a>
+                                    </div>
                                         <div class="addlist-content pt-5">
                                             <div class="container">
                                                 <div class="trend-box">
@@ -32,7 +37,7 @@
                                                             <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
                                                                 <div class="trend-item">
                                                                     <div class="trend-image">
-                                                                        <a href="{% url "package-detail" package.pk %}"><img src="{{package.card_cover_image.url}}" alt="image"></a>
+                                                                        <a href="{% url "admin-package-update" package.pk %}"><img src="{{package.card_cover_image.url}}" alt="image"></a>
                                                                         <div class="trend-tags"><a href="#"><i class="flaticon-location"></i></a></div>
                                                                     </div>
                                                                     <div class="trend-content-main">
@@ -46,7 +51,7 @@
                                                                             </h6>
                                                                             <h4>
                                                                                 <!--class="stretched-link" to add link to whole bootstrap card-->
-                                                                                <a href="{% url "package-detail" package.pk %}" class="stretched-link">{{package.name}}</a>
+                                                                                <a href="{% url "admin-package-update" package.pk %}" class="stretched-link">{{package.name}}</a>
                                                                             </h4>
                                                                             <div
                                                                                 class="rating-main d-flex align-items-center">

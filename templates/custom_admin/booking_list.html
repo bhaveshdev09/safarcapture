@@ -1,0 +1,101 @@
+{% extends "base_admin.html" %}
+{% load static %}
+{% block title %}Bookings{% endblock title %}
+{% block content %}
+
+<!-- BreadCrumb Starts -->
+<section class="breadcrumb-main pb-2" style="background-image: url(static/images/bg/bg8.jpg);">
+  <div class="dot-overlay"></div>
+</section>
+<!-- BreadCrumb Ends -->
+
+<!-- Dashboard -->
+<div id="dashboard" class="pt-10 pb-10">
+  <div class="container">
+    <div class="dashboard-main">
+      <div class="row">
+        {% include "./side_section.html" %}
+
+        <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+          <div class="dashboard-content">
+            <div class="add-listing">
+              <div class="listing-main">
+
+                  <div class="addlist-inner mb-3">
+                      <div class="addlist-title">
+                          <h4 class="m-0"><i class="fa fa-user pr-2"></i>Booking Information</h4>
+                      </div>
+            <div class="dashboard-list-box">
+
+              <div class="table-box">
+
+                <table class="basic-table history-table">
+                  <thead>
+                    <tr>
+                      <th>#ID</th>
+                      <th>Package name</th>
+                      <th>User name</th>
+                      <th>Phone no</th>
+                      <th>Confirm Status</th>
+                      <th>Contact DateTime</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for booking in bookings %}
+                    <tr>
+                      <td>{{booking.id}}</td>
+                      <td>{{booking.package.name}}</td>
+                      <td>{{booking.name}}</td>
+                      <td>{{booking.phone}}</td>
+                      <td><span class="badge bg-{% if booking.status == "pending" %}warning{% else %}success{% endif %}">{{booking.status}}</span></td>
+                      <td>{{booking.created_at}}</td>
+                      <td>
+                        <a class="edit" title="Edit" data-toggle="tooltip" href="{% url "admin-booking-update" booking.pk %}"><i class="icon-pencil pr-2"></i></a>
+                        <a class="delete" title="Delete" data-toggle="tooltip" href="#"><i class="icon-trash pr-2"></i></a>
+                      </td>
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+              
+            </div>
+            <div class="pagination-main text-center mt-2">
+              <ul class="pagination">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-double-left"
+                      aria-hidden="true"></i></a></li>
+                {% endif %}
+  
+                {% for i in paginator.page_range %}
+                  {% if page_obj.number == i %}
+                    <li class="active"><a href="?page={{i}}">{{i}}</a></li>
+                  {% else %}
+                    {% if request.GET.order_by == 'desc' %}
+                      <li><a href="?page={{i}}&amp;order_by=desc">{{i}}</a></li>
+                    {% else %}
+                      <li><a href="?page={{i}}">{{i}}</a></li>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                  <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                {% endif %}
+              </ul>
+            </div>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Content / End -->
+  </div>
+</div>
+<!-- Dashboard / End -->
+
+
+{% endblock content %}
+
+{% block js %}
+{% endblock js %}

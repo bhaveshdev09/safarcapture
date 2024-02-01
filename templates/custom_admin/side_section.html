@@ -1,5 +1,10 @@
 {% load static %}
 
+<!--URL Alias -->
+{% url "admin-dashboard" as dashboard %}
+{% url "admin-booking-list" as bookings %}
+{% url "admin-package-list" as packages %}
+
 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
     <div class="dashboard-sidebar">
         <div class="profile-sec">
@@ -10,9 +15,8 @@
                     </div>
                     <div class="author-content pt-2 p-0">
                         <h3 class="mb-1 white"><a href="#" class="white">{{request.user.name|default:"Admin User"}}</a></h3>
-                        <p class="detail"><i class="fa fa-map-marker"></i> Admin address</p>
-                        <p class="detail"><i class="fa fa-phone"></i> +91 90247 9851</p>
-                    
+                        <p class="detail"><i class="fa fa-map-marker"></i> {{request.user.email|default:"Admin Email"}}</p>
+                        <p class="detail"><i class="fa fa-phone"></i> {{request.user.phone|default:"Admin Contact"}}</p>
                     </div>
                 </div>
                 <div class="dot-overlay"></div>
@@ -23,16 +27,17 @@
         <div class="dashboard-nav">
             <div class="dashboard-nav-inner">
                 <ul>
-                    <li class="active"><a href="dashboard-main.html"><i class="icon-chart mr-1"></i> Dashboard</a></li>
+                    <li {% if request.path == dashboard %}class="active"{% endif %}><a href="{% url "admin-dashboard" %}"><i class="icon-chart mr-1"></i> Dashboard</a></li>
                     {% comment %} <li><a href="dashboard-booking-history.html"><i class="fa fa-list-ul"></i>Booking History</a></li>
                     <li><a href="dashboard-package-enquiry.html"><i class="fa fa-list-ul"></i>Package Queries</a></li> {% endcomment %}
                     <li><a href="dashboard-customer-enquiry.html"><i class="icon-phone mr-1"></i>Queries</a></li>
-                    <li><a href="dashboard-user-details.html"><i class="icon-user mr-1"></i>User</a></li>
+                    <li {% if request.path == bookings %}class="active"{% endif %}><a href="{% url "admin-booking-list" %}"><i class="icon-envelope mr-1"></i>Bookings</a></li>
+                    {% comment %} <li><a href="dashboard-user-details.html"><i class="icon-user mr-1"></i>User</a></li> {% endcomment %}
                     <!-- <li><a href="dashboard-my-profile.html"><i class="sl sl-icon-user"></i> Profile</a></li>                     
                     <li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messages</a></li> -->
                     <!-- <li><a href="dashboard-reviews.html"><i class="sl sl-icon-star"></i> Reviews</a></li> -->
-                    <li><a href="{% url "admin-package-list" %}"><i class="icon-directions mr-1"></i>Packages</a></li>
-                    <li><a href="dashboard-add-destination.html"><i class="icon-direction mr-1"></i>Destination</a></li>
+                    <li {% if request.path == packages %}class="active"{% endif %}><a href="{% url "admin-package-list" %}"><i class="icon-directions mr-1"></i>Packages</a></li>
+                    {% comment %} <li><a href="dashboard-add-destination.html"><i class="icon-direction mr-1"></i>Destination</a></li> {% endcomment %}
                     <li>
                         <form id="logoutForm" method="post" action="{% if request.user.is_authenticated %}{% url "admin-logout" %}{% endif %}">
                             {% csrf_token %}
