@@ -150,7 +150,7 @@
                                 <!-- Item -->
                                 <div class="col-lg-4 col-md-12 col-xs-12">
                                     <div class="dashboard-stat mb-4">
-                                        <div class="dashboard-stat-content"><h4>{{packages}}</h4> <span>Active Packages</span></div>
+                                        <div class="dashboard-stat-content"><h4>{{total_queries}}</h4> <span>Queries</span></div>
                                         <div class="dashboard-stat-icon"><i class="im im-icon-Map2"></i></div>
                                         {% comment %} <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div> {% endcomment %}
                                     </div>
@@ -159,7 +159,7 @@
                                 <!-- Item -->
                                 <div class="col-lg-4 col-md-6 col-xs-12">
                                     <div class="dashboard-stat mb-4">
-                                        <div class="dashboard-stat-content"><h4>{{bookings}}</h4> <span>Total Bookings</span></div>
+                                        <div class="dashboard-stat-content"><h4>{{total_booking}}</h4> <span>Bookings</span></div>
                                         <div class="dashboard-stat-icon"><i class="im im-icon-Line-Chart"></i></div>
                                         {% comment %} <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div> {% endcomment %}
                                     </div>
@@ -169,7 +169,7 @@
                                 <!-- Item -->
                                 <div class="col-lg-4 col-md-6 col-xs-12">
                                     <div class="dashboard-stat mb-4">
-                                        <div class="dashboard-stat-content"><h4>95</h4> <span>Total Reviews</span></div>
+                                        <div class="dashboard-stat-content"><h4>3</h4> <span>Testimonials</span></div>
                                         <div class="dashboard-stat-icon"><i class="im im-icon-Add-UserStar"></i></div>
                                         {% comment %} <div class="dashboard-stat-item"><p>Someone bookmarked your listing!</p></div> {% endcomment %}
                                     </div>
@@ -272,83 +272,39 @@
                                 <div class="col-lg-12 col-md-12 col-xs-12">
                                     <div class="dashboard-list-box with-icons">
                                         <div class="dashboard-title">
-                                            <h4 class="mb-0">Package Enquiry</h4>
+                                            <h4 class="mb-0">Latest Bookings</h4>
                                             <p class="mb-0"></p>
                                         </div>
                                         <div class="table-responsive table-desi">
                                             <table class="basic-table table table-hover">
                                                 <thead>
                                                     <tr>
-                                                        
-                                                        <th>Name</th>
-                                                        <th>Phone</th>
-                                                        <th>Email</th>
-                                                        <th>Destination</th>
-                                                        <th>Adult</th>
-                                                        <th>Children</th>
-                                                        <th>Query</th>
+                                                      <th>#ID</th>
+                                                      <th>Package name</th>
+                                                      <th>User name</th>
+                                                      <th>Phone no</th>
+                                                      <th>Confirm Status</th>
+                                                      <th>Contact DateTime</th>
+                                                      {% comment %} <th>Action</th> {% endcomment %}
                                                     </tr>
-                                                </thead>
-                                                <tbody>
+                                                  </thead>
+                                                  <tbody>
+                                                    {% for booking in bookings %}
                                                     <tr>
-                                                        <td>Sham Ram
-                                                        </td>
-                                                        <td><span>8080749553</span>
-                                                        </td>
-                                                        <td>Sham@gmail.com</td>
-                                                        <td>Manali</td>
-                                                        <td>2</td>
-                                                        <td>4</td>
-                                                        <td>Suggest best for this destination</td>                                                
+                                                      <td>{{forloop.counter}}</td>
+                                                      <td>{{booking.package.name}}</td>
+                                                      <td>{{booking.name}}</td>
+                                                      <td>{{booking.phone}}</td>
+                                                      <td><span class="badge bg-{% if booking.status == "pending" %}warning{% else %}success{% endif %}">{{booking.status}}</span></td>
+                                                      <td>{{booking.created_at}}</td>
+                                                      {% comment %} <td>
+                                                        <a class="edit" title="Edit" data-toggle="tooltip" href="{% url "admin-booking-update" booking.pk %}"><i class="icon-pencil pr-2"></i></a>
+                                                        <a class="delete" title="Delete" data-toggle="tooltip" href="#"><i class="icon-trash pr-2"></i></a>
+                                                      </td> {% endcomment %}
                                                     </tr>
-                                                    
-                                                    <tr>
-                                                        <td>Sham Ram
-                                                        </td>
-                                                        <td><span>8080749553</span>
-                                                        </td>
-                                                        <td>Sham@gmail.com</td>
-                                                        <td>Manali</td>
-                                                        <td>2</td>
-                                                        <td>4</td>
-                                                        <td>Suggest best for this destination</td>                                                
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>Sham Ram
-                                                        </td>
-                                                        <td><span>8080749553</span>
-                                                        </td>
-                                                        <td>Sham@gmail.com</td>
-                                                        <td>Manali</td>
-                                                        <td>2</td>
-                                                        <td>4</td>
-                                                        <td>Suggest best for this destination</td>                                                
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Sham Ram
-                                                        </td>
-                                                        <td><span>8080749553</span>
-                                                        </td>
-                                                        <td>Sham@gmail.com</td>
-                                                        <td>Manali</td>
-                                                        <td>2</td>
-                                                        <td>4</td>
-                                                        <td>Suggest best for this destination</td>                                                
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Sham Ram
-                                                        </td>
-                                                        <td><span>8080749553</span>
-                                                        </td>
-                                                        <td>Sham@gmail.com</td>
-                                                        <td>Manali</td>
-                                                        <td>2</td>
-                                                        <td>4</td>
-                                                        <td>Suggest best for this destination</td>                                                
-                                                    </tr>
-                                                    
-                                                </tbody>
+                                                    {% endfor %}
+                                                  </tbody>
+                                                
                                             </table>
                                         </div>
                                     </div>

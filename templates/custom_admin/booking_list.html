@@ -44,7 +44,7 @@
                   <tbody>
                     {% for booking in bookings %}
                     <tr>
-                      <td>{{booking.id}}</td>
+                      <td>{{forloop.counter}}</td>
                       <td>{{booking.package.name}}</td>
                       <td>{{booking.name}}</td>
                       <td>{{booking.phone}}</td>

@@ -23,6 +23,7 @@ class Contact(BaseModel):
     email = models.EmailField()
     phone = models.CharField(max_length=15)
     message = models.TextField()
+    # followup = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
@@ -233,6 +234,28 @@ class Exclusive(KeyPoint):
         return f"Exclusive Note: {self.note}"
 
 
+# class Query(BaseModel):
+#     FOLLOWUP_STATUS_PENDING = "pending"
+#     FOLLOWUP_STATUS_COMPLETED = "completed"
+#     FOLLOWUP_STATUS_CHOICES = (
+#         (FOLLOWUP_STATUS_PENDING, "Pending"),
+#         (FOLLOWUP_STATUS_COMPLETED, "Completed"),
+#     )
+
+#     package = models.ForeignKey(
+#         Package, on_delete=models.SET_NULL, blank=True, null=True
+#     )
+#     email = models.EmailField(max_length=254)
+#     phone = models.CharField(max_length=10)
+#     name = models.CharField(max_length=255)
+#     total_adults = models.SmallIntegerField(default=0)
+#     total_childrens = models.SmallIntegerField(default=0)
+#     message = models.TextField(blank=True)
+#     status = models.CharField(
+#         max_length=20, choices=FOLLOWUP_STATUS_CHOICES, default=FOLLOWUP_STATUS_PENDING
+#     )
+
+
 class CarryThing(KeyPoint):
     package = models.ForeignKey(
         Package,
@@ -305,8 +328,8 @@ def send_email_to_admin(sender, instance, created, **kwargs):
     get_admin_users = list(User.objects.all().values_list("email", flat=True))
 
     if created:
-        subject = "Contact Query From {instance.name}"
-        message = f"A new contact query has been submitted.\n\nDetails:\n{instance}\nPhone: {instance.phone}\nMessage: {instance.message}"
+        subject = f"Contact Query From {instance.name}"
+        message = f"A new contact query has been submitted.\n\nDetails:\nName: {instance}\nEmail: {instance.email}\nPhone: {instance.phone}\nMessage: {instance.message}"
 
         from_email = settings.EMAIL_HOST_USER  # Replace with your actual email address
         admin_emails = get_admin_users  # Replace with your admin's email address

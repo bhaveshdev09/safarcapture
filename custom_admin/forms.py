@@ -15,13 +15,13 @@ from ckeditor.widgets import CKEditorWidget
 
 class CustomUserAuthForm(forms.Form):
     email = forms.EmailField(
-        widget=forms.EmailInput(attrs={"placeholder": "Enter your email address"})
+        widget=forms.EmailInput(attrs={"placeholder": "Enter Email"})
     )
     password = forms.CharField(
         widget=forms.PasswordInput(
             attrs={
                 "class": "form-control",
-                "placeholder": "Enter your password",
+                "placeholder": "Enter Password",
                 "class": "pass-input",
             }
         )

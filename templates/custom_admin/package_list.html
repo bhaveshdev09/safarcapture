@@ -34,7 +34,7 @@
                                                 <div class="trend-box">
                                                     <div class="row">
                                                         {% for package in packages %}
-                                                            <div class="col-lg-6 col-md-6 col-xs-12 mb-4">
+                                                            <div class="col-lg-6 col-md-6 col-xs-12">
                                                                 <div class="trend-item">
                                                                     <div class="trend-image">
                                                                         <a href="{% url "admin-package-update" package.pk %}"><img src="{{package.card_cover_image.url}}" alt="image"></a>

@@ -4,10 +4,9 @@ from custom_admin import views
 urlpatterns = [
     path("login/", views.CustomUserLoginView.as_view(), name="admin-login"),
     path("logout/", views.CustomUserLogoutView.as_view(), name="admin-logout"),
-    path("booking-history/", views.booking_history, name="booking-history"),
     path("customer-enquiry/", views.customer_enquiry, name="customer-enquiry"),
     path("destination/", views.destination, name="destination"),
-    path("dashboard/", views.dashboard, name="admin-dashboard"),
+    path("dashboard/", views.DashboardView.as_view(), name="admin-dashboard"),
     path("packages/", views.PackageListView.as_view(), name="admin-package-list"),
     path(
         "packages/create/",

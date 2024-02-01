@@ -893,7 +893,7 @@ input#submit:hover {
       font-weight: 700;
       transform: translate(-50%, -50%); }
 
-.alert {
+/* .alert {
   margin-bottom: 10px;
   border-radius: 0px;
   color: #e83737;
@@ -906,7 +906,7 @@ input#submit:hover {
     .alert .alert-success h4 {
       margin-bottom: 8px; }
     .alert .alert-success p {
-      color: #fff; }
+      color: #fff; } */
 
 /* ========================================= */
 /*          Ribbon CSS        */
@@ -2715,9 +2715,9 @@ nav.navbar.navbar-default.navbar-sticky-in .logo-black {
   text-align: center;
 }
 .trending .trend-item {
-  height:550px;
+  /*height:550px;*/
   width:400px;
-  padding: 30px;
+  padding: 10px;
   position: relative;
   transition: all ease-in-out 0.5s; }
   .trending .trend-item:hover {
