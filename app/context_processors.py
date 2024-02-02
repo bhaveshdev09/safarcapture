@@ -10,6 +10,8 @@ def destination_list(request):
 
 def package_list(request):
     package_lists = (
-        Package.objects.only("id", "name").order_by("name").values("id", "name")
+        Package.objects.only("id", "name", "days")
+        .order_by("name")
+        .values("id", "name", "days")
     )
     return {"package_list": package_lists}

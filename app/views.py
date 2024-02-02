@@ -1,7 +1,7 @@
 from typing import Any
 from django.db.models.base import Model as Model
 from django.shortcuts import render, redirect
-from django.views.generic import ListView, FormView, DetailView
+from django.views.generic import ListView, FormView, DetailView, TemplateView
 from app.forms import ContactForm
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -44,6 +44,10 @@ def privacy_policy(request):
     return render(
         request, "privacy_policy.html"
     )  # TODO: Privacy Policy need and update
+
+
+class GalleryView(TemplateView):
+    template_name = "gallery.html"
 
 
 class BlogListView(ListView):

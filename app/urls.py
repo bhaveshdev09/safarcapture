@@ -23,6 +23,7 @@ urlpatterns = [
     ),
     path("contact/", views.ContactView.as_view(), name="contact"),
     path("faq/", views.faq, name="faq"),
+    path("gallary/", views.GalleryView.as_view(), name="gallery"),
     path("success/", views.success, name="success"),
     path("terms-condtions/", views.terms_conditions, name="terms-conditions"),
     path("privacy-policy/", views.privacy_policy, name="privacy-policy"),

@@ -1,0 +1,152 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Gallary{% endblock title %}
+
+{% block content %}
+
+    <!-- BreadCrumb Starts -->
+    <section class="breadcrumb-main pb-0" style="background-image: url({% static "images/bg/bg7.jpg" %});">
+      <div class="breadcrumb-outer pt-18">
+        <div class="container">
+          <div class="breadcrumb-content d-md-flex align-items-center pt-10">
+            <h2 class="pb-2">Gallary</h2>
+            <nav aria-label="breadcrumb">
+              <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gallary</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="dot-overlay"></div>
+    </section>
+    <!-- BreadCrumb Ends -->
+
+
+    <!-- Gallery starts -->
+    <div class="gallery pt-10 pb-6">
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="gallery-item mb-4">
+                        <div class="gallery-image">
+                            <img src="{% static "images/trending/trending1.jpg" %}" alt="image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="gallery-content">
+                            <ul>
+                                <li><a href="{% static "images/trending/trending1.jpg" %}"  data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="gallery-item mb-4">
+                        <div class="gallery-image">
+                            <img src="{% static "images/trending/trending2.jpg" %}" alt="image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="gallery-content">
+                            <ul>
+                                <li><a href="{% static "images/trending/trending2.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="gallery-item mb-4">
+                        <div class="gallery-image">
+                            <img src="{% static "images/trending/trending3.jpg" %}" alt="image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="gallery-content">
+                            <ul>
+                                <li><a href="{% static "images/trending/trending3.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="gallery-item mb-4">
+                        <div class="gallery-image">
+                            <img src="{% static "images/trending/trending4.jpg" %}" alt="image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="gallery-content">
+                            <ul>
+                                <li><a href="{% static "images/trending/trending4.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="gallery-item mb-4">
+                        <div class="gallery-image">
+                            <img src="{% static "images/trending/trending5.jpg" %}" alt="image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="gallery-content">
+                            <ul>
+                                <li><a href="{% static "images/trending/trending5.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="gallery-item mb-4">
+                        <div class="gallery-image">
+                            <img src="{% static "images/trending/trending6.jpg" %}" alt="image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="gallery-content">
+                            <ul>
+                                <li><a href="{% static "images/trending/trending6.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="gallery-item mb-4">
+                        <div class="gallery-image">
+                            <img src="{% static "images/trending/trending7.jpg" %}" alt="image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="gallery-content">
+                            <ul>
+                                <li><a href="{% static "images/trending/trending7.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <div class="gallery-item mb-4">
+                        <div class="gallery-image">
+                            <img src="{% static "images/trending/trending8.jpg" %}" alt="image">
+                            <div class="overlay"></div>
+                        </div>
+                        <div class="gallery-content">
+                            <ul>
+                                <li><a href="{% static "images/trending/trending8.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Ends -->
+
+
+{% endblock content %}
+<!-- *Scripts* -->
+{% block js %}
+<script src="{% static "js/custom-accordian.js" %}"></script>
+{% endblock js %}
