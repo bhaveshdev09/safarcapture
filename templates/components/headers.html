@@ -28,98 +28,77 @@
     </div>
   </div>
 
-  <!-- Navigation Bar -->
+   <!-- Navigation Bar -->
   <div class="header_menu" id="header_menu">
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-2 pt-2">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
-              <img src="{% static "images/safarLogoWhite.png" %}" height="60px" width="180px" alt="image" />
-              <img src="{% static "images/safarLogo2.png" %}" height="60px" width="180px" alt="image" />
-            </a>
-          </div>
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="navbar-collapse1 d-flex align-items-center" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav" id="responsive-menu">
-              <li class="{% if request.path == index %}active{% endif %} pr-2">
-                <a href="{% url 'index' %}">Home</a>
-              </li>
-              <li class="{% if request.path == about %}active{% endif %} pr-2"><a href="{% url 'about' %}">About Us</a>
-              </li>
-              
-              <li class="submenu dropdown pr-2">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Packages <i class="icon-arrow-down" aria-hidden="true"></i></a>
-                  <ul class="dropdown-menu">
-                    {% for package in package_list %}
-                      <li><a href="{% url "package-detail" package.id %}">{{package.name}}</a></li>
-                    {% endfor %}
-                    
-                  </ul>
-              </li>
-              <li class="submenu dropdown pr-2">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                  aria-haspopup="true" aria-expanded="false">Destination <i class="icon-arrow-down" aria-hidden="true"></i></a>
-                  <ul class="dropdown-menu">
-                    {% for destination in destination_list %}
-                      <li><a href="{% url "destination-detail" destination.id %}">{{destination.name}}</a></li>
-                      {% comment %} <li class="submenu dropdown">
-                        <a href="index-train.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Train<i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="index-train.html">Homepage Train</a></li>
-                            <li><a href="train-list.html">Train List</a></li>
-                            <li><a href="train-grid.html">Train Grid</a></li>
-                            <li><a href="train-detail.html">Train Detail</a></li>
-                            <li><a href="train-booking.html">Train Booking</a></li>
-                        </ul>
-                    </li> {% endcomment %}
-                    {% endfor %}
-                  </ul>
-              </li>
-              <li class="submenu dropdown pr-2">
-                <a href="{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                  aria-haspopup="true" aria-expanded="false">Weekends <i class="icon-arrow-down" aria-hidden="true"></i></a>
-                  <ul class="dropdown-menu">
-                    {% for package in package_list %}
-                      {% if package.days <= 4  %}
-                        <li><a href="{% url "package-detail" package.id %}">{{package.name}}</a></li>
-                      {% endif %}
-                    {% endfor %}
-                  </ul>
-              </li>
-              <li class="{% if request.path == blogs %}active{% endif %} pr-2">
-                <a href="{% url 'blogs' %}"> Updates </a>
-              </li>
-              <li class="{% if request.path == gallery %}active{% endif %} pr-2">
-                <a href="{% url 'gallery' %}"> Gallery </a>
-              </li>
-              <li class="{% if request.path == contact %}active{% endif %} pr-2">
-                <a href="{% url 'contact' %}">Contact Us</a>
-              </li>
-            </ul>
-            <!-- <a href="#" class="cart-icon d-flex align-items-center ml-1"><i class="icon-basket-loaded"></i><span class="cart-label">3</span></a> -->
-          </div>
-          <!-- /.navbar-collapse -->
+      <nav class="navbar navbar-default">
+          <div class="container">
+              <div class="navbar-flex d-flex align-items-center justify-content-between w-100 pb-2 pt-2">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                      <a class="navbar-brand" href="index.html">
+                          <img src="{% static "images/safarLogoWhite.png" %}" alt="image">
+                          <img src="{% static "images/safarLogo3.png" %}" alt="image">
+                      </a>
+                  </div>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="navbar-collapse1 d-flex align-items-center" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav" id="responsive-menu">
+                          <li class="{% if request.path == index %}active{% endif %} pr-2"><a href="{% url 'index' %}">Home</a></li>
+                          <li class="{% if request.path == about %}active{% endif %} pr-2"><a href="{% url 'about' %}">About Us</a></li>
+                          <li class="submenu dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Packages <i class="icon-arrow-down" aria-hidden="true"></i></a>
+                              <ul class="dropdown-menu">
+                                {% for package in package_list %}
+                                  <li><a href="{% url "package-detail" package.id %}">{{package.name}}</a></li>
+                                {% endfor %}
+                              </ul>
+                          </li>
+                          <li class="submenu dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                              aria-haspopup="true" aria-expanded="false">Destination <i class="icon-arrow-down" aria-hidden="true"></i></a>
+                              <ul class="dropdown-menu">
+                                {% for location in locations %}
+                                  <li class="submenu dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{location.label}}<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                    <ul class="dropdown-menu">
+                                      {% for destination in destination_list %}
+                                        {% if destination.location == location %}
+                                          <li><a href="{% url "destination-detail" destination.id %}">&nbsp;&nbsp;{{destination.name}}</a></li>
+                                        {% endif %}
+                                      {% endfor %}
+                                    </ul>
+                                  </li> 
+                                {% endfor %}
+                              </ul>
+                          </li>
+                          <li class="{% if request.path == blogs %}active{% endif %} pr-2">
+                            <a href="{% url 'blogs' %}"> Updates </a>
+                          </li>
+                          <li class="{% if request.path == gallery %}active{% endif %} pr-2">
+                            <a href="{% url 'gallery' %}"> Gallery </a>
+                          </li>
+                          <li class="{% if request.path == contact %}active{% endif %} pr-2">
+                            <a href="{% url 'contact' %}">Contact Us</a>
+                          </li>
+                      </ul>
+                      {% comment %} <div class="header_sidemenu">
+                          <div class="mhead">
+                              <span class="menu-ham">
+                                  <a href="#" class="cart-icon d-flex align-items-center ml-1"><i class="icon-basket-loaded"></i><span class="cart-label">3</span></a>
+                              </span>
+                          </div>
+                      </div> {% endcomment %}
+                  </div><!-- /.navbar-collapse -->   
 
-          <div class="register-login">
-            <!-- <a
-                  href="#"
-                  class="mr-2"
-                  data-toggle="modal"
-                  data-target="#register"
-                  ><i class="icon-user mr-1"></i> Register</a
-                >
-                <a href="#" data-toggle="modal" data-target="#login"
-                  ><i class="icon-login mr-1"></i> Login</a
-                > -->
-          </div>
+                  <div class="register-login">
+                      {% comment %} <a href="#" class="mr-2" data-toggle="modal" data-target="#register"><i class="icon-user mr-1"></i> Register</a>
+                      <a href="#" data-toggle="modal" data-target="#login"><i class="icon-login mr-1"></i> Login</a> {% endcomment %}
+                  </div>
 
-          <div id="slicknav-mobile"></div>
-        </div>
-      </div>
-      <!-- /.container-fluid -->
-    </nav>
+                  <div id="slicknav-mobile"></div>
+              </div>
+          </div><!-- /.container-fluid --> 
+      </nav>
   </div>
   <!-- Navigation Bar Ends -->
 </header>

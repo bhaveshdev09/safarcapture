@@ -94,6 +94,11 @@ class IternaryInline(admin.StackedInline):
     min_num = 1
 
 
+class DestinationAdmin(admin.ModelAdmin):
+
+    filter_horizontal = ("image_list",)
+
+
 class PackageAdmin(admin.ModelAdmin):
     inlines = [InclusiveInline, ExclusiveInline, IternaryInline, CarryThingInline]
 
@@ -152,5 +157,5 @@ admin.site.register(PackageImage, PackageImageAdmin)
 admin.site.register(Contact)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(DestinationImage, DestinationImageAdmin)
-admin.site.register(Destination)
+admin.site.register(Destination, DestinationAdmin)
 admin.site.register(Booking)

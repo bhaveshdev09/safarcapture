@@ -5,6 +5,8 @@ from ckeditor.widgets import CKEditorWidget
 
 
 class ContactForm(forms.Form):
+
+    # name = forms.RegexField(strip=True, min_length=2, max_length=20, regex="^[A-Za-z]+(?:\s[A-Za-z]+)?(?:\s[A-Za-z]+)?$")
     name = forms.CharField(
         label="Your Name",
         max_length=100,

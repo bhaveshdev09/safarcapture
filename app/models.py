@@ -8,6 +8,38 @@ from django.core.mail import send_mail
 from django.dispatch import receiver
 from backend import settings
 from PIL import Image
+import os
+
+
+class State(models.TextChoices):
+    ANDHRA_PRADESH = "AP", "Andhra Pradesh"
+    ARUNACHAL_PRADESH = "AR", "Arunachal Pradesh"
+    ASSAM = "AS", "Assam"
+    BIHAR = "BR", "Bihar"
+    CHHATTISGARH = "CT", "Chhattisgarh"
+    GOA = "GA", "Goa"
+    GUJARAT = "GJ", "Gujarat"
+    HARYANA = "HR", "Haryana"
+    HIMACHAL_PRADESH = "HP", "Himachal Pradesh"
+    JHARKHAND = "JH", "Jharkhand"
+    KARNATAKA = "KA", "Karnataka"
+    KERALA = "KL", "Kerala"
+    MADHYA_PRADESH = "MP", "Madhya Pradesh"
+    MAHARASHTRA = "MH", "Maharashtra"
+    MANIPUR = "MN", "Manipur"
+    MEGHALAYA = "ML", "Meghalaya"
+    MIZORAM = "MZ", "Mizoram"
+    NAGALAND = "NL", "Nagaland"
+    ODISHA = "OR", "Odisha"
+    PUNJAB = "PB", "Punjab"
+    RAJASTHAN = "RJ", "Rajasthan"
+    SIKKIM = "SK", "Sikkim"
+    TAMIL_NADU = "TN", "Tamil Nadu"
+    TELANGANA = "TG", "Telangana"
+    TRIPURA = "TR", "Tripura"
+    UTTAR_PRADESH = "UP", "Uttar Pradesh"
+    UTTARAKHAND = "UK", "Uttarakhand"
+    WEST_BENGAL = "WB", "West Bengal"
 
 
 class BaseModel(models.Model):
@@ -68,8 +100,6 @@ class PackageImage(BaseImage):
     name = models.CharField(max_length=255, default="package_image")
 
     def __str__(self):
-        import os
-
         image_filename = os.path.basename(self.image.name)
         return f"Package Image - {str(self.id)} : {image_filename}"
 
@@ -109,10 +139,21 @@ class DestinationImage(BaseImage):
     def __str__(self):
         return f"Destination Image - {str(self.id)}"
 
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.image.path)
+        if img.width != 1600 or img.height != 800:
+            output_size = (1600, 800)
+            resized_image = img.resize(output_size)
+            resized_image.save(self.image.path)
+
 
 class Package(BaseModel):
+
     name = models.CharField(max_length=50)
-    location = models.CharField(max_length=50)
+    location = models.CharField(
+        max_length=50, choices=State.choices, default=State.UTTARAKHAND
+    )
     description = RichTextField()
     category = models.ManyToManyField(Category)
     days = models.PositiveSmallIntegerField(default=5)
@@ -134,7 +175,7 @@ class Package(BaseModel):
     card_cover_image = models.ImageField(
         upload_to="package/covers/",
         default="package/covers/bg.jpg",
-        help_text="Image size should be 700 X 460. Click <a href='https://www.iloveimg.com/resize-image' style='color:lightblue'>here</a> to resize an image.",
+        help_text="Image size should be 700 X 460.",
     )
 
     def __str__(self) -> str:
@@ -162,7 +203,9 @@ class Package(BaseModel):
 
 class Destination(BaseModel):
     name = models.CharField(max_length=50)
-    location = models.CharField(max_length=50)
+    location = models.CharField(
+        max_length=50, choices=State.choices, default=State.UTTARAKHAND
+    )
     state = models.CharField(max_length=100)
     country = models.CharField(max_length=100, default="India")
     rating = models.PositiveSmallIntegerField(default=5)

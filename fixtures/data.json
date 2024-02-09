@@ -24,6 +24,90 @@
         }
     },
     {
+        "model": "app.contact",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-02-01T20:01:55.732Z",
+            "updated_at": "2024-02-01T20:01:55.732Z",
+            "name": "Bhavesh Namdev Patil",
+            "email": "patilbhavesh991209@gmail.com",
+            "phone": "+917045809623",
+            "message": "hello"
+        }
+    },
+    {
+        "model": "app.contact",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-02-01T20:04:28.966Z",
+            "updated_at": "2024-02-01T20:04:28.966Z",
+            "name": "Bhavesh Namdev Patil",
+            "email": "patilbhavesh130@gmail.com",
+            "phone": "7045809623",
+            "message": "hi bhavesh here"
+        }
+    },
+    {
+        "model": "app.contact",
+        "pk": 5,
+        "fields": {
+            "created_at": "2024-02-01T20:07:40.609Z",
+            "updated_at": "2024-02-01T20:07:40.609Z",
+            "name": "Bhavesh",
+            "email": "patilbhavesh991209@gmail.com",
+            "phone": "7045809623",
+            "message": "Hi bhavesh here"
+        }
+    },
+    {
+        "model": "app.contact",
+        "pk": 6,
+        "fields": {
+            "created_at": "2024-02-01T20:11:30.365Z",
+            "updated_at": "2024-02-01T20:11:30.365Z",
+            "name": "Bhavesh Namdev Patil",
+            "email": "patilbhavesh130@gmail.com",
+            "phone": "7045809623",
+            "message": "Hi this is my query"
+        }
+    },
+    {
+        "model": "app.contact",
+        "pk": 7,
+        "fields": {
+            "created_at": "2024-02-01T20:13:25.130Z",
+            "updated_at": "2024-02-01T20:13:25.130Z",
+            "name": "Bhavesh Namdev Patil",
+            "email": "patilbhavesh130@gmail.com",
+            "phone": "7045809623",
+            "message": "this is new query"
+        }
+    },
+    {
+        "model": "app.contact",
+        "pk": 8,
+        "fields": {
+            "created_at": "2024-02-01T20:15:11.345Z",
+            "updated_at": "2024-02-01T20:15:11.345Z",
+            "name": "Vijay",
+            "email": "patilbhavesh189@gmail.com",
+            "phone": "7045809623",
+            "message": "ewkfhekfs"
+        }
+    },
+    {
+        "model": "app.contact",
+        "pk": 9,
+        "fields": {
+            "created_at": "2024-02-01T20:15:34.683Z",
+            "updated_at": "2024-02-01T20:15:34.683Z",
+            "name": "Vijay",
+            "email": "patilbhavesh189@gmail.com",
+            "phone": "7045809623",
+            "message": "ewkfhekfs"
+        }
+    },
+    {
         "model": "app.blogimage",
         "pk": 1,
         "fields": {
@@ -839,31 +923,131 @@
     },
     {
         "model": "app.destinationimage",
-        "pk": 1,
+        "pk": 4,
         "fields": {
-            "created_at": "2024-01-14T14:10:00.719Z",
-            "updated_at": "2024-01-24T21:55:30.172Z",
-            "image": "destination/images/pexels-julia-volk-5205010.jpg",
+            "created_at": "2024-02-08T17:33:08.841Z",
+            "updated_at": "2024-02-08T17:33:08.841Z",
+            "image": "destination/images/trek1.jpg",
             "name": "destination_image"
         }
     },
     {
         "model": "app.destinationimage",
-        "pk": 2,
+        "pk": 5,
         "fields": {
-            "created_at": "2024-01-14T14:27:38.958Z",
-            "updated_at": "2024-01-24T21:56:05.590Z",
-            "image": "destination/images/pexels-gokul-gurang-15896015.jpg",
+            "created_at": "2024-02-08T17:33:31.446Z",
+            "updated_at": "2024-02-08T17:33:31.446Z",
+            "image": "destination/images/mountain2.jpg",
             "name": "destination_image"
         }
     },
     {
         "model": "app.destinationimage",
-        "pk": 3,
+        "pk": 6,
         "fields": {
-            "created_at": "2024-01-14T17:28:52.250Z",
-            "updated_at": "2024-01-24T21:56:30.846Z",
-            "image": "destination/images/chakrata_p_cover_img.jpg",
+            "created_at": "2024-02-08T17:33:52.502Z",
+            "updated_at": "2024-02-08T17:33:52.502Z",
+            "image": "destination/images/river_rafting1.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 7,
+        "fields": {
+            "created_at": "2024-02-08T17:55:07.778Z",
+            "updated_at": "2024-02-08T17:55:07.778Z",
+            "image": "destination/images/Gangotri_Temple.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 8,
+        "fields": {
+            "created_at": "2024-02-08T17:55:23.345Z",
+            "updated_at": "2024-02-08T17:55:23.345Z",
+            "image": "destination/images/devprayag.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 9,
+        "fields": {
+            "created_at": "2024-02-08T17:55:38.071Z",
+            "updated_at": "2024-02-08T17:55:38.071Z",
+            "image": "destination/images/badrinath.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 10,
+        "fields": {
+            "created_at": "2024-02-08T17:55:54.459Z",
+            "updated_at": "2024-02-08T17:55:54.459Z",
+            "image": "destination/images/kedarnath.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 11,
+        "fields": {
+            "created_at": "2024-02-08T17:56:05.753Z",
+            "updated_at": "2024-02-08T17:56:05.754Z",
+            "image": "destination/images/manali1.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 12,
+        "fields": {
+            "created_at": "2024-02-08T17:56:16.111Z",
+            "updated_at": "2024-02-08T17:56:16.111Z",
+            "image": "destination/images/manali4.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 13,
+        "fields": {
+            "created_at": "2024-02-08T17:56:26.943Z",
+            "updated_at": "2024-02-08T17:56:26.943Z",
+            "image": "destination/images/mountain1.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 14,
+        "fields": {
+            "created_at": "2024-02-08T17:56:44.518Z",
+            "updated_at": "2024-02-08T17:56:44.518Z",
+            "image": "destination/images/nature5.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 15,
+        "fields": {
+            "created_at": "2024-02-08T17:57:05.246Z",
+            "updated_at": "2024-02-08T17:57:05.246Z",
+            "image": "destination/images/temple1.jpg",
+            "name": "destination_image"
+        }
+    },
+    {
+        "model": "app.destinationimage",
+        "pk": 16,
+        "fields": {
+            "created_at": "2024-02-08T17:57:26.488Z",
+            "updated_at": "2024-02-08T17:57:26.488Z",
+            "image": "destination/images/shimla1.jpg",
             "name": "destination_image"
         }
     },
@@ -872,9 +1056,9 @@
         "pk": 1,
         "fields": {
             "created_at": "2024-01-14T14:58:28.701Z",
-            "updated_at": "2024-01-25T08:52:59.635Z",
+            "updated_at": "2024-02-03T13:34:22.142Z",
             "name": "Manali Solang Kasol",
-            "location": "Himachal Pradesh",
+            "location": "HP",
             "description": "<p>Everyone&rsquo;s most visited vacation spot, <strong>Manali</strong> is a high-altitude Himalayan town that is a treat for every nomad. Bounded by the Pir Panjal and Dhauladhar ranges, the aura of Manali is unsurpassed and invincible. Be it a relaxation trip with the family, a backpacking trip with your buddies, or a solo trip. Manali has got you covered! A trip to Manali will be inadequate if you miss visiting the enthralling Solang valley, which is one of the most widespread travel destinations of Himachal Pradesh. Solang valley is situated 14 kilometers to the northwest of Manali and welcomes thousands of tourists every year. Consider as a heaven for adventure devotees, Solang valley offers a plethora of activities like parachuting, paragliding, horse riding, Skiing, Quad biking, etc.</p>\r\n\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;There is a lot to explore and enjoy here in Solang valley on your Manali Trip. Jispa, a beautiful little town in the Lahaul district of Himachal Pradesh, is a stunning must-visit. Perched on the banks of river Bhaga, Jispa lies 2 hours from Baralacha-la and provides the most stunning views of surrounding mountains! While it is often regarded as a pit stop en route Leh on the Manali-Leh Highway, I beg to differ. This place is truly worthy of its own individually planned visit! Situated at a stunning height of 10,500 ft., this little village, home to about 78 households, serves as a halt for travelers on the long road trip to Leh-Ladakh. The calm, quiet and tranquil village with a very small population, offers the most beautiful Zen-like trip you will not soon forget</p>",
             "days": 3,
             "night": 2,
@@ -908,9 +1092,9 @@
         "pk": 2,
         "fields": {
             "created_at": "2024-01-22T20:26:45.488Z",
-            "updated_at": "2024-01-25T08:44:28.361Z",
+            "updated_at": "2024-02-03T18:54:37.947Z",
             "name": "Chakrata",
-            "location": "Uttarakhand",
+            "location": "UK",
             "description": "<p>Chakrata is a beautiful cantonment town nestled in the district of Dehradun and enveloped amidst snow-clad himalayan ranges. It sits gracefully at an elevation of 2,118 meters above sea level and offers the scenic beauty of some of the most beautiful waterfalls that make it an ideal place to visit.</p>",
             "days": 2,
             "night": 1,
@@ -919,12 +1103,12 @@
             "pickup_location": "Delhi",
             "drop_of_location": "Delhi",
             "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27444.296159838097!2d77.84613822870519!3d30.703299974274852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390f4a6c1ae9b81f%3A0x9bbdb9d6b27b0eb4!2sChakrata%2C%20Uttarakhand%20248123!5e0!3m2!1sen!2sin!4v1705954515940!5m2!1sen!2sin",
-            "price_quad_sharing": -1,
+            "price_quad_sharing": 0,
             "price_triple_sharing": 5299,
             "price_double_sharing": 5499,
             "price": 5799,
             "rating": 4,
-            "discount": 10,
+            "discount": 20,
             "card_cover_image": "package/covers/trending5.jpg",
             "category": [
                 5,
@@ -945,9 +1129,9 @@
         "pk": 3,
         "fields": {
             "created_at": "2024-01-22T20:48:58.366Z",
-            "updated_at": "2024-01-25T08:18:43.293Z",
+            "updated_at": "2024-02-03T13:33:10.587Z",
             "name": "Jaisalmer",
-            "location": "Rajastan",
+            "location": "RJ",
             "description": "<p>The magic and chivalry of Jaisalmer need no explanation. We thought of a lot of adjectives to define the glories of this jewel&ndash; war-scarred forts, chivalric delight, riot conjuring colors, breathtaking sand dunes, barely arrogant pride and romantic glory. But most are just near-perfectly suited to depict this piece of beauty. Beyond the breezy majestic royal towns of Rajasthan lies Jaisalmer&ndash; the gateway to the land of Thar Desert. The desolate tract townlet, also known as the Golden Town, is a way to the sedation it acquires from the yellow sandstone used to build the infrastructures.</p>\r\n\r\n<p>The city of Jaisalmer is one of the remaining monumental cities in Rajasthan closest to the India-Pakistan border and stands within the Thar Desert&#39;s coronary soul. It is a notable traveller vacation spot to discover in any season. Jaisalmer excursion bundle from Delhi is your pick. The tour bundle from Delhi to Jaisalmer is an outstanding opportunity to witness the historic beauty. Witness the tragedies that passed off a hundred and eighty million years in the past within side the Thar Desert. The town&#39;s maximum distinguished element is the Jaisalmer Fort, also called Sonar Qila (Golden Fort)</p>",
             "days": 3,
             "night": 2,
@@ -982,9 +1166,9 @@
         "pk": 4,
         "fields": {
             "created_at": "2024-01-23T12:23:59.884Z",
-            "updated_at": "2024-01-25T08:53:24.386Z",
+            "updated_at": "2024-02-09T09:57:46.498Z",
             "name": "Panch Kedar",
-            "location": "Uttarkhand",
+            "location": "UK",
             "description": "<p>Panch Kedar consists of 5 famous temlpes of Lord Shiva: Kedarnath, Rudranath, Madhmaheswar, Kalpeshwar and Tungnath. It is a very long pilgrimage trekking destination in India. According to Hindu legend Panch Kedar relates to the Pandavas of Mahabharata, the heroes of the famous hindu epic who built Panch Kedar Temples (means five temples of Lord Shiva) located in Uttrakhand at Garwal Himalayan Region and known as Kedarnath, Kalpnath, Tungnath, Madmaheshwar and Rudranath.</p>",
             "days": 14,
             "night": 13,
@@ -1022,9 +1206,9 @@
         "pk": 5,
         "fields": {
             "created_at": "2024-01-23T14:11:05.424Z",
-            "updated_at": "2024-01-24T19:55:35.539Z",
+            "updated_at": "2024-02-03T13:36:41.522Z",
             "name": "Chardham",
-            "location": "Utterakhand",
+            "location": "HP",
             "description": "<p>A journey that will take you on a quest for Moksha; a journey filled with fascination and spirituality. These Char Dhams - Kedarnath, Badrinath, Yamunotri, and Gangotri of Uttarakhand are some of the most sacred and significant pilgrimages in India which take you on a path of divinity. Every one of these Dhams holds a legend and is devoted to a specific deity. Yamunotri being the seat of the Goddess Yamuna is dedicated to the Goddess Yamuna who goes along the pilgrims to the high altitudes of the picturesque Rawai Valley. Gangotri is dedicated to the Goddess Ganga. The shrine overlooks the River Bhagirathi, another name of River Ganga. According to the legend, Goddess Ganga took the form of the river to cleanse the ashes and liberate the souls of King Bhagiratha&rsquo;s predecessors. Kedarnath is dedicated to Lord Shiva and is also a part of the Panch Kedar. It is the northernmost Jyotirlinga and is close to the source of the holy river Mandakini. Badrinath is dedicated to Lord Vishnu. It is situated on the bank of the River Alaknanda. According to legend, Lord Vishnu meditated here while his consort Lakshmi took the form of a berry (Badri) tree to offer him shade.</p>",
             "days": 11,
             "night": 10,
@@ -1058,9 +1242,9 @@
         "pk": 6,
         "fields": {
             "created_at": "2024-01-23T14:29:33.308Z",
-            "updated_at": "2024-01-24T20:20:34.154Z",
+            "updated_at": "2024-02-09T09:59:27.232Z",
             "name": "Dodham",
-            "location": "Utterakhand",
+            "location": "HP",
             "description": "<p>Straight from the snow-capped majestic mountains to dense wild forests, river confluence to captivating cascades, you can experience the best of nature&rsquo;s blessings on our Badrinath Kedarnath yatra trip. With this pilgrimage, one can marvel at treasures in Uttarakhand&rsquo;s holy towns, experience complete serenity and explore the beauty of the immaculate surrounding mountains. Moreover, Badrinath and Kedarnath are some of the most worshipped temples in India. Their magnificent location offers you a number of picture-perfect locations. The Kedarnath Temple is a holy place for the Hindus and is located amidst the Rudra Himalayan Range at an approximate height of 12,000 ft. The location is near the start of the Mandakini river in Uttarakhand. Because of the harsh weather conditions, the temple is only open between April and November. The Badrikashram, or the city of Badrinath, is located at the height of 3133 m from the main sea level. The city attracts thousands of enthusiasts from different parts of the world. The Do Dham Yatra trip particularly includes a tour to the two most significant shrines in Hinduism &ndash; Kedarnath and Badrinath. With the team, you will get a 6 day and 5 nights expedition, to explore the sacred divine abodes and pay your homage to the gods.</p>",
             "days": 6,
             "night": 5,
@@ -1095,9 +1279,9 @@
         "pk": 7,
         "fields": {
             "created_at": "2024-01-23T14:51:03.517Z",
-            "updated_at": "2024-01-24T20:17:07.356Z",
+            "updated_at": "2024-02-03T13:40:26.213Z",
             "name": "Kedarnath",
-            "location": "Uttarakhand",
+            "location": "HP",
             "description": "<p>The beauty of Kedarnath is alien to none. It is a sacred pilgrimage place of Lord Shiva and is situated in the Rudraprayag district of the Garhwal region in Uttarakhand. Kedarnath is one of the Char Dhams of Uttarakhand and is situated at an altitude of 3586 meters. The place is located in the lap of the majestic Himalayas near the source of the River Mandakini. Kedarnath also has one of the 12 Jyotirlingas of Lord Shiva. You will be mesmerized by the beautiful ambience of the place and, it looks like heaven on earth. Every year thousands of pilgrimages and tourists visit this holy place to offer prayers to Lord Shiva</p>",
             "days": 4,
             "night": 3,
@@ -1132,9 +1316,9 @@
         "pk": 8,
         "fields": {
             "created_at": "2024-01-23T15:15:08.242Z",
-            "updated_at": "2024-01-24T20:23:06.413Z",
+            "updated_at": "2024-02-03T13:40:47.104Z",
             "name": "Manali Jispa Tour",
-            "location": "Himachal Pradesh",
+            "location": "HP",
             "description": "<p>Everyone&rsquo;s most visited vacation spot, Manali is a high-altitude Himalayan town that is a treat for every nomad. Bounded by the Pir Panjal and Dhauladhar ranges, the aura of Manali is unsurpassed and invincible. Be it a relaxation trip with the family, a backpacking trip with your buddies, or a solo trip. Manali has got you covered! A trip to Manali will be inadequate if you miss visiting the enthralling Solang valley, which is one of the most widespread travel destinations of Himachal Pradesh. Solang valley is situated 14 kilometers to the northwest of Manali and welcomes thousands of tourists every year. Consider as a heaven for adventure devotees, Solang valley offers a plethora of activities like parachuting, paragliding, horse riding, Skiing, Quad biking, etc. there is a lot to explore and enjoy here in Solang valley on your Manali Trip. Jispa, a beautiful little town in the Lahaul district of Himachal Pradesh, is a stunning must-visit. Perched on the banks of river Bhaga, Jispa lies 2 hours from Baralacha-la and provides the most stunning views of surrounding mountains! While it is often regarded as a pit stop en route Leh on the Manali-Leh Highway, I beg to differ. This place is truly worthy of its own individually planned visit! Situated at a stunning height of 10,500 ft., this little village, home to about 78 households, serves as a halt for travelers on the long road trip to Leh-Ladakh. The calm, quiet and ranquil village with a very small population, offers the most beautiful Zen-like trip you will not soon forget.</p>",
             "days": 4,
             "night": 3,
@@ -1169,9 +1353,9 @@
         "pk": 9,
         "fields": {
             "created_at": "2024-01-23T16:22:34.124Z",
-            "updated_at": "2024-01-24T20:28:31.754Z",
+            "updated_at": "2024-02-03T13:41:45.889Z",
             "name": "Manali Jipsa Kasol",
-            "location": "Himachal Pradesh",
+            "location": "HP",
             "description": "<p>Everyone&rsquo;s most visited vacation spot, Manali is a high-altitude Himalayan town that is a treat for every nomad. Bounded by the Pir Panjal and Dhauladhar ranges, the aura of Manali is unsurpassed and invincible. Be it a relaxation trip with the family, a backpacking trip with your buddies, or a solo trip. Manali has got you covered! A trip to Manali will be inadequate if you miss visiting the enthralling Solang valley, which is one of the most widespread travel destinations of Himachal Pradesh. Solang valley is situated 14 kilometers to the northwest of Manali and welcomes thousands of tourists every year. Consider as a heaven for adventure devotees, Solang valley offers a plethora of activities like parachuting, paragliding, horse riding, Skiing, Quad biking, etc. there is a lot to explore and enjoy here in Solang valley on your Manali Trip. Jispa, a beautiful little town in the Lahaul district of Himachal Pradesh, is a stunning must-visit. Perched on the banks of river Bhaga, Jispa lies 2 hours from Baralacha-la and provides the most stunning views of surrounding mountains! While it is often regarded as a pit stop en route Leh on the Manali-Leh Highway, I beg to differ. This place is truly worthy of its own individually planned visit! Situated at a stunning height of 10,500 ft., this little village, home to about 78 households, serves as a halt for travelers on the long road trip to Leh-Ladakh. The calm, quiet and tranquil village with a very small population, offers the most beautiful Zen-like trip you will not soon forget.</p>",
             "days": 4,
             "night": 3,
@@ -1185,7 +1369,7 @@
             "price_double_sharing": 13999,
             "price": 14999,
             "rating": 5,
-            "discount": 0,
+            "discount": 10,
             "card_cover_image": "package/covers/nature6.jpg",
             "category": [
                 4
@@ -1205,9 +1389,9 @@
         "pk": 10,
         "fields": {
             "created_at": "2024-01-23T16:38:50.610Z",
-            "updated_at": "2024-01-24T20:42:43.687Z",
+            "updated_at": "2024-02-03T13:41:12.426Z",
             "name": "Manali Solang Kasol Tosh",
-            "location": "Himalchal Pradesh",
+            "location": "HP",
             "description": "<p>Kasol is a hamlet in the district Kullu of the Indian state of Himachal Pradesh. It is situated in Parvati Valley, on the banks of the Parvati River, on the way between Bhuntar and Manikaran . Kasol is the Himalayan hotspot for backpackers. and acts as a base for nearby treks to Malana and Kheerganga. We have specially curated this trip for Kasol in Christmas and New Year. Manali is known for its shiny gompas or Buddhist monasteries. With the highest concentration of Tibetan refugees in the entire Kullu valley, it is famous for its Gadhan Thekchhokling Gompa, built in 1969.</p>",
             "days": 5,
             "night": 4,
@@ -1245,9 +1429,9 @@
         "pk": 11,
         "fields": {
             "created_at": "2024-01-23T17:35:18.676Z",
-            "updated_at": "2024-01-24T20:47:43.412Z",
+            "updated_at": "2024-02-03T14:24:21.229Z",
             "name": "Lahaul Atal Tunnel",
-            "location": "Himachal Pradesh",
+            "location": "HP",
             "description": "<p>Manali and Sissu make for an incredible travel duo, each offering its own unique charm. Manali, nestled in the high-altitude Himalayas, is a favorite among nomads for family vacations, backpacking adventures, and solo journeys. Its breathtaking location, surrounded by the Pir Panjal and Dhauladhar ranges, is truly unmatched. Don&#39;t miss a visit to the captivating Solang Valley, a widespread destination in Himachal Pradesh, just 14 kilometers northwest of Manali. It&#39;s a haven for adventure enthusiasts, with activities like parachuting, paragliding, horse riding, skiing, quad biking, and more to enjoy. On the other hand, Sissu, a picturesque town in Himachal Pradesh&#39;s Lahaul district, is a must-visit. Nestled along the banks of the Bhaga River and located just two hours from Baralacha-la, it offers stunning mountain views. While some may view Jispa as a mere pit stop on the way to Leh along the Manali-Leh Highway, I beg to differ. This charming village, perched at a breathtaking altitude of 10,500 ft. and home to only about 78 households, is a destination worth visiting in its own right. Its serene and tranquil atmosphere provides a zen-like experience you won&#39;t soon forget, making it a perfect complement to your Manali-Sissu trip.</p>",
             "days": 4,
             "night": 3,
@@ -1282,9 +1466,9 @@
         "pk": 12,
         "fields": {
             "created_at": "2024-01-23T17:53:39.690Z",
-            "updated_at": "2024-01-24T20:51:57.295Z",
+            "updated_at": "2024-02-09T09:54:57.963Z",
             "name": "Tirthan Valley",
-            "location": "Himachal Pradesh",
+            "location": "HP",
             "description": "<p>Tirthan Valley Tour Package: Explore the Enchanting Beauty. Tirthan Valley derives its name from the Tirthan River, which winds its way through it. The pristine river originates from the icy cold glacial springs of Hanskund, a snow-capped peak in the verdant Great Himalayan National Park (GHNP). Tirthan Valley Best Time to Visit: A Year-Round Paradise. The best time to visit Tirthan is march- June &amp; mid Sep and Nov. It is an offbeat destination that has something for everyone. This quiet valley is ideal for trekking, fishing, wildlife watching, and discovering under-explored hill villages. There&rsquo;s also the option of doing absolutely nothing as you relax among the pine trees in the valley. Are you ready to embark on a Tirthan Valley adventure? Check out our exclusive Tirthan Valley tour packages to experience the magic of this hidden gem in the Himalayas</p>",
             "days": 4,
             "night": 3,
@@ -1319,9 +1503,9 @@
         "pk": 13,
         "fields": {
             "created_at": "2024-01-23T18:05:03.581Z",
-            "updated_at": "2024-01-24T20:56:36.703Z",
+            "updated_at": "2024-02-07T10:36:19.444Z",
             "name": "Kasol Kheerganga",
-            "location": "Himachal Pradesh",
+            "location": "HP",
             "description": "<p>Kasol, a picturesque hamlet nestled in the Kullu district of Himachal Pradesh, is a traveler&#39;s paradise. This serene destination is situated in the enchanting Parvati Valley, cradled by the meandering Parvati River. If you&#39;re seeking an adventure that immerses you in the breathtaking landscapes of Himachal Pradesh, the Kasol Kheerganga Trek is your ticket to an unforgettable experience.</p>",
             "days": 5,
             "night": 5,
@@ -1333,7 +1517,7 @@
             "price_quad_sharing": 6999,
             "price_triple_sharing": 7299,
             "price_double_sharing": 7799,
-            "price": 0,
+            "price": 7999,
             "rating": 5,
             "discount": 0,
             "card_cover_image": "package/covers/kheerganga.jpg",
@@ -1352,9 +1536,9 @@
         "pk": 1,
         "fields": {
             "created_at": "2024-01-14T14:11:31.436Z",
-            "updated_at": "2024-01-14T14:27:52.543Z",
+            "updated_at": "2024-02-09T09:24:17.911Z",
             "name": "Rishikesh",
-            "location": "Uttarakhand",
+            "location": "UK",
             "state": "Uttarakhand",
             "country": "India",
             "rating": 3,
@@ -1362,8 +1546,12 @@
             "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55235.63523269081!2d78.27060875!3d30.08767875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39093e67cf93f111%3A0xcc78804a6f941bfe!2sRishikesh%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1705241057097!5m2!1sen!2sin",
             "category": 1,
             "image_list": [
-                1,
-                2
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
             ],
             "packages": []
         }
@@ -1373,17 +1561,22 @@
         "pk": 2,
         "fields": {
             "created_at": "2024-01-14T17:30:15.407Z",
-            "updated_at": "2024-01-23T17:36:32.243Z",
+            "updated_at": "2024-02-08T18:01:23.242Z",
             "name": "Manali",
-            "location": "Himachal Pradesh, India",
-            "state": "himachal pradesh",
+            "location": "HP",
+            "state": "Himachal Pradesh",
             "country": "India",
             "rating": 5,
             "description": "<p>In Hinduism, Manu was said to have survived a great flood that destroyed the rest of the world. He then recreated mankind in this Kullu Valley town. What a rush, huh? No wonder the towering peaks and verdant terrain of Manali attracts adventure travellers, with heli-skiing, hiking, mountaineering and river rafting the favored active pursuits. Come down from your endorphin high by breathing deeply at the four-story, wooden Hidimba Devi Temple, which sits in the middle of a nearby deciduous forest, or take a medicinal soak in the hot springs burbling from the ground a 30-minute walk from town.</p>",
             "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26997.5325195682!2d77.16652023256441!3d32.23947037911844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39048708163fd03f%3A0x8129a80ebe5076cd!2sManali%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1705253389401!5m2!1sen!2sin",
             "category": 4,
             "image_list": [
-                3
+                4,
+                5,
+                6,
+                10,
+                11,
+                12
             ],
             "packages": [
                 1,
@@ -1392,6 +1585,97 @@
                 10,
                 11
             ]
+        }
+    },
+    {
+        "model": "app.destination",
+        "pk": 3,
+        "fields": {
+            "created_at": "2024-02-09T09:30:36.755Z",
+            "updated_at": "2024-02-09T09:42:32.228Z",
+            "name": "Kedarnath",
+            "location": "UK",
+            "state": "Uttarakhand",
+            "country": "India",
+            "rating": 5,
+            "description": "<p><strong>Kedarnath is </strong>situated in the Rudraprayag district, Kedarnath is dedicated to Lord Shiva. It is one of the 12 Jyotirlingas (divine representations of Lord Shiva) and is believed to be one of the holiest Hindu pilgrimage sites. The Kedarnath temple is located amidst majestic snow-capped mountains and is accessible via a trek or helicopter ride.</p>\r\n\r\n<p><strong>Main Attractions:</strong></p>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li><strong>Kedarnath Temple:</strong> Located at an altitude of 3,583 meters, the temple is believed to have been built by Adi Shankaracharya in the 8th century. It is surrounded by snow-capped mountains and is accessible via a trek or helicopter ride.</li>\r\n\t<li><strong>Bhairavnath Temple:</strong> Situated about 500 meters from the main temple, it is dedicated to Bhairava, an incarnation of Lord Shiva.</li>\r\n</ol>",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.4278430861837!2d79.06436022613592!3d30.734481474583514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39083ee051e628b1%3A0x167ce4efaf440f1e!2sKedarnath%2C%20Uttarakhand%20246445!5e0!3m2!1sen!2sin!4v1707470998799!5m2!1sen!2sin",
+            "category": 1,
+            "image_list": [
+                11,
+                12,
+                13,
+                14,
+                15,
+                16
+            ],
+            "packages": [
+                4,
+                5,
+                6,
+                7
+            ]
+        }
+    },
+    {
+        "model": "app.destination",
+        "pk": 4,
+        "fields": {
+            "created_at": "2024-02-09T09:41:11.221Z",
+            "updated_at": "2024-02-09T09:47:48.656Z",
+            "name": "Badrinath",
+            "location": "UK",
+            "state": "Uttarakhand",
+            "country": "India",
+            "rating": 5,
+            "description": "<p><strong>Badrinath </strong>is&nbsp;Located in the Chamoli district, Badrinath is dedicated to Lord Vishnu. It is one of the Char Dham pilgrimage sites and is also one of the 108 Divya Desams, sacred Vishnu temples mentioned in the works of the Alvars (Tamil poet-saints). The Badrinath temple is set against the backdrop of the Neelkanth Peak and attracts thousands of devotees each year.</p>\r\n\r\n<p><strong>Main Attractions:</strong></p>\r\n\r\n<ol style=\"margin-left:40px\">\r\n\t<li><strong>Badrinath Temple:</strong> Built in the 8th century by Adi Shankaracharya, the temple is situated on the banks of the Alaknanda River. It is one of the most important pilgrimage sites for Hindus.</li>\r\n\t<li><strong>Tapt Kund:</strong> It is a natural hot water spring believed to have medicinal properties. Devotees take a holy dip before entering the temple.</li>\r\n</ol>",
+            "map_embed_link": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6858.33942672581!2d79.48881979585262!3d30.74173399831939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a78e9f973108e7%3A0xf05a8b5e0c71473!2sBadrinath%2C%20Uttarakhand%20246422!5e0!3m2!1sen!2sin!4v1707471645063!5m2!1sen!2sin",
+            "category": 1,
+            "image_list": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12
+            ],
+            "packages": [
+                4,
+                5,
+                6
+            ]
+        }
+    },
+    {
+        "model": "app.booking",
+        "pk": 1,
+        "fields": {
+            "created_at": "2024-02-01T15:40:25.911Z",
+            "updated_at": "2024-02-01T17:01:10.043Z",
+            "package": 1,
+            "email": "patilbhavesh991209@gmail.com",
+            "phone": "7045809623",
+            "name": "Bhavesh Namdev Patil",
+            "total_adults": 3,
+            "total_childrens": 2,
+            "message": "hello world",
+            "status": "completed"
+        }
+    },
+    {
+        "model": "app.booking",
+        "pk": 2,
+        "fields": {
+            "created_at": "2024-02-01T17:32:09.019Z",
+            "updated_at": "2024-02-01T17:32:09.019Z",
+            "package": 5,
+            "email": "patilbhavesh991209@gmail.com",
+            "phone": "7045809623",
+            "name": "Bhavesh Patil",
+            "total_adults": 8,
+            "total_childrens": 5,
+            "message": "hello",
+            "status": "pending"
         }
     },
     {
@@ -2049,8 +2333,8 @@
         "pk": 66,
         "fields": {
             "created_at": "2024-01-23T17:53:39.699Z",
-            "updated_at": "2024-01-23T17:53:39.699Z",
-            "note": "A total of 5 meals � 2 meals on Day 1 + 2 meals on Day 2 + 1 meal on Day 3",
+            "updated_at": "2024-02-09T09:54:58.021Z",
+            "note": "A total of 5 meals, 2 meals on Day 1 + 2 meals on Day 2 + 1 meal on Day 3",
             "package": 12
         }
     },
@@ -3423,8 +3707,8 @@
         "pk": 5,
         "fields": {
             "created_at": "2024-01-22T20:26:45.509Z",
-            "updated_at": "2024-01-22T20:30:19.478Z",
-            "title": ":Start from Delhi | Reach Chakrata in the Morning",
+            "updated_at": "2024-01-31T20:40:42.185Z",
+            "title": "Start from Delhi | Reach Chakrata in the Morning",
             "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Start your trip by boarding an evening vehicle, which will take you to Chakrata after an overnight journey from Delhi</li>\r\n\t<li>Reach Chakrata the next day</li>\r\n</ol>",
             "package": 2
         }
@@ -3511,8 +3795,8 @@
         "pk": 13,
         "fields": {
             "created_at": "2024-01-23T12:23:59.901Z",
-            "updated_at": "2024-01-23T12:23:59.901Z",
-            "title": "Drive from Haridwar / Rishikesh � Sonprayag / Sitapur",
+            "updated_at": "2024-02-09T09:57:46.525Z",
+            "title": "Drive from Haridwar / Rishikesh Sonprayag / Sitapur",
             "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Stay: Hotel</li>\r\n\t<li>Drive to from Haridwar/Rishikesh to Sonprayag or Sitapur (depends on the accommodation booked/ available).</li>\r\n</ol>",
             "package": 4
         }
@@ -3797,8 +4081,8 @@
         "pk": 39,
         "fields": {
             "created_at": "2024-01-23T14:29:33.328Z",
-            "updated_at": "2024-01-23T14:29:33.328Z",
-            "title": "- GUPTAKASHI � GAURIKUND � KEDARNATH | TREK AMIDST THE BEAUTIFUL TRAIL TO KEDARNATH TEMPLE",
+            "updated_at": "2024-02-09T09:59:27.257Z",
+            "title": "- GUPTAKASHI, GAURIKUND, KEDARNATH | TREK AMIDST THE BEAUTIFUL TRAIL TO KEDARNATH TEMPLE",
             "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early in the morning and have a delicious breakfast.</li>\r\n\t<li>Head towards Sonprayag, where the trekking to Kedarnath will begin.</li>\r\n\t<li>Eat a delicious meal and get transferred from Guptkashi to Sonprayag.</li>\r\n\t<li>Reach Sonprayag, walk to the Government Union taxi stand, to reach Gaurikund. (Walk for 1 Km as no private vehicles are allowed in Gaurikund)</li>\r\n\t<li>Reach Gaurikund and start the soulful trek to Kedarnath from Gaurikund.</li>\r\n\t<li>You can hire ponies or palanquins for a comfortable journey.</li>\r\n\t<li>Trek through the beautiful meadows and rivers.</li>\r\n\t<li>You can take a lunch break in between and then continue the journey. Here, you will see the Kedarnath Temple, situated right at the centre of the valley with majestic mountains.</li>\r\n\t<li>Reach Kedarnath, you can finally witness the whole valley which is filled with the sound of ringing bells and prayers going on everywhere. This will surely mesmerize you.</li>\r\n\t<li>Stay the night in Kedarnath.</li>\r\n</ol>",
             "package": 6
         }
@@ -3808,8 +4092,8 @@
         "pk": 40,
         "fields": {
             "created_at": "2024-01-23T14:29:33.329Z",
-            "updated_at": "2024-01-23T14:29:33.329Z",
-            "title": "KEDARNATH �GUPTKASHI| TREKKING DOWNWARDS WITNESSING THE VALLEYS",
+            "updated_at": "2024-02-09T09:59:27.258Z",
+            "title": "KEDARNATH, GUPTKASHI| TREKKING DOWNWARDS WITNESSING THE VALLEYS",
             "details": "<ol style=\"margin-left:40px\">\r\n\t<li>Wake up early in the morning and enjoy a delicious breakfast.</li>\r\n\t<li>After the early morning Darshan, head towards Gaurikund from Kedarnath. Here you can hire ponies or palanquins for a safe and comfortable journey. (Own Expense).</li>\r\n\t<li>After you reach Gaurikund you will have to proceed to Sonprayag by government Taxi.</li>\r\n\t<li>Arrive at Sonprayag, go to Guptkashi/Rampur (Walk for 1 Km is required at Sonprayag as no private vehicles are allowed after a certain point)</li>\r\n\t<li>Dinner and overnight stay in a hotel</li>\r\n</ol>",
             "package": 6
         }
@@ -3830,8 +4114,8 @@
         "pk": 42,
         "fields": {
             "created_at": "2024-01-23T14:29:33.329Z",
-            "updated_at": "2024-01-23T14:29:33.329Z",
-            "title": "GUPTKASHI � RISHIKESH | CAMP STAY WITH BONFIRE AND MUSIC",
+            "updated_at": "2024-02-09T09:59:27.259Z",
+            "title": "GUPTKASHI, RISHIKESH | CAMP STAY WITH BONFIRE AND MUSIC",
             "details": "<ol style=\"margin-left:40px\">\r\n\t<li>After having breakfast in the morning, drive to Rishikesh via Joshimath.</li>\r\n\t<li>Visit Narsingh Temple in Joshimath later drive back to Rishikesh.</li>\r\n\t<li>Check-in into the Camp/Hotel arrival in Rishikesh.</li>\r\n\t<li>Dinner and overnight stay at Camps/Hotel</li>\r\n</ol>",
             "package": 6
         }

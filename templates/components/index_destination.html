@@ -32,7 +32,7 @@
                             <div class="m-2">
                                 <div class="trend-item">
                                     <div class="trend-image">
-                                    
+                                        
                                         <img src="{{destination.image_list.first.image.url}}" alt="image">
                                     </div>
                                     <div class="trend-content-main">
@@ -51,7 +51,7 @@
                                                 {% comment %} <span class="ml-2">38 Reviews</span> {% endcomment %}
                                             </div>
                                             <h4><a href="{% url "destination-detail" destination.pk %}">{{destination.name}}</a></h4>
-                                            <p class="mb-0"><i class="fa fa-map-marker"></i> {{destination.location}}</p>
+                                            <p class="mb-0"><i class="fa fa-map-marker"></i> {{destination.get_location_display}}</p>
                                         </div>
                                         <div class="trend-last-main">
                                             <div class="ml-3 mr-3 mb-2">{{destination.description|safe|truncatewords_html:20}}</div>

@@ -1,49 +1,64 @@
-from typing import Any
-from django.db.models.base import Model as Model
-from django.shortcuts import render, redirect
-from django.views.generic import ListView, FormView, DetailView, TemplateView
-from app.forms import ContactForm
-from django.urls import reverse_lazy
 from django.contrib import messages
-from app.models import Contact, Blog, Package, Destination, Booking, Category
+from django.shortcuts import redirect, render
+from django.urls import reverse_lazy
+from django.views.generic import (
+    DetailView,
+    FormView,
+    ListView,
+    TemplateView,
+    CreateView,
+)
+
+from app.forms import ContactForm
+from app.models import (
+    Blog,
+    Booking,
+    Category,
+    Contact,
+    Destination,
+    Package,
+)
 from custom_admin.forms import BookingForm
 
 
-def index(request):
-    destinations = Destination.objects.all()[:3]
-    categories = Category.aggrgate_categories()
-    # packages = Package.objects.all().order_by("-name")
+class IndexView(TemplateView):
+    template_name = "index.html"
 
-    packages = Package.objects.all().order_by("price")
-    blogs = Blog.objects.all()[:4]
-    master_blog = Blog.objects.all().order_by("-created_at").first()
-    special_offers = packages.filter(discount__gte=1)
-    return render(
-        request,
-        "index.html",
-        {
-            "destinations": destinations,
-            "categories": categories,
-            "packages": packages[:6],
-            "blogs": blogs,
-            "master_blog": master_blog,
-            "special_offers": special_offers,
-        },
-    )
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
 
+        destinations = Destination.objects.all()[:3]
+        categories = Category.aggrgate_categories()
+        packages = Package.objects.all().order_by("price")
+        blogs = Blog.objects.all()[:4]
+        master_blog = Blog.objects.all().order_by("-created_at").first()
+        special_offers = packages.filter(discount__gte=1)
+        packages = packages[:6]
 
-def about(request):
-    return render(request, "about.html")
+        context.update(
+            {
+                "destinations": destinations,
+                "categories": categories,
+                "packages": packages,
+                "blogs": blogs,
+                "master_blog": master_blog,
+                "special_offers": special_offers,
+            }
+        )
 
-
-def terms_conditions(request):
-    return render(request, "terms_conditions.html")
+        return context
 
 
-def privacy_policy(request):
-    return render(
-        request, "privacy_policy.html"
-    )  # TODO: Privacy Policy need and update
+class AboutView(TemplateView):
+    template_name = "about.html"
+
+
+class TermsConditionView(TemplateView):
+    template_name = "terms_conditions.html"
+
+
+class PrivacyPolicyView(TemplateView):
+    template_name = "privacy_policy.html"
 
 
 class GalleryView(TemplateView):
@@ -99,7 +114,7 @@ class PackageDetailView(DetailView):
     template_name = "package_detail.html"
     context_object_name = "package"
 
-    def get_context_data(self, **kwargs) -> dict[str, Any]:
+    def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["booking_form"] = BookingForm
         return context
@@ -168,9 +183,9 @@ def post_booking(request):
         return redirect("index")
 
 
-def faq(request):
-    return render(request, "faq.html")
+class FAQView(TemplateView):
+    template_name = "faq.html"
 
 
-def success(request):
-    return render(request, "success.html")
+class SuccessView(TemplateView):
+    template_name = "success.html"

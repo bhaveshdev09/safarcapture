@@ -48,7 +48,6 @@
                         </div>
                       </div>
                     </div>
-
                     <div class="col-lg-12 col-sm-12">
                       <div class="form-group">
                         <div class="input-box">
@@ -61,34 +60,14 @@
                       <div class="form-group">
                         <div class="input-box">
                           <i class="fa fa-map-marker"></i>
-                          <select name="cars" id="cars" class="form-select">
+                          <select class="niceSelect">
                             {% for destination in destination_list %}
-                              <option value="{{destination.pk}}">{{destination.name}}</option>
-                            {% endfor %}
+                                <option value="{{destination.pk}}">{{destination.name}}</option>
+                              {% endfor %}
                           </select>
-                          {% comment %} <input type="email" class="form-control" placeholder="Email" name="email" required /> {% endcomment %}
                         </div>
                       </div>
                     </div>
-
-                    {% comment %} <div class="col-lg-12 col-sm-12">
-                      <div class="form-group">
-                        <div class="input-box">
-                          <i class="fa fa-map-marker"></i>
-                          
-                          <input type="text" list="destinations" name="destination" id="destination"
-                            class="form-control" placeholder="Your Destination" required>
-                          <datalist id="destinations">
-                            {% for destination in destination_list %}
-                              <option value="{{destination.name}}">
-                            {% endfor %}
-                          </datalist>
-                        </div>
-                      </div>
-                    </div> {% endcomment %}
-
-
-
                     <div class="col-lg-6 col-sm-12">
                       <div class="form-group">
                         <div class="input-box">
@@ -104,7 +83,6 @@
                         </div>
                       </div>
                     </div>
-
                     <div class="col-lg-6 col-sm-12">
                       <div class="form-group">
                         <div class="input-box">

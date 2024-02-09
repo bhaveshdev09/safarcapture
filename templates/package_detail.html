@@ -71,7 +71,7 @@
                                 <div class="single-title">
                                     <h3 class="mb-1">{{package.name}}</h3>
                                     <div class="rating-main d-sm-flex align-items-center">
-                                        <p class="mb-0 mr-2"><i class="flaticon-location-pin"></i> {{package.location}}, India</p>
+                                        <p class="mb-0 mr-2"><i class="flaticon-location-pin"></i> {{package.get_location_display}}, India</p>
 
                                         <div class="rating mr-2">
                                             {% for check in package.rating_details %}

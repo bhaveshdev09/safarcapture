@@ -2,8 +2,8 @@ from django.urls import path
 from app import views
 
 urlpatterns = [
-    path("", views.index, name="index"),
-    path("about/", views.about, name="about"),
+    path("", views.IndexView.as_view(), name="index"),
+    path("about/", views.AboutView.as_view(), name="about"),
     path("blogs/", views.BlogListView.as_view(), name="blogs"),
     path("blogs/details/<pk>/", views.BlogDetailView.as_view(), name="blog-detail"),
     path(
@@ -12,19 +12,21 @@ urlpatterns = [
         name="package-detail",
     ),
     path(
-        "destinations/details/<pk>/",
-        views.DestinationDetailView.as_view(),
-        name="destination-detail",
-    ),
-    path(
         "packages/booking/",
         views.post_booking,
         name="package-booking",
     ),
+    path(
+        "destinations/details/<pk>/",
+        views.DestinationDetailView.as_view(),
+        name="destination-detail",
+    ),
     path("contact/", views.ContactView.as_view(), name="contact"),
-    path("faq/", views.faq, name="faq"),
+    path("faq/", views.FAQView.as_view(), name="faq"),
     path("gallary/", views.GalleryView.as_view(), name="gallery"),
-    path("success/", views.success, name="success"),
-    path("terms-condtions/", views.terms_conditions, name="terms-conditions"),
-    path("privacy-policy/", views.privacy_policy, name="privacy-policy"),
+    path("success/", views.SuccessView.as_view(), name="success"),
+    path(
+        "terms-condtions/", views.TermsConditionView.as_view(), name="terms-conditions"
+    ),
+    path("privacy-policy/", views.PrivacyPolicyView.as_view(), name="privacy-policy"),
 ]
