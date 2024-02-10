@@ -71,6 +71,17 @@
                                 {% endfor %}
                               </ul>
                           </li>
+                          <li class="submenu dropdown pr-2">
+                            <a href="{% url 'index' %}" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                              aria-haspopup="true" aria-expanded="false">Weekends <i class="icon-arrow-down" aria-hidden="true"></i></a>
+                              <ul class="dropdown-menu">
+                                {% for package in package_list %}
+                                  {% if package.days <= 4  %}
+                                    <li><a href="{% url "package-detail" package.id %}">{{package.name}}</a></li>
+                                  {% endif %}
+                                {% endfor %}
+                              </ul>
+                          </li>
                           <li class="{% if request.path == blogs %}active{% endif %} pr-2">
                             <a href="{% url 'blogs' %}"> Updates </a>
                           </li>
