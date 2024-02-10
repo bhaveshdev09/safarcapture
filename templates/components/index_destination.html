@@ -22,15 +22,15 @@
                     <li><a data-toggle="tab" href="#special">Special Tour</a></li> {% endcomment %}
                 </ul>
             </div>
-            <div class="tab-content">
+            <div class="tab-content d-flex justify-content-center">
                 {% for category in categories %}
                 <div id="{{category|lower|slugify}}" class="tab-pane fade in {% if categories.0 == category %}active{% endif %}">
-                    <div class="row d d-flex justify-content-center col-6">
+                    <div class="d-md-flex d-block justify-content-center">
                         {% comment %} {% for destination in destinations %} {% endcomment %}
                         {% for destination in destinations %}
                             {% if destination.category.pk == category.pk %}
-                            <div class="m-2">
-                                <div class="trend-item">
+                            <div class="">
+                                <div class="trend-item" style="max-width:350px;">
                                     <div class="trend-image">
                                         
                                         <img src="{{destination.image_list.first.image.url}}" alt="image">
@@ -54,7 +54,7 @@
                                             <p class="mb-0"><i class="fa fa-map-marker"></i> {{destination.get_location_display}}</p>
                                         </div>
                                         <div class="trend-last-main">
-                                            <div class="ml-3 mr-3 mb-2">{{destination.description|safe|truncatewords_html:20}}</div>
+                                            <div class="ml-3 mr-3 mb-2">{{destination.description|safe|truncatechars_html:50}}</div>
                                             <div class="trend-last d-flex align-items-center justify-content-center">
                                                 <a class="mb-0 white d-flex align-items-center" href="{% url "destination-detail" destination.pk %}">View Details</a>
 

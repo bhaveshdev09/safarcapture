@@ -27,7 +27,7 @@ class IndexView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        destinations = Destination.objects.all()[:3]
+        destinations = Destination.objects.all()
         categories = Category.aggrgate_categories()
         packages = Package.objects.all().order_by("price")
         blogs = Blog.objects.all()[:4]

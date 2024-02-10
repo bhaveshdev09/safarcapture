@@ -116,12 +116,12 @@
                                         helped us become better people. Each time we travel, we see the world with new
                                         eyes.</p>
                                 </div>
-                                <div class="trend-box">
+                                <div class="trend-box d-flex justify-content-center">
                                     <div class="row">
                                         {% for package in destination.packages.all %}
                                         <div class="col-lg-4 col-md-6 col-xs-12 mb-4">
                                             <a href="#">
-                                                <div class="trend-item">
+                                                <div class="trend-item" style="max-width: 330px;">
                                                     <div class="trend-image">
                                                         <img src="{{package.card_cover_image.url}}" alt="image">
                                                         <div class="trend-tags"><a href="#" class="bordernone" data-toggle="modal" data-target="#bookNow"><i class="flaticon-price"></i></a></div>
@@ -130,7 +130,7 @@
                                                         <div class="trend-content">
                                                             <h6 class="font-weight-normal pink"><i class="fa fa-map-marker-alt"></i> &nbsp;{{package.get_location_display}}
                                                             </h6>
-                                                            <h4><a href="{% url "package-detail" package.pk %}">{{package.name}}</a></h4>
+                                                            <h4><a href="{% url "package-detail" package.pk %}" class=" stretched-link">{{package.name}}</a></h4>
                                                             <div class="rating-main d-flex align-items-center">
                                                                 <div class="rating">
                                                                     {% for check in package.rating_details %}
@@ -146,11 +146,11 @@
                                                             </div>
                                                         </div>
                                                         <div class="trend-last-main">
-                                                            <div class="ml-3 mr-3 mb-2">{{package.description|safe|truncatechars_html:70}}</div>
+                                                            <div class="ml-3 mr-3 mb-2">{{package.description|safe|truncatechars_html:60}}</div>
                                                             <div
                                                                 class="trend-last d-flex align-items-center justify-content-between">
                                                                 <p class="mb-0 white"><i class="fa fa-clock-o"
-                                                                        aria-hidden="true"></i> {{package.days}} days &amp; {{package.night}} night</p>
+                                                                        aria-hidden="true"></i> {{package.days}} D &amp; {{package.night}} N</p>
                                                                 <div class="trend-price">
                                                                     <p class="price white mb-0">From <span>₹&nbsp;{{package.price}}</span>
                                                                     </p>
@@ -775,6 +775,6 @@
 {% endblock content %}
 
 {% block js %}
-<script src="{% static " js/custom-accordian.js" %}"></script>
-<script src="{% static " js/custom-navscroll.js" %}"></script>
+<script src="{% static "js/custom-accordian.js" %}"></script>
+<script src="{% static "js/custom-navscroll.js" %}"></script>
 {% endblock js %}
