@@ -29,118 +29,63 @@
     <div class="gallery pt-10 pb-6">
         <div class="container">
             <div class="row mt-3">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="gallery-item mb-4">
-                        <div class="gallery-image">
-                            <img src="{% static "images/trending/trending1.jpg" %}" alt="image">
-                            <div class="overlay"></div>
+                
+                {% for img in images %}
+                    {% if img == images.0 or img == images.1 %}
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="gallery-item mb-4">
+                                <div class="gallery-image">
+                                    <img src="{{img.image.url}}" alt="image">
+                                    <div class="overlay"></div>
+                                </div>
+                                <div class="gallery-content">
+                                    <ul>
+                                        <li><a href="{{img.image.url}}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{% static "images/trending/trending1.jpg" %}"  data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                            </ul>
+                    {% else %}
+                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                            <div class="gallery-item mb-4">
+                                <div class="gallery-image">
+                                    <img src="{{img.image.url}}" alt="image">
+                                    <div class="overlay"></div>
+                                </div>
+                                <div class="gallery-content">
+                                    <ul>
+                                        <li><a href="{{img.image.url}}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="gallery-item mb-4">
-                        <div class="gallery-image">
-                            <img src="{% static "images/trending/trending2.jpg" %}" alt="image">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{% static "images/trending/trending2.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="gallery-item mb-4">
-                        <div class="gallery-image">
-                            <img src="{% static "images/trending/trending3.jpg" %}" alt="image">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{% static "images/trending/trending3.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="gallery-item mb-4">
-                        <div class="gallery-image">
-                            <img src="{% static "images/trending/trending4.jpg" %}" alt="image">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{% static "images/trending/trending4.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="gallery-item mb-4">
-                        <div class="gallery-image">
-                            <img src="{% static "images/trending/trending5.jpg" %}" alt="image">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{% static "images/trending/trending5.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="gallery-item mb-4">
-                        <div class="gallery-image">
-                            <img src="{% static "images/trending/trending6.jpg" %}" alt="image">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{% static "images/trending/trending6.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="gallery-item mb-4">
-                        <div class="gallery-image">
-                            <img src="{% static "images/trending/trending7.jpg" %}" alt="image">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{% static "images/trending/trending7.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <div class="gallery-item mb-4">
-                        <div class="gallery-image">
-                            <img src="{% static "images/trending/trending8.jpg" %}" alt="image">
-                            <div class="overlay"></div>
-                        </div>
-                        <div class="gallery-content">
-                            <ul>
-                                <li><a href="{% static "images/trending/trending8.jpg" %}" data-lightbox="gallery" data-title="Title"><i class="fa fa-eye"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
+        <div class="pagination-main text-center mt-2">
+            <ul class="pagination">
+              {% if page_obj.has_previous %}
+              <li><a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-double-left"
+                    aria-hidden="true"></i></a></li>
+              {% endif %}
+
+              {% for i in paginator.page_range %}
+                {% if page_obj.number == i %}
+                  <li class="active"><a href="?page={{i}}">{{i}}</a></li>
+                {% else %}
+                  {% if request.GET.order_by == 'desc' %}
+                    <li><a href="?page={{i}}&amp;order_by=desc">{{i}}</a></li>
+                  {% else %}
+                    <li><a href="?page={{i}}">{{i}}</a></li>
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+              {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+              {% endif %}
+            </ul>
+          </div>
     </div>
     <!-- Gallery Ends -->
 

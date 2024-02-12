@@ -9,7 +9,7 @@ from django.views.generic import (
     CreateView,
 )
 
-from app.forms import ContactForm
+from app.forms import ContactForm, DestinationQueryForm
 from app.models import (
     Blog,
     Booking,
@@ -17,12 +17,15 @@ from app.models import (
     Contact,
     Destination,
     Package,
+    GallaryImage,
 )
 from custom_admin.forms import BookingForm
 
 
-class IndexView(TemplateView):
+class IndexView(FormView):
     template_name = "index.html"
+    form_class = DestinationQueryForm
+    success_url = reverse_lazy("success")
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -48,6 +51,19 @@ class IndexView(TemplateView):
 
         return context
 
+    def form_valid(self, form):
+        print(form.cleaned_data)
+        form.save()
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        print(form.errors)
+        messages.error(
+            self.request,
+            "There was an error with your submission. Please check the form.",
+        )
+        return super().form_invalid(form)
+
 
 class AboutView(TemplateView):
     template_name = "about.html"
@@ -61,8 +77,12 @@ class PrivacyPolicyView(TemplateView):
     template_name = "privacy_policy.html"
 
 
-class GalleryView(TemplateView):
+class GalleryView(ListView):
     template_name = "gallery.html"
+    context_object_name = "images"
+    paginate_by = 8
+    model = GallaryImage
+    queryset = GallaryImage.objects.all().order_by("-created_at")
 
 
 class BlogListView(ListView):

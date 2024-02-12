@@ -14,6 +14,8 @@ from app.models import (
     Destination,
     DestinationImage,
     Booking,
+    Query,
+    GallaryImage,
 )
 from django.db import models
 from django import forms
@@ -47,6 +49,10 @@ class DestinationImageAdmin(admin.ModelAdmin):
     list_display = [
         "image_tag",
     ]
+
+
+class QueryAdmin(admin.ModelAdmin):
+    list_display = ["name", "phone", "message", "destination"]
 
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -159,3 +165,5 @@ admin.site.register(Category, CategoryAdmin)
 admin.site.register(DestinationImage, DestinationImageAdmin)
 admin.site.register(Destination, DestinationAdmin)
 admin.site.register(Booking)
+admin.site.register(Query, QueryAdmin)
+admin.site.register(GallaryImage)

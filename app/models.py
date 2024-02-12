@@ -63,10 +63,25 @@ class Contact(BaseModel):
 
 class BaseImage(BaseModel):
     image = models.ImageField()
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, blank=True, default="")
 
     class Meta:
         abstract = True
+
+
+class GallaryImage(BaseImage):
+    image = models.ImageField(upload_to="gallery/images/")
+
+    def __str__(self):
+        return f"Gallery Image - {str(self.id)}"
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.image.path)
+        if img.width != 700 or img.height != 460:
+            output_size = (700, 460)
+            resized_image = img.resize(output_size)
+            resized_image.save(self.image.path)
 
 
 class BlogImage(BaseImage):
@@ -277,26 +292,26 @@ class Exclusive(KeyPoint):
         return f"Exclusive Note: {self.note}"
 
 
-# class Query(BaseModel):
-#     FOLLOWUP_STATUS_PENDING = "pending"
-#     FOLLOWUP_STATUS_COMPLETED = "completed"
-#     FOLLOWUP_STATUS_CHOICES = (
-#         (FOLLOWUP_STATUS_PENDING, "Pending"),
-#         (FOLLOWUP_STATUS_COMPLETED, "Completed"),
-#     )
+class Query(BaseModel):
+    FOLLOWUP_STATUS_PENDING = "pending"
+    FOLLOWUP_STATUS_COMPLETED = "completed"
+    FOLLOWUP_STATUS_CHOICES = (
+        (FOLLOWUP_STATUS_PENDING, "Pending"),
+        (FOLLOWUP_STATUS_COMPLETED, "Completed"),
+    )
 
-#     package = models.ForeignKey(
-#         Package, on_delete=models.SET_NULL, blank=True, null=True
-#     )
-#     email = models.EmailField(max_length=254)
-#     phone = models.CharField(max_length=10)
-#     name = models.CharField(max_length=255)
-#     total_adults = models.SmallIntegerField(default=0)
-#     total_childrens = models.SmallIntegerField(default=0)
-#     message = models.TextField(blank=True)
-#     status = models.CharField(
-#         max_length=20, choices=FOLLOWUP_STATUS_CHOICES, default=FOLLOWUP_STATUS_PENDING
-#     )
+    destination = models.ForeignKey(
+        Destination, on_delete=models.SET_NULL, blank=True, null=True
+    )
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=10)
+    name = models.CharField(max_length=255)
+    total_adults = models.SmallIntegerField(default=0)
+    total_childrens = models.SmallIntegerField(default=0)
+    message = models.TextField(blank=True)
+    status = models.CharField(
+        max_length=20, choices=FOLLOWUP_STATUS_CHOICES, default=FOLLOWUP_STATUS_PENDING
+    )
 
 
 class CarryThing(KeyPoint):
@@ -353,7 +368,7 @@ def send_email_booking_to_admin(sender, instance, created, **kwargs):
     get_admin_users = list(User.objects.all().values_list("email", flat=True))
 
     if created:
-        subject = "New Booking from {instance.name}"
+        subject = f"New Booking from {instance.name}"
         message = f"A new {sender.__name__} has been submitted.\n\nDetails:\n{instance}"
 
         from_email = settings.EMAIL_HOST_USER  # Replace with your actual email address
@@ -373,6 +388,24 @@ def send_email_to_admin(sender, instance, created, **kwargs):
     if created:
         subject = f"Contact Query From {instance.name}"
         message = f"A new contact query has been submitted.\n\nDetails:\nName: {instance}\nEmail: {instance.email}\nPhone: {instance.phone}\nMessage: {instance.message}"
+
+        from_email = settings.EMAIL_HOST_USER  # Replace with your actual email address
+        admin_emails = get_admin_users  # Replace with your admin's email address
+
+        send_mail(subject, message, from_email, admin_emails)
+
+
+@receiver(post_save, sender=Query)
+def send_email_destination_query_to_admin(sender, instance, created, **kwargs):
+    from django.contrib.auth import get_user_model
+
+    User = get_user_model()
+
+    get_admin_users = list(User.objects.all().values_list("email", flat=True))
+
+    if created:
+        subject = f"Destination Query from {instance.name}"
+        message = f"A new {sender.__name__} has been submitted.\n\nDetails:\nUser: {instance.name}\nPhone No: {instance.phone}\nDestination: {instance.destination}\nMessage: {instance.message}\n"
 
         from_email = settings.EMAIL_HOST_USER  # Replace with your actual email address
         admin_emails = get_admin_users  # Replace with your admin's email address
