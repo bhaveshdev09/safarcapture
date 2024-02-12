@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Terms &amp; Conditions{% endblock title %}
+
+{% block content %}
+
+<!-- BreadCrumb Starts -->
+<section class="breadcrumb-main pb-0" style="background-image: url({% static "images/bg/bg8.jpg" %});">
+  <div class="breadcrumb-outer pt-18">
+    <div class="container">
+      <div class="breadcrumb-content d-md-flex align-items-center pt-10">
+        <h2 class="pb-2">Refund Policy</h2>
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "index" %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Refund Policy</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="dot-overlay"></div>
+</section>
+<!-- BreadCrumb Ends -->
+
+<section class="blog trending destination-b">
+    <div class="container">
+        <div class="contact-info">
+            <h3 class="">Refund Policy</h3>
+            <p>When you make a reservation with us, we allocate one exclusive Travel Counselor to process your reservation. 
+                Once the hotels/itinerary and the costs have been finalized, the Counselor would send a Performa invoice listing 
+                the amount payable, reservation details, and the package inclusions. If you are satisfied with the details, we will 
+                start to process the reservation.</p>
+
+            <h4>Advance Payment</h4>
+            <p>To process the reservation, we would need a 10-25% advance payment. After we receive the confirmations and payment time 
+                limits from respective hotels, we would inform you of the final payment schedule, which would vary from hotel to hotel, 
+                seasons, and the destination.</p>
+
+            <h4>Confirmation Voucher</h4>
+            <p>Once the reservation is confirmed and the advance is received, we will send you a confirmation voucher detailing all the 
+                details pertaining to the particular reservation by email/courier. This should be presented to the hotel at the time of check-in.</p>
+
+            <h4>Confirmation of Reservation</h4>
+            <p>The hotel confirmation voucher sent by us has a confirmation number/name of the person who confirmed the reservation along with 
+                the hotel phone number/contact details. You are welcome to check the status of your reservation from the hotel directly.</p>
+
+            <h4>Reconfirmation with Hotel</h4>
+            <p>No, a copy of the hotel confirmation voucher issued by us is also sent to the hotel/s.</p>
+
+            <h4>Confirmation Time</h4>
+            <p>It typically takes 24 to 48 hours to receive a confirmation.</p>
+
+            <h4>Changing / Cancelling a Reservation</h4>
+            <h5>Cancellation Policy for Hotel Reservations</h5>
+            <p>If the reservation is cancelled/revised, it is subject to terms and conditions levied by the respective hotel/s. 
+                This policy is not uniform and depends on various factors such as the seasonality, the duration between the 
+                cancellations/modifications and the Check-in Date, the kind of rate on which the reservation was made. 
+                All these conditions are applied by the hotels and not The Safar Capture. In case of modifications/cancellations, 
+                we would charge a 10% processing fee.</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

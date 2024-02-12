@@ -17,7 +17,7 @@ from app.models import (
     Contact,
     Destination,
     Package,
-    GallaryImage,
+    GalleryImage,
 )
 from custom_admin.forms import BookingForm
 
@@ -77,12 +77,16 @@ class PrivacyPolicyView(TemplateView):
     template_name = "privacy_policy.html"
 
 
+class RefundPolicyView(TemplateView):
+    template_name = "refund_policy.html"
+
+
 class GalleryView(ListView):
     template_name = "gallery.html"
     context_object_name = "images"
     paginate_by = 8
-    model = GallaryImage
-    queryset = GallaryImage.objects.all().order_by("-created_at")
+    model = GalleryImage
+    queryset = GalleryImage.objects.all().order_by("-created_at")
 
 
 class BlogListView(ListView):
