@@ -12,16 +12,16 @@
       <div class="links">
         <ul>
           <li><a href="#" class="white"><i class="fa fa-phone"></i> +91 816-851-4112 </a></li>
-          <li><a href="#" class="white"><i class="fa fa-envelope"></i> info@safarcapture.com</a></li>
+          <li><a href="#" class="white"><i class="fa fa-envelope"></i> bhanudahiya11234@gmail.com</a></li>
           <li><a href="#" class="white"><i class="fa fa-calendar"></i> Mon-Sun: 9 AM – 7 PM</a></li>
         </ul>
       </div>
       <div class="links float-right">
         <ul>
-          <li><a href="#"><i class="fab fa-facebook white" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter white" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram white" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fab fa-linkedin white" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.facebook.com/"><i class="fab fa-facebook white" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.instagram.com/safarcapture?igsh=OG9ud3JpbzBsbzdq"><i class="fab fa-instagram white" aria-hidden="true"></i></a></li>
+          {% comment %} <li><a href="#"><i class="fab fa-twitter white" aria-hidden="true"></i></a></li> {% endcomment %}
+          {% comment %} <li><a href="#"><i class="fab fa-linkedin white" aria-hidden="true"></i></a></li> {% endcomment %}
           {% comment %} <li><a href="#search1" class="mt_search"><i class="icon-magnifier white"></i></a></li> {% endcomment %}
         </ul>
       </div>
@@ -82,9 +82,9 @@
                                 {% endfor %}
                               </ul>
                           </li>
-                          <li class="{% if request.path == blogs %}active{% endif %} pr-2">
+                          {% comment %} <li class="{% if request.path == blogs %}active{% endif %} pr-2">
                             <a href="{% url 'blogs' %}"> Updates </a>
-                          </li>
+                          </li> {% endcomment %}
                           <li class="{% if request.path == gallery %}active{% endif %} pr-2">
                             <a href="{% url 'gallery' %}"> Gallery </a>
                           </li>

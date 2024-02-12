@@ -69,7 +69,7 @@ class BaseImage(BaseModel):
         abstract = True
 
 
-class GallaryImage(BaseImage):
+class GalleryImage(BaseImage):
     image = models.ImageField(upload_to="gallery/images/")
 
     def __str__(self):

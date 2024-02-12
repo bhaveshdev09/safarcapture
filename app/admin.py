@@ -15,7 +15,7 @@ from app.models import (
     DestinationImage,
     Booking,
     Query,
-    GallaryImage,
+    GalleryImage,
 )
 from django.db import models
 from django import forms
@@ -166,4 +166,4 @@ admin.site.register(DestinationImage, DestinationImageAdmin)
 admin.site.register(Destination, DestinationAdmin)
 admin.site.register(Booking)
 admin.site.register(Query, QueryAdmin)
-admin.site.register(GallaryImage)
+admin.site.register(GalleryImage)
