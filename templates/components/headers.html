@@ -36,12 +36,12 @@
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header">
                       <a class="navbar-brand" href="{% url "index" %}">
-                          <img src="{% static "images/safarLogoWhite.png" %}" alt="image">
-                          <img src="{% static "images/safarLogo3.png" %}" alt="image">
+                          <img src="{% static "images/safarLogoWhite2.png" %}" width="140" height="140" alt="image">
+                          <img src="{% static "images/SafarCaptureLogo.png" %}" width="180" height="85" alt="image">
                       </a>
                   </div>
                   <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="navbar-collapse1 d-flex align-items-center" id="bs-example-navbar-collapse-1">
+                  <div class="navbar-collapse1 d-flex align-items-center pt-1" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav" id="responsive-menu">
                           <li class="{% if request.path == index %}active{% endif %} pr-2"><a href="{% url 'index' %}">Home</a></li>
                           <li class="{% if request.path == about %}active{% endif %} pr-2"><a href="{% url 'about' %}">About Us</a></li>
