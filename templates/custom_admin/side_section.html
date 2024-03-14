@@ -4,6 +4,8 @@
 {% url "admin-dashboard" as dashboard %}
 {% url "admin-booking-list" as bookings %}
 {% url "admin-package-list" as packages %}
+{% url "admin-customer-enquiry" as customer_enquiry %}
+{% url "admin-gallery" as gallery %}
 
 <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
     <div class="dashboard-sidebar">
@@ -30,19 +32,26 @@
                     <li {% if request.path == dashboard %}class="active"{% endif %}><a href="{% url "admin-dashboard" %}"><i class="icon-chart mr-1"></i> Dashboard</a></li>
                     {% comment %} <li><a href="dashboard-booking-history.html"><i class="fa fa-list-ul"></i>Booking History</a></li>
                     <li><a href="dashboard-package-enquiry.html"><i class="fa fa-list-ul"></i>Package Queries</a></li> {% endcomment %}
-                    <li><a href="dashboard-customer-enquiry.html"><i class="icon-phone mr-1"></i>Queries</a></li>
+                    <li {% if request.path == customer_enquiry %}class="active"{% endif %}><a href="{% url "admin-customer-enquiry" %}"><i class="icon-phone mr-1"></i>Queries</a></li>
                     <li {% if request.path == bookings %}class="active"{% endif %}><a href="{% url "admin-booking-list" %}"><i class="icon-envelope mr-1"></i>Bookings</a></li>
                     {% comment %} <li><a href="dashboard-user-details.html"><i class="icon-user mr-1"></i>User</a></li> {% endcomment %}
                     <!-- <li><a href="dashboard-my-profile.html"><i class="sl sl-icon-user"></i> Profile</a></li>                     
                     <li><a href="dashboard-messages.html"><i class="sl sl-icon-envelope-open"></i> Messages</a></li> -->
                     <!-- <li><a href="dashboard-reviews.html"><i class="sl sl-icon-star"></i> Reviews</a></li> -->
                     <li {% if request.path == packages %}class="active"{% endif %}><a href="{% url "admin-package-list" %}"><i class="icon-directions mr-1"></i>Packages</a></li>
+                    <li {% if request.path == gallery %}class="active"{% endif %}><a href="{% url "admin-gallery" %}"><i class="icon-menu mr-1"></i>Gallery</a></li>
                     {% comment %} <li><a href="dashboard-add-destination.html"><i class="icon-direction mr-1"></i>Destination</a></li> {% endcomment %}
                     <li>
                         <form id="logoutForm" method="post" action="{% if request.user.is_authenticated %}{% url "admin-logout" %}{% endif %}">
                             {% csrf_token %}
-                            <a href="#" onclick="submitLogoutForm()"><i class="icon-logout mr-1"></i>Logout</a>
+                            <a href="#" onclick="submitLogoutForm()" type="submit"><i class="icon-logout mr-1"></i>Logout</a>
                         </form>
+                        <script>
+                            function submitLogoutForm() {
+                              // Trigger the form submission
+                              document.getElementById('logoutForm').submit();
+                            }
+                        </script>
                     </li>
                 </ul>
             </div>

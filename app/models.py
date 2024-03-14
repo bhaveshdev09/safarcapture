@@ -369,7 +369,7 @@ def send_email_booking_to_admin(sender, instance, created, **kwargs):
 
     if created:
         subject = f"New Booking from {instance.name}"
-        message = f"A new {sender.__name__} has been submitted.\n\nDetails:\n{instance}"
+        message = f"A new {sender.__name__} has been submitted.\n\nDetails:\nUser: {instance.name}\nPhone No: {instance.phone}\nEmail: {instance.email}\nPackage: {instance.package.name}\nMessage: {instance.message}\n"
 
         from_email = settings.EMAIL_HOST_USER  # Replace with your actual email address
         admin_emails = get_admin_users  # Replace with your admin's email address

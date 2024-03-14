@@ -13,7 +13,7 @@ from custom_admin.forms import (
     IternaryFormSet,
     BookingForm,
 )
-from app.models import Package, Booking
+from app.models import Package, Booking, Query, GalleryImage
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 
@@ -60,8 +60,22 @@ class CustomUserLogoutView(LogoutView):
         return super().dispatch(request, *args, **kwargs)
 
 
-def customer_enquiry(request):
-    return render(request, "custom_admin/customer_enquiry.html")
+class AdminGalleryList(LoginRequiredMixin, ListView):
+    model = GalleryImage
+    template_name = "custom_admin/gallery.html"
+    context_object_name = "images"
+    paginate_by = 8
+    login_url = reverse_lazy("admin-login")
+    queryset = GalleryImage.objects.all().order_by("-created_at")
+
+
+class CustomerEnquiryListView(LoginRequiredMixin, ListView):
+    model = Query
+    template_name = "custom_admin/customer_enquiry.html"
+    context_object_name = "enquries"
+    paginate_by = 10
+    login_url = reverse_lazy("admin-login")
+    queryset = Query.objects.all().order_by("-created_at")
 
 
 def destination(request):
